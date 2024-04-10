@@ -8,9 +8,6 @@ const expressLayouts = require('express-ejs-layouts')
 const minify = require('./files/minify.js')
 const webURL = new URL('https://www.zmtportfolio.com')
 
-minify.minifyJS()
-minify.minifyCSS()
-
 // Express server instantiation 
 const app = express()
 

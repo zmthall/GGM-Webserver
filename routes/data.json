@@ -15,20 +15,15 @@
         "reservation_hours": "8:00AM-4:00PM Monday to Friday",
         "favicon": "/images/favicon.ico",
         "logo_src": "/images/Logo.png",
-        "logo_alt": "Logo reading Golden Gate Manor, Inc.",
+        "logo_alt": "Logo reading: Golden Gate Manor, Inc.",
         "home_href": "/",
-        "slogan": "PEOPLE WHO VALUE THEIR QUALITY OF LIFE CAN DEPEND ON US"
-    },
-    "header": {
-        "top": {
-            "non_medical": {
-                "content": "Non-Medical Transportation"
-            },
-            "nemt": {
-                "content": "NEMT Transportation"
-            },
-            "assisted_living": {
-                "content": "Assisted Living"
+        "slogan": "PEOPLE WHO VALUE THEIR QUALITY OF LIFE CAN DEPEND ON US",
+        "mission_statement": "To improve The Quality of Life Each and Every Day.",
+        "social": {
+            "facebook": {
+                "logo_src1": "/images/facebook-logo.svg",
+                "logo_src2": "/images/facebook-logo.svg",
+                "url": "https://www.facebook.com/GoldenGateManor/"
             }
         }
     },

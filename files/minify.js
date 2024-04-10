@@ -79,7 +79,7 @@ async function minifyJS() {
 minifyCSS()
 minifyJS()
 
-// module.exports = {
-//     minifyJS: minifyJS,
-//     minifyCSS: minifyCSS
-// }
+module.exports = {
+    minifyJS: minifyJS,
+    minifyCSS: minifyCSS
+}

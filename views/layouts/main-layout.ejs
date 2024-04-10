@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %> | <%= config.company.name %></title>
+    <title><%= page.title %> | <%= config.company.name %></title>
     <link rel="icon" type="image/x-icon" href="<%- config.company.favicon %>">
-    <%- include('../snippets/head') %>
+    <%- include('../snippets/head-additions') %>
 </head>
 <body>
-    <%- include('../snippets/body') %>
-    <%- include('../snippets/header', { header: config.header, company: config.company }) %>
+    <%- include('../snippets/body-additions') %>
+    <%- include('../snippets/header', { 
+        page: page,
+        company: config.company,
+        header: config.header,  
+        links: config.links }) %>
+    <section class="page-body"></section>
     <%- body %> 
-    <%- include('../snippets/footer', { config: config }) %>
+    <%- include('../snippets/footer', { 
+        page: page,
+        company: config.company,
+        links: config.footer_links }) %>
 </body>
 </html>

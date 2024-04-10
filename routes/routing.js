@@ -1,4 +1,5 @@
-var express = require('express')
+const express = require('express')
+const helper = require('../files/helper.js')
 var router = express.Router()
 
 var fs = require("fs"), json;
@@ -21,7 +22,11 @@ json = getConfig('data.json');
 router.get('/', (request, response) => {
     response.render('index', {
         config: json,
-        title: 'Medicaid Transportation',
+        helper: helper,
+        page: {
+            title: 'Medicaid Transportation',
+            href: "/"
+        },
         layout: './layouts/main-layout'
     })
 })
@@ -29,7 +34,11 @@ router.get('/', (request, response) => {
 router.get('/assisted-living', (request, response) => {
     response.render('assisted-living', {
         config: json,
-        title: 'Assisted Living',
+        helper: helper,
+        page: {
+            title: 'Assisted Living',
+            href: '/assisted-living'
+        },
         layout: './layouts/main-layout'
     })
 })
@@ -37,7 +46,11 @@ router.get('/assisted-living', (request, response) => {
 router.get('/non-medical-transportation', (request, response) => {
     response.render('non-medical-transportation', {
         config: json,
-        title: 'Non-Medical Transportation',
+        helper: helper,
+        page: {
+            title: 'Non-Medical Transportation',
+            href: '/non-medical-transportation'
+        },
         layout: './layouts/main-layout'
     })
 })
@@ -45,7 +58,11 @@ router.get('/non-medical-transportation', (request, response) => {
 router.get('/nemt', (request, response) => {
     response.render('nemt-transportation', {
         config: json,
-        title: 'Non-Emergency Medical Transportation',
+        helper: helper,
+        page: {
+            title: 'Non-Emergency Medical Transportation',
+            href: '/nemt'
+        },
         layout: './layouts/main-layout'
     })
 })
@@ -53,7 +70,11 @@ router.get('/nemt', (request, response) => {
 router.get('/about-us', (request, response) => {
     response.render('about-us', {
         config: json,
-        title: 'About us',
+        helper: helper,
+        page: {
+            title: 'About us',
+            href: '/about-us'
+        },
         layout: './layouts/main-layout'
     })
 })
@@ -61,7 +82,11 @@ router.get('/about-us', (request, response) => {
 router.get('/about-us/location', (request, response) => {
     response.render('location', {
         config: json,
-        title: 'Location',
+        helper: helper,
+        page: {
+            title: 'Location',
+            href: '/about-us/location'
+        },
         layout: './layouts/main-layout'
     })
 })
@@ -76,7 +101,11 @@ router.get('/about-us/location', (request, response) => {
 router.get('/about-us/community', (request, response) => {
     response.render('community', {
         config: json,
-        title: 'Community',
+        helper: helper,
+        page: {
+            title: 'Community',
+            href: '/about-us/community'
+        },
         layout: './layouts/main-layout'
     })
 })
@@ -84,7 +113,11 @@ router.get('/about-us/community', (request, response) => {
 router.get('/contact-us', (request, response) => {
     response.render('contact-us', {
         config: json,
-        title: 'contact-us',
+        helper: helper,
+        page: {
+            title: 'Contact Us',
+            href: '/contact-us'
+        },
         layout: './layouts/main-layout'
     })
 })
@@ -92,7 +125,47 @@ router.get('/contact-us', (request, response) => {
 router.get('/contact-us/schedule-a-ride', (request, response) => {
     response.render('schedule-a-ride', {
         config: json,
-        title: 'Schedule A Ride',
+        helper: helper,
+        page: {
+            title: 'Schedule a Ride',
+            href: '/contact-us'
+        },
+        layout: './layouts/main-layout'
+    })
+})
+
+router.get('/privacy-policy', (request, response) => {
+    response.render('privacy-policy', {
+        config: json,
+        helper: helper,
+        page: {
+            title: 'Privacy Policy',
+            href: '/privacy-policy'
+        },
+        layout: './layouts/main-layout'
+    })
+})
+
+router.get('/accessibility', (request, response) => {
+    response.render('accessibility', {
+        config: json,
+        helper: helper,
+        page: {
+            title: 'Accessibility',
+            href: '/accessibility'
+        },
+        layout: './layouts/main-layout'
+    })
+})
+
+router.get('/site-map', (request, response) => {
+    response.render('site-map', {
+        config: json,
+        helper: helper,
+        page: {
+            title: 'Site Map',
+            href: '/site-map'
+        },
         layout: './layouts/main-layout'
     })
 })
@@ -100,7 +173,11 @@ router.get('/contact-us/schedule-a-ride', (request, response) => {
 router.get('*', (request, response) => {
   response.render('404', {
     config: json,
-    title: 'Page not Found: 404',
+    helper: helper,
+    page: {
+        title: 'Page not Found: 404',
+        href: 'ERROR'
+    },
     layout: './layouts/main-layout'
   })
 })

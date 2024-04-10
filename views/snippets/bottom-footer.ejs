@@ -1,0 +1,14 @@
+<div class="bottom-footer">
+    <div class="footer-copyright-wrapper">
+        <a href="<%- company.home_href %>">&copy; 2024 <span class="footer-company-name"><%- company.name %></span></a>
+    </div>
+    <nav class="footer-policy-links-nav">
+        <ul class="footer-policy-lnks">
+            <% for(const link in links) { %>
+                <li class="footer-policy-link-item">
+                    <a class="footer-policy-link" href="<%- links[link].href %>"><%- links[link].title %></a>
+                </li>
+            <% } %>
+        </ul>
+    </nav>
+</div>

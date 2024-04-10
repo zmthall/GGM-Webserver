@@ -16,166 +16,92 @@
         "favicon": "/images/favicon.ico",
         "logo_src": "/images/Logo.png",
         "logo_alt": "Logo reading Golden Gate Manor, Inc.",
-        "home_href": "/"
+        "home_href": "/",
+        "slogan": "PEOPLE WHO VALUE THEIR QUALITY OF LIFE CAN DEPEND ON US"
     },
     "header": {
         "top": {
-            "home": {
-                "href": "/",
-                "logo_src": "/images/Logo.png",
-                "logo_alt": "Logo reading Golden Gate Manor, Inc."
-            },
             "non_medical": {
-                "href": "/non-medical-transportation",
-                "phone_number": "719-543-2525",
-                "phone_number_format": "(719) 543-2525",
                 "content": "Non-Medical Transportation"
             },
             "nemt": {
-                "href": "/nemt",
-                "phone_number": "719-544-3231",
-                "phone_number_format": "(719) 544-3231",
                 "content": "NEMT Transportation"
             },
             "assisted_living": {
-                "href": "/assisted-living",
-                "phone_number": "719-696-8032",
-                "phone_number_format": "(719) 696-8032",
                 "content": "Assisted Living"
             }
+        }
+    },
+    "links": {
+        "home": {
+            "title": "HOME",
+            "href": "/"
         },
-        "nav": {
-            "home": {
-                "title": "HOME",
-                "href": "/"
-            },
-            "assisted_living": {
-                "title": "ASSISTED LIVING",
-                "href": "/assisted-living"
-            },
-            "non_medical": {
-                "title": "NON-MEDICAL TRANSPORTATION",
-                "href": "/non-medical-transportation"
-            },
-            "nemt": {
-                "title": "NEMT TRANSPORTATION",
-                "href": "/nemt"
-            },
-            "medical_supply": {
-                "title": "MEDICAL SUPPLIES",
-                "href": "https://www.goldengatemedicalsupply.com"
-            },
-            "about_us": {
-                "title": "ABOUT US",
-                "href": "/about-us",
-                "links": {
-                    "about_us": {
-                        "title": "ABOUT US",
-                        "href": "/about-us"
-                    },
-                    "blog": {
-                        "title": "BLOG",
-                        "href": "/blogs"
-                    },
-                    "location": {
-                        "title": "LOCATION",
-                        "href": "/about-us/location"
-                    },
-                    "community": {
-                        "title": "COMMUNITY",
-                        "href": "/about-us/community"
-                    }
+        "assisted_living": {
+            "title": "ASSISTED LIVING",
+            "href": "/assisted-living"
+        },
+        "non_medical": {
+            "title": "NON-MEDICAL TRANSPORTATION",
+            "href": "/non-medical-transportation"
+        },
+        "nemt": {
+            "title": "NEMT TRANSPORTATION",
+            "href": "/nemt"
+        },
+        "medical_supply": {
+            "title": "MEDICAL SUPPLIES",
+            "href": "https://www.goldengatemedicalsupply.com"
+        },
+        "about_us": {
+            "title": "ABOUT US",
+            "href": "/about-us",
+            "links": {
+                "about_us": {
+                    "title": "ABOUT US",
+                    "href": "/about-us"
+                },
+                "blog": {
+                    "title": "BLOG",
+                    "href": "/blogs"
+                },
+                "location": {
+                    "title": "LOCATION",
+                    "href": "/about-us/location"
+                },
+                "community": {
+                    "title": "COMMUNITY",
+                    "href": "/about-us/community"
                 }
-            },
-            "contact_us": {
-                "title": "CONTACT US",
-                "href": "/contact-us",
-                "links": {
-                    "contact_us": {
-                        "title": "CONTACT US",
-                        "href": "/contact-us"
-                    },
-                    "schedule_a_ride": {
-                        "title": "SCHEDULE A RIDE",
-                        "href": "/contact-us/schedule-a-ride"
-                    }
+            }
+        },
+        "contact_us": {
+            "title": "CONTACT US",
+            "href": "/contact-us",
+            "links": {
+                "contact_us": {
+                    "title": "CONTACT US",
+                    "href": "/contact-us"
+                },
+                "schedule_a_ride": {
+                    "title": "SCHEDULE A RIDE",
+                    "href": "/contact-us/schedule-a-ride"
                 }
             }
         }
     },
-    "pages": {
-        "home": {
-            "title": "Medical Transportation in Pueblo Colorado",
-            "hero_greeting": "Welcome to",
-            "hero_title": "Golden Gate Manor",
-            "hero_slogan": "PEOPLE WHO VALUE THEIR QUALITY OF LIFE CAN DEPEND ON US",
-            "hero_text": "Here at Golden Gate Manor, Our Mission Is Simple: To improve the quality of life each and every day. We proudly offer transportation services to not only our residents, but to Medicaid approved members of our community. Search our website for additional information, or contact us with any questions.",
-            "hero_button_text": "Contact Us",
-            "assisted_living_cta_title": {
-                "primary": "Assisted",
-                "secondary": "Living"
-            },
-            "assisted_living_cta": "Golden Gate Manor, Inc. are highly respected, Medicaid Certified Assisted Living Facilities located in Pueblo, Colorado. Trained staff members are present 24/7 to provide care, assistance with medication, daily living skills, meals, transportation and treatment management.",
-            "nemt_cta_title": {
-                "primary": "NEMT",
-                "secondary": "Transportion"
-            },
-            "nemt_cta": "Non-Emergent Medical Transportation (NEMT) is transportation to and from covered non-emergency medical appointments or services. With our 40+ vehicles, we can take you to any appointment within state lines.",
-            "non_medical_cta_title": {
-                "primary": "Non-Medical",
-                "secondary": "Transportation"
-            },
-            "non_medical_cta": "We are proud to now offer Non-Medical Transportation to Medicaid eligible disabled and elderly members of Pueblo City/County (including Pueblo West). Whether you need to run personal errands, or attend a family event, Golden Gate Manor Transportation can get you there.",
-            "medical_supplies_cta_title": {
-                "primary": "Golden Gate",
-                "secondary": "Medical Supplies"
-            },
-            "medical_supplies_cta": "Golden Gate Medical Supplies is a family-owned provider of durable medical equipment and supplies. We have been serving individuals, caregivers, and businesses with a commitment to quality care. Our knowledgeable team offers a wide range of products and services to support you."
+    "footer_links": {
+        "privacy_policy": {
+            "title": "PRIVACY POLICY",
+            "href": "/privacy-policy"
         },
-        "assisted_living": {
-            "title": "Assisted Living Pueblo, CO",
-            "link_title": "Assisted Living",
-            "href": "/assisted-living"
+        "accessibility": {
+            "title": "ACCESSIBILITY",
+            "href": "/accessibility"
         },
-        "non_medical_transportation": {
-            "title": "Non-Medical Transportation Services",
-            "link_title": "Non-Medical Transportation",
-            "href": "/non-medical-transportation"
-        },
-        "nemt_transportation": {
-            "title": "Non-Emergency Medical Transportation Services",
-            "link_title": "NEMT Transportation",
-            "href": "/nemt"
-        },
-        "about_us": {
-            "title": "About Us",
-            "link_title": "About Us",
-            "href": "/about-us"
-        },
-        "blog": {
-            "title": "Blog",
-            "link_title": "Blog",
-            "href": "/blogs"
-        },
-        "location": {
-            "title": "Map, Hours, and Location Information",
-            "link_title": "Location",
-            "href": "/about-us/location"
-        },
-        "community": {
-            "title": "Community Outreach",
-            "link_title": "Community",
-            "href": "/about-us/community"
-        },
-        "contact_us": {
-            "title": "Get in Touch with Us",
-            "link_title": "Contact Us",
-            "href": "/contact-us"
-        },
-        "schedule_a_ride": {
-            "title": "Schedule a Ride",
-            "link_title": "SCHEDULE A RIDE",
-            "href": "/contact-us/schedule-a-ride"
+        "site_map": {
+            "title": "SITE MAP",
+            "href": "/site-map"
         }
     }
 }

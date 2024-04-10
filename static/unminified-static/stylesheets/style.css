@@ -7,6 +7,7 @@
     --primary-color: #121b75;
     --secondary-color: #EAE39E;
     --background-color: #f9f7f5;
+    --link-hover-color: #ADA985;
     --light-grey: rgba(225, 225, 225);
     --text-color: #DDD;
     --contrast-text: var(--primary-color);
@@ -44,7 +45,10 @@ body {
     font-weight: 500;
     background: var(--background-color);
     overflow-x: hidden;
-    height: 500vh;
+}
+
+.page-body {
+    height: 150vh;
 }
 
 h1, h2, h3, h4, h5 {
@@ -61,7 +65,8 @@ a {
 a:not(.logo-wrapper a, 
 a.main-navigation-link, 
 a.mobile-navigation-link):hover {
-    color: color-mix(in hsl, var(--primary-color) 70%, var(--secondary-color) 30%)
+    /* color: color-mix(in hsl, var(--primary-color) 70%, var(--secondary-color) 30%) */
+    color: var(--link-hover-color);
 }
 
 /* Top Header Styling */
@@ -485,6 +490,57 @@ li.mobile-navigation-link-item:not(:last-of-type) {
 
     .info-header-right > div:nth-of-type(-n + 2) {
         border-right: 1px solid rgba(200, 200, 200, 0.1);
+    }
+}
+
+/* Bottom Footer Styling */
+
+footer.main-footer {
+    background: var(--primary-color);
+}
+
+footer.main-footer a {
+    color: white;
+}
+
+.bottom-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid white;
+}
+
+ul.footer-policy-lnks {
+    list-style: none;
+    display: flex;
+}
+
+li.footer-policy-link-item {
+    padding: 0 0.5rem;
+    line-height: 1;
+}
+
+li.footer-policy-link-item:not(:last-of-type) {
+    border-right: 1px solid white
+}
+
+li a.footer-policy-link {
+    font-size: 0.5rem;
+    text-decoration: none;
+}
+
+.footer-copyright-wrapper a {
+    font-size: 0.75rem;
+    text-decoration: none;
+}
+
+/* Bottom Footer Width Styling */
+
+@media(max-width: 500px) {
+    .bottom-footer {
+        flex-direction: column;
+        gap: 0.25rem;
     }
 }
 

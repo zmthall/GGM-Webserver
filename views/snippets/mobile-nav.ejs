@@ -1,0 +1,29 @@
+<nav class="mobile-navigation" data-navigation="mobile">
+    <div class="mobile-nav-logo-wrapper">
+        <div class="mobile-nav-home">
+            <a href="<%- company.home_href %>" class="home-logo-link">
+                <img src="<%- company.logo_src %>" alt="<% company.logo_alt %>">
+            </a>
+        </div>
+    </div>
+    <div class="home-navigation-btn-wrapper">
+        <button class="mobile-nav-btn" type="button" data-nav-btn="mobile">
+            <div class="mobile-nav-btn-logo-wrapper">
+                <div class="mobile-nav-btn-logo-lines" data-btn-lines>
+                    <div class="mobile-nav-btn-logo-line line1"></div>
+                    <div class="mobile-nav-btn-logo-line line2"></div>
+                    <div class="mobile-nav-btn-logo-line line3"></div>
+                </div>
+            </div>
+        </button>
+    </div>
+    <div class="mobile-navigation-links-wrapper hidden" data-mobile-nav-drawer>
+        <ul class="mobile-navigation-link-items">
+            <% for(let link in nav) { %>
+                <li class="mobile-navigation-link-item">
+                    <a class="mobile-navigation-link" href="<%- nav[link].href %>"><%- nav[link].title %></a>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+</nav>

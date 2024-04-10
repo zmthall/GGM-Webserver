@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> | <%= config.company.name %></title>
+    <link rel="icon" type="image/x-icon" href="<%- config.company.favicon %>">
+    <%- include('../snippets/head') %>
+</head>
+<body>
+    <%- include('../snippets/body') %>
+    <%- include('../snippets/header', { header: config.header, company: config.company }) %>
+    <%- body %> 
+    <%- include('../snippets/footer', { config: config }) %>
+</body>
+</html>

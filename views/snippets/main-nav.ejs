@@ -1,0 +1,9 @@
+<nav class="main-navigation" data-navigation="main">
+    <ul class="main-navigation-link-items">
+        <% for(let link in nav) { %>
+            <li class="main-navigation-link-item">
+                <a class="main-navigation-link" href="<%- nav[link].href %>"><%- nav[link].title %></a>
+            </li>
+        <% } %>
+    </ul>
+</nav>

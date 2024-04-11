@@ -10,9 +10,6 @@
     --link-hover-color: #ADA985;
     --light-grey: rgba(225, 225, 225);
     --text-color: #DDD;
-    --contrast-text: var(--primary-color);
-    --link-color-dark: var(--primary-color);
-    --link-color-light: var(--secondary-color);
     --inactive-cta: #969696;
     --cta-text-color: #FFF;
 
@@ -64,9 +61,52 @@ a {
 
 a:not(.logo-wrapper a, 
 a.main-navigation-link, 
-a.mobile-navigation-link):hover {
+a.mobile-navigation-link,
+a.cta-button):hover {
     /* color: color-mix(in hsl, var(--primary-color) 70%, var(--secondary-color) 30%) */
     color: var(--link-hover-color);
+}
+
+/* Universal Page Styling */
+
+.cta-button {
+    display: block;
+    border: 1px solid var(--secondary-color);
+    padding: 1rem;
+    width: 150px;
+    text-decoration: none;
+    text-align: center;
+    background: var(--primary-color);
+}
+
+.cta-button:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+span.read-more-plus {
+    color: var(--secondary-color);
+    font-weight: 900;
+}
+
+.cta-button:hover span.read-more-plus {
+    color: var(--primary-color);
+}
+
+button.more-info-btn {
+    position: absolute;
+    right: 0;
+    background: var(--secondary-color);
+    border: none;
+    padding: 0.25rem;
+    color: var(--primary-color);
+    transform: translate(0, 7px);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button.more-info-btn:hover {
+    background: var(--link-hover-color);
 }
 
 /* Top Header Styling */
@@ -546,6 +586,66 @@ li a.footer-policy-link {
         flex-direction: column;
         gap: 0.25rem;
     }
+}
+
+/* Info Footer Styling */
+
+.information-footer {
+    display: flex;
+    color: white;
+    padding: 4rem 1rem;
+    gap: 1rem;
+}
+
+.footer-content-wrapper {
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-top-content {
+    position: relative;
+}
+
+.company-information-wrapper img {
+    width: 100%;
+}
+
+.follow-us-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.follow-us-wrapper a {
+    width: 35px;
+}
+
+h2.company-information-section-title {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+h3.company-information-title {
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+p.company-information-content {
+    font-size: 1rem;
+    font-weight: 300;
+    --max-lines: 2;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: var(--max-lines);
+}
+
+.footer-content-wrapper a {
+    font-size: 1rem;
 }
 
 /* Universal Width Styling */

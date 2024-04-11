@@ -1,28 +1,69 @@
 <div class="information-footer">
-    <div class="company-information-wrapper">
-        <a href="<%- company.home_href %>">
-            <img src="<%- company.logo_src %>"  alt="<%- company.logo_alt %>">
-        </a>
-        <h2><%- company.slogan %></h2>
-        <p class="mission-statement">
-            <span class="our-mission-title">At Golden Gate Manor, Our Mission Is Simple:</span>
-            <span class="our-mission-statement"><%- company.mission_statement %></span>
+    <div class="company-information-wrapper footer-content-wrapper">
+        <h2 class="company-information-section-title"><%- company.slogan %></h2>
+        <h3 class="company-information-title">At Golden Gate Manor, Our Mission Is Simple:</h3>
+        <p class="company-information-content">
+            <%- company.mission_statement %>
         </p>
-        <p class="follow-us-wrapper">
-            Follow Us
-            <!-- <img src="" alt=""> -->
-        </p>
+        <div class="follow-us-wrapper">
+            <p>Follow Us</p>
+            <a href="<%- company.social.facebook.href %>">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-facebook-white"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                </svg>
+            </a>
+        </div>
     </div>
-    <div class="non-medical-information-wrapper">
-
+    <div class="non-medical-information-wrapper footer-content-wrapper">
+        <div class="footer-top-content">
+            <h2 class="company-information-section-title">NON-MEDICAL TRANSPORTATION</h2>
+            <h3 class="company-information-title">How Do I Schedule a Ride?</h3>
+            <p class="company-information-content">
+                Contact our dispatch services at <a href="tel:<%- company.phone_number_dispatch %>"><%- company.phone_number_dispatch_format %></a>. 
+                We are happy to answer and questions regarding our city cab services and our non-medical transportation services.
+            </p>
+            <button type="button" class="more-info-btn">more</button>
+        </div>
+        <a href="<%- links.non_medical.href %>" type="button" class="cta-button read-more"><span class="read-more-plus">+</span> Read More</a>
     </div>
-    <div class="nemt-information-wrapper">
-
+    <div class="nemt-information-wrapper footer-content-wrapper">
+        <div class="footer-top-content">
+            <h2 class="company-information-section-title">NEMT TRANSPORTATION</h2>
+            <h3 class="company-information-title">How Do I Schedule a Ride?</h3>
+            <p class="company-information-content">
+                Once approved, please call us at least 48 hours before a scheduled appointment. Reservation hours are from 8:00AM-4:00PM
+                Monday – Friday. If you need to cancel a ride please call us at least two hours before your scheduled pick-up. During
+                nonbusiness hours call our dispatch at <a href="tel:<%- company.phone_number_dispatch %>"><%- company.phone_number_dispatch_format %></a> for appointment changes.
+            </p>
+            <a href="<%- links.contact_us.sublinks.schedule_a_ride.href %>">Schedule A Ride</a>
+            <button type="button" class="more-info-btn">more</button>
+        </div>
+        <a href="<%- links.nemt.href %>" type="button" class="cta-button read-more"><span class="read-more-plus">+</span> Read More</a>
     </div>
-    <div class="assisted-living-information-wrapper">
-
+    <div class="assisted-living-information-wrapper footer-content-wrapper">
+        <div class="footer-top-content">
+            <h2 class="company-information-section-title">ASSISTED LIVING</h2>
+            <h3 class="company-information-title">24/7 Care by Trained Staff</h3>
+            <p class="company-information-content">
+                Trained staff members are present 24/7 to provide care, assistance with medication, daily living skills, meals,
+                transportation and treatment management.
+            </p>
+            <button type="button" class="more-info-btn">more</button>
+        </div>
+        <a href="<%- links.assisted_living.href %>" type="button" class="cta-button read-more"><span class="read-more-plus">+</span> Read More</a>
     </div>
-    <div class="medical-supplies-information-wrapper">
-
+    <div class="medical-supplies-information-wrapper footer-content-wrapper">
+        <div class="footer-top-content">
+            <h2 class="company-information-section-title">GOLDEN GATE MEDICAL SUPPLIES</h2>
+            <h3 class="company-information-title">Medical Equipment and Supplies</h3>
+            <p class="company-information-content">
+                At Golden Gate Medical Supply, our goal is to increase patient accessibility to medical supplies by providing quality
+                products at the most affordable price to achieve independence.
+            </p>
+            <button type="button" class="more-info-btn">more</button>
+        </div>
+        <a href="<%- links.medical_supply.href %>" type="button" class="cta-button read-more"><span class="read-more-plus">+</span> Read More</a>
     </div>
 </div>

@@ -21,9 +21,8 @@
         "mission_statement": "To improve The Quality of Life Each and Every Day.",
         "social": {
             "facebook": {
-                "logo_src1": "/images/facebook-logo.svg",
-                "logo_src2": "/images/facebook-logo.svg",
-                "url": "https://www.facebook.com/GoldenGateManor/"
+                "logo_src": "/images/facebook.svg",
+                "href": "https://www.facebook.com/GoldenGateManor/"
             }
         }
     },
@@ -51,7 +50,7 @@
         "about_us": {
             "title": "ABOUT US",
             "href": "/about-us",
-            "links": {
+            "sublinks": {
                 "about_us": {
                     "title": "ABOUT US",
                     "href": "/about-us"
@@ -73,7 +72,7 @@
         "contact_us": {
             "title": "CONTACT US",
             "href": "/contact-us",
-            "links": {
+            "sublinks": {
                 "contact_us": {
                     "title": "CONTACT US",
                     "href": "/contact-us"

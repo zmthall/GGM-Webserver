@@ -1,9 +1,12 @@
-class headerButtonHandler {
+class ButtonHandler {
     constructor() {
         this.buttons = {
             mobile_nav: {
                 button: document.querySelector('[data-nav-btn]'),
                 isX: false
+            },
+            footer: {
+                moreInfo: document.querySelectorAll('[data-info-btn]')
             }
         }
 
@@ -31,7 +34,19 @@ class headerButtonHandler {
                 docoument.body.classList.toggle("no-scroll")
             }, 1);
         })
+
+        this.buttons.footer.moreInfo.forEach(button => {
+            button.addEventListener("click", (event) => {
+                let icons = Array.from(button.children)
+                icons.forEach(icon => {
+                    icon.classList.toggle("hidden")
+                })
+
+                let prevEl = event.target.previousElementSibling
+                prevEl.classList.toggle("collapsed")
+            })
+        })
     }   
 }
 
-const headerBtnHandler = new headerButtonHandler()
+const headerBtnHandler = new ButtonHandler()

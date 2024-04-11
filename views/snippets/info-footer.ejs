@@ -20,50 +20,94 @@
         <div class="footer-top-content">
             <h2 class="company-information-section-title">NON-MEDICAL TRANSPORTATION</h2>
             <h3 class="company-information-title">How Do I Schedule a Ride?</h3>
-            <p class="company-information-content">
+            <p class="company-information-content collapsed">
                 Contact our dispatch services at <a href="tel:<%- company.phone_number_dispatch %>"><%- company.phone_number_dispatch_format %></a>. 
                 We are happy to answer and questions regarding our city cab services and our non-medical transportation services.
             </p>
-            <button type="button" class="more-info-btn">more</button>
+            <button type="button" class="more-info-btn" data-info-btn>
+                <div class="more-info-button-icon-wrapper down">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg>
+                </div>
+                <div class="more-info-button-icon-wrapper up hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                        <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                      </svg>
+                </div>
+            </button>
         </div>
-        <a href="<%- links.non_medical.href %>" type="button" class="cta-button read-more"><span class="read-more-plus">+</span> Read More</a>
+        <a href="<%- links.non_medical.href %>" type="button" class="cta-button read-more"><span class="read-more-plus">+</span> Visit Page</a>
     </div>
     <div class="nemt-information-wrapper footer-content-wrapper">
         <div class="footer-top-content">
             <h2 class="company-information-section-title">NEMT TRANSPORTATION</h2>
             <h3 class="company-information-title">How Do I Schedule a Ride?</h3>
-            <p class="company-information-content">
+            <p class="company-information-content collapsed">
                 Once approved, please call us at least 48 hours before a scheduled appointment. Reservation hours are from 8:00AM-4:00PM
                 Monday – Friday. If you need to cancel a ride please call us at least two hours before your scheduled pick-up. During
                 nonbusiness hours call our dispatch at <a href="tel:<%- company.phone_number_dispatch %>"><%- company.phone_number_dispatch_format %></a> for appointment changes.
+                <a href="<%- links.contact_us.sublinks.schedule_a_ride.href %>"> Schedule a ride online</a>.
             </p>
-            <a href="<%- links.contact_us.sublinks.schedule_a_ride.href %>">Schedule A Ride</a>
-            <button type="button" class="more-info-btn">more</button>
+            <button type="button" class="more-info-btn" data-info-btn>
+                <div class="more-info-button-icon-wrapper down">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg>
+                </div>
+                <div class="more-info-button-icon-wrapper up hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                        <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                      </svg>
+                </div>
+            </button>
         </div>
-        <a href="<%- links.nemt.href %>" type="button" class="cta-button read-more"><span class="read-more-plus">+</span> Read More</a>
+        <a href="<%- links.nemt.href %>" type="button" class="cta-button read-more"><span class="read-more-plus">+</span> Visit Page</a>
     </div>
     <div class="assisted-living-information-wrapper footer-content-wrapper">
         <div class="footer-top-content">
             <h2 class="company-information-section-title">ASSISTED LIVING</h2>
             <h3 class="company-information-title">24/7 Care by Trained Staff</h3>
-            <p class="company-information-content">
+            <p class="company-information-content collapsed">
                 Trained staff members are present 24/7 to provide care, assistance with medication, daily living skills, meals,
                 transportation and treatment management.
             </p>
-            <button type="button" class="more-info-btn">more</button>
+            <button type="button" class="more-info-btn" data-info-btn>
+                <div class="more-info-button-icon-wrapper down">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg>
+                </div>
+                <div class="more-info-button-icon-wrapper up hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                        <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                      </svg>
+                </div>
+            </button>
         </div>
-        <a href="<%- links.assisted_living.href %>" type="button" class="cta-button read-more"><span class="read-more-plus">+</span> Read More</a>
+        <a href="<%- links.assisted_living.href %>" type="button" class="cta-button read-more"><span class="read-more-plus">+</span> Visit Page</a>
     </div>
     <div class="medical-supplies-information-wrapper footer-content-wrapper">
         <div class="footer-top-content">
             <h2 class="company-information-section-title">GOLDEN GATE MEDICAL SUPPLIES</h2>
             <h3 class="company-information-title">Medical Equipment and Supplies</h3>
-            <p class="company-information-content">
-                At Golden Gate Medical Supply, our goal is to increase patient accessibility to medical supplies by providing quality
+            <p class="company-information-content collapsed">
+                Our goal at Golden Gate Medical Supply is to increase patient accessibility to medical supplies by providing quality
                 products at the most affordable price to achieve independence.
             </p>
-            <button type="button" class="more-info-btn">more</button>
+            <button type="button" class="more-info-btn" data-info-btn>
+                <div class="more-info-button-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg>
+                </div>
+                <div class="more-info-button-icon-wrapper hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                        <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                      </svg>
+                </div>
+            </button>
         </div>
-        <a href="<%- links.medical_supply.href %>" type="button" class="cta-button read-more"><span class="read-more-plus">+</span> Read More</a>
+        <a href="<%- links.medical_supply.href %>" type="button" class="cta-button read-more"><span class="read-more-plus">+</span> Visit Page</a>
     </div>
 </div>

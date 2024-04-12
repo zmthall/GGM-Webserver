@@ -1,4 +1,4 @@
-class ButtonHandler {
+class PageHandler {
     constructor() {
         this.buttons = {
             mobile_nav: {
@@ -10,7 +10,22 @@ class ButtonHandler {
             }
         }
 
+        this.footer = {
+            width: undefined,
+            elements: {
+                width: undefined,
+                infoFooter: document.querySelector('[data-info-footer]'),
+            }
+        }
+
+        this.screen = {
+            width: window.screen.width
+        }
+
+        this.r = document.querySelector(':root')
+
         this.createEventHandlers()
+        this.setFooterContentWidth()
     }
 
     createEventHandlers() {
@@ -46,7 +61,43 @@ class ButtonHandler {
                 prevEl.classList.toggle("collapsed")
             })
         })
-    }   
+    }
+    getVariableValue(variableName) {
+        var rs = getComputedStyle(this.r)
+        if(typeof variableName === "string") return rs.getPropertyValue(variableName)
+        else return -1
+    }
+
+    setVariableValue(variableName, value) {
+        if(typeof variableName === 'string' && typeof value === 'string') 
+            this.r.style.setProperty(variableName, value)
+        else return -1
+    }
+
+    setFooterContentWidth() {
+        window.addEventListener("resize", () => {
+            this.footer.width = this.footer.elements.infoFooter.offsetWidth
+            this.screen.width = window.screen.width
+
+            if(this.screen.width >= 1000 && this.screen.width < 1800) {
+                this.footer.elements.width = this.footer.width/5 - 8
+            } else {
+                this.footer.elements.width = 310
+            }
+            this.setVariableValue('--info-footer-content-width', `${this.footer.elements.width}px`)
+        })
+
+    }
 }
 
-const headerBtnHandler = new ButtonHandler()
+window.addEventListener("load", () => {
+    const pageHandler = new PageHandler()
+    pageHandler.footer.width = pageHandler.footer.elements.infoFooter.offsetWidth
+    console.log(pageHandler.footer.width);
+    if(pageHandler.screen.width >= 1000 && this.screen.width < 1800) {
+        pageHandler.footer.elements.width = pageHandler.footer.width/5 - 8
+    } else {
+        pageHandler.footer.elements.width = 310
+    }
+    pageHandler.setVariableValue('--info-footer-content-width', `${pageHandler.footer.elements.width}px`)
+})

@@ -1,6 +1,7 @@
 {
     "company": {
         "name": "Golden Gate Manor, Inc.",
+        "short_name": "Golden Gate Manor",
         "phone_number_nemt": "719-544-3231",
         "phone_number_dispatch": "719-543-2525",
         "phone_number_assisted_living": "719-696-8032",
@@ -28,57 +29,57 @@
     },
     "links": {
         "home": {
-            "title": "HOME",
+            "title": "Home",
             "href": "/"
         },
         "assisted_living": {
-            "title": "ASSISTED LIVING",
+            "title": "Assisted Living",
             "href": "/assisted-living"
         },
         "non_medical": {
-            "title": "NON-MEDICAL TRANSPORTATION",
+            "title": "Non-Medical Transportation",
             "href": "/non-medical-transportation"
         },
         "nemt": {
-            "title": "NEMT TRANSPORTATION",
+            "title": "NEMT Transportation",
             "href": "/nemt"
         },
         "medical_supply": {
-            "title": "MEDICAL SUPPLIES",
+            "title": "Medical Supplies",
             "href": "https://www.goldengatemedicalsupply.com"
         },
         "about_us": {
-            "title": "ABOUT US",
+            "title": "About Us",
             "href": "/about-us",
             "sublinks": {
                 "about_us": {
-                    "title": "ABOUT US",
+                    "title": "About Us",
                     "href": "/about-us"
                 },
                 "blog": {
-                    "title": "BLOG",
+                    "title": "Blog",
                     "href": "/blogs"
                 },
                 "location": {
-                    "title": "LOCATION",
+                    "title": "Location",
                     "href": "/about-us/location"
                 },
                 "community": {
-                    "title": "COMMUNITY",
+                    "title": "Community",
                     "href": "/about-us/community"
                 }
             }
         },
         "contact_us": {
-            "title": "CONTACT US",
+            "title": "Contact Us",
             "href": "/contact-us",
             "sublinks": {
                 "contact_us": {
-                    "title": "CONTACT US",
+                    "title": "Contact Us",
                     "href": "/contact-us"
                 },
                 "schedule_a_ride": {
-                    "title": "SCHEDULE A RIDE",
+                    "title": "Schedule A Ride",
                     "href": "/contact-us/schedule-a-ride"
                 }
             }
@@ -86,15 +87,15 @@
     },
     "footer_links": {
         "privacy_policy": {
-            "title": "PRIVACY POLICY",
+            "title": "Privacy Policy",
             "href": "/privacy-policy"
         },
         "accessibility": {
-            "title": "ACCESSIBILITY",
+            "title": "Accessibility",
             "href": "/accessibility"
         },
         "site_map": {
-            "title": "SITE MAP",
+            "title": "Site Map",
             "href": "/site-map"
         }
     }

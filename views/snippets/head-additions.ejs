@@ -1,2 +1,8 @@
 <link rel="stylesheet" href="/stylesheets/style.css">
 <script src="/scripts/script.js" defer></script>
+
+<% if (page.page_type === 'home-page') { %>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+<% } else if(page.page_type ==='page') { %>
+    <link rel="stylesheet" href="/stylesheets/page.css">
+<% } %>

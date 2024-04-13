@@ -19,7 +19,7 @@ class PageHandler {
         }
 
         this.screen = {
-            width: window.screen.width
+            width: window.innerWidth
         }
 
         this.r = document.querySelector(':root')
@@ -77,8 +77,7 @@ class PageHandler {
     setFooterContentWidth() {
         window.addEventListener("resize", () => {
             this.footer.width = this.footer.elements.infoFooter.offsetWidth
-            this.screen.width = window.screen.width
-
+            this.screen.width = window.innerWidth
             if(this.screen.width >= 1000 && this.screen.width < 1800) {
                 this.footer.elements.width = this.footer.width/5 - 8
             } else {
@@ -93,7 +92,6 @@ class PageHandler {
 window.addEventListener("load", () => {
     const pageHandler = new PageHandler()
     pageHandler.footer.width = pageHandler.footer.elements.infoFooter.offsetWidth
-    console.log(pageHandler.footer.width);
     if(pageHandler.screen.width >= 1000 && this.screen.width < 1800) {
         pageHandler.footer.elements.width = pageHandler.footer.width/5 - 8
     } else {

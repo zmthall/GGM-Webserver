@@ -25,7 +25,8 @@ router.get('/', (request, response) => {
         helper: helper,
         page: {
             title: 'Medicaid Transportation',
-            href: "/"
+            href: "/",
+            page_type: "home-page"
         },
         layout: './layouts/main-layout'
     })
@@ -37,7 +38,8 @@ router.get('/assisted-living', (request, response) => {
         helper: helper,
         page: {
             title: 'Assisted Living',
-            href: '/assisted-living'
+            href: '/assisted-living',
+            page_type: "page"
         },
         layout: './layouts/main-layout'
     })
@@ -49,7 +51,8 @@ router.get('/non-medical-transportation', (request, response) => {
         helper: helper,
         page: {
             title: 'Non-Medical Transportation',
-            href: '/non-medical-transportation'
+            href: '/non-medical-transportation',
+            page_type: "page"
         },
         layout: './layouts/main-layout'
     })
@@ -61,7 +64,8 @@ router.get('/nemt', (request, response) => {
         helper: helper,
         page: {
             title: 'Non-Emergency Medical Transportation',
-            href: '/nemt'
+            href: '/nemt',
+            page_type: "page"
         },
         layout: './layouts/main-layout'
     })
@@ -73,7 +77,8 @@ router.get('/about-us', (request, response) => {
         helper: helper,
         page: {
             title: 'About us',
-            href: '/about-us'
+            href: '/about-us',
+            page_type: "page"
         },
         layout: './layouts/main-layout'
     })
@@ -85,7 +90,8 @@ router.get('/about-us/location', (request, response) => {
         helper: helper,
         page: {
             title: 'Location',
-            href: '/about-us/location'
+            href: '/about-us/location',
+            page_type: "page"
         },
         layout: './layouts/main-layout'
     })
@@ -104,7 +110,8 @@ router.get('/about-us/community', (request, response) => {
         helper: helper,
         page: {
             title: 'Community',
-            href: '/about-us/community'
+            href: '/about-us/community',
+            page_type: "page"
         },
         layout: './layouts/main-layout'
     })
@@ -116,7 +123,8 @@ router.get('/contact-us', (request, response) => {
         helper: helper,
         page: {
             title: 'Contact Us',
-            href: '/contact-us'
+            href: '/contact-us',
+            page_type: "page"
         },
         layout: './layouts/main-layout'
     })
@@ -128,7 +136,8 @@ router.get('/contact-us/schedule-a-ride', (request, response) => {
         helper: helper,
         page: {
             title: 'Schedule a Ride',
-            href: '/contact-us'
+            href: '/contact-us',
+            page_type: "page"
         },
         layout: './layouts/main-layout'
     })
@@ -140,7 +149,8 @@ router.get('/privacy-policy', (request, response) => {
         helper: helper,
         page: {
             title: 'Privacy Policy',
-            href: '/privacy-policy'
+            href: '/privacy-policy',
+            page_type: "page"
         },
         layout: './layouts/main-layout'
     })
@@ -152,7 +162,8 @@ router.get('/accessibility', (request, response) => {
         helper: helper,
         page: {
             title: 'Accessibility',
-            href: '/accessibility'
+            href: '/accessibility',
+            page_type: "page"
         },
         layout: './layouts/main-layout'
     })
@@ -164,7 +175,8 @@ router.get('/site-map', (request, response) => {
         helper: helper,
         page: {
             title: 'Site Map',
-            href: '/site-map'
+            href: '/site-map',
+            page_type: "page"
         },
         layout: './layouts/main-layout'
     })
@@ -176,7 +188,8 @@ router.get('*', (request, response) => {
     helper: helper,
     page: {
         title: 'Page not Found: 404',
-        href: 'ERROR'
+        href: 'ERROR',
+        page_type: "error-page"
     },
     layout: './layouts/main-layout'
   })

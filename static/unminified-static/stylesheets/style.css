@@ -46,9 +46,9 @@ body {
     overflow-x: hidden;
 }
 
-.page-body {
+/* .page-body {
     height: 150vh;
-}
+} */
 
 h1, h2, h3, h4, h5 {
     font-family: var(--font-family-headings);
@@ -72,6 +72,7 @@ a.cta-button):hover {
 /* Universal Page Styling */
 
 .cta-button {
+    color: white;
     display: block;
     border: 1px solid var(--secondary-color);
     padding: 1rem;
@@ -79,6 +80,7 @@ a.cta-button):hover {
     text-decoration: none;
     text-align: center;
     background: var(--primary-color);
+    font-size: 1rem;
 }
 
 .cta-button:hover {
@@ -230,6 +232,7 @@ a.mobile-navigation-link {
     padding: 0 calc(7.2vw - 66.08px);
     text-align: center;
     white-space: nowrap;
+    text-transform: uppercase;
 }
 
 a.main-navigation-link:hover,
@@ -563,6 +566,7 @@ li a.footer-policy-link {
     font-size: 0.5rem;
     text-decoration: none;
     display: block;
+    text-transform: uppercase;
 }
 
 .footer-copyright-wrapper a {

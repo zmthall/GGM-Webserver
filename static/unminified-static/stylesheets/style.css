@@ -18,6 +18,8 @@
     --info-header-max-width: 1200px;
     --info-footer-min-height: 350px;
     --info-footer-content-width: 310px;
+    --main-nav-height: 34px;
+    --mobile-nav-height: 50px;
 
     /* Font Family */
     --font-family-headings: "Noto Serif", serif;
@@ -64,7 +66,8 @@ a {
 a:not(.logo-wrapper a, 
 a.main-navigation-link, 
 a.mobile-navigation-link,
-a.cta-button):hover {
+a.cta-button,
+a.no-hover-page-link):hover {
     /* color: color-mix(in hsl, var(--primary-color) 70%, var(--secondary-color) 30%) */
     color: var(--link-hover-color);
 }
@@ -81,12 +84,12 @@ a.cta-button):hover {
     text-align: center;
     background: var(--primary-color);
     font-size: 1rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .cta-button:hover {
     background: var(--secondary-color);
     color: var(--primary-color);
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 span.read-more-plus {

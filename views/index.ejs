@@ -1,3 +1,6 @@
 <header class="hero-header">
-    <%- include('./snippets/hero', { company: config.company, links: config.links }) %>
+    <%- include('./snippets/index/hero', { company: config.company, links: config.links }) %>
 </header>
+<main class="home-page-main-content">
+    <%- include('./snippets/index/our-services', { links: config.links}) %>
+</main>

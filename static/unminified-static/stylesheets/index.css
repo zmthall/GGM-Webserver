@@ -1,3 +1,13 @@
+/* Main Page Styling */
+
+main.home-page-main-content section:nth-child(odd) {
+    background: rgb(240, 240, 240);
+}
+
+main p.section-text {
+    color: rgba(100, 100, 100);
+}
+
 /* Hero Section Styling */
 
 section.hero-section {
@@ -194,21 +204,16 @@ p.cta-card-content {
 }
 
 section.home-page-our-services {
-    height: calc(100vh - var(--main-nav-height));
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 4rem 0;
 }
 
 /* Our Services Section Width Styling */
 
 @media(max-width: 1000px) {
-    section.home-page-our-services {
-        padding: 4rem 0;
-        height: unset;
-    }
-
     .cta-cards-wrapper {
         flex-wrap: wrap;
     }
@@ -230,5 +235,101 @@ section.home-page-our-services {
 
     .cta-card:nth-last-of-type(-n+3) {
         margin-top: 2rem;
+    }
+}
+
+/* Assisted Living CTA Styling */
+
+.assisted-living-section img {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+    align-self: center;
+}
+
+img.assisted-living-sign {
+    display: none;
+}
+
+.assisted-living-cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 30px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+section.assisted-living-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+p.assisted-living-content {
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 0 1.5rem;
+}
+
+h2.assisted-living-title {
+    width: 100%;
+    text-align: center;
+}
+
+a.cta-button.assisted-living {
+    align-self: center;
+    margin: 2rem 0;
+}
+
+p.assisted-living-content:first-of-type {
+    margin: 1rem 0;
+}
+
+span.title-top {
+    display: block;
+    color: rgb(150, 150, 150);
+    font-family: var(--font-family-main);
+}
+
+span.title-bottom {
+    color: var(--primary-color);
+    font-weight: 900;
+}
+
+/* Assisted Living CTA Width Styling */
+
+@media(max-width: 768px) {
+    .assisted-living-cta-wrapper {
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    p.assisted-living-content {
+        padding: 0;
+    }
+
+    .assisted-living-section img {
+        border-radius: 1rem;
+        box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    img.assisted-living-sign {
+        display: block;
+        width: 50%;
+    }
+
+    img.assisted-living-house {
+        display: none;
+    }
+}
+
+@media(max-width: 500px) {
+    img.assisted-living-sign {
+        width: 100%;
     }
 }

@@ -5,19 +5,53 @@
             <div class="nemt-transportation-card">
                 <div class="card-front"></div>
                 <div class="card-back">
-                    <a href="tel:<%- company.phone_number_dispatch_toll %>"><%- company.phone_number_dispatch_format_toll %></a>
-                    
+                    <div class="card-back-left">
+                        <div class="nemt-transportation-card-logo-wrapper"></div>
+                    </div>
+                    <div class="card-back-right">
+                        <h3 class="nemt-transportation-card-title">
+                            <span class="title-top-card-title">Golden Gate Manor</span>
+                            <span class="title-bottom-card-title">NEMT</span>
+                        </h3>
+                        <div class="nemt-transportation-phone-wrapper">
+                            <div class="nemt-transportation-phone logo-wrapper">
+                                <%- include('../../svg/telephone') %>
+                            </div>
+                            <div class="nemt-transportation-phone-numbers">
+                                <a href="tel:<%- company.phone_number_dispatch_toll %>">Toll Free: <%- company.phone_number_dispatch_format_toll %></a>
+                                <a href="tel:<%- company.phone_number_dispatch %>">Phone: <%- company.phone_number_dispatch_format %></a>
+                            </div>
+                        </div>
+                        <div class="nemt-transportation-web-wrapper">
+                            <div class="nemt-transportation-web logo-wrapper">
+                                <%- include('../../svg/globe') %>
+                            </div>
+                            <div class="nemt-transportation-links nemt-card-content">
+                                <a href="<%- links.nemt.href %>"><%- links.nemt.title %></a>
+                                <a href="<%- links.contact_us.href %>"><%- links.contact_us.title %></a>
+                            </div>
+                        </div>
+                        <div class="nemt-transportation-location-wrapper">
+                            <div class="nemt-transportation-location logo-wrapper">
+                                <%- include('../../svg/location') %>
+                            </div>
+                            <div class="nemt-transportation-address nemt-card-content">
+                                <p class="nemt-transportation-card-adress-line-1"><%- company.address_transportation %></p>
+                                <p class="nemt-transportation-card-adress-line-2"><%- company.address_info %></p>
+                            </div>
+                        </div>
+                    </div>                    
                 </div>
             </div>
         </div>
         <div class="nemt-transportation-cta-right">
-            <h2 class="assisted-living-title">
-                <span class="title-top">Non-Emergency</span>
-                <span class="title-bottom">Medical Transportaion</span>
+            <h2 class="nemt-transportation-title">
+                <span class="title-top nemt-card">Golden Gate Manor</span>
+                <span class="title-bottom nemt-card">Transportation</span>
             </h2>
             <p class="nemt-transportation-content section-text">
                 Colorado Medicaid clients can get transportation to any eligible Medicaid covered medical appointment. With our 
-                fleet of over 40+ vehicles, Golden Gate Transportation is available when other methods of transportation may not be.
+                fleet of over 40+ vehicles, Golden Gate Manor Transportation is available when other methods of transportation may not be.
             </p>
             <p class="nemt-transportation-content section-text">
                 Clients are required to go to the closest provider that meets their Medicaid medical needs. 

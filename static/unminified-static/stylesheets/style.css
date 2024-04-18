@@ -48,9 +48,9 @@ body {
     overflow-x: hidden;
 }
 
-/* .page-body {
-    height: 150vh;
-} */
+main .section-text {
+    color: rgba(100, 100, 100);
+}
 
 h1, h2, h3, h4, h5 {
     font-family: var(--font-family-headings);

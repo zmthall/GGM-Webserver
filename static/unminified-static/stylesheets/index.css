@@ -4,10 +4,6 @@ main.home-page-main-content section:nth-child(odd) {
     background: rgb(240, 240, 240);
 }
 
-main p.section-text {
-    color: rgba(100, 100, 100);
-}
-
 /* Hero Section Styling */
 
 section.hero-section {
@@ -471,6 +467,10 @@ p.nemt-transportation-content.section-text {
     font-size: 1.25rem;
 }
 
+a.cta-button.nemt-transportation {
+    margin: 1rem 0;
+}
+
 /* NEMT Transportation Section Width Styling */
 
 @media(max-width: 1400px) {
@@ -521,4 +521,52 @@ p.nemt-transportation-content.section-text {
     .nemt-transportation-cta-right {
         width: 100%;
     }
+}
+
+/* Non-Medical Transportation Section */
+
+.non-medical-transportation-cta-wrapper {
+    display: flex;
+    padding: 4rem 0.5rem;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.non-medical-transportation-cta-left {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2.non-medical-transportation-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.non-medical-transportation-cta-right {
+    width: 600px;
+}
+
+.non-medical-transportation-cta-right img {
+    width: 100%;
+}
+
+.non-medical-transportation-cta-wrapper .section-text {
+    font-size: 1.25rem;
+}
+
+ul.non-medical-transportation-content-list {
+    list-style-image: url('/images/check-mark.svg');
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.non-medical-transportation-content-list li.section-text {
+    width: 50%;
+}
+
+a.cta-button.non-medical-transportation {
+    margin: 1rem 0;
 }

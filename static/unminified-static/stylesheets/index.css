@@ -335,3 +335,187 @@ span.title-bottom {
         width: 100%;
     }
 }
+
+/* NEMT Transportation Section */
+
+.nemt-transportation-card {
+    margin-left: 100px;
+    width: 300px;
+    height: 175px;
+    position: absolute;
+    box-shadow: 0 4px 10px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+    top: 0;
+    right: 0;
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card-front {
+    background: url('/images/golden-gate-manor-logo-clear-background.png') center/contain no-repeat;
+    background-color: white;
+    backface-visibility: hidden;
+    z-index: 1;
+}
+
+.card-back {
+    background: white;
+    transform: rotateY(180deg);
+    padding: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nemt-transportation-card:hover {
+    transform: rotateY(180deg);
+}
+
+.nemt-transportation-card-logo-wrapper {
+    width: 75px;
+    height: 75px;
+    background: url('/images/GGMT-Logo_800.png') center/contain no-repeat;
+}
+
+.nemt-transportation-card-title {
+    text-align: center
+}
+
+.nemt-card-content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nemt-card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.nemt-transportation-title {
+    display: none;
+}
+
+.card-back-left { 
+    padding-right: 0.5rem;
+}
+
+.card-back-right {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem;
+}
+
+.logo-wrapper {
+    font-size: 1.5rem;
+}
+
+span.title-top-card-title {
+    color: rgba(150, 150, 150);
+    display: block;
+    font-size: 1.25rem;
+}
+
+span.title-bottom-card-title {
+    color: var(--primary-color);
+    font-family: var(--font-family-headings);
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.nemt-transportation-card a,
+.nemt-transportation-card p {
+    font-size: 0.9rem;
+}
+
+.nemt-transportation-cta-wrapper {
+    display: flex;
+    gap: 10rem;
+}
+
+.nemt-transportation-cta-left {
+    width: 600px;
+    position: relative;
+}
+
+.nemt-transportation-cta-left img {
+    width: 600px;
+}
+
+.nemt-transportation-cta-right {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+section.nemt-transportation-section {
+    padding: 4rem 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+p.nemt-transportation-content.section-text {
+    font-size: 1.25rem;
+}
+
+/* NEMT Transportation Section Width Styling */
+
+@media(max-width: 1400px) {
+    .nemt-transportation-cta-wrapper {
+        gap: 1rem;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media(max-width: 1250px) {
+    .nemt-transportation-cta-right { width: 50%; }
+}
+
+@media(max-width: 1000px) {
+    .nemt-transportation-cta-right {
+        width: 600px;
+    }
+
+    .nemt-transportation-cta-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media(max-width: 650px) {
+    .nemt-transportation-title {
+        display: block;
+    }
+
+    .nemt-transportation-cta-left {
+        width: 80%;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nemt-transportation-card {
+        display: none;
+    }
+
+    .nemt-transportation-cta-left img,
+    .nemt-transportation-cta-right {
+        width: 100%;
+    }
+}

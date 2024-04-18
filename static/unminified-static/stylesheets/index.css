@@ -338,16 +338,19 @@ span.title-bottom {
 
 /* NEMT Transportation Section */
 
+.nemt-transportation-card-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 .nemt-transportation-card {
-    margin-left: 100px;
     width: 300px;
     height: 175px;
-    position: absolute;
+    position: relative;
     box-shadow: 0 4px 10px 3px rgba(0, 0, 0, 0.2);
     transition: transform 1s ease-in-out;
     transform-style: preserve-3d;
-    top: 0;
-    right: 0;
 }
 
 .card-front, .card-back {
@@ -374,7 +377,7 @@ span.title-bottom {
     align-items: center;
 }
 
-.nemt-transportation-card:hover {
+.nemt-transportation-card-wrapper:hover > .nemt-transportation-card {
     transform: rotateY(180deg);
 }
 

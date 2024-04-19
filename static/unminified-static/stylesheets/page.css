@@ -1,0 +1,97 @@
+/* Universal Page Styling */
+
+.page-info-topper {
+    padding: 0 1rem;
+}
+
+.page-title-wrapper {
+    margin-top: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.page-title-wrapper h1 {
+    color: rgb(var(--primary-color))
+}
+
+.breadcrumb-wrapper {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    background: rgb(var(--light-grey))
+}
+
+/* Assisted Living Page Styling */
+
+.assisted-living-top-page {
+    display: flex;
+    gap: 6rem;
+    justify-content: center;
+    padding: 1rem 1rem 4rem 1rem;
+}
+
+.assisted-living-page-container.left-side {
+    width: 600px;
+}
+
+.assisted-living-page-container.left-side h2 {
+    margin-bottom: 1rem;
+    text-align: center
+}
+.assisted-living-page-container.left-side p:first-of-type {
+    margin-bottom: 1rem;
+}
+
+.assisted-living-page-container.right-side {
+    display: flex;
+    align-items: center;
+    width: 600px;
+    justify-content: center;
+}
+
+.assisted-living-page-container.right-side img {
+    border-radius: 1rem;
+    width: 86%;
+    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+main.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Assisted Living Page Width Styling */
+
+@media(max-width: 1200px) {
+    .assisted-living-top-page {
+        justify-content: space-between;
+        gap: 1rem;
+    }
+}
+
+@media(max-width: 850px) {
+    .assisted-living-top-page {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .assisted-living-page-container.left-side {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .assisted-living-page-container.right-side {
+        width: 80%;
+    }
+}
+
+@media(max-width: 650px) {
+    .assisted-living-page-container.right-side {
+        width: 100%;
+    }
+
+    .assisted-living-page-container.right-side img {
+        width: 100%;
+    }
+}

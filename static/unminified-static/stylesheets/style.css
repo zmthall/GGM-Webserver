@@ -48,10 +48,6 @@ body {
     overflow-x: hidden;
 }
 
-main .section-text {
-    color: rgba(100, 100, 100);
-}
-
 h1, h2, h3, h4, h5 {
     font-family: var(--font-family-headings);
     font-weight: 700;
@@ -100,6 +96,22 @@ span.read-more-plus {
 
 .cta-button:hover span.read-more-plus {
     color: rgb(var(--primary-color));
+}
+
+span.title-top {
+    display: block;
+    color: rgb(150, 150, 150);
+    font-family: var(--font-family-main);
+}
+
+span.title-bottom {
+    color: rgb(var(--primary-color));
+    font-weight: 900;
+}
+
+main .section-text {
+    color: rgba(100, 100, 100);
+    font-size: 1.25rem;
 }
 
 /* Top Header Styling */

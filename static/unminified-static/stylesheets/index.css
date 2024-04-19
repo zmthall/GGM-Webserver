@@ -50,7 +50,7 @@ span.hero-title-welcome {
 span.hero-title-company-name {
     font-weight: 900;
     font-size: 3rem;
-    color: var(--secondary-color);
+    color: rgb(var(--secondary-color));
 }
 
 span.hero-title-slogan {
@@ -67,7 +67,7 @@ span.hero-title-line {
     width: 50%;
     height: 2px;
     margin: 0.5rem auto;
-    background: var(--secondary-color);
+    background: rgb(var(--secondary-color));
 }
 
 .cta-button.contact-us-page {
@@ -147,16 +147,16 @@ a.cta-card-link {
 }
 
 a.cta-card-link:hover .cta-icon-wrapper {
-    color: var(--primary-color);
+    color: rgb(var(--primary-color));
 }
 
 a.cta-card-link:hover span.cta-button.our-services {
-    background: var(--secondary-color);
-    color: var(--primary-color);
+    background: rgb(var(--secondary-color));
+    color: rgb(var(--primary-color));
 }
 
 a.cta-card-link:hover span.read-more-plus {
-    color: var(--primary-color);
+    color: rgb(var(--primary-color));
 }
 
 .cta-icon-wrapper {
@@ -177,7 +177,7 @@ span.cta-button.our-services {
 }
 
 span.bottom-title {
-    color: var(--primary-color);
+    color: rgb(var(--primary-color));
     font-family: var(--font-family-headings);
     font-size: 1.25rem;
     font-weight: 900;
@@ -291,7 +291,7 @@ span.title-top {
 }
 
 span.title-bottom {
-    color: var(--primary-color);
+    color: rgb(var(--primary-color));
     font-weight: 900;
 }
 
@@ -344,7 +344,7 @@ span.title-bottom {
     width: 300px;
     height: 175px;
     position: relative;
-    box-shadow: 0 4px 10px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px 3px rgba(var(--primary-color), 0.3);
     transition: transform 1s ease-in-out;
     transform-style: preserve-3d;
 }
@@ -423,7 +423,7 @@ span.title-top-card-title {
 }
 
 span.title-bottom-card-title {
-    color: var(--primary-color);
+    color: rgb(var(--primary-color));
     font-family: var(--font-family-headings);
     font-size: 1.25rem;
     font-weight: 900;
@@ -494,6 +494,8 @@ h2.non-medical-transportation-title {
 
 .non-medical-transportation-cta-right {
     width: 600px;
+    display: flex;
+    align-items: center;
 }
 
 .non-medical-transportation-cta-right img {
@@ -509,10 +511,12 @@ ul.non-medical-transportation-content-list {
     display: flex;
     gap: 1rem;
     padding: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .non-medical-transportation-content-list li.section-text {
-    width: 50%;
+    width: 250px;
 }
 
 a.cta-button.non-medical-transportation {
@@ -522,7 +526,8 @@ a.cta-button.non-medical-transportation {
 /* NEMT and Non-Medical Transportation Section Width Styling */
 
 @media(max-width: 1400px) {
-    .nemt-transportation-cta-wrapper {
+    .nemt-transportation-cta-wrapper,
+    .non-medical-transportation-cta-wrapper {
         gap: 1rem;
         justify-content: space-between;
         width: 100%;
@@ -530,18 +535,25 @@ a.cta-button.non-medical-transportation {
 }
 
 @media(max-width: 1250px) {
-    .nemt-transportation-cta-right { width: 50%; }
+    .nemt-transportation-cta-right, 
+    .non-medical-transportation-cta-left { width: 50%; }
 }
 
 @media(max-width: 1000px) {
-    .nemt-transportation-cta-right {
+    .nemt-transportation-cta-right,
+    .non-medical-transportation-cta-left {
         width: 600px;
     }
 
-    .nemt-transportation-cta-wrapper {
+    .nemt-transportation-cta-wrapper,
+    .non-medical-transportation-cta-wrapper {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .non-medical-transportation-cta-wrapper {
+        flex-direction: column-reverse;
     }
 
 }
@@ -551,8 +563,9 @@ a.cta-button.non-medical-transportation {
         display: block;
     }
 
-    .nemt-transportation-cta-left {
-        width: 80%;
+    .nemt-transportation-cta-left,
+    .non-medical-transportation-cta-right {
+        width: 100%;
         border-radius: 1rem;
         overflow: hidden;
         box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
@@ -566,7 +579,9 @@ a.cta-button.non-medical-transportation {
     }
 
     .nemt-transportation-cta-left img,
-    .nemt-transportation-cta-right {
+    .nemt-transportation-cta-right,
+    .non-medical-transportation-cta-right img,
+    .non-medical-transportation-cta-left {
         width: 100%;
     }
 }

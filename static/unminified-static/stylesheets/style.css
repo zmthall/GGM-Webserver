@@ -4,14 +4,14 @@
 
 :root {
     /* Colors */
-    --primary-color: #121b75;
-    --secondary-color: #EAE39E;
-    --background-color: #f9f7f5;
-    --link-hover-color: #ADA985;
-    --light-grey: rgba(225, 225, 225);
-    --text-color: #DDD;
-    --inactive-cta: #969696;
-    --cta-text-color: #FFF;
+    --primary-color: 18, 27, 117;
+    --secondary-color: 234, 227, 158;
+    --background-color: 249, 247, 245;
+    --link-hover-color: 173, 169, 133;
+    --light-grey: 225, 225, 225;
+    --text-color: 221, 221, 221;
+    --inactive-cta: 150, 150, 150;
+    --cta-text-color: 255, 255, 255;
 
     /* Dimensions */
     --info-header-height: 75px;
@@ -44,7 +44,7 @@ body {
     font-size: var(--base-font-size);
     font-family: var(--font-family-main);
     font-weight: 500;
-    background: var(--background-color);
+    background: rgb(var(--background-color));
     overflow-x: hidden;
 }
 
@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5 {
 }
 
 a {
-    color: var(--primary-color);
+    color: rgb(var(--primary-color));
     font-weight: 900;
     font-size: 1.3rem;
 }
@@ -69,7 +69,7 @@ a.mobile-navigation-link,
 a.cta-button,
 a.no-hover-page-link):hover {
     /* color: color-mix(in hsl, var(--primary-color) 70%, var(--secondary-color) 30%) */
-    color: var(--link-hover-color);
+    color: rgb(var(--link-hover-color));
 }
 
 /* Universal Page Styling */
@@ -77,29 +77,29 @@ a.no-hover-page-link):hover {
 .cta-button {
     color: white;
     display: block;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid rgb(var(--secondary-color));
     padding: 1rem;
     width: 150px;
     text-decoration: none;
     text-align: center;
-    background: var(--primary-color);
+    background: rgb(var(--primary-color));
     font-size: 1rem;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .cta-button:hover {
-    background: var(--secondary-color);
-    color: var(--primary-color);
+    background: rgb(var(--secondary-color));
+    color: rgb(var(--primary-color));
 }
 
 span.read-more-plus {
-    color: var(--secondary-color);
+    color: rgb(var(--secondary-color));
     font-weight: 900;
     transition: color 0.3s ease-in-out;
 }
 
 .cta-button:hover span.read-more-plus {
-    color: var(--primary-color);
+    color: rgb(var(--primary-color));
 }
 
 /* Top Header Styling */
@@ -146,11 +146,11 @@ span.read-more-plus {
 }
 
 .info-header-right > div:nth-of-type(1) {
-    border-left: 1px solid var(--light-grey);
+    border-left: 1px solid rgb(var(--light-grey));
 }
 
 .info-header-right > div:nth-of-type(-n + 2) {
-    border-right: 1px solid var(--light-grey);
+    border-right: 1px solid rgb(var(--light-grey));
 }
 
 .non-medical-transportation-info.anchor,
@@ -176,7 +176,7 @@ span.read-more-plus {
 
 .logo-wrapper {
     height: 75%;
-    color: var(--primary-color);
+    color: rgb(var(--primary-color));
 }
 
 .logo-wrapper.assisted-living {
@@ -240,14 +240,14 @@ a.mobile-navigation-link {
 
 a.main-navigation-link:hover,
 a.mobile-navigation-link:hover {
-    background: var(--secondary-color);
-    color: var(--primary-color);
+    background: rgb(var(--secondary-color));
+    color: rgb(var(--primary-color));
     transition: background-color 0.3s ease-in-out;
 }
 
 nav.main-navigation {
     height: 35px;
-    background: var(--primary-color);
+    background: rgb(var(--primary-color));
     position: sticky;
     top: -1px;
     box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.04);
@@ -283,7 +283,7 @@ li.main-navigation-link-item {
 /* Mobile Header Styling */
 
 nav.mobile-navigation {
-    background: var(--background-color);
+    background: rgb(var(--background-color));
     height: 50px;
     display: none;
     justify-content: space-between;
@@ -374,7 +374,7 @@ button.mobile-nav-btn .mobile-nav-btn-logo-line {
     position: fixed;
     right: 0;
     top: 0;
-    background: var(--background-color);
+    background: rgb(var(--background-color));
     transform: translate(100%);
     transition: transform 0.5s ease-in-out;
 }
@@ -438,12 +438,12 @@ ul.mobile-navigation-link-items {
     right: 0;
     top: 0;
     margin-top: 5rem;
-    border-top: 2px solid var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
+    border-top: 2px solid rgb(var(--primary-color));
+    border-bottom: 2px solid rgb(var(--primary-color));
 }
 
 li.mobile-navigation-link-item a {
-    color: var(--primary-color);
+    color: rgb(var(--primary-color));
     width: 100%;
     font-size: 1.1rem;
     font-weight: 900;
@@ -520,7 +520,7 @@ li.mobile-navigation-link-item:not(:last-of-type) {
     }
 
     .info-header {
-        background: var(--primary-color);
+        background: rgb(var(--primary-color));
         height: unset;
         padding: 1rem 0;
     }
@@ -533,7 +533,7 @@ li.mobile-navigation-link-item:not(:last-of-type) {
 /* Bottom Footer Styling */
 
 footer.main-footer {
-    background: var(--primary-color);
+    background: rgb(var(--primary-color));
 }
 
 footer.main-footer a {
@@ -642,7 +642,7 @@ li a.footer-policy-link {
 }
 
 h2.company-information-section-title {
-    color: var(--secondary-color);
+    color: rgb(var(--secondary-color));
     font-size: 0.9rem;
 }
 
@@ -672,7 +672,7 @@ p.company-information-content.collapsed::before {
     position: absolute;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to bottom, transparent, var(--primary-color));
+    background: linear-gradient(to bottom, transparent, rgb(var(--primary-color)));
     width: 100%;
     height: 1.5rem;
     pointer-events: none;
@@ -683,7 +683,7 @@ p.company-information-content.collapsed::before {
 }
 
 button.more-info-btn {
-    background: var(--secondary-color);
+    background: rgb(var(--secondary-color));
     border: 0;
     transform: translate(0, 7px);
     border-radius: 3px;
@@ -695,7 +695,7 @@ button.more-info-btn {
 }
 
 button.more-info-btn:hover {
-    background: var(--link-hover-color);
+    background: rgb(var(--link-hover-color));
 }
 
 .more-info-button-icon-wrapper {

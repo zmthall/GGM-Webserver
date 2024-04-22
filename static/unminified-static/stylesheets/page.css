@@ -22,11 +22,14 @@
 
 /* Assisted Living Page Styling */
 
+.assisted-living-top-page-section {
+    padding: 1rem 1rem 4rem 1rem;
+}
+
 .assisted-living-top-page {
     display: flex;
     gap: 6rem;
     justify-content: center;
-    padding: 1rem 1rem 4rem 1rem;
 }
 
 .assisted-living-page-container.left-side {
@@ -59,6 +62,134 @@ main.page-content {
     margin: 0 auto;
 }
 
+.assisted-living-page-amenities {
+    padding: 4rem 0 0 0;
+    color: white;
+}
+
+ul.assisted-living-amenities-card {
+    list-style: none;
+    color: black;
+}
+
+p.amenities-content-description {
+    color: white;
+}
+
+h2.assisted-living-amenities-title {
+    width: 100%;
+}
+
+.amenity-cards-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.assisted-living-page-amenities-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 4rem 3rem;
+    background: #365DBA;
+}
+
+.amenity-cards-wrapper {
+    margin-top: 1rem;
+}
+
+.assisted-living-amenities-card {
+    background: #E1E1E1;
+    text-align: center;
+    padding: 1rem;
+    width: 33%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.amenity-card-item:not(:last-of-type) {
+    margin-bottom: 0.5rem;
+}
+
+section.assisted-living-bottom-page-section {
+    padding: 0rem 1rem 4rem 1rem;
+}
+
+.free-consultation-cta {
+    display: flex;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.free-consultation-cta-left,
+.free-consultation-cta-right {
+    width: 50%;
+}
+
+.free-consultation-cta-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.free-consultation-cta-right {
+    padding: 1rem;
+}
+
+h2.free-consultation-title,
+h2.see-for-yourself-title {
+    color: rgb(var(--primary-color));
+    margin-bottom: 1rem;
+}
+
+a.cta-button.assisted-living-page {
+    width: 200px;
+    margin-top: 2rem;
+}
+
+.see-for-yourself-cta {
+    margin-top: 4rem;
+    border: 1px solid rgba(var(--primary-color));
+    border-radius: 1rem;
+    width: 100%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.see-for-yourself-cta > .cta-button.assisted-living-page {
+    font-size: 2rem
+}
+
+
+.see-for-yourself-card-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.see-for-yourself-card {
+    width: 300px;
+    padding: 2rem;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    margin: 2rem;
+    box-shadow: inset 0 1px 10px 2px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.see-for-yourself-card > h3 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
 /* Assisted Living Page Width Styling */
 
 @media(max-width: 1200px) {
@@ -85,6 +216,47 @@ main.page-content {
         width: 80%;
         justify-content: center;
     }
+
+    .free-consultation-cta {
+        flex-direction: column;
+    }
+
+    .free-consultation-cta-left,
+    .free-consultation-cta-right {
+        width: 100%;
+    }
+
+    .free-consultation-cta-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width: 800px) {
+    .see-for-yourself-card-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .see-for-yourself-card {
+        width: 80%;
+    }
+}
+
+@media(max-width: 768px) {
+    .amenity-cards-wrapper {
+        flex-direction: column;
+        width: 80%;
+        gap: 2rem;
+    }
+    .assisted-living-amenities-card {
+        width: 100%;
+    }
+
+    .assisted-living-page-amenities-wrapper {
+        align-items: center;
+    }
 }
 
 @media(max-width: 650px) {
@@ -94,5 +266,23 @@ main.page-content {
 
     .assisted-living-page-container.right-side img {
         width: 100%;
+    }
+}
+
+@media(max-width: 500px) {
+    .see-for-yourself-card {
+        width: 100%;
+    }
+
+    .see-for-yourself-cta {
+        padding: 1rem;
+    }
+
+    .amenity-cards-wrapper {
+        width: 100%;
+    }
+
+    .assisted-living-page-amenities-wrapper {
+        padding: 4rem 1rem;
     }
 }

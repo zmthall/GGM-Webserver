@@ -1,33 +1,48 @@
 <section class="houses-slide-carousel-section">
-    <button type="button" data-slider-btn="left"></button>
-    <div class="slide-carousel-view-area">
-        <div class="carousel-slides" data-direction>
-            <div class="carousel-slide-wrapper">
-                    <div class="carousel-slide-item" data-slide-item="1">
-
+    <h2 class="slider-carousel-title">
+        <span class="title-top">Golden Gate Manor</span>
+        <span class="title-bottom">Assisted Living Houses</span>
+    </h2>
+    <div class="houses-slide-carousel-wrapper">
+        <button type="button" data-slider-btn="left" class="slider-btn left-btn">
+            <div class="btn-logo-wrapper slide-carousel-arrow-left">
+                <%- include('../../svg/arrow-left') %>
+            </div>
+        </button>
+        <div class="slide-carousel-view-area" data-view-area>
+            <div class="carousel-slides" data-direction>
+                <div class="carousel-slide-wrapper">
+                    <div class="carousel-slide-item" data-slide-index="0">
+    
                     </div>
-            </div>
-            <div class="carousel-slide-wrapper">
-                <div class="carousel-slide-item" data-slide-item="2">
-
                 </div>
-            </div>
-            <div class="carousel-slide-wrapper">
-                <div class="carousel-slide-item" data-slide-item="3">
-
+                <div class="carousel-slide-wrapper">
+                    <div class="carousel-slide-item" data-slide-index="1">
+    
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-slide-wrapper">
-                <div class="carousel-slide-item" data-slide-item="4">
-
+                <div class="carousel-slide-wrapper">
+                    <div class="carousel-slide-item" data-slide-index="2">
+                        
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-slide-wrapper">
-                <div class="carousel-slide-item" data-slide-item="5">
-
+                <div class="carousel-slide-wrapper">
+                    <div class="carousel-slide-item" data-slide-index="3">
+    
+                    </div>
+                </div>
+                <div class="carousel-slide-wrapper">
+                    <div class="carousel-slide-item" data-slide-index="4">
+    
+                    </div>
                 </div>
             </div>
         </div>
+        <button type="button" data-slider-btn="right" class="slider-btn right-btn">
+            <div class="btn-logo-wrapper slide-carousel-arrow-right">
+                <%- include('../../svg/arrow-right') %>
+            </div>
+        </button>
     </div>
-    <button type="button" data-slider-btn="right"></button>
+    <script src="/scripts/slider-carousel.js"></script>
 </section>

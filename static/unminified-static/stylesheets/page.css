@@ -1,5 +1,13 @@
 /* Universal Page Styling */
 
+:root {
+    /* Assisted Living Page Variables */
+    --slide-item-x: 0;
+    --slide-items-shown: 3;
+    --slide-item-margin: 1rem;
+    --slide-view-area-height: 0;
+}
+
 .page-info-topper {
     padding: 0 1rem;
 }
@@ -57,7 +65,7 @@
     box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
-main.page-content {
+.page-content {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -190,12 +198,121 @@ a.cta-button.assisted-living-page {
     margin-bottom: 0.5rem;
 }
 
+/* Assisted Living Slider Styling */
+
+.slider-carousel-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.houses-slide-carousel-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    width: 95%;
+}
+
+.slide-carousel-view-area {
+    width: 100%;
+    height: var(--slide-view-area-height);
+    margin: 0 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-logo-wrapper {
+    display: flex;
+    align-items: center;
+    height: calc(13.3vw - 52.8px);
+    font-size: calc(2.7vw - 11.2px);
+}
+
+.slider-btn {
+    background: rgba(0, 0, 0, 0.8);
+    border: 0;
+    padding: 0 calc(0.7vw - 3.2px);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.slider-btn:hover {
+    background: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.carousel-slides {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    transform: translateX(calc(-1*(var(--slide-item-x) + 2rem)));
+}
+
+.carousel-slide-wrapper {
+    width: var(--slide-item-x);
+    height: var(--slide-item-x);
+    margin: var(--slide-item-margin);
+}
+
+.carousel-slide-item {
+    width: var(--slide-item-x);
+    height: var(--slide-item-x);
+    background: white;
+    transition: transform 0.5s ease-in-out;
+}
+
+
 /* Assisted Living Page Width Styling */
+
+@media(min-width: 1600px) {
+    .houses-slide-carousel-wrapper {
+        width: 1504.04px;
+    }
+    
+    .btn-logo-wrapper {
+        height: 10rem;
+        font-size: 2rem;
+    }
+    
+    .slider-btn {
+        padding: 0 0.5rem;
+    }
+}
+
+@media(min-width: 1017px) {
+    .carousel-slide-wrapper:nth-of-type(3) {
+        width: calc(var(--slide-item-x) * 1.2);
+        height: calc(var(--slide-item-x) * 1.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-slide-item[data-slide-index='2'] {
+        transform: scale(1.2);
+    }
+}
 
 @media(max-width: 1200px) {
     .assisted-living-top-page {
         justify-content: space-between;
         gap: 1rem;
+    }
+}
+
+@media(max-width: 1000px ) {
+    .btn-logo-wrapper {
+        height: 5rem;
+        font-size: 1rem;
+    }
+
+    .slider-btn {
+        padding: 0 0.25rem;
     }
 }
 

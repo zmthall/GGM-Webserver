@@ -385,6 +385,24 @@ a.cta-button.assisted-living-page {
     }
 }
 
+@media(max-width: 618px) {
+    .houses-slide-carousel-wrapper {
+        position: relative;
+    }
+
+    .slider-btn {
+        position: absolute;
+    }
+
+    button.slider-btn.right-btn {
+        right: 0;
+    }
+
+    button.slider-btn.left-btn {
+        left: 0;
+    }
+}
+
 @media(max-width: 500px) {
     .see-for-yourself-card {
         width: 100%;

@@ -200,6 +200,10 @@ a.cta-button.assisted-living-page {
 
 /* Assisted Living Slider Styling */
 
+section.houses-slide-carousel-section {
+    padding-bottom: 4rem;
+}
+
 .slider-carousel-title {
     text-align: center;
     margin-bottom: 1rem;
@@ -210,7 +214,6 @@ a.cta-button.assisted-living-page {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    margin-bottom: 4rem;
     width: 95%;
 }
 

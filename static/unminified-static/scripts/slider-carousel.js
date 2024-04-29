@@ -38,8 +38,8 @@ class SliderCarousel {
             this.slideX = `${(this.containerWidth - (4 * 16))/2}px`
             this.viewAreaHeight = `${((this.containerWidth - (4 * 16))/2) + 32}px`
         } else if(this.pageWidth <= 600) {
-            this.slideX = 0
-            this.viewAreaHeight = 0
+            this.slideX = `${this.containerWidth - (2 * 16)}px`
+            this.viewAreaHeight = `${this.containerWidth - (2 * 16) + 32}px`
         } else if(this.pageWidth > 1600) {
             this.slideX = `${(1376.04 - (6 * 16))/3.2}px`
             this.viewAreaHeight = `${((1376.04 - (6 * 16))/3.2) + 64}px`

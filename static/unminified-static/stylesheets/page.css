@@ -217,7 +217,6 @@ a.cta-button.assisted-living-page {
 .slide-carousel-view-area {
     width: 100%;
     height: var(--slide-view-area-height);
-    margin: 0 1rem;
     position: relative;
     overflow: hidden;
 }

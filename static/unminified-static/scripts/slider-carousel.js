@@ -32,17 +32,17 @@ class SliderCarousel {
         if(this.pageWidth <= 1600 && this.pageWidth > 1000) {
             temp.style.transition = 'transform .5s ease-in-out'
             this.slideX = `${(this.containerWidth - (6 * 16))/3.2}px`
-            this.viewAreaHeight = `${((this.containerWidth - (6 * 16))/3.2) + 64}px`
+            this.viewAreaHeight = `${(((this.containerWidth - (6 * 16))/3.2) * 1.2) + 48}px`
         } else if(this.pageWidth <= 1000 && this.pageWidth > 600) {
             temp.style.transition = 'unset'
             this.slideX = `${(this.containerWidth - (4 * 16))/2}px`
-            this.viewAreaHeight = `${((this.containerWidth - (4 * 16))/2) + 32}px`
+            this.viewAreaHeight = `${((this.containerWidth - (4 * 16))/2) + 48}px`
         } else if(this.pageWidth <= 600) {
             this.slideX = `${this.containerWidth - (2 * 16)}px`
-            this.viewAreaHeight = `${this.containerWidth - (2 * 16) + 32}px`
+            this.viewAreaHeight = `${this.containerWidth - (2 * 16) + 48}px`
         } else if(this.pageWidth > 1600) {
             this.slideX = `${(1376.04 - (6 * 16))/3.2}px`
-            this.viewAreaHeight = `${((1376.04 - (6 * 16))/3.2) + 64}px`
+            this.viewAreaHeight = `${(((1376.04 - (6 * 16))/3.2) * 1.2) + 48}px`
         }
         console.log(this.slideX);
     }

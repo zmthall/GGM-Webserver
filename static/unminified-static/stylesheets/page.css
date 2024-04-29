@@ -282,6 +282,10 @@ a.cta-button.assisted-living-page {
     .slider-btn {
         padding: 0 0.5rem;
     }
+
+    .carousel-slides {
+        transform: translateX(calc(-1*(var(--slide-item-x) + 1rem)));
+    }
 }
 
 @media(min-width: 1017px) {

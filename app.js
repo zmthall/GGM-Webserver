@@ -6,7 +6,7 @@ const https = require('https')
 const http = require('http')
 const expressLayouts = require('express-ejs-layouts')
 const minify = require('./files/minify.js')
-const webURL = new URL('https://www.zmtportfolio.com')
+const webURL = new URL('https://www.goldengatemanor.com')
 
 // Express server instantiation 
 const app = express()

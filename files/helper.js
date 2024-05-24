@@ -6,6 +6,12 @@ function handleize(string) {
     }
 }
 
+function lengthof(object) {
+    if(typeof object === 'object')
+        return Object.keys(object).length
+}
+
 module.exports = {
-    handleize: handleize
+    handleize: handleize,
+    lengthof: lengthof
 }

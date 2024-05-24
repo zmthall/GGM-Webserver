@@ -1,6 +1,10 @@
-const express = require('express')
-const helper = require('../files/helper.js')
-var router = express.Router()
+const express = require('express');
+const helper = require('../files/helper.js');
+const app = express();
+const methods = require('../files/methods.js')
+const path = require('path')
+var router = express.Router();
+
 
 var fs = require("fs"), json;
 
@@ -105,16 +109,35 @@ router.get('/about-us/location', (request, response) => {
 // })
 
 router.get('/about-us/community', (request, response) => {
-    response.render('community', {
-        config: json,
-        helper: helper,
-        page: {
-            title: 'Community',
-            href: '/about-us/community',
-            page_type: "page"
-        },
-        layout: './layouts/main-layout'
-    })
+    const filePath = '/images/community/'
+    const dir = path.join(__dirname, '..', 'static' + filePath)
+    const getImageUrls = async () => {
+        let outreachImages = {
+            fileName: [],
+            description: [],
+            url: []
+        }
+        const fileNames = await methods.getDirFileNames(dir)
+        for(const idx in fileNames) {
+            outreachImages.fileName.push(fileNames[idx])
+            outreachImages.description.push(`Outreach content: ${fileNames[idx].split('.')[0]}`)
+            outreachImages.url.push(filePath + fileNames[idx])
+        }
+
+        response.render('community', {
+            config: json,
+            helper: helper,
+            page: {
+                title: 'Community',
+                href: '/about-us/community',
+                page_type: "page"
+            },
+            outreachImages,
+            layout: './layouts/main-layout'
+        })
+    }
+
+    getImageUrls()
 })
 
 router.get('/contact-us', (request, response) => {
@@ -193,6 +216,7 @@ router.get('*', (request, response) => {
     },
     layout: './layouts/main-layout'
   })
+  response.status(404).end()
 })
 
 module.exports = router

@@ -1,4 +1,22 @@
 <section class="image-carousel-section">
     <script src="/scripts/image-carousel.js" defer></script>
-
+    <div class="image-carousel-wrapper">
+        <button class="image-carousel-btn" type="button" data-carousel-btn="left">
+            <div class="btn-logo-wrapper">
+                <%- include('../../svg/arrow-left') %>
+            </div>
+        </button>
+        <div class="image-slider-container">
+            <% for(let i = 0; i < 8; i++) { %>
+                <div class="image-slide-wrapper">
+                    
+                </div>
+            <% } %>
+        </div>
+        <button class="image-carousel-btn" type="button"  data-carousel-btn="right">
+            <div class="btn-logo-wrapper">
+                <%- include('../../svg/arrow-right') %>
+            </div>
+        </button>
+    </div>
 </section>

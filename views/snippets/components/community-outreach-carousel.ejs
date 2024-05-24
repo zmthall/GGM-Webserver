@@ -8,8 +8,8 @@
         </button>
         <div class="image-slider-container">
             <% for(let i = 0; i < 8; i++) { %>
-                <div class="image-slide-wrapper">
-                    
+                <div class="image-slide-wrapper<% if(i != 0) { %> hidden<% } %>">
+                    <img src="<%- outreachImages.url[i] %>" alt="<%- outreachImages.description[i] %>">
                 </div>
             <% } %>
         </div>

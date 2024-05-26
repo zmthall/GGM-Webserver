@@ -22,7 +22,11 @@
             <% for(let link in links) { %>
                 <li class="mobile-navigation-link-item">
                     <% if(links[link].sublinks) { %>
-                        <button class="mobile-navigation-sublink-btn" type="button" data-navigation-btn="<%- helper.handleize(links[link].title) %>"><%- links[link].title %> <span class="sublink-icon-wrapper down"><%- include('../svg/chevron-down') %></span></button>
+                        <button class="mobile-navigation-sublink-btn" type="button" data-navigation-btn="<%- helper.handleize(links[link].title) %>">
+                            <%- links[link].title %> 
+                            <span class="sublink-icon-wrapper"><%- include('../svg/chevron-down') %></span>
+                            <span class="sublink-icon-wrapper hidden"><%- include('../svg/chevron-up') %></span>
+                        </button>
                         <ul class="mobile-navigation-sublink-items hidden">
                             <% for(const sublink in links[link].sublinks) { %>
                                 <li class="mobile-navigation-sublink-item">

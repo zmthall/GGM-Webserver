@@ -536,7 +536,7 @@ ul.mobile-navigation-sublink-items {
     overflow: hidden;
     border-top: 2px solid rgb(var(--secondary-color));
     border-bottom: 2px solid rgb(var(--secondary-color));
-    transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.3s ease-in-out;
 }
 
 ul.mobile-navigation-sublink-items.active {

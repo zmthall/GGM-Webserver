@@ -295,12 +295,15 @@ ul.main-navigation-sublink-items {
 }
 
 a.main-navigation-link.sublink {
-    padding: 0.25rem 0;
+    padding: .5rem 0.1rem;
     display: flex;
     color: rgb(var(--primary-color));
     justify-content: center;
     font-size: 0.8rem;
     font-weight: 900;
+    white-space: unset;
+    width: 100%;
+    justify-content: center;
 }
 
 a.main-navigation-link:hover + ul.main-navigation-sublink-items,
@@ -309,12 +312,18 @@ ul.main-navigation-sublink-items:hover {
     -webkit-transform: perspective(400) rotate3d(0, 0, 0, 0);
 }
 
-/* Main Nav  */
+/* Main Nav Width Styling */
 
 @media(max-width: 1000px) {
     a.main-navigation-link {
         font-size: 0.75rem;
         padding: 0 calc(7.2vw - 49.76px);
+    }
+}
+
+@media(max-width: 900px) {
+    a.main-navigation-link.sublink {
+        font-size: calc(0.8vw + 5.6px);
     }
 }
 

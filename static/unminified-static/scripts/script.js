@@ -14,6 +14,11 @@ class PageHandler {
             }
         }
 
+        this.timers = {
+            timerEnter: undefined,
+            timerLeave: undefined
+        }
+
         this.footer = {
             width: undefined,
             elements: {
@@ -68,17 +73,23 @@ class PageHandler {
 
         this.buttons.main_nav.sublinkWrappers.forEach(element => {
             element.addEventListener("mouseenter", (event) => {
+                if(this.timers.timerLeave)
+                    clearTimeout(this.timers.timerLeave)
                 event.target.lastElementChild.classList.remove("hidden")
-                setTimeout(() => {
+                this.timers.timerEnter = setTimeout(() => {
                     event.target.lastElementChild.classList.add("active")
                 }, 1)
+                console.log(`enter: ${event.target.lastElementChild.classList}`)
             })
 
             element.addEventListener("mouseleave", (event) => {
+                if(this.timers.timerEnter)
+                    clearTimeout(this.timers.timerEnter)
                 event.target.lastElementChild.classList.remove("active")
-                setTimeout(() => {
+                this.timers.timerLeave = setTimeout(() => {
                     event.target.lastElementChild.classList.add("hidden")
                 }, 500);
+                console.log(`leave: ${event.target.lastElementChild.classList}`)
             })
         })
 

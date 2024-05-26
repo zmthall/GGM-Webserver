@@ -84,7 +84,17 @@ class PageHandler {
 
         this.buttons.mobile_nav.sublinkButtons.forEach(button => {
             button.addEventListener("click", (event) => {
-                console.log(event.target.nextElementSibling)
+                if(button.nextElementSibling.classList.contains("hidden")) {
+                    button.nextElementSibling.classList.remove("hidden")
+                    setTimeout(() => {
+                        button.nextElementSibling.classList.add("active")
+                    }, 1);
+                } else {
+                    button.nextElementSibling.classList.remove("active")
+                    setTimeout(() => {
+                        button.nextElementSibling.classList.add("hidden")
+                    }, 500);
+                }
             })
         })
     }

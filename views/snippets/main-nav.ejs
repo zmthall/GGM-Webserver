@@ -3,6 +3,15 @@
         <% for(const link in links) { %>
             <li class="main-navigation-link-item">
                 <a class="main-navigation-link" href="<%- links[link].href %>"><%- links[link].title %></a>
+            <% if(links[link].sublinks) { %>
+                <ul class="main-navigation-sublink-items">
+                    <% for(const sublink in links[link].sublinks) { %>
+                        <li class="main-navigation-link-item">
+                            <a href="<%- links[link].sublinks[sublink].href %>" class="main-navigation-link sublink"><%- links[link].sublinks[sublink].title %></a>
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %> 
             </li>
         <% } %>
     </ul>

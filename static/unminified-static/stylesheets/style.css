@@ -878,3 +878,77 @@ a.cta-button.read-more {
 .no-scroll {
     overflow: hidden;
 }
+
+@media (hover: none) {
+    nav.main-navigation {
+        display: none;
+    }
+
+    nav.mobile-navigation {
+        display: flex;
+    }
+
+    .info-header>.info-header-left {
+        display: none;
+    }
+
+    .info-header>.info-header-right {
+        width: 100%;
+        justify-content: center;
+        color: white;
+    }
+
+    .info-header-right>div:nth-of-type(1) {
+        border-left: none;
+    }
+
+    .info-header-right svg {
+        display: block;
+    }
+
+    .info-header-right p.content {
+        display: block;
+        font-size: 0.7rem;
+    }
+
+    .info-header-right a.anchor {
+        display: none;
+    }
+
+    .info-header-right>div {
+        flex-direction: column;
+        color: white;
+        height: 100%;
+        align-content: center;
+        text-align: center;
+        width: 33%;
+    }
+
+    .info-header-right a {
+        color: white;
+        font-size: 0.8rem
+    }
+
+    .info-header-right .info-wrapper {
+        width: min-content;
+    }
+
+    .info-header-right .logo-wrapper {
+        height: 50%;
+    }
+
+    p.content {
+        white-space: normal;
+    }
+
+    .info-header {
+        background: rgb(var(--primary-color));
+        height: unset;
+        padding: 1rem 0;
+        max-width: unset;
+    }
+
+    .info-header-right>div:nth-of-type(-n + 2) {
+        border-right: 1px solid rgba(200, 200, 200, 0.1);
+    }
+}

@@ -294,6 +294,8 @@ ul.main-navigation-sublink-items {
     overflow: hidden;
     -webkit-transform: perspective(400) rotate3d(1, 0, 0, -90deg);
     -webkit-transform-origin: 50% 0;
+    transform: perspective(400) rotate3d(1, 0, 0, -90deg);
+    transform-origin: 50% 0;
     -webkit-transition: 350ms;
     -moz-transition: 350ms;
     -o-transition: 350ms;
@@ -316,6 +318,7 @@ a.main-navigation-link:hover+ul.main-navigation-sublink-items.active,
 ul.main-navigation-sublink-items.active {
     max-height: 1000px;
     -webkit-transform: perspective(400) rotate3d(0, 0, 0, 0);
+    transform: perspective(400) rotate3d(0, 0, 0, 0);
 }
 
 /* Main Nav Width Styling */

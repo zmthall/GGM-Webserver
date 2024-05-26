@@ -28,6 +28,10 @@
                 "logo_src": "/images/facebook.svg",
                 "href": "https://www.facebook.com/GoldenGateTransportation/"
             }
+        },
+        "business_hours": {
+            "days": "Mon. - Fri.",
+            "hours": "8:00 AM - 4:00 PM"
         }
     },
     "links": {
@@ -121,6 +125,14 @@
                 "home_page": "Home",
                 "current_page_url": "/assisted-living",
                 "current_page": "Assisted Living" 
+            }
+        },
+        "location": {
+            "breadcrumb": {
+                "home_page_url": "/",
+                "home_page": "Home",
+                "current_page_url": "/about-us/location",
+                "current_page": "Location" 
             }
         }
     }

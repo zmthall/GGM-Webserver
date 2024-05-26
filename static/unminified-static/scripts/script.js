@@ -3,7 +3,11 @@ class PageHandler {
         this.buttons = {
             mobile_nav: {
                 button: document.querySelector('[data-nav-btn]'),
+                sublinkButtons: document.querySelectorAll('[data-navigation-btn]'),
                 isX: false
+            },
+            main_nav: {
+                sublinkWrappers: document.querySelectorAll('[data-sublink-wrapper]'),
             },
             footer: {
                 moreInfo: document.querySelectorAll('[data-info-btn]')
@@ -46,7 +50,7 @@ class PageHandler {
             setTimeout(() => {
                 btnLines.classList.toggle("active")
                 navDrawer.classList.toggle("active")
-                docoument.body.classList.toggle("no-scroll")
+                document.body.classList.toggle("no-scroll")
             }, 1);
         })
 
@@ -61,7 +65,30 @@ class PageHandler {
                 prevEl.classList.toggle("collapsed")
             })
         })
+
+        this.buttons.main_nav.sublinkWrappers.forEach(element => {
+            element.addEventListener("mouseenter", (event) => {
+                event.target.lastElementChild.classList.remove("hidden")
+                setTimeout(() => {
+                    event.target.lastElementChild.classList.add("active")
+                }, 1)
+            })
+
+            element.addEventListener("mouseleave", (event) => {
+                event.target.lastElementChild.classList.remove("active")
+                setTimeout(() => {
+                    event.target.lastElementChild.classList.add("hidden")
+                }, 500);
+            })
+        })
+
+        this.buttons.mobile_nav.sublinkButtons.forEach(button => {
+            button.addEventListener("click", (event) => {
+                console.log(event.target.nextElementSibling)
+            })
+        })
     }
+
     getVariableValue(variableName) {
         var rs = getComputedStyle(this.r)
         if(typeof variableName === "string") return rs.getPropertyValue(variableName)

@@ -2,7 +2,7 @@
     <div class="nemt-transportation-cta-wrapper">
         <div class="nemt-transportation-cta-left">
             <img src="/images/GGMT-Fleet.webp" alt="Golden Gate Manor fleet lined up in front of the transportation building.">
-            <div class="nemt-transportation-card-wrapper">
+            <div aria-hidden="true" class="nemt-transportation-card-wrapper">
                 <div class="nemt-transportation-card">
                     <div class="card-front"></div>
                     <div class="card-back">
@@ -19,8 +19,8 @@
                                     <%- include('../../svg/telephone') %>
                                 </div>
                                 <div class="nemt-transportation-phone-numbers nemt-card-content">
-                                    <a href="tel:<%- company.phone_number_dispatch_toll %>">Toll Free: <%- company.phone_number_dispatch_format_toll %></a>
-                                    <a href="tel:<%- company.phone_number_dispatch %>">Phone: <%- company.phone_number_dispatch_format %></a>
+                                    <a tabindex="-1" href="tel:<%- company.phone_number_dispatch_toll %>">Toll Free: <%- company.phone_number_dispatch_format_toll %></a>
+                                    <a tabindex="-1" href="tel:<%- company.phone_number_dispatch %>">Phone: <%- company.phone_number_dispatch_format %></a>
                                 </div>
                             </div>
                             <div class="nemt-transportation-web-wrapper nemt-card-content-wrapper">
@@ -28,8 +28,8 @@
                                     <%- include('../../svg/globe') %>
                                 </div>
                                 <div class="nemt-transportation-links nemt-card-content">
-                                    <a href="<%- links.nemt.href %>"><%- links.nemt.title %></a>
-                                    <a href="<%- links.contact_us.href %>"><%- links.contact_us.title %></a>
+                                    <a tabindex="-1" href="<%- links.nemt.href %>"><%- links.nemt.title %></a>
+                                    <a tabindex="-1" href="<%- links.contact_us.href %>"><%- links.contact_us.title %></a>
                                 </div>
                             </div>
                             <div class="nemt-transportation-location-wrapper nemt-card-content-wrapper">

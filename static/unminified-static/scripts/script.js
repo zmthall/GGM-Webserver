@@ -8,15 +8,16 @@ class PageHandler {
             },
             main_nav: {
                 sublinkWrappers: document.querySelectorAll('[data-sublink-wrapper]'),
+                previousEnter: undefined,
+                previousLeave: undefined,
+                timers: {
+                    timerEnter: undefined,
+                    timerLeave: undefined
+                }
             },
             footer: {
                 moreInfo: document.querySelectorAll('[data-info-btn]')
             }
-        }
-
-        this.timers = {
-            timerEnter: undefined,
-            timerLeave: undefined
         }
 
         this.footer = {
@@ -73,23 +74,30 @@ class PageHandler {
 
         this.buttons.main_nav.sublinkWrappers.forEach(element => {
             element.addEventListener("mouseenter", (event) => {
-                if(this.timers.timerLeave)
-                    clearTimeout(this.timers.timerLeave)
+                const elementName = element.getAttribute("data-sublink-wrapper")
+                this.buttons.main_nav.previousEnter = element.getAttribute("data-sublink-wrapper")
                 event.target.lastElementChild.classList.remove("hidden")
-                this.timers.timerEnter = setTimeout(() => {
+                this.buttons.main_nav.timers.timerEnter = setTimeout(() => {
                     event.target.lastElementChild.classList.add("active")
                 }, 1)
-                console.log(`enter: ${event.target.lastElementChild.classList}`)
+                console.log(`${this.buttons.main_nav.previousLeave}:${elementName}`)
+                if(this.buttons.main_nav.previousLeave === elementName)
+                    clearTimeout(this.buttons.main_nav.timers.timerLeave)
+
+                // console.log(event.target.lastElementChild.classList)
             })
 
             element.addEventListener("mouseleave", (event) => {
-                if(this.timers.timerEnter)
-                    clearTimeout(this.timers.timerEnter)
+                const elementName = element.getAttribute("data-sublink-wrapper")
+                this.buttons.main_nav.previousLeave = element.getAttribute("data-sublink-wrapper")
                 event.target.lastElementChild.classList.remove("active")
-                this.timers.timerLeave = setTimeout(() => {
+                this.buttons.main_nav.timers.timerLeave = setTimeout(() => {
                     event.target.lastElementChild.classList.add("hidden")
-                }, 500);
-                console.log(`leave: ${event.target.lastElementChild.classList}`)
+                }, 1000);
+                if(this.buttons.main_nav.previousEnter === elementName)
+                    clearTimeout(this.buttons.main_nav.timers.timerEnter)
+
+                // console.log(event.target.lastElementChild.classList)
             })
         })
 

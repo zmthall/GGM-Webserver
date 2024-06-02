@@ -443,3 +443,58 @@ iframe.location-iframe {
     width: 100%;
     height: 600px;
 }
+
+.business-information-section {
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+}
+
+span.bolded-text {
+    font-weight: 900;
+}
+
+p.content-text {
+    font-size: 1.1rem;
+}
+
+.business-information-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 300px;
+}
+
+.content-information-container {
+    padding: 0.25rem;
+    margin-left: 2rem;
+    position: relative;
+}
+
+.content-information-container::before {
+    content: "";
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    background: rgb(var(--primary-color));
+    left: -1rem;
+}
+
+h2.content-title {
+    margin-bottom: 1rem;
+}
+
+p.content-text.reservation-days-hours {
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+a.facebook-page-link {
+    font-size: 2.5rem;
+    display: flex;
+    width: fit-content;
+}
+
+.social-logo-wrapper {
+    display: flex;
+}

@@ -134,6 +134,14 @@
                 "current_page_url": "/about-us/location",
                 "current_page": "Location" 
             }
+        },
+        "about_us": {
+            "breadcrumb": {
+                "home_page_url": "/",
+                "home_page": "Home",
+                "current_page_url": "/about-us",
+                "current_page": "About Golden Gate Manor, Inc." 
+            }
         }
     }
 }

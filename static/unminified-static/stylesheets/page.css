@@ -70,6 +70,7 @@
 .page-content {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 1rem;
 }
 
 .assisted-living-page-amenities {
@@ -481,6 +482,7 @@ p.content-text, p.content-text a {
 
 h2.content-title {
     margin-bottom: 1rem;
+    color: rgb(var(--primary-color));
 }
 
 p.content-text.reservation-days-hours {

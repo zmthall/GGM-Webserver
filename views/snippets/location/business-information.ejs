@@ -1,0 +1,26 @@
+<section class="business-information-section">
+    <div class="business-information-wrapper">
+        <div class="contact-info-container content-information-container">
+            <h2 class="content-title bolded-text">Contact Information</h2>
+            <p class="content-text"><span class="bolded-text"><%- company.name %></span></p>
+            <p class="content-text"><span class="bolded-text">Address: </span><%- company.address_transportation %></p>
+            <p class="content-text"><%- company.adress_info %></p>
+            <p class="content-text"><span class="bolded-text">Phone: </span><a href="<%- company.phone_number_nemt %>" class="primary-link"><%- company.phone_number_nemt_format %></a></p>
+        </div>
+        <div class="reservation-hours-container content-information-container">
+            <h2 class="content-title bolded-text">Reservation Hours</h2>
+            <p class="content-text reservation-days-hours">
+                <span class="bolded-text"><%- company.business_hours.days %></span>
+                <span><%- company.business_hours.hours %></span>
+            </p>
+        </div>
+        <div class="get-connected-container content-information-container">
+            <h2 class="content-title bolded-text">Get Connected</h2>
+            <a href="<%- company.social.facebook.href %>" class="facebook-page-link">
+                <div class="social-logo-wrapper">
+                    <%- include('../../svg/facebook-logo') %>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>

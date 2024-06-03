@@ -453,7 +453,7 @@ span.bolded-text {
     font-weight: 900;
 }
 
-p.content-text {
+p.content-text, p.content-text a {
     font-size: 1.1rem;
 }
 

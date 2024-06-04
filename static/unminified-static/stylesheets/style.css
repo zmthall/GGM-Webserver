@@ -134,9 +134,13 @@ main .section-title {
     padding: 0 1rem;
 }
 
-.section-content {
+.section-content:not(:last-of-type) {
     margin-top: 1rem;
     margin-bottom: 2rem;
+}
+
+main.main-content {
+    margin-bottom: 4rem;
 }
 
 /* Top Header Styling */

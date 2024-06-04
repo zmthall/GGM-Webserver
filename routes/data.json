@@ -63,10 +63,6 @@
                     "title": "About Us",
                     "href": "/about-us"
                 },
-                "blog": {
-                    "title": "Blog",
-                    "href": "/blogs"
-                },
                 "location": {
                     "title": "Find Us",
                     "href": "/about-us/location"

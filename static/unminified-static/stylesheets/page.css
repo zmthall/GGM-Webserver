@@ -472,6 +472,32 @@ li.section-list-item:nth-of-type(-n + 4) {margin-bottom: 0.3rem;}
     box-shadow: 0 4px 10px 2px rgba(0, 0, 0, .2);
 }
 
+/* ---- Transportation and Medical Supply Section Styling */
+
+.section-content-image-container {
+    display: flex;
+    align-items: center;
+}
+
+.about-us-medical-supply-section  h2.section-title {
+    text-align: right;
+}
+
+img.section-image {
+    width: 40%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, .2);
+}
+
+img.section-image.image-left {
+    margin-right: 1rem;
+}
+
+img.section-image.image-right {
+    margin-left: 1rem;
+}
+
+
 /* About Us Page Width Styling */
 
 @media(max-width: 1400px) {
@@ -482,6 +508,38 @@ li.section-list-item:nth-of-type(-n + 4) {margin-bottom: 0.3rem;}
 
     .house-image-container {
         margin: 1rem auto 0.5rem auto;
+    }
+}
+
+@media(max-width: 1100px) {
+    .section-content-image-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-us-transportation-section .section-content-image-container {
+        flex-direction: column-reverse;
+    }
+
+    img.section-image.image-left,
+    img.section-image.image-right {
+        width: 100%;   
+        height: 300px;
+        margin-bottom: 1rem;
+        object-fit: cover;
+        object-position: bottom
+    }
+
+    img.section-image.image-left {
+        margin-right: 0;
+    }
+
+    img.section-image.image-right {
+        margin-left: 0;
+    }
+
+    .about-us-medical-supply-section  h2.section-title {
+        text-align: left;
     }
 }
 

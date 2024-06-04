@@ -118,9 +118,25 @@ main .section-text {
     font-size: 1.3rem;
 }
 
+main .section-text:not(ul, li) {
+    margin-bottom: 0.5rem;
+}
+
 main .section-title {
     color: rgb(var(--primary-color));
     font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section-content {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 /* Top Header Styling */

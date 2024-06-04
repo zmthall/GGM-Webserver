@@ -32,6 +32,7 @@
 
 /* Assisted Living Page Styling */
 
+/* ---- Top Page Section Styling ---- */
 .assisted-living-top-page-section {
     padding: 1rem 1rem 4rem 1rem;
 }
@@ -67,12 +68,7 @@
     box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
-.page-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
+/* ---- Amenities Section Styling ---- */
 .assisted-living-page-amenities {
     padding: 4rem 0 0 0;
     color: white;
@@ -125,6 +121,8 @@ h2.assisted-living-amenities-title {
 .amenity-card-item:not(:last-of-type) {
     margin-bottom: 0.5rem;
 }
+
+/* ---- Bottom Page Section Styling ---- */
 
 section.assisted-living-bottom-page-section {
     padding: 0rem 1rem 4rem 1rem;
@@ -201,7 +199,7 @@ a.cta-button.assisted-living-page {
     margin-bottom: 0.5rem;
 }
 
-/* Assisted Living Slider Styling */
+/* ---- Slider Styling ----- */
 
 section.houses-slide-carousel-section {
     padding-bottom: 4rem;
@@ -271,7 +269,6 @@ section.houses-slide-carousel-section {
     background: white;
     transition: transform 0.5s ease-in-out;
 }
-
 
 /* Assisted Living Page Width Styling */
 
@@ -429,6 +426,66 @@ section.houses-slide-carousel-section {
 
     .assisted-living-page-amenities-wrapper {
         padding: 4rem 1rem;
+    }
+}
+
+/* About Us Page Styling */
+
+/* ---- Intro Section Styling ---- */
+.about-us-introduction-section img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px 2px rgba(0,0,0,.2);
+}
+
+main a.cta-button {
+    margin: 1.5rem auto 0 auto;
+}
+
+/* ---- Assisted living Section Styling ---- */
+
+p.section-list-description {
+    margin-top: 0.5rem;
+}
+
+ul.section-list-container {
+    margin-left: 2rem;
+}
+
+li.section-list-item:nth-of-type(-n + 4) {margin-bottom: 0.3rem;}
+
+.house-image-container {
+    max-width: 1400px;
+    margin: 2rem auto 0.5rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.house-image-container img {
+    width: calc(280px - 1.5rem);
+    margin: 0 0.75rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, .2);
+}
+
+@media(max-width: 1400px) {
+    .house-image-container img {
+        margin-top: 1.5rem;
+        justify-self: center;
+    }
+}
+
+@media(max-width: 600px) {
+    .house-image-container {
+        display: none;
+    }
+
+    .about-us-introduction-section img {
+        object-position: right;
     }
 }
 

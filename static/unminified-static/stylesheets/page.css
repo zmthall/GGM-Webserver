@@ -472,10 +472,16 @@ li.section-list-item:nth-of-type(-n + 4) {margin-bottom: 0.3rem;}
     box-shadow: 0 4px 10px 2px rgba(0, 0, 0, .2);
 }
 
+/* About Us Page Width Styling */
+
 @media(max-width: 1400px) {
     .house-image-container img {
         margin-top: 1.5rem;
         justify-self: center;
+    }
+
+    .house-image-container {
+        margin: 1rem auto 0.5rem auto;
     }
 }
 

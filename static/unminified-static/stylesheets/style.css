@@ -139,6 +139,10 @@ main .section-title {
     margin-bottom: 2rem;
 }
 
+.section-content:only-of-type {
+    margin-top: 1rem;
+}
+
 main.main-content {
     margin-bottom: 4rem;
 }

@@ -1,1 +1,4 @@
-<%- include('./snippets/components/community-outreach-carousel', { outreachImages: outreachImages, helper: helper }) %>
+<main class="community-outreach main-content">
+    <%- include('./snippets/title-breadcrumb', { breadcrumb: config.pages.community.breadcrumb }) %>
+    <%- include('./snippets/about-us/community/top-page', { outreachImages: outreachImages, helper: helper }) %>
+</main>

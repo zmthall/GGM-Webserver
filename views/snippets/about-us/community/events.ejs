@@ -1,0 +1,33 @@
+<section class="community-outreach-top-page page-content section-content">
+    <h2 class="section-title">Upcoming Events for Golden Gate Manor, Inc:</h2>
+    <% for(const idx in events.upcoming) { %>
+        <div class="event-container">
+            <div class="event-left-info">
+                <% if(events.upcoming[idx].date.day_end != "") { %>
+                    <span class="event-from-date"><%- events.upcoming[idx].date.month %> <%- events.upcoming[idx].date.day %></span>
+                    <span class="event-to-wrapper">to</span>
+                    <span class="event-from-date"><%- events.upcoming[idx].date.month_end %><%- events.upcoming[idx].date.day_end %></span>
+                <% } else { %>
+                    <span class="event-date-month"><%- events.upcoming[idx].date.month %></span>
+                    <span class="event-date-day"><%- events.upcoming[idx].date.day %></span>
+                <% } %> 
+            </div>
+            <div class="event-right-info">
+                <div class="event-information-wrapper">
+                    <div class="event-top-information">
+                        <h3 class="event-title"><%- events.upcoming[idx].name %></h3>
+                        <p class="event-location-name"><%- events.upcoming[idx].location.name %></p>
+                        <p class="event-location-address"><%- events.upcoming[idx].location.address %></p>
+                    </div>
+                    <div class="event-description-container event-bottom-information">
+                        <p class="event-description section-text collapsed"><%- events.upcoming[idx].description %></p>
+                        <button type="button" class="event-button expand-button" data-event-expand-btn="<%- idx %>">more</button>
+                    </div>
+                </div>
+                <div class="event-more-info-button-wrapper">
+                    <a href="<%- events.upcoming[idx].url %>" target="_blank" rel="noopener noreferrer" class="event-more-info-btn cta-button"><span class="read-more-plus">+ </span>More Info</a>
+                </div>
+            </div>
+        </div>
+    <% } %>
+</section>

@@ -146,6 +146,50 @@
                 "current_page_url": "/about-us/community",
                 "current_page": "Community Outreach and Events"
             }
+        },
+        "privacy_policy": {
+            "breadcrumb": {
+                "home_page_url": "/",
+                "home_page": "Home",
+                "current_page_url": "/policy/privacy-policy",
+                "current_page": "Privacy Policy"
+            }
+        }
+    },
+    "events": {
+        "upcoming": {
+            "event1": {
+                "name": "2024 Spring Jubilee",
+                "location": {
+                    "name": "Center Toward Self-Reliance",
+                    "address": "901 W 8th Street, Pueblo, CO 81003"
+                },
+                "date": {
+                    "day": "7th",
+                    "month": "June",
+                    "month_abb": "Jun.",
+                    "day_end": "",
+                    "month_end": ""
+                },
+                "description": "Join the Center Toward Self-Reliance and Re-Inspired Minds for a Spring Jubilee! Welcoming brain injury survivors and people with disabilities.",
+                "url": "https://cfdpueblo.org/spring-jubilee/"
+            },
+            "event2": {
+                "name": "2024 Fremont County Senoir Resource Fair",
+                "location": {
+                    "name": "Pathfinder Event Center",
+                    "address": "6655 CO-115, Florence, CO 81226"
+                },
+                "date": {
+                    "day": "25th",
+                    "month": "June",
+                    "month_abb": "Jun.",
+                    "day_end": "",
+                    "month_end": ""
+                },
+                "description": "For Fremont County Seniors, and those who care for them. Featuring 40 local organizations. Come learn more about local community resources!",
+                "url": "https://seniorsbluebook.com/index.php/events/fremont-county-senior-resource-fair/30973"
+            }
         }
     }
 }

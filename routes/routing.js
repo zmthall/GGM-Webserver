@@ -166,27 +166,27 @@ router.get('/contact-us/schedule-a-ride', (request, response) => {
     })
 })
 
-router.get('/privacy-policy', (request, response) => {
+router.get('/policy/privacy-policy', (request, response) => {
     response.render('privacy-policy', {
         config: json,
         helper: helper,
         page: {
             title: 'Privacy Policy',
-            href: '/privacy-policy',
-            page_type: "page"
+            href: '/policy/privacy-policy',
+            page_type: "policy-page"
         },
         layout: './layouts/main-layout'
     })
 })
 
-router.get('/accessibility', (request, response) => {
+router.get('/policy/accessibility', (request, response) => {
     response.render('accessibility', {
         config: json,
         helper: helper,
         page: {
             title: 'Accessibility',
-            href: '/accessibility',
-            page_type: "page"
+            href: '/policy/accessibility',
+            page_type: "policy-page"
         },
         layout: './layouts/main-layout'
     })

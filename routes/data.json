@@ -91,11 +91,11 @@
     "footer_links": {
         "privacy_policy": {
             "title": "Privacy Policy",
-            "href": "/privacy-policy"
+            "href": "/policy/privacy-policy"
         },
         "accessibility": {
             "title": "Accessibility",
-            "href": "/accessibility"
+            "href": "/policy/accessibility"
         },
         "site_map": {
             "title": "Site Map",

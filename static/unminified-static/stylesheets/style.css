@@ -147,6 +147,28 @@ main.main-content {
     margin-bottom: 4rem;
 }
 
+.page-title-wrapper {
+    margin-top: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.page-title-wrapper h1 {
+    color: rgb(var(--primary-color))
+}
+
+.page-info-topper {
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.breadcrumb-wrapper {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    background: rgb(var(--light-grey))
+}
+
 /* Top Header Styling */
 
 .info-header {

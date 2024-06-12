@@ -40,7 +40,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+body.main-content-body {
     font-size: var(--base-font-size);
     font-family: var(--font-family-main);
     font-weight: 500;

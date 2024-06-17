@@ -689,7 +689,6 @@ button.image-carousel-btn:hover {
     background: rgb(210, 210, 255);
 }
 
-
 .event-more-info-button-wrapper {
     display: flex;
     justify-content: center;
@@ -759,5 +758,41 @@ button.event-button.expand-button:hover {
 
     .event-left-info {
         width: 20%;
+    }
+}
+
+/* Thank You Page Styling */
+
+.envelope-mail-svg {
+    width: 30%;
+}
+
+section.thank-you-main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p.thank-you-note {font-size: 2rem;font-weight: 900;color: rgb(var(--primary-color));}
+
+p.thank-you-text {
+    width: 50%;
+    text-align: center;
+}
+
+/* Thank You Page Width Styling */
+
+@media(max-width: 768px) {
+    .thank-you-main-section {
+        margin-top: 4rem;
+    }
+
+    p.thank-you-text {
+        width: 100%;
+    }
+
+    .envelope-mail-svg {
+            width: 50%;
     }
 }

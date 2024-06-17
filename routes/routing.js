@@ -153,6 +153,19 @@ router.get('/contact-us', (request, response) => {
     })
 })
 
+router.get('/contact-us/thank-you', (request, response) => {
+    response.render('thank-you', {
+        config: json,
+        helper: helper,
+        page: {
+            title: 'Thank You',
+            href: '/contact-us/thank-you',
+            page_type: "page"
+        },
+        layout: './layouts/main-layout'
+    })
+})
+
 router.get('/contact-us/schedule-a-ride', (request, response) => {
     response.render('schedule-a-ride', {
         config: json,

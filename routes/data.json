@@ -196,6 +196,10 @@
         "site_map": {
             "title": "Site Map",
             "url": "/site-map"
+        },
+        "thank_you": {
+            "title": "Thank you",
+            "url": "/contact-us/thank-you"
         }
     },
     "events": {

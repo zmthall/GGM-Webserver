@@ -57,7 +57,7 @@ h5 {
     font-weight: 700;
 }
 
-a {
+a, .previous-page-button {
     color: rgb(var(--primary-color));
     font-weight: 900;
     font-size: 1.3rem;

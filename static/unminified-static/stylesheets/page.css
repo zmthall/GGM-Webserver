@@ -857,4 +857,68 @@ p.thank-you-text {
     .envelope-mail-svg {
             width: 50%;
     }
+} 
+
+/* 404 Page Styling */
+
+button.previous-page-button {
+    font-family: var(--font-family-headings);
+    background: none;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+main.bad-page.main-content {
+    margin-top: 4rem; 
+}
+
+.main-section {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+button.previous-page-button:hover {
+    color: rgb(var(--link-hover-color))
+}
+
+.bad-page-main-section-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p.main-section-text {
+    font-size: 10rem;
+    display: flex;
+    justify-content: center;
+}
+
+.main-section-text svg {
+    height: 200px;
+}
+
+/* 404 Page Width Styling */
+
+@media(max-width: 1200px) {
+    .main-section-text svg {
+        height: calc(11.4vw + 63.2px);
+    }
+
+    p.main-section-text {
+        font-size: calc(07.3vw + 72.4px)
+    }
+}
+
+@media(max-width: 768px) {
+    p.section-text {
+        text-align: center;
+    }
+
+    h2.section-title {
+        text-align: center;
+    }
 }

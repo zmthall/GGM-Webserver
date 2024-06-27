@@ -225,7 +225,7 @@ router.get('*', (request, response) => {
     page: {
         title: 'Page not Found: 404',
         href: 'ERROR',
-        page_type: "error-page"
+        page_type: "page"
     },
     layout: './layouts/main-layout'
   })

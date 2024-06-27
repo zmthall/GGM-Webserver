@@ -855,9 +855,15 @@ p.thank-you-text {
     }
 
     .envelope-mail-svg {
-            width: 50%;
+        width: 50%;
     }
 } 
+
+/* Site Map Page Styling */
+
+nav.site-map-navigation {
+    margin-top: 1rem;
+}
 
 /* 404 Page Styling */
 

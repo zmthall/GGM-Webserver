@@ -1,0 +1,11 @@
+<section class="site-map-main-section page-content">
+    <nav class="site-map-navigation">
+        <ul class="section-list-container">
+            <% for(const idx in pages) { %>
+                <li class="section-list-item">
+                    <a href="<%- pages[idx].url %>" class=""><%- pages[idx].title %></a>
+                </li> 
+            <% } %>
+        </ul>
+    </nav>
+</section>

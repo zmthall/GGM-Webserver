@@ -67,7 +67,8 @@ a:not(.logo-wrapper a,
     a.main-navigation-link,
     a.mobile-navigation-link,
     a.cta-button,
-    a.no-hover-page-link):hover {
+    a.no-hover-page-link,
+    a.form-button):hover {
     /* color: color-mix(in hsl, var(--primary-color) 70%, var(--secondary-color) 30%) */
     color: rgb(var(--link-hover-color));
 }

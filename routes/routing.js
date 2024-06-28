@@ -62,13 +62,13 @@ router.get('/non-medical-transportation', (request, response) => {
     })
 })
 
-router.get('/nemt', (request, response) => {
+router.get('/nemt-transportation', (request, response) => {
     response.render('nemt-transportation', {
         config: json,
         helper: helper,
         page: {
             title: 'Non-Emergency Medical Transportation',
-            href: '/nemt',
+            href: '/nemt-transportation',
             page_type: "page"
         },
         layout: './layouts/main-layout'

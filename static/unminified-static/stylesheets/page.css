@@ -471,89 +471,231 @@ section.non-medical-transportation-bottom-page {
 
 /* NEMT Page Styling */
 
-section.non-emergency-transportation-top-page {
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
+/* --- Top Page Section Styling --- */
 
-.non-emergency-transportation-top-page-left {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    section.non-emergency-transportation-top-page {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
 
-.non-emergency-transportation-top-page-right {
-    width: 50%;
-}
+    .non-emergency-transportation-top-page-left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-table.nemt-table, th.nemt-header, td.nemt-table-data {
-    border: 2px solid;
-    border-collapse: collapse;
-    background: #c6d5e4;
-}
+    .non-emergency-transportation-top-page-right {
+        width: 50%;
+    }
 
-table.nemt-table {
-    width: 100%;
-    margin: 1rem 0;
-}
+    table.nemt-table, th.nemt-header, td.nemt-table-data {
+        border: 2px solid;
+        border-collapse: collapse;
+        background: #c6d5e4;
+    }
 
-th.nemt-header, td.nemt-table-data {
-    padding: 0.75rem;
-}
+    table.nemt-table {
+        width: 100%;
+        margin: 1rem 0;
+    }
 
-th.nemt-header {
-    font-weight: 900;
-}
+    th.nemt-header, td.nemt-table-data {
+        padding: 0.75rem;
+    }
 
-td.nemt-table-data {
-    font-weight: 500;
-    text-align: center;
-}
+    th.nemt-header {
+        font-weight: 900;
+    }
 
-a.form-button {
-    width: 80%;
-    display: flex;
-    font-size: 0.65rem;
-    text-align: center;
-    border-radius: 0.5rem;
-    background: rgb(var(--secondary-color));
-}
+    td.nemt-table-data {
+        font-weight: 500;
+        text-align: center;
+    }
 
-a.form-button:hover {
-    color: white;
+    a.form-button {
+        width: 80%;
+        display: flex;
+        font-size: 0.65rem;
+        text-align: center;
+        border-radius: 0.5rem;
+        background: rgb(var(--secondary-color));
+    }
+
+    a.form-button:hover {
+        color: white;
+        background: rgb(var(--primary-color));
+    }
+
+    .nemt-form-button-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .nemt-text-span:first-of-type {
+        margin-bottom: 0.5rem;
+    }
+
+    a.form-button:hover .nemt-form-button-text-wrapper {
+        position: relative;
+    }
+
+    a.form-button:hover .nemt-form-button-text-wrapper::before {
+        content: "Opens in New Tab";
+        color: black;
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        background: white;
+        padding: 0.25rem;
+        top: 0;
+        left: 50%;
+        translate: -50% -125%;
+        border: 1px solid;
+    }
+
+/* --- Information Section Styling --- */
+
+    a.nemt-page-anchor {
+        text-decoration: none;
+    }
+
+    span.nemt-span-text {
+        text-decoration: underline;
+    }
+
+/* --- Information Section Styling */
+
+.nemt-information-wrapper {
     background: rgb(var(--primary-color));
 }
 
-.nemt-form-button-text-wrapper {
+.nemt-information-wrapper {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 1rem;
+    padding: 3rem;
 }
 
-.nemt-text-span:first-of-type {
+.nemt-information-wrapper:first-of-type {
+    border-bottom: 1px solid rgb(var(--light-grey));
+}
+section.nemt-transportation-information {
+    margin-top: 1rem;
+}
+
+p.dark-background,
+a.dark-background,
+h1.dark-background,
+h2.dark-background,
+h3.dark-background,
+h4.dark-background {
+    color: white;
+}
+
+h3.content-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.nemt-transportation-information-schedule-ride ul.section-list-container {
+    list-style-image: url('/images/check-mark-white.svg')
+}
+
+li.information-list-item a {
+    margin-top: 1rem;
+}
+
+a.link-spacing {
+    margin-top: 1rem;
+    display: block;
+}
+
+.nemt-transportation-information-faq ul.section-list-container {
+    list-style: none;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+button.faqs-dropdown-button {
+    height: 40px;
+    width: 100%;
+    border: 0;
+    background: 0;
+    border-bottom: 1px solid rgb(var(--light-grey));
+    text-align: left;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    line-height: 0.9;
+    display: flex;
+    align-items: center;
+}
+
+button.faqs-dropdown-button:hover {color: rgb(var(--primary-color));font-weight: 900;}
+
+li.faqs-list-item:not(:last-of-type) {
     margin-bottom: 0.5rem;
 }
 
-a.form-button:hover .nemt-form-button-text-wrapper {
-    position: relative;
+li.faqs-list-item {
+    background: rgb(var(--background-color));
+    border-radius: 0.25rem;
 }
 
-a.form-button:hover .nemt-form-button-text-wrapper::before {
-    content: "Opens in New Tab";
-    color: black;
-    position: absolute;
+.faqs-list-content {
+    max-height: 0px;
+    overflow: hidden;
+}
+
+.faqs-list-content.open {
+    padding: 1rem;
+}
+
+.appointment-schedule-information-container *:not(h3) {
+    font-size: 1.3rem;
+}
+
+.nemt-information-wrapper:last-of-type {
+    flex-direction: column;
+}
+
+/* .during-business-hours-wrapper {
+    width:  fit-content;
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+} */
+
+.appointment-schedule-information-container {
     width: fit-content;
-    height: fit-content;
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.appointment-schedule-information-container::before {
+    content: "";
+    height: calc(100% - 2rem);
+    width: 0.25rem;
+    position: absolute;
     background: white;
-    padding: 0.25rem;
-    top: 0;
-    left: 50%;
-    translate: -50% -125%;
-    border: 1px solid;
+    display: block;
+    left: 0;
+    top: 1rem;
+    border-radius: 100vw;
+}
+
+h3.section-sub-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
 }
 
 /* NEMT Page Width Styling */
@@ -575,7 +717,40 @@ a.form-button:hover .nemt-form-button-text-wrapper::before {
         width: 100%;
         font-size: calc(1.2vw + 6.784px);
     }
+
+    .nemt-information-wrapper {
+        flex-direction: column;
+    }
+
+    .nemt-transportation-information-faq {
+        margin-bottom: 1.5rem;
+    }
 }
+
+@media(max-width: 600px) {
+    .nemt-information-wrapper {
+        padding: 1rem;
+    }
+}
+
+@media(max-width: 520px) {
+    .nemt-information-wrapper h2.section-title {
+        font-size: calc(4.6vw + 4.08px);
+    }
+
+    .nemt-information-wrapper:last-of-type {
+        padding-top: 1rem;
+    }
+
+    h3.section-sub-title {
+        font-size: calc(4.8vw - 0.96px);
+    }
+
+    .appointment-schedule-information-container *:not(h3) {
+        font-size: calc(4.4vw - 2.08px)
+    }
+}
+
 
 
 /* About Us Page Styling */

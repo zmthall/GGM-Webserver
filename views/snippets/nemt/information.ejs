@@ -1,0 +1,155 @@
+<section class="nemt-transportation-information page-content">
+    <h2 class="section-title">Transportation Information</h2>
+    <div class="nemt-information-wrapper">
+        <div class="nemt-transportation-information-faq">
+            <h3 class="content-title dark-background">FAQs</h3>
+            <ul class="section-list-container">
+                <li class="faqs-list-item">
+                    <button type="button" data-faqs-btn="1" class="faqs-dropdown-button">WHO IS ELIGIBLE?</button>
+                    <div class="faqs-list-content">
+                        <p class="faqs-text">
+                            Your client may be eligible if they have a 
+                            current Medicaid Insurance ID and are going 
+                            to a Medicaid approved appointment.
+                        </p>
+                    </div>
+                </li>
+                <li class="faqs-list-item">
+                    <button type="button" data-faqs-btn="2" class="faqs-dropdown-button">HOW DO THEY SCHEDULE A RIDE?</button>
+                    <div class="faqs-list-content">
+                        <p class="faqs-text">To allow us time to schedule 
+                            your ride, please call us at least 
+                            twenty-four (24) hours before a scheduled 
+                            appointment. Reservation hours are 8:00AM – 
+                            4:00PM Monday – Friday. If you need to cancel 
+                            a ride please call us at least two hours 
+                            before you scheduled pick-up. If after office 
+                            hours, call our dispatch at <a href="tel:<%- company.phone_number_dispatch %>"><%- company.phone_number_dispatch_format %></a>.</p>
+                        <p class="faqs-text">
+                            Our contact office is open five (5) days a 
+                            week Monday – Friday 8:00AM – 4:00PM for any 
+                            questions, cancellations and general care 
+                            appointments. Transportation to urgent 
+                            appointments can be scheduled on an “as 
+                            available” basis.
+                        </p>
+                        <a href="/contact-us/schedule-a-ride" class="link-spacing">
+                            Schedule A Ride Online
+                        </a>
+                    </div>
+                </li>
+                <li class="faqs-list-item">
+                    <button type="button" data-faqs-btn="3" class="faqs-dropdown-button">WHICH SERVICES ARE COVERED?</button>
+                    <div class="faqs-list-content">
+                        <p class="faqs-text">
+                            We provide transportation assistance for 
+                            those services covered by Medicaid. We cannot 
+                            transport to services not covered under the 
+                            Medicaid program.
+                        </p>
+                    </div>
+                </li>
+                <li class="faqs-list-item">
+                    <button type="button" data-faqs-btn="4" class="faqs-dropdown-button">HOW DOES THE CLIENT GET APPROVED?</button>
+                    <div class="faqs-list-content">
+                        <p class="faqs-text">
+                            The attending Physician, Physician’s 
+                            Assistant, Nurse Practitioner, Therapist, or 
+                            licensed healthcare professional must 
+                            complete and sign the Medical Certificate of 
+                            Transportation Services.
+                        </p>
+                        <p class="faqs-text">
+                            If a client lives beyond 25 miles from the 
+                            Medical Provider then the additional 25 mile 
+                            form must be filled out, which is found 
+                            within the 
+                        </p>
+                        <a href="/pdfs/Medical Certificate of Transportation Service.pdf" target="_blank" ref="noopener" class="link-spacing">
+                            Medical Certificate of Transportation Service Form
+                        </a>
+                    </div>
+                </li>
+                <li class="faqs-list-item">
+                    <button type="button" data-faqs-btn="5" class="faqs-dropdown-button">WHEN SHOULD THEY BE READY FOR THEIR RIDE?</button>
+                    <div class="faqs-list-content">
+                        <p class="faqs-text">
+                            When you call us for a ride, we will give you 
+                            the time at which you should be ready to be 
+                            picked up. For shared rides, you may be asked 
+                            to be ready earlier than expected. Unexpected 
+                            delays may occur due to traffic or weather 
+                            conditions.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="nemt-transportation-information-schedule-ride">
+            <h3 class="content-title dark-background">How Do I Schedule A Ride?</h3>
+            <ul class="section-list-container">
+                <li class="information-list-item">
+                    <p class="information-content-text dark-background">
+                        Once approved, please call us at least 48 hours 
+                        before a scheduled appointment. Reservation hours 
+                        are from 8:00AM-4:00PM Monday - Friday. If you 
+                        need to cancel a ride please call us at least two 
+                        hours before your scheduled pick-up. If after 
+                        hours, call our dispatch at 
+                        <a href="tel:<%- company.phone_number_dispatch %>" class="dark-background">
+                            <%- company.phone_number_dispatch_format %>
+                        </a>.
+                    </p>
+                </li>
+                <li class="information-list-item">
+                    <p class="information-content-text dark-background">
+                        Our office is open five (5) days a week Monday - 
+                        Friday 8:00AM - 4:00PM for any questions, 
+                        cancellations, and urgent care appointments. 
+                        Transportation to urgent appointments can be 
+                        scheduled on an "as available" basis.
+                    </p>
+                    <a href="/contact-us/schedule-a-ride" class="link-spacing dark-background">Schedule A Ride Online</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="nemt-information-wrapper">
+        <h2 class="section-title dark-background">
+            DRIVERS AND APPOINTMENTS AVAILABLE 24/7
+        </h2>
+        <div class="during-business-hours-wrapper appointment-schedule-information-container">
+            <h3 class="section-sub-title dark-background">
+                During Business Hours Call:
+            </h3>
+            <a href="tel:<%- company.phone_number_nemt %>" class="nemt-page-anchor dark-background">
+                <span class="nemt-span-logo">
+                    <%- include('../../svg/phone') %> 
+                </span>
+                <span class="nemt-span-text">
+                    <%- company.phone_number_nemt_format %>
+                </span>
+            </a>
+            <a href="tel:<%- company.phone_number_dispatch_toll %>" class="nemt-page-anchor dark-background">
+                <span class="nemt-span-logo">
+                    <%- include('../../svg/phone') %> 
+                </span>
+                <span class="nemt-span-text">
+                    <%- company.phone_number_dispatch_format_toll %>
+                </span>
+            </a>
+            <p class="information-content-text dark-background"><%- include('../../svg/clock') %> Office Hours: M-F 8AM-4PM</p>
+        </div>
+        <div class="after-business-hours-wrapper appointment-schedule-information-container">
+            <h3 class="section-sub-title dark-background">After Business Hours Call:</h3>
+            <a href="tel:<%- company.phone_number_dispatch %>" class="nemt-page-anchor dark-background">
+                <span class="nemt-span-logo">
+                    <%- include('../../svg/phone') %> 
+                </span>
+                <span class="nemt-span-text">
+                    <%- company.phone_number_dispatch_format %>
+                </span>
+            </a>
+        </div>
+    </div>
+</section>

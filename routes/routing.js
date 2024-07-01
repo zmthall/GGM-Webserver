@@ -1,7 +1,7 @@
 const express = require('express');
 const helper = require('../files/helper.js');
-const app = express();
 const methods = require('../files/methods.js')
+const mailer = require('../files/mailer.js')
 const path = require('path')
 var router = express.Router();
 
@@ -151,6 +151,35 @@ router.get('/contact-us', (request, response) => {
         },
         layout: './layouts/main-layout'
     })
+})
+
+router.post('/contact-us/send-email', (request, response) => {
+    const data = {
+        reason: request.body.reason,
+        first_name: request.body.first_name,
+        last_name: request.body.last_name,
+        email: request.body.email,
+        phone: request.body.phone,
+        contact_method: request.body.contact_method,
+        message: request.body.message
+    }
+
+    const message = {
+        from: process.env.EMAIL_USERNAME,
+        to: 'goldengatemedicalsupplies@gmail.com',
+        subject: `Message From: ${data.first_name} ${data.last_name}`,
+        text: `Reason: ${data.reason} Name: ${data.first_name} ${data.last_name} Email Address: ${data.email} Phone Number: ${data.phone} Preferred Contact Method: ${data.contact_method} Message: ${data.message}`,
+        html: `<p>Reason: ${data.reason}</p>
+        <p>Name: ${data.first_name} ${data.last_name}</p>
+        <p>Email Address: <a href="mailto:${data.email}">${data.email}</a></p>
+        <p>Phone Number: <a href="tel:${data.phone}">${data.phone}</a></p>
+        <p>Preferred Contact Method: ${data.contact_method}</p>
+        <p>Message: ${data.message}</p>`
+    }
+
+    mailer.send_email(message).catch(console.error)
+
+    response.status(200).redirect('/contact-us/thank-you')
 })
 
 router.get('/contact-us/thank-you', (request, response) => {

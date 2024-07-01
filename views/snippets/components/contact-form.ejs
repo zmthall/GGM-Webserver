@@ -1,0 +1,43 @@
+<form action="/contact-us/send-email" method="post">
+    <div class="form-item-container">
+        <label for="reason">Reason for Contact</label>
+        <select name="reason" id="reason">
+            <option value="general">General Contact</option>
+            <option value="complaint">File a Complaint</option>
+            <option value="question">Question or Inquiry</option>
+            <option value="transportation">Transportation Services</option>
+            <option value="medical-supplies">Medical Supplies</option>
+        </select>
+    </div>
+    <div class="form-item-container">
+        <div class="first-name-wrapper">
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" id="first_name">
+        </div>
+        <div class="last-name-wrapper">
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" id="last_name">
+        </div>
+    </div>
+    <div class="form-item-container">
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email">
+    </div>
+    <div class="form-item-container">
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+    </div>
+    <div class="form-item-container">
+        <label for="contact_method">Preferred Contact Method</label>
+        <select name="contact_method" id="contact_method">
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+        </select>
+    </div>
+    <div class="form-item-container">
+        <label for="message">Comment/Inquiry/Message</label>
+        <textarea name="message" id="message" rows="5"></textarea>
+    </div>
+
+    <button type="submit">Send</button>
+</form>

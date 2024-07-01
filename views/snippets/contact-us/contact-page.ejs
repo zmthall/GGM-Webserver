@@ -1,0 +1,39 @@
+<section class="contact-us-get-in-touch page-content">
+    <div class="get-in-touch-text-wrapper">
+        <h2>GET IN TOUCH:</h2>
+        <p class="section-text">
+            Send us a message to get in touch with one of our team members. 
+            We're here to address any inquiries, questions, or concerns you 
+            may have regarding our transportation services, our assisted 
+            living services, or our medical supply services.
+        </p>
+        <p class="section-text please-note">
+            <span class="please-note">Please Note:</span> This form is specifically for general inquiries and 
+            customer service-related matters. If you need to schedule a ride 
+            with our transportation service, please use our dedicated 
+            <a href="/contact-us/schedule-a-ride">Schedule A Ride</a> form. We prioritize ride requests submitted 
+            through that form and cannot guarantee accommodation for rides 
+            requested through this contact form. We appreciate your 
+            understanding and look forward to assisting you!
+        </p>
+        <div class="business-information">
+            <div class="contact-us-location">
+                <h3 class="contact-us-subtitle"><%- company.name %></h3>
+                <a href="/about-us/location"><%- company.adress_transportation %> <%- company.address_info %></a>
+            </div>
+            <div class="contact-us-phone">
+                <h3 class="contact-us-subtitle">Phone</h3>
+                <a href="tel:<%- company.phone_number_nemt %>"><%- company.phone_number_nemt_format %></a>
+            </div>
+            <div class="contact-us-hours">
+                <h3 class="contact-us-subtitle">Hours</h3>
+                <p class="contact-us-information">
+                    <%- company.reservation_hours %>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="get-in-touch-form-wrapper">
+        <%- include('../components/contact-form') %>
+    </div>
+</section>

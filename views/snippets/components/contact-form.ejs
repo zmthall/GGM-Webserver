@@ -1,4 +1,4 @@
-<form action="/contact-us/send-email" method="post">
+<form class="<%- helper.handleize(page.title) %>-page-contact-form" action="/contact-us/send-email" method="post">
     <div class="form-item-container">
         <label for="reason">Reason for Contact</label>
         <select name="reason" id="reason">
@@ -9,12 +9,12 @@
             <option value="medical-supplies">Medical Supplies</option>
         </select>
     </div>
-    <div class="form-item-container">
-        <div class="first-name-wrapper">
+    <div class="form-item-container name-field">
+        <div class="first-name-wrapper name-field-wrapper">
             <label for="first_name">First Name</label>
             <input type="text" name="first_name" id="first_name">
         </div>
-        <div class="last-name-wrapper">
+        <div class="last-name-wrapper name-field-wrapper">
             <label for="last_name">Last Name</label>
             <input type="text" name="last_name" id="last_name">
         </div>
@@ -39,5 +39,5 @@
         <textarea name="message" id="message" rows="5"></textarea>
     </div>
 
-    <button type="submit">Send</button>
+    <button class="primary-button" type="submit">Send</button>
 </form>

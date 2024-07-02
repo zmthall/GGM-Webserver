@@ -570,19 +570,21 @@ section.non-medical-transportation-bottom-page {
 
 /* --- Information Section Styling */
 
-.nemt-information-wrapper {
+.nemt-information-wrapper:not(.footer-content-wrapper) {
     background: rgb(var(--primary-color));
-}
-
-.nemt-information-wrapper {
     display: flex;
     padding: 3rem;
 }
 
-.nemt-information-wrapper:first-of-type {
+.nemt-information-wrapper:first-of-type:not(.footer-content-wrapper) {
     border-bottom: 1px solid rgb(var(--light-grey));
+    
 }
-section.nemt-transportation-information {
+.nemt-information-wrapper:last-of-type:not(.footer-content-wrapper) {
+    flex-direction: column;
+}
+
+section.nemt-transportation-information:not(.footer-content-wrapper) {
     margin-top: 1rem;
 }
 
@@ -659,9 +661,6 @@ li.faqs-list-item {
     font-size: 1.3rem;
 }
 
-.nemt-information-wrapper:last-of-type {
-    flex-direction: column;
-}
 
 /* .during-business-hours-wrapper {
     width:  fit-content;
@@ -718,7 +717,7 @@ h3.section-sub-title {
         font-size: calc(1.2vw + 6.784px);
     }
 
-    .nemt-information-wrapper {
+    .nemt-information-wrapper:not(.footer-content-wrapper) {
         flex-direction: column;
     }
 
@@ -728,17 +727,17 @@ h3.section-sub-title {
 }
 
 @media(max-width: 600px) {
-    .nemt-information-wrapper {
+    .nemt-information-wrapper:not(.footer-content-wrapper) {
         padding: 1rem;
     }
 }
 
 @media(max-width: 520px) {
-    .nemt-information-wrapper h2.section-title {
+    .nemt-information-wrapper:not(.footer-content-wrapper) h2.section-title {
         font-size: calc(4.6vw + 4.08px);
     }
 
-    .nemt-information-wrapper:last-of-type {
+    .nemt-information-wrapper:last-of-type:not(.footer-content-wrapper) {
         padding-top: 1rem;
     }
 
@@ -948,6 +947,7 @@ a.facebook-page-link {
 
 /* Community Outreach Page Styling */
 
+
 /* ---- Top Page Section Styling */
 .image-carousel-wrapper {
     display: flex;
@@ -1105,6 +1105,118 @@ button.event-button.expand-button:hover {
     .event-left-info {
         width: 20%;
     }
+}
+
+/* Contact Us Page Styling */
+
+section.contact-us-get-in-touch {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.contact-us-get-in-touch-wrapper {
+    width: 50%;
+    text-align: left;
+}
+
+.form-item-container  {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-item-container:not(.name-field) {
+        gap: 0.25rem;
+}
+
+.form-item-container.name-field {
+    flex-direction: row;
+}
+
+.name-field-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 0.25rem;
+}
+
+.name-field-wrapper:last-of-type { 
+    margin-left: 0.5rem;
+}
+
+.name-field-wrapper:first-of-type {
+    margin-right: 0.5rem;
+}
+
+
+form.contact-us-page-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+form.contact-us-page-contact-form input,
+form.contact-us-page-contact-form select {
+    height: 35px;
+}
+
+form.contact-us-page-contact-form input,
+form.contact-us-page-contact-form select,
+form.contact-us-page-contact-form textarea {
+    resize: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.business-information {
+    margin-left: 4rem;
+    margin-top: 1rem;
+}
+
+.contact-us-location,
+.contact-us-phone, 
+.contact-us-hours {
+    position: relative;
+}
+
+.contact-us-location,
+.contact-us-phone {
+    margin-bottom: 1rem;
+}
+
+.contact-us-location a {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: max-content;
+}
+
+.business-information a {
+    font-size: 1rem;
+}
+
+.contact-us-location::before {
+    content: url('/images/location-fill.svg');
+}
+
+.contact-us-phone::before {
+    content: url('/images/phone.svg');
+}
+
+.contact-us-hours::before {
+    content: url('/images/clock.svg');
+}
+
+.contact-us-location::before,
+.contact-us-phone::before,
+.contact-us-hours::before {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 50%;
+    translate: -3rem -50%;
 }
 
 /* Thank You Page Styling */

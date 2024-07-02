@@ -1,5 +1,5 @@
 <section class="contact-us-get-in-touch page-content">
-    <div class="get-in-touch-text-wrapper">
+    <div class="get-in-touch-text-wrapper contact-us-get-in-touch-wrapper">
         <h2>GET IN TOUCH:</h2>
         <p class="section-text">
             Send us a message to get in touch with one of our team members. 
@@ -19,7 +19,10 @@
         <div class="business-information">
             <div class="contact-us-location">
                 <h3 class="contact-us-subtitle"><%- company.name %></h3>
-                <a href="/about-us/location"><%- company.adress_transportation %> <%- company.address_info %></a>
+                <a href="/about-us/location">
+                    <span class="company-address anchor-text"><%- company.address_transportation %></span>
+                    <span class="company-address anchor-text"><%- company.address_info %></span>
+                </a>
             </div>
             <div class="contact-us-phone">
                 <h3 class="contact-us-subtitle">Phone</h3>
@@ -33,7 +36,7 @@
             </div>
         </div>
     </div>
-    <div class="get-in-touch-form-wrapper">
-        <%- include('../components/contact-form') %>
+    <div class="get-in-touch-form-wrapper contact-us-get-in-touch-wrapper">
+        <%- include('../components/contact-form', { page: page, helper: helper }) %>
     </div>
 </section>

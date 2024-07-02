@@ -202,7 +202,7 @@ router.get('/contact-us/schedule-a-ride', (request, response) => {
         page: {
             title: 'Schedule a Ride',
             href: '/contact-us',
-            page_type: "contact-page"
+            page_type: "page"
         },
         layout: './layouts/main-layout'
     })

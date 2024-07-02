@@ -1219,6 +1219,87 @@ form.contact-us-page-contact-form textarea {
     translate: -3rem -50%;
 }
 
+/* Contact us Page Width Styling */
+
+@media(max-width: 800px) {
+    section.contact-us-get-in-touch {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.contact-us-get-in-touch p.section-text {
+        text-align: left;
+    }
+
+    .contact-us-get-in-touch-wrapper {
+        width: 80%;
+    }
+}
+
+@media(max-width: 768px) {
+    .contact-us-get-in-touch-wrapper {
+        width: 100%;
+    }
+}
+
+@media(max-width: 450px) {
+    .form-item-container.name-field {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .form-item-container div.name-field-wrapper {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* Schedule a Ride Page Styling */
+
+.jotform-form-container {
+    margin-top: 1rem;
+}
+
+
+.form-input-wide .form-header-group {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+li.form-line {
+    margin: 0;
+}
+
+span.please-note {
+    font-weight: 900;
+    text-decoration: underline;
+    color: rgb(var(--please-note-color));
+}
+
+p.please-note {
+    color: rgb(var(--please-note-color));
+    font-weight: 500;
+}
+
+p a {
+    font-size: inherit;
+}
+
+button#input_27 {
+    background: rgb(var(--primary-color));
+    border-color: rgb(var(--primary-color));
+}
+
+button#input_27:hover {
+    background-color: rgb(var(--secondary-color));
+    color: rgb(var(--primary-color));
+}
+
+div.form-all {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
 /* Thank You Page Styling */
 
 .envelope-mail-svg {

@@ -12,20 +12,20 @@
     <div class="form-item-container name-field">
         <div class="first-name-wrapper name-field-wrapper">
             <label for="first_name">First Name</label>
-            <input type="text" name="first_name" id="first_name">
+            <input type="text" name="first_name" id="first_name" required>
         </div>
         <div class="last-name-wrapper name-field-wrapper">
             <label for="last_name">Last Name</label>
-            <input type="text" name="last_name" id="last_name">
+            <input type="text" name="last_name" id="last_name" required>
         </div>
     </div>
     <div class="form-item-container">
         <label for="email">Email Address</label>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" required>
     </div>
     <div class="form-item-container">
         <label for="phone">Phone Number</label>
-        <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        <input type="text" name="phone" id="phone" pattern="^[\(]?[0-9]{3}[\)\- ]?[0-9]{3}[\-]?[0-9]{4}$">
     </div>
     <div class="form-item-container">
         <label for="contact_method">Preferred Contact Method</label>
@@ -36,7 +36,7 @@
     </div>
     <div class="form-item-container">
         <label for="message">Comment/Inquiry/Message</label>
-        <textarea name="message" id="message" rows="5"></textarea>
+        <textarea name="message" id="message" rows="5" required></textarea>
     </div>
 
     <button class="primary-button" type="submit">Send</button>

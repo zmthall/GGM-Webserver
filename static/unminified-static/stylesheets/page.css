@@ -100,6 +100,10 @@ h2.assisted-living-amenities-title {
     margin-bottom: 0.5rem;
 }
 
+.margin-top-s {
+    margin-top: 1rem;
+}
+
 /* ---- Bottom Page Section Styling ---- */
 
 section.assisted-living-bottom-page-section {
@@ -459,14 +463,8 @@ section.non-medical-transportation-bottom-page {
 }
 
 @media(max-width: 875px) {
-    .non-medical-transportation-bottom-page {
-        flex-direction: column;
-    }
-}
-
-@media(max-width: 400px) {
     .non-medical-transportation-bottom-page img {
-        width: 400px;   
+        display: none;
     }
 }
 
@@ -558,7 +556,68 @@ section.non-medical-transportation-bottom-page {
         translate: -50% -125%;
         border: 1px solid;
     }
-
+    
+    .nemt-transportation-eligible-places-wrapper {
+        display: flex;
+    }
+    
+    .nemt-transportation-content {
+        width: 50%;
+    }
+    
+    .GGMT-service-area-map-container {
+        width: 100%;
+        position: relative;
+    }
+    
+    .GGMT-service-area-map-container img {
+        width: 100%;
+    }
+    
+    .GGMT-service-area-map-container:hover::before  {
+        content: url('/images/circle-plus.svg');
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    ul.section-list-container.nemt-page {
+        list-style-image: url(/images/check-mark.svg);
+    }
+    
+    ul.section-list-container.nemt-page li p {
+        text-align: left;
+    }
+    
+    @media(max-width: 800px) {
+        .nemt-transportation-eligible-places-wrapper {
+            flex-direction: column;
+        }
+        
+        .nemt-transportation-content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    
+        .GGMT-service-area-map-container {
+            width: 75%;
+        }
+    }
+    
+    @media(max-width: 500px) {
+        .GGMT-service-area-map-container {
+            width: 100%;
+        }
+    }
+    
 /* --- Information Section Styling --- */
 
     a.nemt-page-anchor {

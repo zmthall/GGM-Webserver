@@ -151,7 +151,7 @@ a.cta-button.assisted-living-page {
 }
 
 .see-for-yourself-cta > .cta-button.assisted-living-page {
-    font-size: 2rem
+    font-size: 1rem;
 }
 
 
@@ -435,6 +435,7 @@ section.non-medical-transportation-bottom-page {
 
 .non-medical-transportation-bottom-page img {
     width: 497px;
+    margin-left: 1rem;
 }
 
 /* Non-Medical Transportation Page Width Styling */
@@ -1115,6 +1116,12 @@ section.contact-us-get-in-touch {
     margin-top: 1rem;
 }
 
+section.contact-us-map-iframe-section .location-iframe-container,
+section.contact-us-map-iframe-section iframe.location-iframe {
+    height: 350px;
+    margin-top: 1rem;
+}
+
 .contact-us-get-in-touch-wrapper {
     width: 50%;
     text-align: left;
@@ -1197,7 +1204,6 @@ section.contact-us-get-in-touch {
 .jotform-form-container {
     margin-top: 1rem;
 }
-
 
 .form-input-wide .form-header-group {
     margin-top: 0;

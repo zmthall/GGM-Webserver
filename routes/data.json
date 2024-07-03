@@ -208,8 +208,14 @@
             "url": "/policy/privacy-policy"
         },
         "accessibility": {
+            "breadcrumb": {
+                "home_page_url": "/",
+                "home_page": "Home",
+                "current_page_url": "/policy/accessibility",
+                "current_page": "Accessibility Efforts"
+            },
             "title": "Accessibility",
-            "url": "/accessibility"
+            "url": "/policy/accessibility"
         },
         "site_map": {
             "breadcrumb": {

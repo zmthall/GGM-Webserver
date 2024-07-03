@@ -13,7 +13,7 @@
     --inactive-cta: 150, 150, 150;
     --cta-text-color: 255, 255, 255;
     --please-note-color: 163, 21, 13;
-    --section-text-color: 50, 50, 50
+    --section-text-color: 50, 50, 50;
 
     /* Dimensions */
     --info-header-height: 75px;
@@ -115,6 +115,7 @@ span.read-more-plus {
     font-size: 1rem;
     cursor: pointer;
     border-radius: 0.25rem;
+    transition: background 0.3s ease-in-out;
 }
 
 .primary-button:hover {
@@ -196,6 +197,68 @@ span.please-note {
 
 .section-text.please-note {
     color: rgb(var(--please-note-color));
+}
+
+.form-item-container  {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-item-container:not(.name-field) {
+        gap: 0.25rem;
+}
+
+.form-item-container.name-field {
+    flex-direction: row;
+}
+
+.name-field-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 0.25rem;
+}
+
+.name-field-wrapper:last-of-type { 
+    margin-left: 0.5rem;
+}
+
+.name-field-wrapper:first-of-type {
+    margin-right: 0.5rem;
+}
+
+
+form.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+form.contact-form input,
+form.contact-form select {
+    height: 35px;
+}
+
+form.contact-form input,
+form.contact-form select,
+form.contact-form textarea {
+    resize: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+@media(max-width: 450px) {
+    .form-item-container.name-field {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .form-item-container div.name-field-wrapper {
+        width: 100%;
+        margin: 0;
+    }
 }
 
 /* Top Header Styling */

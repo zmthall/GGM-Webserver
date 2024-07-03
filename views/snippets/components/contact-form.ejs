@@ -1,4 +1,4 @@
-<form class="<%- helper.handleize(page.title) %>-page-contact-form" action="/contact-us/send-email" method="post">
+<form autocomplete="off" class="<%- helper.handleize(page.title) %>-page contact-form" action="/contact-us/send-email" method="post">
     <div class="form-item-container">
         <label for="reason">Reason for Contact</label>
         <select name="reason" id="reason">
@@ -7,6 +7,7 @@
             <option value="question">Question or Inquiry</option>
             <option value="transportation">Transportation Services</option>
             <option value="medical-supplies">Medical Supplies</option>
+            <option value="accessibility">Accessibility</option>
         </select>
     </div>
     <div class="form-item-container name-field">

@@ -46,3 +46,13 @@ ul.policy-unordered-list {
 p.policy-text a {
     font-size: 1rem;
 }
+
+section.contact-us-form {
+    width: 60%;
+}
+
+@media(max-width: 700px) {
+    section.contact-us-form {
+        width: 100%;
+    }
+}

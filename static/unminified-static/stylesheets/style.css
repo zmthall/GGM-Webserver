@@ -978,6 +978,22 @@ a.cta-button.read-more {
     margin-top: 2rem;
 }
 
+.close-button {
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 3;
+}
+
+.close-button:hover {
+    color: rgb(var(--dark-grey));
+}
+
 /* Footer Information Width Styling */
 
 @media(max-width: 1600px) {

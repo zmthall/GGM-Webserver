@@ -587,6 +587,28 @@ section.non-medical-transportation-bottom-page {
         justify-content: center;
         align-items: center;
     }
+
+    .eligibility-map.pop-up-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background: rgb(var(--background-color));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .eligibility-map-wrapper.pop-up-modal {
+        height: 80%;
+    }
+
+    .eligibility-map-wrapper.pop-up-modal img {
+        width: 100%;
+        height: 100%;
+    }
     
     ul.section-list-container.nemt-page {
         list-style-image: url(/images/check-mark.svg);

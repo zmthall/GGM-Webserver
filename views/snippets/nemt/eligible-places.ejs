@@ -1,4 +1,4 @@
-<section class="nemt-transportation-eligible-places page-content margin-top-s">
+<section class="nemt-transportation-eligible-places page-content margin-top-s" data-eligible-places-container>
     <h2 class="section-title">Eligible Places of Services</h2>
     <div class="nemt-transportation-eligible-places-wrapper">
         <div class="nemt-transportation-eligible-places-text nemt-transportation-content">
@@ -25,9 +25,10 @@
             </ul>
         </div>
         <div class="nemt-transportation-eligible-places-map nemt-transportation-content">
-            <div class="GGMT-service-area-map-container">
-                <img src="/images/ggmt-service-map.jpg" alt="Map of Colorado Counties and our servicable areas">
+            <div class="GGMT-service-area-map-container" aria-modal="true" role="button" aria-hidden="true" data-map-container>
+                <img src="/images/ggmt-service-map.jpg" alt="Map of Colorado Counties servicable area that includes all of Colorado excluding: Boulder, Larimer, Weld, Broomfield, Denver, Adams, Jefferson, Douglas, and Arapahoe counties">
             </div>
         </div>
+        <script src="/scripts/eligibility-map.js"></script>
     </div>
 </section>

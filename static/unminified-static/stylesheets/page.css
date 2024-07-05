@@ -595,6 +595,65 @@ section.non-medical-transportation-bottom-page {
     ul.section-list-container.nemt-page li p {
         text-align: left;
     }
+
+    section.nemt-transportation-driver-safety {
+        display: flex;
+        margin-top: 2rem;
+        padding: 2.5rem;
+        background: rgb(var(--dark-grey));
+        gap: 1rem;
+        align-items: center;
+        border-radius: 1rem;
+        box-shadow: 0 4px 30px 6px rgba(0, 0, 0, .2);
+    }
+    
+    .nemt-transportation-driver-safety-text-content {
+        width: 35%;
+    }
+    
+    .nemt-transportation-driver-safety-image-content {
+        width: 65%;
+    }
+    
+    .nemt-transportation-driver-safety-image-content img {
+        width: 100%;
+    }
+    
+    .driver-safety-images-camera img {
+        width: 50%;
+    }
+    
+    .driver-safety-images-camera {
+        display: flex;
+    }
+    
+    .section-title.driver-safety {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .section-title.driver-safety span.top-header-text {
+        color: rgb(var(--secondary-color))
+    }
+    
+    @media(max-width: 1200px) {
+        section.nemt-transportation-driver-safety {
+            border-radius: 0;
+            box-shadow: none;
+        }
+    }
+    
+    @media(max-width: 850px) {
+        section.nemt-transportation-driver-safety {
+            flex-direction: column;
+        }
+    
+        .nemt-transportation-driver-safety-text-content,
+        .nemt-transportation-driver-safety-image-content {
+            width: 100%;
+        }
+    }
     
     @media(max-width: 800px) {
         .nemt-transportation-eligible-places-wrapper {
@@ -615,6 +674,10 @@ section.non-medical-transportation-bottom-page {
     @media(max-width: 500px) {
         .GGMT-service-area-map-container {
             width: 100%;
+        }
+
+        section.nemt-transportation-driver-safety {
+            padding: 1rem;
         }
     }
     
@@ -655,6 +718,15 @@ h2.dark-background,
 h3.dark-background,
 h4.dark-background {
     color: white;
+}
+
+p.darker-background,
+a.darker-background,
+h1.darker-background,
+h2.darker-background,
+h3.darker-background,
+h4.darker-background {
+    color: black;
 }
 
 h3.content-title {

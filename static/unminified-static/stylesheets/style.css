@@ -191,6 +191,10 @@ main.main-content {
     background: rgb(var(--light-grey))
 }
 
+.breadcrumb-wrapper a {
+    text-transform: capitalize;
+}
+
 span.please-note {
     font-weight: 700;
     text-decoration: underline;

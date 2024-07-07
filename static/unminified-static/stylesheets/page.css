@@ -215,18 +215,7 @@ section.houses-slide-carousel-section {
 }
 
 .slider-btn {
-    background: rgba(0, 0, 0, 0.8);
-    border: 0;
     padding: 0 calc(0.7vw - 3.2px);
-    border-radius: 0.25rem;
-    cursor: pointer;
-    z-index: 1;
-    color: black;
-}
-
-.slider-btn:hover {
-    background: rgba(0, 0, 0, 0.3);
-    color: rgba(255, 255, 255, 0.6);
 }
 
 .carousel-slides {
@@ -944,6 +933,10 @@ p.section-list-description {
     margin-top: 0.5rem;
 }
 
+p.section-list-description.section-text {
+    text-align: left;
+}
+
 ul.section-list-container {
     margin-left: 2rem;
 }
@@ -1032,7 +1025,7 @@ img.section-image.image-right {
     }
 
     .about-us-medical-supply-section  h2.section-title {
-        text-align: left;
+        text-align: center;
     }
 }
 

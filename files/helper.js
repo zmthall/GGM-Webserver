@@ -6,6 +6,16 @@ function handleize(string) {
     }
 }
 
+function breadcrumbCheck(string) {
+    var test = string.split('/').filter(Boolean)
+    if(test.length > 1) return { test: true, title: test[0].replace('-', ' '), url: "/" + test[0] }
+    else return { test: false }
+}
+
+function linkBreadcrumb(string) {
+
+}
+
 function lengthof(object) {
     if(typeof object === 'object')
         return Object.keys(object).length
@@ -13,5 +23,7 @@ function lengthof(object) {
 
 module.exports = {
     handleize: handleize,
+    linkBreadcrumb: linkBreadcrumb,
+    breadcrumbCheck: breadcrumbCheck,
     lengthof: lengthof
 }

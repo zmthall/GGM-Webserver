@@ -29,9 +29,13 @@ class MapHandler {
     }
 
     modalInjection() {
-        this.map.section.append(this.containerSetup())
-        document.body.classList.add('no-scroll')
-        this.map.container = document.querySelector('[data-map-modal-container]')
+        var screenWidth = screen.width
+        
+        if(screenWidth > 768) {
+            this.map.section.append(this.containerSetup())
+            document.body.classList.add('no-scroll')
+            this.map.container = document.querySelector('[data-map-modal-container]')
+        }
     }
 
     modalDelete() {

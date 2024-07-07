@@ -668,6 +668,10 @@ section.non-medical-transportation-bottom-page {
             width: 100%;
             height: auto;
         }
+
+        .GGMT-service-area-map-container:hover::before  {
+            display: none;
+        }
     }
     
     @media(max-width: 1200px) {

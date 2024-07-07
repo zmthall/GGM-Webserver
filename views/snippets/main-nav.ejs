@@ -1,10 +1,12 @@
 <nav class="main-navigation" data-navigation="main">
     <ul class="main-navigation-link-items">
+        <% var count = 0 %>
         <% for(const link in links) { %>
             <% if(links[link].sublinks) { %>
-                <li class="main-navigation-link-item" data-sublink-wrapper="<%- helper.handleize(links[link].title) %>">
+                <li class="main-navigation-link-item" data-link-wrapper="<%- helper.handleize(links[link].title) %>" data-idx="<%- count %>">
+                    <% count = count + 1 %>
                     <a class="main-navigation-link" href="<%- links[link].href %>"><%- links[link].title %></a>
-                    <ul class="main-navigation-sublink-items hidden">
+                    <ul class="main-navigation-sublink-items hidden" data-sublink-wrapper="<%- helper.handleize(links[link].title) %>">
                         <% for(const sublink in links[link].sublinks) { %>
                             <li class="main-navigation-link-item">
                                 <a href="<%- links[link].sublinks[sublink].href %>" class="main-navigation-link sublink"><%- links[link].sublinks[sublink].title %></a>

@@ -1,5 +1,7 @@
 class PageHandler {
     constructor() {
+        const _this = this
+        console.log(_this)
         this.buttons = {
             mobile_nav: {
                 button: document.querySelector('[data-nav-btn]'),
@@ -7,13 +9,9 @@ class PageHandler {
                 isX: false
             },
             main_nav: {
+                linkWrappers: document.querySelectorAll('[data-link-wrapper]'),
                 sublinkWrappers: document.querySelectorAll('[data-sublink-wrapper]'),
-                previousEnter: undefined,
-                previousLeave: undefined,
-                timers: {
-                    timerEnter: undefined,
-                    timerLeave: undefined
-                }
+                timeoutVar: new Array(document.querySelectorAll('[data-link-wrapper]').length)
             },
             footer: {
                 moreInfo: document.querySelectorAll('[data-info-btn]')
@@ -72,32 +70,30 @@ class PageHandler {
             })
         })
 
-        this.buttons.main_nav.sublinkWrappers.forEach(element => {
+        this.buttons.main_nav.linkWrappers.forEach(element => {
             element.addEventListener("mouseenter", (event) => {
-                const elementName = element.getAttribute("data-sublink-wrapper")
-                this.buttons.main_nav.previousEnter = element.getAttribute("data-sublink-wrapper")
-                event.target.lastElementChild.classList.remove("hidden")
-                this.buttons.main_nav.timers.timerEnter = setTimeout(() => {
-                    event.target.lastElementChild.classList.add("active")
-                }, 1)
-                console.log(`${this.buttons.main_nav.previousLeave}:${elementName}`)
-                if(this.buttons.main_nav.previousLeave === elementName)
-                    clearTimeout(this.buttons.main_nav.timers.timerLeave)
+                const IDX = event.target.getAttribute('data-idx')
+                const sublink = event.target.querySelector('[data-sublink-wrapper]');
 
-                // console.log(event.target.lastElementChild.classList)
+                if(this.buttons.main_nav.timeoutVar[IDX]) {
+                    clearTimeout(this.buttons.main_nav.timeoutVar[IDX])
+                    this.buttons.main_nav.timeoutVar[IDX] = undefined
+                }
+
+
+                sublink.classList.remove('hidden')
+                setTimeout(() => {
+                    sublink.classList.add('active')
+                }, 1);
             })
 
             element.addEventListener("mouseleave", (event) => {
-                const elementName = element.getAttribute("data-sublink-wrapper")
-                this.buttons.main_nav.previousLeave = element.getAttribute("data-sublink-wrapper")
-                event.target.lastElementChild.classList.remove("active")
-                this.buttons.main_nav.timers.timerLeave = setTimeout(() => {
-                    event.target.lastElementChild.classList.add("hidden")
-                }, 1000);
-                if(this.buttons.main_nav.previousEnter === elementName)
-                    clearTimeout(this.buttons.main_nav.timers.timerEnter)
-
-                // console.log(event.target.lastElementChild.classList)
+                const IDX = event.target.getAttribute('data-idx')
+                const sublink = event.target.querySelector('[data-sublink-wrapper]');
+                sublink.classList.remove('active')
+                this.buttons.main_nav.timeoutVar[IDX] = setTimeout(() => {
+                    sublink.classList.add('hidden')
+                }, 750);
             })
         })
 

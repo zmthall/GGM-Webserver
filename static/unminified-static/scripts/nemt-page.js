@@ -45,5 +45,39 @@ class MapHandler {
     }
 }
 
+class FAQHandler {
+    constructor() {
+        this.faq = {
+            buttons: document.querySelectorAll('[data-faqs-btn]'),
+            containers: document.querySelectorAll('[data-faqs-container]')
+        }
+
+        this.faq.buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const IDX = parseInt(button.getAttribute('data-faqs-btn'))
+                this.toggleFAQ(IDX)
+                if(!button.classList.contains('expanded')) {
+                    this.closeOtherFAQs(IDX)
+                }
+            })
+        })
+    }
+
+    toggleFAQ(IDX) {
+        this.faq.containers[IDX].classList.toggle('expanded')
+    }
+
+    closeOtherFAQs(IDX) {
+        this.faq.containers.forEach((container, idx) => {
+            if(idx != IDX && container.classList.contains('expanded')) {
+                container.classList.remove('expanded')
+            }
+        })
+    }
+}
+
 const mapHandler = new MapHandler()
+const faqHandler = new FAQHandler()
+console.log(faqHandler)
 console.log(mapHandler)
+

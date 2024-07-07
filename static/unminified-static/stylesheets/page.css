@@ -822,8 +822,9 @@ li.faqs-list-item {
     overflow: hidden;
 }
 
-.faqs-list-content.open {
+.faqs-list-content.expanded {
     padding: 1rem;
+    max-height: unset;
 }
 
 .appointment-schedule-information-container *:not(h3) {

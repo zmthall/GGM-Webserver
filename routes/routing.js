@@ -101,9 +101,9 @@ router.get('/about-us/location', (request, response) => {
     })
 })
 
-// router.get('/blogs', (request, response) => {
+// router.get('/about-us/blog', (request, response) => {
 //     response.render('about', {
-//         title: 'About us',
+//         title: 'Golden Gate Manor Blog',
 //         layout: './layouts/main-layout'
 //     })
 // })

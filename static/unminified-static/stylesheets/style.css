@@ -1026,13 +1026,9 @@ div#chat_app div.sc-suggestions-row button.sc-suggestions-element {
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-div#chat_app .sc-suggestions-row button.sc-suggestions-element:hover {
+div#chat_app div.sc-suggestions-row button.sc-suggestions-element:hover {
     background: rgb(var(--primary-color));
-    color: white !important;
-}
-
-.sc-user-input--text::before {
-    pointer-events: none;
+    color: white!important;
 }
 
 @media(max-width: 590px) {

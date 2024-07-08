@@ -28,6 +28,8 @@
   },
   "homepage": "https://github.com/zmthall/GGM_Website#readme",
   "dependencies": {
+    "axios": "^1.7.2",
+    "cheerio": "^1.0.0-rc.12",
     "csso": "^5.0.5",
     "dotenv": "^16.4.5",
     "ejs": "^3.1.9",

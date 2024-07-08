@@ -1284,6 +1284,7 @@ p.event-description {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    line-clamp: var(--max-lines);
     -webkit-line-clamp: var(--max-lines);
     position: relative;
 }

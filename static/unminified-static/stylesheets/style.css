@@ -998,6 +998,49 @@ a.cta-button.read-more {
     color: rgb(var(--dark-grey));
 }
 
+/* AI Chat Styling */
+
+.sc-message-list .sc-message--content.received .sc-message--text {
+    margin-right: 0;
+}
+
+.sc-message--text a {
+    font-size: 14px;
+    word-break: break-word;
+}
+
+.sc-message--content.sent .sc-message--text {
+    max-width: calc(100% - 100px);
+}
+
+.sc-message--text {
+    padding: 5px 0.75rem;
+    font-size: 1rem;
+}
+
+.talk-bubble-right.tri-right.right-in.round::after {
+    right: -12px;
+}
+
+div#chat_app div.sc-suggestions-row button.sc-suggestions-element {
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+div#chat_app .sc-suggestions-row button.sc-suggestions-element:hover {
+    background: rgb(var(--primary-color));
+    color: white !important;
+}
+
+.sc-user-input--text::before {
+    pointer-events: none;
+}
+
+@media(max-width: 590px) {
+    .sc-user-input--picker-wrapper div.sc-emoji-picker {
+        width: calc(100vw - 50px);
+    }
+}
+
 /* Footer Information Width Styling */
 
 @media(max-width: 1600px) {

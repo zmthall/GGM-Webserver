@@ -1178,6 +1178,10 @@ button.image-carousel-btn:hover {
     overflow: hidden;
 }
 
+.event-description.section-text {
+    text-align: left;
+}
+
 .event-left-info {
     width: 15%;
     display: flex;
@@ -1217,7 +1221,7 @@ p.event-description.section-text {
     margin: 0;
 }
 
-p.event-description.collapsed {
+p.event-description {
     --max-lines: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -1226,7 +1230,7 @@ p.event-description.collapsed {
     position: relative;
 }
 
-p.event-description.collapsed::before {
+p.event-description::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -1237,15 +1241,24 @@ p.event-description.collapsed::before {
     pointer-events: none;
 }
 
+p.event-description.expanded {
+    display: block;
+}
+
+p.event-description.expanded::before {
+    display: none;
+}
+
 button.event-button.expand-button {
     border: 0;
     background: none;
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 900;
+    padding: 0.5rem 0;
 }
 
 button.event-button.expand-button:hover {
-    color: rgb(var(--primary-color));
+    color: rgb(var(--dark-grey));
 }
 
 /* Community Outreach Width Styling */

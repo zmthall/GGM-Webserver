@@ -76,8 +76,7 @@ class FAQHandler {
     }
 }
 
-const mapHandler = new MapHandler()
-const faqHandler = new FAQHandler()
-console.log(faqHandler)
-console.log(mapHandler)
-
+window.addEventListener("load", () => {
+    const mapHandler = new MapHandler()
+    const faqHandler = new FAQHandler()
+})

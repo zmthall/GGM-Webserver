@@ -1,7 +1,5 @@
 class PageHandler {
     constructor() {
-        const _this = this
-        console.log(_this)
         this.buttons = {
             mobile_nav: {
                 button: document.querySelector('[data-nav-btn]'),

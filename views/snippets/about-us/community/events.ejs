@@ -20,7 +20,7 @@
                         <p class="event-location-address"><%- events.upcoming[idx].location.address %></p>
                     </div>
                     <div class="event-description-container event-bottom-information">
-                        <p class="event-description section-text collapsed"><%- events.upcoming[idx].description %></p>
+                        <p class="event-description section-text" data-event-expand-container="<%- idx %>"><%- events.upcoming[idx].description %></p>
                         <button type="button" class="event-button expand-button" data-event-expand-btn="<%- idx %>">more</button>
                     </div>
                 </div>

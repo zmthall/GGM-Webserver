@@ -23,6 +23,11 @@ function getConfig(file){
 
 json = getConfig('data.json');
 
+router.get('/sitemaps/:sitemap', (req, res) => {
+    const { sitemap } = req.params;
+    return res.sendFile(path.join(__dirname, '../sitemaps', sitemap));
+});
+
 router.get('/', (request, response) => {
     response.render('index', {
         config: json,

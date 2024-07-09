@@ -1,8 +1,9 @@
 const cheerio = require('cheerio')
 const axios = require("axios")
+const path = require('path')
+const { simpleSitemapAndIndex } = require('sitemap');
 
 async function webCrawl() {
-    console.log('\n\n\n\n\n-------------------------------------------------------------------')
     var pageHTML = await axios.get("localhost")
     var $ = cheerio.load(pageHTML.data)
     const pageURLS = {}
@@ -28,7 +29,7 @@ async function webCrawl() {
     return pageURLS 
 }
 
-async function configureSitemap() {
+async function configureSitemapData() {
     const urls = await webCrawl()
     var data = []
 
@@ -46,9 +47,24 @@ async function configureSitemap() {
         count++
         data.push(temp)
     }
-    console.log(data)
-
-
+    return data
 }
 
-configureSitemap()
+async function generateSitemap() {
+    try {
+        const sitemapItems = await configureSitemapData()
+        const dir = path.join(__dirname, '../sitemaps/')
+
+        await simpleSitemapAndIndex({
+            hostname: 'https://goldengatemanor.com',
+            destinationDir: dir,
+            sitemapHostname: `https://goldengatemanor.com/sitemaps/`,
+            sourceData: sitemapItems,
+        });
+
+    } catch(err) {
+        throw new Error(err.message)
+    }
+}
+
+generateSitemap()

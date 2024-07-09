@@ -21,8 +21,8 @@ async function WebCrawl() {
     var $ = cheerio.load(pageHTML.data)
     const pageURLS = {}
 
-    $("a").each((index, element) => {
-        console.log($(element).attr('ref'))
+    $("a:not([ref=nofollow])").each((index, element) => {
+        console.log($(element).attr('href'))
     })
 
     // console.log(pageURLS)

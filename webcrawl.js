@@ -6,7 +6,7 @@ const axios = require("axios");
 // }
 
 function objTest(key, newValue, object) {
-    var keyTest = key.includes('\n') || /\d/.test(key) || key.includes('@')
+    var keyTest = key.includes('\n') || /\d/.test(key)
     var valueTest = newValue.includes('https') || Object.values(object).includes(newValue)
 
     if(key === 'policy')

@@ -3,13 +3,13 @@
         <h1><%- breadcrumb.current_page %></h1>
     </div>
     <div class="breadcrumb-wrapper">
-        <span class="home-page"><a href="<%- breadcrumb.home_page_url %>" class="home-page-anchor"><%- breadcrumb.home_page %></a></span>
+        <span class="home-page"><a ref="nofollow" href="<%- breadcrumb.home_page_url %>" class="home-page-anchor"><%- breadcrumb.home_page %></a></span>
         <span class="breadcrumb-divider">/</span>
         <% breadcrumb.previous_page = helper.breadcrumb(breadcrumb.current_page_url) %>
         <% if(breadcrumb.previous_page.test) { %>
-            <span class="previous-page"><a href="<%- breadcrumb.previous_page.url %>" class="previous-page-anchor"><%- breadcrumb.previous_page.title %></a></span>
+            <span class="previous-page"><a ref="nofollow" href="<%- breadcrumb.previous_page.url %>" class="previous-page-anchor"><%- breadcrumb.previous_page.title %></a></span>
             <span class="breadcrumb-divider">/</span>
         <% } %>
-        <span class="current-page"><a href="<%- breadcrumb.current_page_url %>" class="current-page-anchor"><%- breadcrumb.current_page %></a></span>
+        <span class="current-page"><a ref="nofollow" href="<%- breadcrumb.current_page_url %>" class="current-page-anchor"><%- breadcrumb.current_page %></a></span>
     </div>
 </div>

@@ -24,7 +24,7 @@
                             4:00PM Monday – Friday. If you need to cancel 
                             a ride please call us at least two hours 
                             before you scheduled pick-up. If after office 
-                            hours, call our dispatch at <a href="tel:<%- company.phone_number_dispatch %>"><%- company.phone_number_dispatch_format %></a>.</p>
+                            hours, call our dispatch at <a ref="nofollow" href="tel:<%- company.phone_number_dispatch %>"><%- company.phone_number_dispatch_format %></a>.</p>
                         <p class="faqs-text">
                             Our contact office is open five (5) days a 
                             week Monday – Friday 8:00AM – 4:00PM for any 
@@ -65,9 +65,7 @@
                             form must be filled out, which is found 
                             within the 
                         </p>
-                        <a href="/pdfs/Medical Certificate of Transportation Service.pdf" target="_blank" ref="noopener" class="link-spacing">
-                            Medical Certificate of Transportation Service Form
-                        </a>
+                        <a href="/pdfs/Medical Certificate of Transportation Service.pdf" target="_blank" ref="noopener nofollow" class="link-spacing">Medical Certificate of Transportation Service Form</a>
                     </div>
                 </li>
                 <li class="faqs-list-item">
@@ -96,7 +94,7 @@
                         need to cancel a ride please call us at least two 
                         hours before your scheduled pick-up. If after 
                         hours, call our dispatch at 
-                        <a href="tel:<%- company.phone_number_dispatch %>" class="dark-background">
+                        <a ref="nofollow" href="tel:<%- company.phone_number_dispatch %>" class="dark-background">
                             <%- company.phone_number_dispatch_format %>
                         </a>.
                     </p>
@@ -122,7 +120,7 @@
             <h3 class="section-sub-title dark-background">
                 During Business Hours Call:
             </h3>
-            <a href="tel:<%- company.phone_number_nemt %>" class="nemt-page-anchor dark-background">
+            <a ref="nofollow" href="tel:<%- company.phone_number_nemt %>" class="nemt-page-anchor dark-background">
                 <span class="nemt-span-logo">
                     <%- include('../../svg/phone') %> 
                 </span>
@@ -130,7 +128,7 @@
                     <%- company.phone_number_nemt_format %>
                 </span>
             </a>
-            <a href="tel:<%- company.phone_number_dispatch_toll %>" class="nemt-page-anchor dark-background">
+            <a ref="nofollow" href="tel:<%- company.phone_number_dispatch_toll %>" class="nemt-page-anchor dark-background">
                 <span class="nemt-span-logo">
                     <%- include('../../svg/phone') %> 
                 </span>
@@ -142,7 +140,7 @@
         </div>
         <div class="after-business-hours-wrapper appointment-schedule-information-container">
             <h3 class="section-sub-title dark-background">After Business Hours Call:</h3>
-            <a href="tel:<%- company.phone_number_dispatch %>" class="nemt-page-anchor dark-background">
+            <a ref="nofollow" href="tel:<%- company.phone_number_dispatch %>" class="nemt-page-anchor dark-background">
                 <span class="nemt-span-logo">
                     <%- include('../../svg/phone') %> 
                 </span>

@@ -22,23 +22,28 @@ async function WebCrawl() {
     const pageURLS = {}
 
     $("a:not([ref=nofollow])").each((index, element) => {
-        console.log($(element).attr('href'))
+        var elInnerText = $(element).text().toLowerCase().replaceAll('-', '_').replaceAll(' ', '_')
+        if(Object.values(pageURLS).length === 0 || Object.values(pageURLS).length != 0 && !Object.values(pageURLS).includes($(element).attr('href'))) {
+            pageURLS[elInnerText] = $(element).attr('href')
+        }
     })
 
     // console.log(pageURLS)
     
-    // for(const idx in pageURLS) {
-    //     pageHTML = await axios.get(`${pageURLS[idx]}`)
-    //     $ = cheerio.load(pageHTML.data)
-    //     $("a").each((index, element) => {
-    //         var elInnerText = $(element).text().toLowerCase().replaceAll('-', '_').replaceAll(' ', '_')
-    //         if(!objTest(elInnerText, $(element).attr('href'), pageURLS)) {
-    //             pageURLS[elInnerText] = $(element).attr('href')
-    //         }
-    //     })
-    // }
+    var page = []
+    for(const idx in pageURLS) {
+        pageHTML = await axios.get(`${pageURLS[idx]}`)   
+        $ = cheerio.load(pageHTML.data)
+        $("a:not([ref=nofollow])").each((index, element) => {
+            var elInnerText = $(element).text().toLowerCase().replaceAll('-', '_').replaceAll(' ', '_')
+            if(!Object.values(pageURLS).includes($(element).attr('href'))) {
+                pageURLS[elInnerText] = $(element).attr('href') + `[${pageURLS[idx]}]`
+            }
+        })
+    }
 
-    // console.log(pageURLS)
+    console.log(pageURLS)
+    console.log(page)
 }
 
 WebCrawl()

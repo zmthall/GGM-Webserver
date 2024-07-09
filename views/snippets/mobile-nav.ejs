@@ -1,7 +1,7 @@
 <nav class="mobile-navigation" data-navigation="mobile">
     <div class="mobile-nav-logo-wrapper">
         <div class="mobile-nav-home">
-            <a href="<%- company.home_href %>" class="home-logo-link">
+            <a rel="nofollow" href="<%- company.home_href %>" class="home-logo-link">
                 <img src="<%- company.logo_src %>" alt="<% company.logo_alt %>">
             </a>
         </div>
@@ -36,7 +36,7 @@
                                 <% } %>
                         </ul>
                     <% } else { %>
-                        <a class="mobile-navigation-link" href="<%- links[link].href %>"><%- links[link].title %></a>
+                        <a class="mobile-navigation-link"<% if(links[link].title === 'Medical Supplies') { %>ref="nofollow"<% } %> href="<%- links[link].href %>"><%- links[link].title %></a>
                     <% } %>
                 </li>
             <% } %>

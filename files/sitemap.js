@@ -14,7 +14,6 @@ async function webCrawl() {
         }
     })
     
-    var page = []
     for(const idx in pageURLS) {
         pageHTML = await axios.get(`${pageURLS[idx]}`)   
         $ = cheerio.load(pageHTML.data)
@@ -25,8 +24,31 @@ async function webCrawl() {
             }
         })
     }
+
+    return pageURLS 
 }
 
-module.exports = {
-    
+async function configureSitemap() {
+    const urls = await webCrawl()
+    var data = []
+
+    var count = 0
+    for(const idx in urls) {
+        var temp = { url: urls[idx] }
+        if(count < 10) {
+            if(count === 0)
+                temp.priority = 1.0
+            else
+                temp.priority = 0.8
+        } else {
+            temp.priority = 0.6
+        }
+        count++
+        data.push(temp)
+    }
+    console.log(data)
+
+
 }
+
+configureSitemap()

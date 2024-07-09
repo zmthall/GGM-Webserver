@@ -22,26 +22,23 @@ async function WebCrawl() {
     const pageURLS = {}
 
     $("a").each((index, element) => {
-        var elInnerText = $(element).text().toLowerCase().replaceAll('-', '_').replaceAll(' ', '_')
-        if(!objTest(elInnerText, $(element).attr('href'), pageURLS)) {
-            pageURLS[elInnerText] = $(element).attr('href')
-        }
+        console.log($(element).attr('ref'))
     })
 
-    console.log(pageURLS)
+    // console.log(pageURLS)
     
-    for(const idx in pageURLS) {
-        pageHTML = await axios.get(`${pageURLS[idx]}`)
-        $ = cheerio.load(pageHTML.data)
-        $("a").each((index, element) => {
-            var elInnerText = $(element).text().toLowerCase().replaceAll('-', '_').replaceAll(' ', '_')
-            if(!objTest(elInnerText, $(element).attr('href'), pageURLS)) {
-                pageURLS[elInnerText] = $(element).attr('href')
-            }
-        })
-    }
+    // for(const idx in pageURLS) {
+    //     pageHTML = await axios.get(`${pageURLS[idx]}`)
+    //     $ = cheerio.load(pageHTML.data)
+    //     $("a").each((index, element) => {
+    //         var elInnerText = $(element).text().toLowerCase().replaceAll('-', '_').replaceAll(' ', '_')
+    //         if(!objTest(elInnerText, $(element).attr('href'), pageURLS)) {
+    //             pageURLS[elInnerText] = $(element).attr('href')
+    //         }
+    //     })
+    // }
 
-    console.log(pageURLS)
+    // console.log(pageURLS)
 }
 
 WebCrawl()

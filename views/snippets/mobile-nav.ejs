@@ -36,7 +36,7 @@
                                 <% } %>
                         </ul>
                     <% } else { %>
-                        <a class="mobile-navigation-link"<% if(links[link].title === 'Medical Supplies') { %>ref="nofollow"<% } %> href="<%- links[link].href %>"><%- links[link].title %></a>
+                        <a class="mobile-navigation-link"<% if(links[link].title === 'Medical Supplies') { %>rel="nofollow"<% } %> href="<%- links[link].href %>"><%- links[link].title %></a>
                     <% } %>
                 </li>
             <% } %>

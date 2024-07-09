@@ -15,7 +15,7 @@
                     </ul>
                 <% } else { %>
                     <li class="main-navigation-link-item">
-                        <a class="main-navigation-link"<% if(links[link].title === 'Medical Supplies') { %>ref="nofollow"<% } %> href="<%- links[link].href %>"><%- links[link].title %></a>
+                        <a class="main-navigation-link"<% if(links[link].title === 'Medical Supplies') { %>rel="nofollow"<% } %> href="<%- links[link].href %>"><%- links[link].title %></a>
                 <% } %>
             </li>
         <% } %>

@@ -23,11 +23,6 @@ function getConfig(file){
 
 json = getConfig('data.json');
 
-router.get('/sitemaps/:sitemap', (req, res) => {
-    const { sitemap } = req.params;
-    return res.sendFile(path.join(__dirname, '../sitemaps', sitemap));
-});
-
 router.get('/', (request, response) => {
     response.render('index', {
         config: json,
@@ -251,6 +246,14 @@ router.get('/site-map', (request, response) => {
         layout: './layouts/main-layout'
     })
 })
+
+router.get('/sitemap-:int.xml.gz', (req, res) => {
+    return res.sendFile(path.join(__dirname, '../sitemap', `sitemap-${req.params.int}.xml.gz`));
+});
+
+router.get('/robots.txt', (req, res) => {
+    return res.sendFile(path.join(__dirname, '../sitemap', 'robots.txt'));
+});
 
 router.get('*', (request, response) => {
   response.render('404', {

@@ -53,7 +53,7 @@ async function configureSitemapData() {
 async function generateSitemap() {
     try {
         const sitemapItems = await configureSitemapData()
-        const dir = path.join(__dirname, '../sitemaps/')
+        const dir = path.join(__dirname, '../sitemap/')
 
         await simpleSitemapAndIndex({
             hostname: 'https://goldengatemanor.com',

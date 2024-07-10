@@ -1,4 +1,4 @@
 User-Agent: *
 Disallow:
 
-Sitemap: https://goldengatemanor.com/sitemap_index.xml.gz
+Sitemap: https://golgengatemanor.com/sitemap_index.xml.gz

@@ -58,7 +58,7 @@ async function generateSitemap() {
         await simpleSitemapAndIndex({
             hostname: 'https://goldengatemanor.com',
             destinationDir: dir,
-            sitemapHostname: `https://goldengatemanor.com/sitemaps/`,
+            sitemapHostname: `https://goldengatemanor.com`,
             sourceData: sitemapItems,
         });
 

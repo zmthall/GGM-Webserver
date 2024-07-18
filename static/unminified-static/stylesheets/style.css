@@ -1034,6 +1034,28 @@ div#chat_app div.sc-suggestions-row button.sc-suggestions-element:hover {
 
 div#chat_app .sc-launcher {
     border: 1px solid white;
+    width: 70px;
+    height: 70px;
+}
+
+div#chat_app img.sc-open-icon {
+    width: 75px;
+    height: 50px;
+    bottom: 60px;
+    right: 0px;
+}
+
+div#chat_app img.sc-closed-icon {
+    width: 30px !important;
+    height: 30px !important;
+    bottom: 50px !important;
+    right: 0 !important;
+    translate: 65%;
+}
+
+div#chat_app .sc-launcher::before {
+    width: 70px;
+    height: 70px;
 }
 
 @media(max-width: 590px) {

@@ -7,16 +7,16 @@
             </div>
         </button>
         <div class="image-slider-container">
-            <button class="community-images-more-btn" type="button" data-carousel-more-image-btn>More Photos</button>
+            <!-- <button class="community-images-more-btn" type="button" data-carousel-more-image-btn>More Photos</button> -->
             <% for(let i = 0; i < 8; i++) { %>
-                <div class="image-slide-wrapper<% if(i != 0) { %> hidden<% } %>">
+                <div class="image-slide-wrapper<% if(i != 0) { %> hidden<% } else { %> shown<% } %>" data-carousel-image-slides="<%- i %>" data-current-slide="<% if(i !=0) { %> no<% } else { %>yes<% } %>">
                     <img src="<%- outreachImages.url[i] %>" alt="<%- outreachImages.description[i] %>">
                 </div>
             <% } %>
             <div class="image-slide-indicator-wrapper">
                 <% for(let i=0; i < 8; i++) { %>
-                    <div class="image-slide-indicator<% if(i === 0) { %> selected<% } %>" data-slide-indicator="<% i %>"></div>
-                    <% } %>
+                    <div class="image-slide-indicator<% if(i === 0) { %> selected<% } %>" data-slide-indicator="<%- i %>"></div>
+                <% } %>
             </div>
         </div>
         <button class="primary-button image-carousel-btn" type="button"  data-carousel-btn="right">

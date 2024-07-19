@@ -1058,6 +1058,10 @@ div#chat_app .sc-launcher::before {
     height: 70px;
 }
 
+div#chat_app .sc-header {
+    border: 1px solid white;
+}
+
 @media(max-width: 590px) {
     .sc-user-input--picker-wrapper div.sc-emoji-picker {
         width: calc(100vw - 50px);

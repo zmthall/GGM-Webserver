@@ -1,0 +1,1486 @@
+<style>
+    /* House Image Carousel with Information */
+
+.carousel-wrapper *, .carousel-wrapper *::before, .carousel-wrapper *::after  {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body.no-scroll {
+overflow: hidden;
+}
+
+.houses-title {
+font-size: 3rem;
+font-weight: bold;
+text-align: center;
+color: rgb(var(--primary-color));
+}
+
+.carousel-wrapper {
+height: auto;
+width: 100vw;
+position: relative;
+display: flex;
+justify-content: center;
+margin-bottom: 2rem;
+z-index: 0;
+}
+
+.carousel-container {
+position: relative;
+height: 450px;
+width: 95vw;
+overflow: hidden;
+z-index: 0;
+}
+
+.carousel-tiles {
+position: absolute;
+top: 0;
+height: 100%;
+transform: translateX(0);
+display: flex;
+justify-content: center;
+align-items: center;
+transition: transform 1s ease-in-out;
+z-index: 0;
+}
+
+.carousel-tile {
+width: calc((95vw / 3) - 8rem);
+height: 75%;
+margin: 0 4rem;
+border-radius: 1rem;
+position: relative;
+transition: transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.carousel-tile::before {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+border-radius: 1rem;
+box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+transition: opacity 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+opacity: 1;
+}
+
+.carousel-tile::after {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+border-radius: 1rem;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+transition: opacity 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+opacity: 0;
+z-index: -1;
+}
+
+.carousel-tile.middle::before {
+opacity: 0;
+}
+
+.carousel-tile.middle {
+transform: scale(1.2);
+}
+
+.carousel-tile.middle::after {
+opacity: 1;
+}
+
+.carousel-tile .image-wrapper {
+position: absolute;
+width: 100%;
+height: 100%;
+border-radius: 1rem;
+}
+
+.image-wrapper.manor-I {
+background: url("https://cdn.aryeo.com/listings/606-w-abriendo-ave-pueblo-co-81004-5542173/resized/large/large-973a0a3d-21ca-4abd-ab78-ab1f784f181c.jpeg") no-repeat center/cover;
+}
+
+.image-wrapper.manor-II {
+background: url("https://cdn.aryeo.com/listings/1219-lake-ave-pueblo-co-81004-5541788/resized/large/large-97fb727f-f78e-4b9c-b27e-d73f5a24425b.jpeg") no-repeat center/cover;
+}
+
+.image-wrapper.horizon {
+background: black;
+overflow: hidden;
+}
+
+.quad-image-horizon {
+width: 50%;
+height: 50%;
+position: absolute;
+}
+
+.horizon-image1 {
+top: 0;
+left: 0;
+background: url("https://cdnmedia.endeavorsuite.com/images/organizations/43bdf7fb-1a9e-4568-960e-08c1e4910472/Assisted%20Living/side-horizon.jpeg?v=1701877209580") no-repeat center/cover;
+}
+
+.horizon-image2 {
+top: 0;
+right: 0;
+background: url("https://cdnmedia.endeavorsuite.com/images/organizations/43bdf7fb-1a9e-4568-960e-08c1e4910472/Assisted%20Living/backyard-seating-horizon.jpeg?v=1701877209580") no-repeat center/cover;
+}
+
+.horizon-image3 {
+bottom: 0;
+left: 0;
+background: url("https://cdnmedia.endeavorsuite.com/images/organizations/43bdf7fb-1a9e-4568-960e-08c1e4910472/Assisted%20Living/front-horizon-edited.jpeg?v=1701877209580") no-repeat center/cover;
+}
+
+.horizon-image4 {
+bottom: 0;
+right: 0;
+background: url("https://cdnmedia.endeavorsuite.com/images/organizations/43bdf7fb-1a9e-4568-960e-08c1e4910472/Assisted%20Living/Backyard-horizon.jpeg?v=1701877209580") no-repeat center/cover;
+}
+
+.image-wrapper.view {
+background: url("https://cdn.aryeo.com/listings/525-w-9th-st-pueblo-co-81003-5624220/resized/large/large-e5d42988-967c-4fea-ba2b-6646a057632f.jpeg") no-repeat center/cover;
+}
+
+.image-wrapper.valley {
+background: url("https://cdn.aryeo.com/listings/1033-e-evans-ave-pueblo-co-81004-5630352/resized/large/large-c0cd19e8-3c4c-4bb7-b79f-471ace5c84bc.jpeg") no-repeat center/cover;
+}
+
+.carousel-tile .tile-title {
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+border-top-left-radius: 1rem;
+border-top-right-radius: 1rem;
+background-color: rgba(0, 0, 0, 0.5);
+width: 100%;
+height: 4rem;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+text-align: center;
+}
+
+.carousel-tile .tile-description {
+position: absolute;
+width: 100%;
+height: 4rem;
+background-color: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+top: 4rem;
+text-align: center;
+padding-bottom: 1rem;
+transform: scale(0);
+opacity: 0;
+transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+z-index: 0;
+}
+
+.carousel-tile .image-wrapper:hover ~ .tile-description,
+.info-btns-wrapper:hover ~ .tile-description,
+.tile-description:hover {
+transform: scale(1);
+opacity: 1;
+}
+
+.info-btns-wrapper {
+position: absolute;
+bottom: 0;
+padding: 0 1rem;
+padding-bottom: 1rem;
+width: 100%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+gap: 2rem;
+}
+
+.info-btn {
+border: none;
+background: none;
+padding: 1rem 0;
+font-size: 1.5rem;
+background-color: rgba(0, 0, 0, 0.5);
+cursor: pointer;
+color: rgba(255, 255, 255, 0.5);
+border-radius: 1rem;
+font-family: inherit;
+text-align: center;
+white-space: nowrap;
+flex-grow: 1;
+flex-shrink: 1;
+}
+
+a.info-btn {
+text-decoration: none;
+}
+
+.info-btn:hover {
+color: white;
+background-color: black;
+}
+
+.btn-wrapper {
+top: 0;
+left: 0;
+position: absolute;
+width: 100vw;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 3rem;
+}
+
+.scroll-btn {
+width: 3rem;
+height: 20%;
+background: rgba(50, 50, 50, 1);
+border: none;
+border-radius: 5px;
+color: black;
+cursor: pointer;
+z-index: 2;
+}
+
+.scroll-btn:hover {
+color: rgba(255, 255, 255, 0.7);
+background: rgba(50, 50, 50, 0.7);
+}
+
+@media (min-width: 2000px) {
+.carousel-tile {
+    width: calc((95vw / 4) - 4rem);
+    transition: none;
+    margin: 0 2rem;
+}
+}
+
+
+@media (max-width: 1050px) {
+.carousel-tile {
+    width: calc((95vw / 2) - 4rem);
+    transition: none;
+    margin: 0 2rem;
+}
+
+}
+
+@media (max-width: 700px) {
+.carousel-tile {
+    width: calc((95vw - 4rem));
+    transition: none;
+    margin: 0 2rem;
+}
+}
+
+/* More photos slider */
+
+
+.picture-slider {
+height: 100vh;
+width: 100vw;
+background-color: rgba(0, 0, 0, 0.5);
+position: fixed;
+top: 0;
+display: flex;
+justify-content: center;
+z-index: 10000;
+}
+
+.picture-slides {
+height: 100%;
+width: 80%;
+background-color: white;
+position: relative;
+}
+
+.slide {
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+list-style: none;
+opacity: 0;
+transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+opacity: 1;
+}
+
+.full-image {
+height: 100%;
+width: 100%;
+}
+
+/* Golden Gate Manor I - Pictures */
+
+.GGMI-Image-1 {
+background-image: url("https://cdn.aryeo.com/listings/606-w-abriendo-ave-pueblo-co-81004-5542173/resized/large/large-d8100247-b824-41ad-a320-1b7d413784f2.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GGMI-Image-2 {
+background-image: url("https://cdn.aryeo.com/listings/606-w-abriendo-ave-pueblo-co-81004-5542173/resized/large/large-afbf7476-c6d4-4af6-a5df-a80954453b53.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GGMI-Image-3 {
+background-image: url("https://cdn.aryeo.com/listings/606-w-abriendo-ave-pueblo-co-81004-5542173/resized/large/large-65899088-56df-4e30-9499-98686a50cb38.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GGMI-Image-4 {
+background-image: url("https://cdn.aryeo.com/listings/606-w-abriendo-ave-pueblo-co-81004-5542173/resized/large/large-cd64b352-7f19-4dc2-a5e4-17ae3cee75ed.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GGMI-Image-5 {
+background-image: url("https://cdn.aryeo.com/listings/606-w-abriendo-ave-pueblo-co-81004-5542173/resized/large/large-79675190-107c-4fbc-bb0f-1da03c924025.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GGMI-Image-6 {
+background-image: url("https://cdn.aryeo.com/listings/606-w-abriendo-ave-pueblo-co-81004-5542173/resized/large/large-6434c896-e903-4a46-a352-a62ddca495a2.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GGMI-Image-7 {
+background-image: url("https://cdn.aryeo.com/listings/606-w-abriendo-ave-pueblo-co-81004-5542173/resized/large/large-2c6d1c42-4080-4a9e-9e53-21286be60e5d.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GGMI-Image-8 {
+background-image: url("https://cdn.aryeo.com/listings/606-w-abriendo-ave-pueblo-co-81004-5542173/resized/large/large-605e34b3-30e5-4473-9393-d9a49062e036.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GGMI-Image-9 {
+background-image: url("https://cdn.aryeo.com/listings/606-w-abriendo-ave-pueblo-co-81004-5542173/resized/large/large-5c15d99a-1bd5-43e1-b019-da22744f0af0.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GGMI-Image-10 {
+background-image: url("https://cdn.aryeo.com/listings/606-w-abriendo-ave-pueblo-co-81004-5542173/resized/large/large-32f0d11e-f77f-4ab7-8dd7-87bd82cadd00.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GGMI-Image-11 {
+background-image: url("https://cdn.aryeo.com/listings/606-w-abriendo-ave-pueblo-co-81004-5542173/resized/large/large-c3ec4817-73d9-4e33-88fb-87c0dda75614.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GGMI-Image-12 {
+background-image: url("https://cdn.aryeo.com/listings/606-w-abriendo-ave-pueblo-co-81004-5542173/resized/large/large-365be78e-0237-46cd-9ed3-802ec905285b.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GGMI-Image-13 {
+background-image: url("https://cdn.aryeo.com/listings/606-w-abriendo-ave-pueblo-co-81004-5542173/resized/large/large-276444ad-e427-4e6f-9fde-90534ea4c6c0.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GGMI-Image-14 {
+background-image: url("https://cdn.aryeo.com/listings/606-w-abriendo-ave-pueblo-co-81004-5542173/resized/large/large-68af7505-d389-4acc-8c00-85cad646cccb.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GGMI-Image-15 {
+background-image: url("https://cdn.aryeo.com/listings/606-w-abriendo-ave-pueblo-co-81004-5542173/resized/large/large-b8c176e5-5008-407a-adfd-bc8cb50a1cb1.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GGMI-Image-16 {
+background-image: url("https://cdn.aryeo.com/listings/606-w-abriendo-ave-pueblo-co-81004-5542173/resized/large/large-35327bbc-bb10-4cae-9550-f878f738d0e4.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GGMI-Image-17 {
+background-image: url("https://cdn.aryeo.com/listings/606-w-abriendo-ave-pueblo-co-81004-5542173/resized/large/large-935a12ca-3c4a-4c1e-ba05-e43a2c712c25.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+/* GOLDEN GATE MANOR II - Pictures */
+
+.GGMII-Image-1 {
+background-image: url("https://cdn.aryeo.com/listings/1219-lake-ave-pueblo-co-81004-5541788/resized/large/large-d37caf65-7bf5-4bd5-8d44-a45af4c8f6e3.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GGMII-Image-2 {
+background-image: url("https://cdn.aryeo.com/listings/1219-lake-ave-pueblo-co-81004-5541788/resized/large/large-3307eee1-74da-4e3b-a196-28a3fbb4e094.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GGMII-Image-3 {
+background-image: url("https://cdn.aryeo.com/listings/1219-lake-ave-pueblo-co-81004-5541788/resized/large/large-5769fad1-65bb-460d-99f9-c4cea0e858ae.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GGMII-Image-4 {
+background-image: url("https://cdn.aryeo.com/listings/1219-lake-ave-pueblo-co-81004-5541788/resized/large/large-29df3348-3e34-4d74-9650-7f3d6283c69e.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GGMII-Image-5 {
+background-image: url("https://cdn.aryeo.com/listings/1219-lake-ave-pueblo-co-81004-5541788/resized/large/large-bc639691-adaf-4c01-8097-486a27ea340f.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GGMII-Image-6 {
+background-image: url("https://cdn.aryeo.com/listings/1219-lake-ave-pueblo-co-81004-5541788/resized/large/large-eb9d91fc-450f-4b85-95b5-39565a2a1dd5.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GGMII-Image-7 {
+background-image: url("https://cdn.aryeo.com/listings/1219-lake-ave-pueblo-co-81004-5541788/resized/large/large-74173ecf-fb80-4eeb-b85e-692556256a3f.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GGMII-Image-8 {
+background-image: url("https://cdn.aryeo.com/listings/1219-lake-ave-pueblo-co-81004-5541788/resized/large/large-f96c9a71-44a0-40dd-ac91-569cb14ef231.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GGMII-Image-9 {
+background-image: url("https://cdn.aryeo.com/listings/1219-lake-ave-pueblo-co-81004-5541788/resized/large/large-a28a7166-84bc-42a5-916a-22158890a6ff.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GGMII-Image-10 {
+background-image: url("https://cdn.aryeo.com/listings/1219-lake-ave-pueblo-co-81004-5541788/resized/large/large-080a7295-b84f-495f-bb87-61d6aef4e761.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GGMII-Image-11 {
+background-image: url("https://cdn.aryeo.com/listings/1219-lake-ave-pueblo-co-81004-5541788/resized/large/large-92de20dd-b28d-4e42-b4d0-107f9cba8672.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GGMII-Image-12 {
+background-image: url("https://cdn.aryeo.com/listings/1219-lake-ave-pueblo-co-81004-5541788/resized/large/large-bd9440f2-1258-47ba-afc4-c0a76e96915d.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GGMII-Image-13 {
+background-image: url("https://cdn.aryeo.com/listings/1219-lake-ave-pueblo-co-81004-5541788/resized/large/large-6514cee8-e5a3-4b17-a6ee-bbd4febb14a6.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GGMII-Image-14 {
+background-image: url("https://cdnmedia.endeavorsuite.com/images/organizations/43bdf7fb-1a9e-4568-960e-08c1e4910472/Assisted%20Living/GGM2%20Bedroom.jpg?v=1692890442606");
+background-size: cover;
+background-position: center;
+}
+.GGMII-Image-15 {
+background-image: url("https://cdnmedia.endeavorsuite.com/images/organizations/43bdf7fb-1a9e-4568-960e-08c1e4910472/Assisted%20Living/GGM2%20Bedroom%202.jpg?v=1692891151801");
+background-size: cover;
+background-position: center;
+}
+.GGMII-Image-16 {
+background-image: url("https://cdn.aryeo.com/listings/1219-lake-ave-pueblo-co-81004-5541788/resized/large/large-ce598df2-8e39-40da-926b-8a4a24fb218f.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GGMII-Image-17 {
+background-image: url("https://cdn.aryeo.com/listings/1219-lake-ave-pueblo-co-81004-5541788/resized/large/large-d1810026-078a-4ccc-9327-c95d3c7cf7e0.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+
+/* GOLDEN HORIZON - Pictures*/
+
+.GHorizon-Image-1 {
+background-image: url("https://cdn.aryeo.com/listings/2109-chautard-dr-pueblo-co-81005-5594533/resized/large/large-9da5357b-4236-4d74-94e3-aea4839d4ed2.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GHorizon-Image-2 {
+background-image: url("https://cdn.aryeo.com/listings/2109-chautard-dr-pueblo-co-81005-5594533/resized/large/large-2e00f5a6-d5da-4107-bcf6-bd99c0a3604b.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GHorizon-Image-3 {
+background-image: url("https://cdn.aryeo.com/listings/2109-chautard-dr-pueblo-co-81005-5594533/resized/large/large-acff80c7-2c56-446b-b381-756e5b05fadd.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GHorizon-Image-4 {
+background-image: url("https://cdn.aryeo.com/listings/2109-chautard-dr-pueblo-co-81005-5594533/resized/large/large-51cc7d08-e903-47d2-a2b1-1b2b91c514cb.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GHorizon-Image-5 {
+background-image: url("https://cdn.aryeo.com/listings/2109-chautard-dr-pueblo-co-81005-5594533/resized/large/large-de1ad2b8-4351-4a38-adba-d2118785f6ab.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GHorizon-Image-6 {
+background-image: url("https://cdn.aryeo.com/listings/2109-chautard-dr-pueblo-co-81005-5594533/resized/large/large-100a7622-ad0a-4027-8e3a-fdb71b520d73.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GHorizon-Image-7 {
+background-image: url("https://cdn.aryeo.com/listings/2109-chautard-dr-pueblo-co-81005-5594533/resized/large/large-904a852a-8013-429a-8072-1feb6b854c67.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GHorizon-Image-8 {
+background-image: url("https://cdn.aryeo.com/listings/2109-chautard-dr-pueblo-co-81005-5594533/resized/large/large-d9c763ab-a584-49fa-8306-8c028015d772.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GHorizon-Image-9 {
+background-image: url("https://cdn.aryeo.com/listings/2109-chautard-dr-pueblo-co-81005-5594533/resized/large/large-dba98a81-7c48-438a-bc95-758ebd10692d.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GHorizon-Image-10 {
+background-image: url("https://cdnmedia.endeavorsuite.com/images/organizations/43bdf7fb-1a9e-4568-960e-08c1e4910472/Assisted%20Living/Horizon%20Bedroom.jpg?v=1692891480886");
+background-size: cover;
+background-position: center;
+}
+.GHorizon-Image-11 {
+background-image: url("https://cdnmedia.endeavorsuite.com/images/organizations/43bdf7fb-1a9e-4568-960e-08c1e4910472/Assisted%20Living/Horizon%20Bedroom%202.jpg?v=1692891480886");
+background-size: cover;
+background-position: center;
+}
+.GHorizon-Image-12 {
+background-image: url("https://cdn.aryeo.com/listings/2109-chautard-dr-pueblo-co-81005-5594533/resized/large/large-6e934d47-f82a-4df3-a751-51eaeadce281.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GHorizon-Image-13 {
+background-image: url("https://cdn.aryeo.com/listings/2109-chautard-dr-pueblo-co-81005-5594533/resized/large/large-37427dfc-3bd9-4345-957d-db1dc95ea6d8.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GHorizon-Image-14 {
+background-image: url("https://cdn.aryeo.com/listings/2109-chautard-dr-pueblo-co-81005-5594533/resized/large/large-386717e3-d594-4844-bec8-037a3a51ea4c.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+/* GOLDEN VALLEY - Pictures */
+
+.GValley-Image-1 {
+background-image: url("https://cdn.aryeo.com/listings/1033-e-evans-ave-pueblo-co-81004-5630352/resized/large/large-f58f84bc-ae36-494e-85c9-0582d4c2a341.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GValley-Image-2 {
+background-image: url("https://cdn.aryeo.com/listings/1033-e-evans-ave-pueblo-co-81004-5630352/resized/large/large-a5352a77-3ac7-46ef-a9cd-cdff4587fa85.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GValley-Image-3 {
+background-image: url("https://cdn.aryeo.com/listings/1033-e-evans-ave-pueblo-co-81004-5630352/resized/large/large-aa794d16-6ec8-435e-8594-b0da961cf286.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GValley-Image-4 {
+background-image: url("https://cdn.aryeo.com/listings/1033-e-evans-ave-pueblo-co-81004-5630352/resized/large/large-0a2d7cee-9de6-43c9-b5b9-0815e2d989f8.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GValley-Image-5 {
+background-image: url("https://cdn.aryeo.com/listings/1033-e-evans-ave-pueblo-co-81004-5630352/resized/large/large-94e908b5-2a5c-443c-abf2-0a1b892c8129.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GValley-Image-6 {
+background-image: url("https://cdn.aryeo.com/listings/1033-e-evans-ave-pueblo-co-81004-5630352/resized/large/large-aee7ac37-32ea-409c-a4fd-020066871d52.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GValley-Image-7 {
+background-image: url("https://cdn.aryeo.com/listings/1033-e-evans-ave-pueblo-co-81004-5630352/resized/large/large-11ecf606-fc68-40da-a568-65ae379a1d5b.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GValley-Image-8 {
+background-image: url("https://cdn.aryeo.com/listings/1033-e-evans-ave-pueblo-co-81004-5630352/resized/large/large-8a54c4c6-e2cd-4176-8ac0-addd217f4dfa.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.GValley-Image-9 {
+background-image: url("https://cdn.aryeo.com/listings/1033-e-evans-ave-pueblo-co-81004-5630352/resized/large/large-223e1d06-92ad-4cbf-ad04-1d5e59d078e3.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GValley-Image-10 {
+background-image: url("https://cdn.aryeo.com/listings/1033-e-evans-ave-pueblo-co-81004-5630352/resized/large/large-cef8171c-eacf-4d80-9c83-03558f50a18d.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GValley-Image-11 {
+background-image: url("https://cdn.aryeo.com/listings/1033-e-evans-ave-pueblo-co-81004-5630352/resized/large/large-5eae3fcd-97fa-4207-b6c3-a43bfd9ff228.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GValley-Image-12 {
+background-image: url("https://cdn.aryeo.com/listings/1033-e-evans-ave-pueblo-co-81004-5630352/resized/large/large-6f2ea075-f529-4ec1-8715-b67d27016cb1.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GValley-Image-13 {
+background-image: url("https://cdnmedia.endeavorsuite.com/images/organizations/43bdf7fb-1a9e-4568-960e-08c1e4910472/Assisted%20Living/Valley%20Bedroom.jpg?v=1692892521960");
+background-size: cover;
+background-position: center;
+}
+.GValley-Image-14 {
+background-image: url("https://cdn.aryeo.com/listings/1033-e-evans-ave-pueblo-co-81004-5630352/resized/large/large-2b58ef9a-1772-4cac-94ba-d724f48e8416.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GValley-Image-15 {
+background-image: url("https://cdn.aryeo.com/listings/1033-e-evans-ave-pueblo-co-81004-5630352/resized/large/large-7ed5bde8-99b2-48ca-ad09-5b7bf58fc09a.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+/* GOLDEN VIEW - Pictures */
+
+
+.GView-Image-1 {
+background-image: url("https://cdn.aryeo.com/listings/525-w-9th-st-pueblo-co-81003-5624220/resized/large/large-88258ff0-f2f0-4653-b01f-6cff02ac5d08.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GView-Image-2 {
+background-image: url("https://cdn.aryeo.com/listings/525-w-9th-st-pueblo-co-81003-5624220/resized/large/large-8f265be6-7105-4984-b88b-9a78a904f8c9.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GView-Image-3 {
+background-image: url("https://cdn.aryeo.com/listings/525-w-9th-st-pueblo-co-81003-5624220/resized/large/large-4c9eddb5-9372-4bf8-b77e-c13ec248b4fc.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GView-Image-4 {
+background-image: url("https://cdn.aryeo.com/listings/525-w-9th-st-pueblo-co-81003-5624220/resized/large/large-484ccd2d-9a98-44eb-ae2b-88af86f3cb08.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GView-Image-5 {
+background-image: url("https://cdn.aryeo.com/listings/525-w-9th-st-pueblo-co-81003-5624220/resized/large/large-7693b27b-8eda-4f36-b23f-c1057808d5ad.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GView-Image-6 {
+background-image: url("https://cdn.aryeo.com/listings/525-w-9th-st-pueblo-co-81003-5624220/resized/large/large-7890650a-4242-4ffc-b5db-f9953170dabc.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GView-Image-7 {
+background-image: url("https://cdn.aryeo.com/listings/525-w-9th-st-pueblo-co-81003-5624220/resized/large/large-17611b67-5dfe-412f-aa7b-eb44d45aa66f.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GView-Image-8 {
+background-image: url("https://cdn.aryeo.com/listings/525-w-9th-st-pueblo-co-81003-5624220/resized/large/large-0874fd52-0871-49e5-98ea-91763b3f608a.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GView-Image-9 {
+background-image: url("https://cdn.aryeo.com/listings/525-w-9th-st-pueblo-co-81003-5624220/resized/large/large-d22594d5-cf0b-4dc4-99aa-79b430c62b5e.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GView-Image-10 {
+background-image: url("https://cdn.aryeo.com/listings/525-w-9th-st-pueblo-co-81003-5624220/resized/large/large-4e870a58-0567-4760-8ec0-a6dbabfe65f2.jpeg");
+background-size: cover;
+background-position: center;
+}
+.GView-Image-11 {
+background-image: url("https://cdnmedia.endeavorsuite.com/images/organizations/43bdf7fb-1a9e-4568-960e-08c1e4910472/Assisted%20Living/View%20Bedroom.jpg?v=1692892304780");
+background-size: cover;
+background-position: center;
+}
+.GView-Image-12 {
+background-image: url("https://cdnmedia.endeavorsuite.com/images/organizations/43bdf7fb-1a9e-4568-960e-08c1e4910472/Assisted%20Living/View%20Bedroom%202.jpg?v=1692892304780");
+background-size: cover;
+background-position: center;
+}
+.GView-Image-13 {
+background-image: url("https://cdn.aryeo.com/listings/525-w-9th-st-pueblo-co-81003-5624220/resized/large/large-a346af59-cc05-43b8-bb10-2b1ce5e0976f.jpeg");
+background-size: cover;
+background-position: center;
+}
+
+.corner-counter {
+position: absolute;
+top: 1rem;
+left: 1rem;
+z-index: 1;
+background-color: rgba(255, 255, 255, 0.25);
+padding: 1rem;
+font-size: 2.5rem;
+font-weight: bold;
+}
+
+button.picture-slider-btn {
+position: absolute;
+z-index: 1;
+cursor: pointer;
+background: rgba(255, 255, 255, 0.8);
+border: none;
+border-radius: 5px;
+color: black;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 0;
+}
+
+.picture-slider-btn:hover {
+color: white;
+background: rgba(0, 0, 0, 0.8);
+}
+
+.picture-slider-btn.next,
+.picture-slider-btn.prev {
+top: 50%;
+translate: 0 -50%;
+height: 8rem;
+width: 4rem;
+}
+
+.picture-slider-btn.prev {
+left: 0;
+transform: translateX(calc(-100% - 0.25rem));
+}
+
+.picture-slider-btn.next {
+right: 0;
+transform: translateX(calc(100% + 0.25rem));
+}
+
+.picture-slider-btn.close {
+font-size: 2rem;
+top: 1rem;
+right: 1rem;
+height: 4rem;
+width: 4rem;
+}
+
+.hidden {
+display: none;
+}
+
+@media (max-width: 768px) {
+.picture-slides {
+    width: 100%;
+}
+
+.picture-slider-btn.prev {
+    left: 0.25rem;
+    transform: translateX(0);
+}
+
+.picture-slider-btn.next {
+    right: 0.25rem;
+    transform: translateX(0);
+}
+
+.full-image {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.picture-slider-btn { 
+    background: rgba(255, 255, 255, 1);
+}
+}
+</style>
+</head>
+
+<body>
+<h2 class="houses-title">Golden Gate Manor Houses</h2>
+<div class="carousel-wrapper">
+    <div class="btn-wrapper">
+        <button class="scroll-btn prev" type="button" data-carousel-btn="prev">
+            <div class="btn-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                    <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                </svg>
+            </div>
+        </button>
+        <button class="scroll-btn next" type="button" data-carousel-btn="next">
+            <div class="btn-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                    <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                </svg>
+            </div>
+        </button>
+    </div>
+    <div class="carousel-container" data-test>
+        <div class="carousel-tiles" data-carousel>
+            <div class="carousel-tile">
+                <div class="image-wrapper manor-I"></div>
+                <h2 class="tile-title">Golden Gate Manor I</h2>
+                <div class="info-btns-wrapper">
+                    <a class="info-btn" href="https://goo.gl/maps/RdzcjqoFjsPJQpPz5" target="_blank">View Map</a>
+                    <button class="info-btn" type="button" data-more-btn="manor-I">View More</button>
+                </div>
+                <p class="tile-description">606 West Abriendo Ave. Pueblo, CO 81004</p>
+            </div>
+            <div class="carousel-tile" data-tile>
+                <div class="image-wrapper view"></div>
+                <h2 class="tile-title">Golden View</h2>
+                <div class="info-btns-wrapper">
+                    <a class="info-btn" href="https://goo.gl/maps/UhswVz9wbprojhLJ9" target="_blank">View Map</a>
+                    <button class="info-btn" type="button" data-more-btn="view">View More</button>
+                </div>
+                <p class="tile-description">525 West 9th Street Pueblo, CO 81003 <br>
+                    *Handicap accessible facility</p>
+            </div>
+            <div class="carousel-tile" data-tile>
+                <div class="image-wrapper valley"></div>
+                <h2 class="tile-title">Golden Valley</h2>
+                <div class="info-btns-wrapper">
+                    <a class="info-btn" href="https://goo.gl/maps/KNM3gM8kRRWGAg6Z9" target="_blank">View Map</a>
+                    <button class="info-btn" type="button" data-more-btn="valley">View More</button>
+                </div>
+                <p class="tile-description">1033 East Evans Pueblo, CO 81004 <br/>
+                    *Offering private bedrooms & bathrooms</p>
+            </div>
+            <div class="carousel-tile" data-tile>
+                <div class="image-wrapper manor-II"></div>
+                <h2 class="tile-title">Golden Gate Manor II</h2>
+                <div class="info-btns-wrapper">
+                    <a class="info-btn" href="https://goo.gl/maps/7KJYLe5kL8e1fqL8A" target="_blank">View Map</a>
+                    <button class="info-btn" type="button" data-more-btn="manor-II">View More</button>
+                </div>
+                <p class="tile-description">1219 Lake Ave Pueblo, CO 81004</p>
+            </div>
+            <div class="carousel-tile">
+                <div class="image-wrapper horizon">
+                    <div class="horizon-image1 quad-image-horizon"></div>
+                    <div class="horizon-image2 quad-image-horizon"></div>
+                    <div class="horizon-image3 quad-image-horizon"></div>
+                    <div class="horizon-image4 quad-image-horizon"></div>
+                </div>
+                <h2 class="tile-title">Golden Horizon</h2>
+                <div class="info-btns-wrapper">
+                    <a class="info-btn" href="https://goo.gl/maps/jJsHQKRC3vkEDZCm8" target="_blank">View Map</a>
+                    <button class="info-btn" type="button" data-more-btn="horizon">View More</button>
+                </div>
+                <p class="tile-description">2109 Chautard Drive Pueblo, CO 81005</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const buttons = document.querySelectorAll("[data-carousel-btn]");
+    const carousel = document.querySelector("[data-carousel]");
+    const tiles = document.querySelectorAll("[data-tile]");
+    const container = document.querySelector("[data-test]");
+    var width = (carousel.offsetWidth/5);
+    var screenWidth = window.innerWidth;
+    var tileCount = Math.round(screenWidth/width);
+    var slideOpen = false;
+    let middleIdx = 0;
+    let Dx = 0;
+    let count = 0;
+    let autoScrolling;
+
+    if(!autoScrolling)
+        startAutoScrolling();
+    
+    if(tileCount === 3)
+        tiles[0].classList.add("middle");
+    else {
+        let temp = document.querySelector(".middle");
+    if(temp)
+        temp.classList.remove("middle");
+    }  
+
+    function startAutoScrolling() {
+        autoScrolling = setInterval(autoScroll, 7000);
+    }
+
+    function stopAutoScrolling() {
+        autoScrolling = clearInterval(autoScrolling);
+    }
+    
+    buttons.forEach(button => {
+        button.addEventListener("mouseenter", () => {
+            if(tileCount > 1 && autoScrolling) {
+                stopAutoScrolling();
+            }
+        })
+    })
+
+    buttons.forEach(button => {
+        button.addEventListener("mouseleave", () => {
+            if(tileCount > 1 && !autoScrolling) {
+                startAutoScrolling();
+            }
+        })
+    })
+
+    container.addEventListener("mouseenter", () => {
+        if(tileCount > 1)
+            stopAutoScrolling();
+    })
+
+    container.addEventListener("mouseleave", () => {
+        if(tileCount > 1 && !slideOpen)
+            startAutoScrolling();
+    })
+
+    window.addEventListener("resize", () => { 
+        screenWidth = window.innerWidth;
+        width = (carousel.offsetWidth/5);
+        tileCount = Math.round(screenWidth/width)
+        count = 0;
+        middleIdx = 0;
+        carousel.style.transform = "translate(0)";
+        if(tileCount > 1 && !autoScrolling)
+            startAutoScrolling();
+        
+        if(tileCount != 3) {
+            let temp = document.querySelector(".middle");
+            if(temp)
+                temp.classList.remove("middle");
+        } else {
+            let temp = document.querySelector(".middle");
+            if(temp)
+                temp.classList.remove("middle");
+            tiles[0].classList.add("middle");
+        }
+    });
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            if(button.getAttribute("data-carousel-btn") === "prev")
+                scrollLeft();
+            else if(button.getAttribute("data-carousel-btn") === "next")
+                scrollRight();
+        })
+    })
+
+    function changeMiddle() {
+        let temp = document.querySelector(".middle");
+        if(temp)
+            temp.classList.remove("middle");
+        tiles[middleIdx].classList.add("middle");
+    }
+
+    function autoScroll() {
+        if(tileCount === 1) {
+            autoScrolling = clearInterval(autoScrolling);
+        }
+        else
+            scrollRight();
+    }
+
+    function scrollLeft() {
+        if(count > 0) {
+            if(count === 1) {
+                --count;
+                Dx = 0;
+            }
+            else 
+            Dx = -(--count * width);
+            if(tileCount === 3) {
+                middleIdx--;
+                changeMiddle();
+            }
+        } else {
+            count = 5 - tileCount;
+            Dx = -((5 - tileCount) * width)
+            if(tileCount === 3) {
+                middleIdx = 2;
+                changeMiddle();
+            }
+        }
+
+        carousel.style.transform = "translate(" + Dx + "px)"; 
+    }
+
+    function scrollRight() {
+        if(count < (5 - tileCount)) {
+            Dx = -(++count * width);
+            if(tileCount === 3) {
+                middleIdx++;
+                changeMiddle();
+            }
+        } else {
+            Dx = 0;
+            count = 0;
+            if(tileCount === 3) {
+                middleIdx = 0;
+                changeMiddle();
+            }
+        }
+        
+        carousel.style.transform = "translate(" + Dx + "px)";
+    }
+</script>
+
+<div class="preloading-images">
+    <div id="preload-01"></div>
+    <div id="preload-02"></div>
+    <div id="preload-03"></div>
+    <div id="preload-04"></div>
+    <div id="preload-05"></div>
+</div>
+
+<div class="picture-slider manor-I hidden" data-picture-slider="manor-I">
+    <div class="picture-slides">
+        <button type="button" class="picture-slider-btn close" data-close="manor-I">X</button>
+        <button type="button" class="picture-slider-btn prev" data-picture-btn="prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+            </svg>
+        </button>
+        <button type="button" class="picture-slider-btn next" data-picture-btn="next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+            </svg>
+        </button>
+        <div class="corner-counter" data-counter="manor-I"></div>
+        <ul data-slides="manor-I">
+            <li class="slide active">
+                <div class="full-image GGMI-Image-1"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMI-Image-2"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMI-Image-3"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMI-Image-4"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMI-Image-5"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMI-Image-6"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMI-Image-7"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMI-Image-8"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMI-Image-9"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMI-Image-10"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMI-Image-11"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMI-Image-12"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMI-Image-13"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMI-Image-14"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMI-Image-15"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMI-Image-16"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMI-Image-17"></div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="picture-slider manor-II hidden" data-picture-slider="manor-II">
+    <div class="picture-slides">
+        <button type="button" class="picture-slider-btn close" data-close="manor-II">X</button>
+        <button type="button" class="picture-slider-btn prev" data-picture-btn="prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+            </svg>
+        </button>
+        <button type="button" class="picture-slider-btn next" data-picture-btn="next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+            </svg>
+        </button>
+        <div class="corner-counter" data-counter="manor-II"></div>
+        <ul data-slides="manor-II">
+            <li class="slide active">
+                <div class="full-image GGMII-Image-1"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMII-Image-2"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMII-Image-3"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMII-Image-4"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMII-Image-5"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMII-Image-6"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMII-Image-7"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMII-Image-8"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMII-Image-9"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMII-Image-10"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMII-Image-11"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMII-Image-12"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMII-Image-13"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMII-Image-14"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMII-Image-15"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMII-Image-16"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GGMII-Image-17"></div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="picture-slider horizon hidden" data-picture-slider="horizon">
+    <div class="picture-slides">
+        <button type="button" class="picture-slider-btn close" data-close="horizon">X</button>
+        <button type="button" class="picture-slider-btn prev" data-picture-btn="prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+            </svg>
+        </button>
+        <button type="button" class="picture-slider-btn next" data-picture-btn="next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+            </svg>
+        </button>
+        <div class="corner-counter" data-counter="horizon"></div>
+        <ul data-slides="horizon">
+            <li class="slide active">
+                <div class="full-image GHorizon-Image-1"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GHorizon-Image-2"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GHorizon-Image-3"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GHorizon-Image-4"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GHorizon-Image-5"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GHorizon-Image-6"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GHorizon-Image-7"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GHorizon-Image-8"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GHorizon-Image-9"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GHorizon-Image-10"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GHorizon-Image-11"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GHorizon-Image-12"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GHorizon-Image-13"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GHorizon-Image-14"></div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="picture-slider view hidden" data-picture-slider="view">
+    <div class="picture-slides">
+        <button type="button" class="picture-slider-btn close" data-close="view">X</button>
+        <button type="button" class="picture-slider-btn prev" data-picture-btn="prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+            </svg>
+        </button>
+        <button type="button" class="picture-slider-btn next" data-picture-btn="next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+            </svg>
+        </button>
+        <div class="corner-counter" data-counter="view"></div>
+        <ul data-slides="view">
+            <li class="slide active">
+                <div class="full-image GView-Image-1"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GView-Image-2"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GView-Image-3"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GView-Image-4"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GView-Image-5"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GView-Image-6"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GView-Image-7"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GView-Image-8"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GView-Image-9"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GView-Image-10"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GView-Image-11"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GView-Image-12"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GView-Image-13"></div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="picture-slider valley hidden" data-picture-slider="valley">
+    <div class="picture-slides">
+        <button type="button" class="picture-slider-btn close" data-close="valley">X</button>
+        <button type="button" class="picture-slider-btn prev" data-picture-btn="prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+            </svg>
+        </button>
+        <button type="button" class="picture-slider-btn next" data-picture-btn="next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+            </svg>
+        </button>
+        <div class="corner-counter" data-counter="valley"></div>
+        <ul data-slides="valley">
+            <li class="slide active">
+                <div class="full-image GValley-Image-1"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GValley-Image-2"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GValley-Image-3"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GValley-Image-4"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GValley-Image-5"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GValley-Image-6"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GValley-Image-7"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GValley-Image-8"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GValley-Image-9"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GValley-Image-10"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GValley-Image-11"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GValley-Image-12"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GValley-Image-13"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GValley-Image-14"></div>
+            </li>
+            <li class="slide">
+                <div class="full-image GValley-Image-15"></div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+    const moreButtons = document.querySelectorAll("[data-more-btn]");
+    const closeButtons = document.querySelectorAll("[data-close]");
+    const sliderButtons = document.querySelectorAll("[data-picture-btn]")
+    const slides = document.querySelectorAll("[data-slides]");
+    let currentSlides;
+    let slideIdx = 0;
+    
+    addLoadEvent(preloader);
+
+    moreButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            let bodyTemp = document.querySelector("body");
+            bodyTemp.classList.add("no-scroll");
+            currentSlides = button.getAttribute("data-more-btn");
+            let temp = document.querySelector(`[data-picture-slider=${currentSlides}]`);
+            if(temp)
+                temp.classList.remove("hidden");
+
+            buttons.forEach(button => {
+                button.classList.add("hidden");
+            })
+            slideOpen = true;
+            stopAutoScrolling();
+            let counter = document.querySelector(`[data-counter=${currentSlides}]`);
+            slides.forEach(slide => {
+                if(slide.getAttribute("data-slides") === currentSlides) {
+                    counter.innerHTML = `${slideIdx + 1}/${slide.children.length}`
+                }
+            })
+        })
+    })
+
+    closeButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            let temp = document.querySelector(`[data-picture-slider=${currentSlides}]`);
+            let bodyTemp = document.querySelector("body");
+            
+            bodyTemp.classList.remove("no-scroll");
+            if(temp)
+                temp.classList.add("hidden")
+            slideIdx = 0;
+
+            buttons.forEach(button => {
+                button.classList.remove("hidden");
+            })
+            slideOpen = false;
+            startAutoScrolling();
+        })
+    })
+
+    sliderButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const offset = button.dataset.pictureBtn === "next" ? 1 : -1;
+            let counter = document.querySelector(`[data-counter=${currentSlides}]`);
+
+            slides.forEach(slide => {
+                if(slide.getAttribute("data-slides") === currentSlides) {
+                    let temp = slide.children;
+                    temp[slideIdx].classList.remove("active");
+                    // temp[slideCount].classList.remove("active");
+                    if(slideIdx === 0 && offset === -1)
+                    slideIdx = temp.length - 1;
+                else if (slideIdx === temp.length - 1 && offset === 1)
+                    slideIdx = 0;
+                else
+                    slideIdx += offset;
+                temp[slideIdx].classList.add("active");
+                counter.innerHTML = `${slideIdx + 1}/${temp.length}`
+                }
+            })
+        })
+    })
+
+    function preloader() {
+        if (document.getElementById) {
+            document.getElementById("preload-01").style.background = "url('https://cdn.aryeo.com/listings/606-w-abriendo-ave-pueblo-co-81004-5542173/resized/large/large-d8100247-b824-41ad-a320-1b7d413784f2.jpeg') no-repeat -9999px -9999px";
+            document.getElementById("preload-02").style.background = "url('https://cdn.aryeo.com/listings/1219-lake-ave-pueblo-co-81004-5541788/resized/large/large-d37caf65-7bf5-4bd5-8d44-a45af4c8f6e3.jpeg') no-repeat -9999px -9999px";
+            document.getElementById("preload-03").style.background = "url('https://cdn.aryeo.com/listings/2109-chautard-dr-pueblo-co-81005-5594533/resized/large/large-3e67fe89-824d-47a5-8a84-3ce4a6a4467a.jpeg') no-repeat -9999px -9999px";
+            document.getElementById("preload-04").style.background = "url('https://cdn.aryeo.com/listings/525-w-9th-st-pueblo-co-81003-5624220/resized/large/large-f2013fcc-fee7-422e-90f0-f5158ea8aea9.jpeg') no-repeat -9999px -9999px";
+            document.getElementById("preload-05").style.background = "url('https://cdn.aryeo.com/listings/1033-e-evans-ave-pueblo-co-81004-5630352/resized/large/large-f58f84bc-ae36-494e-85c9-0582d4c2a341.jpeg') no-repeat -9999px -9999px";
+        }
+    }
+    function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+            window.onload = func;
+        } else {
+            window.onload = function() {
+                if (oldonload) {
+                    oldonload();
+                }
+                func();
+            }
+        }
+    }
+</script>
+</body>

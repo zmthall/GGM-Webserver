@@ -235,36 +235,36 @@
     "events": {
         "upcoming": {
             "event1": {
-                "name": "2024 Spring Jubilee",
+                "name": "2024 Arkansas Valley Senior Resource Fair",
                 "location": {
-                    "name": "Center Toward Self-Reliance",
-                    "address": "901 W 8th Street, Pueblo, CO 81003"
+                    "name": "Otero College",
+                    "address": "2001 San Juan Ave., La Junta, CO, 81050"
                 },
                 "date": {
-                    "day": "7th",
-                    "month": "June",
-                    "month_abb": "Jun.",
+                    "day": "8th",
+                    "month": "August",
+                    "month_abb": "Aug.",
                     "day_end": "",
                     "month_end": ""
                 },
-                "description": "Join the Center Toward Self-Reliance and Re-Inspired Minds for a Spring Jubilee! Welcoming brain injury survivors and people with disabilities.",
-                "url": "https://cfdpueblo.org/spring-jubilee/"
+                "description": "For Arkansas Valley Seniors, and those who care for them. Featuring different local organizations. Come learn more about local community resources!",
+                "url": "https://seniorsbluebook.com/events/arkansas-valley-senior-resource-fair/1723132800"
             },
             "event2": {
-                "name": "2024 Fremont County Senoir Resource Fair",
+                "name": "Senior Week - Senior Safari Day",
                 "location": {
-                    "name": "Pathfinder Event Center",
-                    "address": "6655 CO-115, Florence, CO 81226"
+                    "name": "Pueblo Zoo",
+                    "address": "3455 Nuckolls Ave., Pueblo, CO, 81005"
                 },
                 "date": {
-                    "day": "25th",
-                    "month": "June",
-                    "month_abb": "Jun.",
+                    "day": "11th",
+                    "month": "September",
+                    "month_abb": "Sept.",
                     "day_end": "",
                     "month_end": ""
                 },
-                "description": "For Fremont County Seniors, and those who care for them. Featuring 40 local organizations. Come learn more about local community resources!",
-                "url": "https://seniorsbluebook.com/index.php/events/fremont-county-senior-resource-fair/30973"
+                "description": "Join us for an exciting day at the Pueblo Zoo! From the 8th to the 14th seniors 65+ get in for free to enjoy a festival atmosphere with food, live music, etc.",
+                "url": "https://www.pueblozoo.org/senior-week"
             }
         }
     }

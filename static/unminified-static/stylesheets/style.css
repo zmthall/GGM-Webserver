@@ -1073,6 +1073,15 @@ div#chat_app .sc-chat-window {
     bottom: 110px;
 }
 
+div#chat_app .sc-new-messsages-count {
+    position: fixed;
+    right: 25px;
+    bottom: 80px;
+    top: unset;
+    left: unset;
+}
+
+
 @media(max-width: 590px) {
     .sc-user-input--picker-wrapper div.sc-emoji-picker {
         width: calc(100vw - 50px);

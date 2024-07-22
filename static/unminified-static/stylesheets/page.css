@@ -1242,7 +1242,7 @@ button.community-images-more-btn:hover {
 }
 
 .event-left-info {
-    width: 15%;
+    width: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1337,10 +1337,6 @@ button.event-button.expand-button:hover {
     .event-container {
         width: 100%;
     }
-
-    .event-left-info {
-        width: 20%;
-    }
 }
 
 @media(max-width: 768px) {
@@ -1374,6 +1370,19 @@ button.event-button.expand-button:hover {
     button.image-carousel-btn[data-carousel-btn=right] {
         border-left: 1px solid rgba(255, 255, 255, .25);
         right: 0;
+    }
+}
+
+@media(max-width: 450px) {
+    .event-container {
+        flex-direction: column;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1rem;
+    }
+
+    .event-left-info,
+    .event-right-info {
+        width: 100%;
     }
 }
 

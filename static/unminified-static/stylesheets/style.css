@@ -1037,6 +1037,8 @@ div#chat_app .sc-launcher {
     border: 1px solid white;
     width: 70px;
     height: 70px;
+    overflow: hidden;
+    bottom: 33px;
 }
 
 div#chat_app img.sc-open-icon {
@@ -1061,6 +1063,14 @@ div#chat_app .sc-launcher::before {
 
 div#chat_app .sc-header {
     border: 1px solid white;
+}
+
+div#chat_app .sc-launcher.opened::before {
+    box-shadow: none;
+}
+
+div#chat_app .sc-chat-window {
+    bottom: 110px;
 }
 
 @media(max-width: 590px) {

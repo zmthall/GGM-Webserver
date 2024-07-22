@@ -1523,6 +1523,14 @@ div.form-all {
     margin-top: 0;
 }
 
+.progressBarSubtitle span {
+    font-size: 0.5rem;
+}
+
+.progressBarSubtitle {
+    text-align: right;
+}
+
 /* Thank You Page Styling */
 
 .envelope-mail-svg {

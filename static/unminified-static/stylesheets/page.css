@@ -1532,22 +1532,6 @@ div.form-all {
     text-align: right;
 }
 
-button.pickerArrow.pickerYearArrow.prev {
-    margin-bottom: 0.5rem;
-}
-
-button.pickerArrow.pickerYearArrow.next {
-    margin-top: 0.5rem;
-}
-
-button.pickerArrow.pickerMonthArrow.prev {
-    margin-bottom: 0.5rem;
-}
-
-button.pickerArrow.pickerMonthArrow.next {
-    margin-top: 0.5rem;
-}
-
 /* Thank You Page Styling */
 
 .envelope-mail-svg {

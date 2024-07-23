@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0">
     <title><%= page.title %> | <%= config.company.name %></title>
     <link rel="icon" type="image/x-icon" href="<%- config.company.favicon %>">
     <%- include('../snippets/head-additions', { page: page }) %>
@@ -22,5 +22,6 @@
         company: config.company,
         footer_links: config.footer_links,
         links: config.links }) %>
+    <script src="/scripts/chat_plugin.js"></script> 
 </body>
 </html>

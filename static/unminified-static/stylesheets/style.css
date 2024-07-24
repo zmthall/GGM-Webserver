@@ -508,7 +508,7 @@ nav.mobile-navigation {
     position: sticky;
     top: 0;
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, .054);
-    z-index: 1;
+    z-index: 2;
 }
 
 .mobile-nav-logo-wrapper {
@@ -829,10 +829,10 @@ ul.footer-policy-lnks {
 
 li.footer-policy-link-item {
     padding: 0 0.5rem;
-    padding: 0 .5rem;
     height: 15px;
     display: flex;
     align-items: center;
+    text-align: center;
 }
 
 li.footer-policy-link-item:not(:last-of-type) {
@@ -851,12 +851,17 @@ li a.footer-policy-link {
     text-decoration: none;
 }
 
+.footer-copyright-wrapper a,
+a.footer-policy-link {
+    padding: 0.5rem;
+}
+
 /* Bottom Footer Width Styling */
 
 @media(max-width: 500px) {
     .bottom-footer {
         flex-direction: column;
-        gap: 0.25rem;
+        gap: 1.5rem;
     }
 
     .footer-copyright-wrapper a {
@@ -1039,6 +1044,7 @@ div#chat_app .sc-launcher {
     height: 70px;
     overflow: hidden;
     bottom: 33px;
+    z-index: 1;
 }
 
 div#chat_app img.sc-open-icon {
@@ -1063,6 +1069,10 @@ div#chat_app .sc-launcher::before {
 
 div#chat_app .sc-header {
     border: 1px solid white;
+}
+
+div#chat_app .talk-bubble-right {
+    bottom: 40px;
 }
 
 div#chat_app .sc-launcher.opened::before {

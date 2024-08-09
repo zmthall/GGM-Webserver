@@ -72,7 +72,8 @@ a:not(.logo-wrapper a,
     a.cta-button,
     a.no-hover-page-link,
     a.form-button,
-    a.info-btn):hover {
+    a.info-btn,
+    a.secondary-button):hover {
     /* color: color-mix(in hsl, var(--primary-color) 70%, var(--secondary-color) 30%) */
     color: rgb(var(--link-hover-color));
 }
@@ -123,6 +124,23 @@ span.read-more-plus {
 .primary-button:hover {
     color: rgb(var(--primary-color));
     background: rgb(var(--secondary-color));
+}
+
+.secondary-button {
+    color: rgb(var(--primary-color));
+    background: rgb(var(--secondary-color));
+    text-decoration: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid rgb(var(--secondary-color));
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.secondary-button:hover {
+    color: rgb(var(--secondary-color));
+    background: rgb(var(--primary-color));
 }
 
 span.title-top {

@@ -1410,6 +1410,10 @@ ul.employment-page-what-we-want {
     list-style-image: url(/images/check-mark-white.svg);
 }
 
+section.employment-page-section.about-us.page-content {
+    margin: 5rem auto;
+}
+
 span.employement-page-title-span {
     display: block;
 }
@@ -1418,6 +1422,33 @@ span.employment-page-top-title {
     text-align: center;
     margin-bottom: 1rem;
     font-size: 2rem
+}
+
+section.employment-page-section {
+    margin: 2rem auto;
+}
+
+section.employment-page-section.cta {
+    background: rgb(var(--primary-color));
+    color:  white;
+    padding: 4rem 6rem;
+    text-align: center;
+}
+
+h2.employment-page.section-title.cta {
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+p.employement-page.section-text.cta {
+    color: white;
+}
+
+@media(max-width: 600px) {
+    section.employment-page-section.cta {
+        padding: 3rem 1rem;
+    }
 }
 
 @media(max-width: 500px) {

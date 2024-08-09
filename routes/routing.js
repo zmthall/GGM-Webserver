@@ -140,6 +140,19 @@ router.get('/about-us/community', (request, response) => {
     getImageUrls()
 })
 
+router.get('/about-us/employment', (request, response) => {
+    response.render('employment', {
+        config: json,
+        helper: helper,
+        page: {
+            title: 'Employment Opportunities',
+            href: '/about-us/employment',
+            page_type: "page"
+        },
+        layout: './layouts/main-layout'
+    })
+})
+
 router.get('/contact-us', (request, response) => {
     response.render('contact-us', {
         config: json,

@@ -1387,6 +1387,54 @@ button.event-button.expand-button:hover {
     }
 }
 
+/* Employment Page Styling */
+
+section.employment-page-hero-shot {
+    background: url('/images/employment-hero_1600.webp') center/cover;
+    height: 600px;
+    width: 100%;
+    position: relative;
+    padding: 2rem;
+}
+
+.employement-hero-shot-wrapper {
+    width: fit-content;
+    padding: 2rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 1rem;
+}
+
+ul.employment-page-what-we-want {
+    margin-left: 2rem;
+    list-style-image: url(/images/check-mark-white.svg);
+}
+
+span.employement-page-title-span {
+    display: block;
+}
+
+span.employment-page-top-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem
+}
+
+@media(max-width: 500px) {
+    section.employment-page-hero-shot {
+        padding: 0;
+    }
+
+    .employement-hero-shot-wrapper {
+        border-radius: 0;
+        height: 100%;
+    }
+
+    h1.employment-page-title {
+        font-size: calc(5vw + 4px);
+    }
+}
+
 /* Contact Us Page Styling */
 
 section.contact-us-get-in-touch {

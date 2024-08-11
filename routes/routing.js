@@ -153,6 +153,19 @@ router.get('/about-us/employment', (request, response) => {
     })
 })
 
+router.get('/about-us/employment/apply', (request, response) => {
+    response.render('application', {
+        config: json,
+        helper: helper,
+        page: {
+            title: 'Golden Gate Manor Inc Job Application',
+            href: '/about-us/employment/apply',
+            page_type: "page"
+        },
+        layout: './layouts/main-layout'
+    })
+})
+
 router.get('/contact-us', (request, response) => {
     response.render('contact-us', {
         config: json,

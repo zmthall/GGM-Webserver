@@ -1463,10 +1463,15 @@ section.employment-page-opportunities {
     width: 330px;
     height: 350px;
     margin: 0.75rem;
-    border-radius: 1rem;
-    border: 1px solid;
-    overflow: hidden;
-    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.employment-page-opportunity-card:hover > .opportunity-card-back{
+    transform: rotateY(360deg);
+}
+
+.employment-page-opportunity-card:hover > .opportunity-card-front {
+    transform: rotateY(180deg);
 }
 
 h2.employment-page.section-title.opportunities {
@@ -1474,15 +1479,36 @@ h2.employment-page.section-title.opportunities {
     text-align: center;
 }
 
-.opportunity-card-front {
+.opportunity-card-back {
+    background-color: white;
+    transform: rotateY(180deg);
+    z-index: 2;
+}
+
+.opportunity-card-front,
+.opportunity-card-back {
     width: 100%;
     height: 100%;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform 1s ease-in-out;
+    border: 1px solid;
+    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.opportunity-card-front {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1rem;
-    position: relative;
+    background-color: #fff;
+    z-index: 0;
 }
 
 .opportunity-card-front::before {

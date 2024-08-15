@@ -1482,7 +1482,6 @@ h2.employment-page.section-title.opportunities {
 .opportunity-card-back {
     background-color: white;
     transform: rotateY(180deg);
-    z-index: 2;
 }
 
 .opportunity-card-front,
@@ -1551,6 +1550,97 @@ h2.employment-page.section-title.opportunities {
 .opportunity-card-front .opportunity-card-title,
 .opportunity-card-front .opportunity-card-description {
     z-index: 1;
+}
+
+p.job-opportunity-list-text {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+}
+
+ul.job-opportunity-list-items {
+    list-style: none;
+}
+
+ul.job-opportunity-list-items {
+    height: 100%;
+}
+
+h3.opportunity-card-title {
+    text-decoration: underline;
+    margin-bottom: 0.25rem;
+}
+
+.department-positions:last-of-type {
+    margin-top: 1rem;
+}
+
+.department-positions:only-of-type {
+    margin-top: 0;
+}
+
+.department-positions {
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+.department-positions::before {
+    content: "";
+    position: absolute;
+    border-radius: 1rem;
+    top: 50%;
+    left: -1rem;
+    width: 0.25rem;
+    height: 100%;
+    background: rgb(var(--primary-color));
+    translate: 0 -50%;
+}
+
+.opportunity-card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.opportunity-card-back::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 30%;
+}
+
+.opportunity-card-back.transportation::before {
+    background: url('/images/golden-gate-manor-cars-building-employment.jpg') center / cover;
+}
+
+.opportunity-card-back.assisted-living::before {
+    background: url('/images/assisted-living-employment.jpg') left / cover;
+}
+
+.opportunity-card-back.medical-supply-store::before {
+    background: url('/images/medical-supply-employment.jpg') left / cover;
+}
+
+.opportunity-card-back.gas-station::before {
+    background: url('/images/gas-staton-employment.jpg') center / cover;
+}
+
+h2.job-opportunity-list-title {
+    z-index: 1;
+    font-size: 1.4rem;
+    font-weight: 900;
+    align-self: center;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    text-align: center;
 }
 
 @media(max-width: 600px) {

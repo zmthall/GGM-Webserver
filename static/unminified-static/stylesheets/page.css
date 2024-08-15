@@ -1450,6 +1450,8 @@ section.employment-page-opportunities {
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    margin: 2rem 0;
+    margin-bottom: 4rem;
 }
 
 .employment-page-opportunity-cards-container {
@@ -1638,9 +1640,17 @@ h2.job-opportunity-list-title {
     font-weight: 900;
     align-self: center;
     padding-bottom: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     text-align: center;
+}
+
+.cta-button.employment-page {
+    z-index: 1;
+}
+
+.opportunity-card-back.transportation > a.cta-button.employment-page {
+    margin-top: 0.5rem;
 }
 
 @media(max-width: 600px) {

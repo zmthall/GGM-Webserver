@@ -156,9 +156,9 @@
                 "home_page_url": "/",
                 "home_page": "Home",
                 "current_page_url": "/about-us",
-                "current_page": "About Golden Gate Manor, Inc." 
+                "current_page": "About Us" 
             },
-            "title": "About Us",
+            "title": "About Golden Gate Manor Inc.",
             "url": "/about-us"
         },
         "location": {
@@ -176,20 +176,20 @@
                 "home_page_url": "/",
                 "home_page": "Home",
                 "current_page_url": "/about-us/community",
-                "current_page": "Community Outreach and Events"
+                "current_page": "Community Outreach"
             },
-            "title": "Community Outreach",
+            "title": "Community Outreach and Events",
             "url": "/about-us/community"
         },
-        "employment": {
+        "employment_application": {
             "breadcrumb": {
                 "home_page_url": "/",
                 "home_page": "Home",
-                "current_page_url": "/about-us/employment",
-                "current_page": "Employment Opportunities"
+                "current_page_url": "/about-us/employment/apply",
+                "current_page": "Application"
             },
-            "title": "Employment Opportunities",
-            "url": "/about-us/employment"
+            "title": "Golden Gate Manor - Job Application",
+            "url": "/about-us/employment/apply"
         },
         "contact_us": {
             "breadcrumb": {

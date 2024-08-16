@@ -80,7 +80,7 @@ router.get('/about-us', (request, response) => {
         config: json,
         helper: helper,
         page: {
-            title: 'About us',
+            title: 'About Golden Gate Manor Inc.',
             href: '/about-us',
             page_type: "page"
         },
@@ -128,7 +128,7 @@ router.get('/about-us/community', (request, response) => {
             config: json,
             helper: helper,
             page: {
-                title: 'Community',
+                title: 'Community Outreach and Events',
                 href: '/about-us/community',
                 page_type: "page"
             },
@@ -158,7 +158,7 @@ router.get('/about-us/employment/apply', (request, response) => {
         config: json,
         helper: helper,
         page: {
-            title: 'Golden Gate Manor Inc Job Application',
+            title: 'Golden Gate Manor - Application Form',
             href: '/about-us/employment/apply',
             page_type: "page"
         },

@@ -1,15 +1,24 @@
 class ApplicationHandler {
     constructor() {
+        this.date = (new Date()).toLocaleString()
+        
         this.form = {
             select: document.querySelector('[data-select]'),
-            selectOption: this.GetURLParameter('select')
+            selectOption: this.GetURLParameter('select'),
+            dateInput: document.querySelector('[data-form-date]'),
+            positionInput: document.querySelector('[data-form-position]')
         }
 
         
         window.addEventListener("load", (event) => {
-            console.log(this.form.selectOption)
-            if(this.form.selectOption != undefined)
+            this.form.dateInput.value = this.date
+            
+            if(this.form.selectOption != undefined) {
+                this.form.positionInput.value = this.form.selectOption
                 this.form.select.value = this.form.selectOption
+            } else {
+                this.form.positionInput.value = "general"
+            }
         })
     }
 

@@ -1,0 +1,12 @@
+<article class="accessible-rides-ad">
+    <button type="button" class="article-ad-close" data-article-ad-close>X</button>
+    <h2 class="article-title">Are you needing transportation with wheelchair accessibile vehicles?</h2>
+    <p class="article-text">Look no further. Our fleet includes accessible vans for your convenience.</p>
+    <a href="/accessible-vans" class="cta-button">READ MORE</a>
+    <script>
+        let closeButton = document.querySelector('[data-article-ad-close]')
+        closeButton.addEventListener('click', (event) => {
+            event.target.parentNode.classList.add("hidden")
+        })
+    </script>
+</article>

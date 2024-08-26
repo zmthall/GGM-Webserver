@@ -131,6 +131,16 @@
             "title": "Assisted Living",
             "url": "/assisted-living"
         },
+        "accessible_vans": {
+            "breadcrumb": {
+                "home_page_url": "/",
+                "home_page": "Home",
+                "current_page_url": "/accessible-vans",
+                "current_page": "Accessible Rides" 
+            },
+            "title": "Accessible Rides",
+            "url": "/accessible-vans"
+        },
         "non_medical": {
             "breadcrumb": {
                 "home_page_url": "/",

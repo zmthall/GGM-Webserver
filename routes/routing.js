@@ -36,6 +36,19 @@ router.get('/', (request, response) => {
     })
 })
 
+router.get('/accessible-vans', (request, response) => {
+    response.render('accessible-vans', {
+        config: json,
+        helper: helper,
+        page: {
+            title: 'Accessible Transportation',
+            href: '/accessible-vans',
+            page_type: "page"
+        },
+        layout: './layouts/main-layout'
+    })
+})
+
 router.get('/assisted-living', (request, response) => {
     response.render('assisted-living', {
         config: json,

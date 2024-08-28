@@ -1,9 +1,18 @@
 const express = require('express');
-const helper = require('../files/helper.js');
-const methods = require('../files/methods.js')
-const mailer = require('../files/mailer.js')
+const helper = require('../files/helper');
+const methods = require('../files/methods')
+const mailer = require('../files/mailer')
+const google_handler = require('../files/google-handler')
 const path = require('path')
+require('dotenv').config()
 var router = express.Router();
+
+const google = new google_handler.GoogleAPIHandler(process.env.SPREADSHEET_ID, process.env.FOLDER_ID)
+async function test() {
+    console.log(await google.getSheetsRows('GGMT'))
+}
+
+test()
 
 
 var fs = require("fs"), json;

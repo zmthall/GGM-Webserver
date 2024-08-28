@@ -1,11 +1,11 @@
 const express = require('express')
 const indexRouter = require('./routes/routing.js')
 const { auth } = require('express-openid-connect');
-require('dotenv').config()
 const https = require('https')
 const http = require('http')
 const expressLayouts = require('express-ejs-layouts')
-const minify = require('./files/minify.js')
+const minify = require('./files/minify')
+
 const webURL = new URL('https://www.goldengatemanor.com')
 
 // Express server instantiation 

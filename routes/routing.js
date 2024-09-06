@@ -6,15 +6,10 @@ const google_handler = require('../files/google-handler')
 const path = require('path')
 require('dotenv').config()
 var router = express.Router();
+const multer  = require('multer');
 
+const upload = multer();
 const google = new google_handler.GoogleAPIHandler(process.env.SPREADSHEET_ID, process.env.FOLDER_ID)
-async function test() {
-    console.log(await google.getSheetsRows('GGMT'))
-}
-
-test()
-
-
 var fs = require("fs"), json;
 
 function readJsonFileSync(filepath, encoding){
@@ -188,6 +183,12 @@ router.get('/about-us/employment/apply', (request, response) => {
     })
 })
 
+router.get('/about-us/employment/send-application', (request, response) => {
+
+
+    response.status(200).redirect('/contact-us/thank-you')
+})
+
 router.get('/contact-us', (request, response) => {
     response.render('contact-us', {
         config: json,
@@ -214,7 +215,7 @@ router.post('/contact-us/send-email', (request, response) => {
 
     const message = {
         from: process.env.EMAIL_USERNAME,
-        to: 'goldengatemedicalsupplies@gmail.com',
+        to: 'goldengatemanortransportation@gmail.com',
         subject: `Message From: ${data.first_name} ${data.last_name}`,
         text: `Reason: ${data.reason} Name: ${data.first_name} ${data.last_name} Email Address: ${data.email} Phone Number: ${data.phone} Preferred Contact Method: ${data.contact_method} Message: ${data.message}`,
         html: `<p>Reason: ${data.reason}</p>

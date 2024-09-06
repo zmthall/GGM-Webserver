@@ -1,72 +1,204 @@
 <section class="application-page-section page-content">
-    <form action="">
-        <div class="form-component-container">
-            <label for="job-position">Position</label>
-            <select name="job-position" id="job-position" data-select>
-                <optgroup label="Transportation">
-                    <option value="transportation" data-company="ggmt-cc">Transportation - General</option>
-                </optgroup>
-                <optgroup label="City Cab Positions">
-                    <option value="dispatcher" data-company="cc">Dispatcher</option>
-                    <option value="cc-driver" data-company="cc">City Cab Driver</option>
-                    <option value="cc-office-staff" data-company="cc">City Cab Office</option>
-                </optgroup>
-                <optgroup label="NEMT Positions">
-                    <option value="csr" data-company="ggmt">Customer Service Representative</option>
-                    <option value="nemt-driver" data-company="ggmt">NEMT Driver</option>
-                </optgroup>
-                <optgroup label="Assisted Living Positions">
-                    <option value="assisted-living" data-company="acf">Assisted Living - General</option>
-                    <option value="qmap" data-company="acf">Assisted Living - QMAP</option>
-                    <option value="pcp" data-company="acf">Assisted Living - PCP</option>
-                </optgroup>
-                <optgroup label="Medical Supply Positions">
-                    <option value="medical-supply" data-company="ggms">Medical Supply - General</option>
-                    <option value="dme-specialist" data-company="ggms">DME Specialist</option>
-                    <option value="dme-delivery" data-company="ggms">DME Delivery Technician</option>
-                    <option value="dme-inventory" data-company="ggms">DME Inventory Technician</option>
-                </optgroup>
-                <optgroup label="Gas Station Positions">
-                    <option value="gas-station" data-company="ggmc"></option>>Gas Station - General</option>
-                    <option value="c-store-manager" data-company="ggmc">Gas Station Manager</option>
-                    <option value="c-assistant-manager" data-company="ggmc">Gas Station Assistant Manager</option>
-                    <option value="c-attendant" data-company="ggmc">Gas Station Attendant</option>
-                </optgroup>
-                <optgroup label="Other">
-                    <option value="other" data-company="ggm">General Application</option>
-                </optgroup>
-            </select>
-        </div>
-        <div class="form-component-container">
-            <div class="input-two-container">
-                <label for="first_name">First Name</label>
-                <input type="text" name="first_name" id="first_name">
+    <form action="" method="post" enctype="multipart/form-data">
+        <section class="personal-form-section">
+            <h2 class="form-title">Personal Information</h2>
+            <div class="form-component-container">
+                <label for="job-position">Position</label>
+                <select name="job-position" id="job-position" data-select>
+                    <optgroup label="Transportation">
+                        <option value="transportation" data-company="ggmt-cc">Transportation - General</option>
+                    </optgroup>
+                    <optgroup label="City Cab Positions">
+                        <option value="dispatcher" data-company="cc">Dispatcher</option>
+                        <option value="cc-driver" data-company="cc">City Cab Driver</option>
+                        <option value="cc-office-staff" data-company="cc">City Cab Office</option>
+                    </optgroup>
+                    <optgroup label="NEMT Positions">
+                        <option value="csr" data-company="ggmt">Customer Service Representative</option>
+                        <option value="nemt-driver" data-company="ggmt">NEMT Driver</option>
+                    </optgroup>
+                    <optgroup label="Assisted Living Positions">
+                        <option value="assisted-living" data-company="acf">Assisted Living - General</option>
+                        <option value="qmap" data-company="acf">Assisted Living - QMAP</option>
+                        <option value="pcp" data-company="acf">Assisted Living - PCP</option>
+                    </optgroup>
+                    <optgroup label="Medical Supply Positions">
+                        <option value="medical-supply" data-company="ggms">Medical Supply - General</option>
+                        <option value="dme-specialist" data-company="ggms">DME Specialist</option>
+                        <option value="dme-delivery" data-company="ggms">DME Delivery Technician</option>
+                        <option value="dme-inventory" data-company="ggms">DME Inventory Technician</option>
+                    </optgroup>
+                    <optgroup label="Gas Station Positions">
+                        <option value="gas-station" data-company="ggmc">Gas Station - General</option>
+                        <option value="c-store-manager" data-company="ggmc">Gas Station Manager</option>
+                        <option value="c-assistant-manager" data-company="ggmc">Gas Station Assistant Manager</option>
+                        <option value="c-attendant" data-company="ggmc">Gas Station Attendant</option>
+                    </optgroup>
+                    <optgroup label="Other">
+                        <option value="other" data-company="ggm">General Application</option>
+                    </optgroup>
+                </select>
             </div>
-            <div class="input-two-container">
-                <label for="last_name">Last Name</label>
-                <input type="text" name="last_name" id="last_name">
-            </div>
-        </div>
-        <div class="form-component-container">
-            <div class="input-one-container">
-                <label for="address">Address</label>
-                <input type="text" name="address" id="address">
-            </div>
-        </div>
-        <div class="form-component-container">
-            <div class="input-half-container">
-                <label for="telephone">Phone Number</label>
-                <input type="text" name="telephone" id="telephone">
-            </div>
-        </div>
-        <div class="form-component-container">
-            <fieldset class="input-radio-container">
-                <legend>Are you over the age of 18 years old?</legend>
-                <div class="input-one-container">
-                    
+            <div class="form-component-container">
+                <div class="input-two-container">
+                    <label for="first_name">First Name</label>
+                    <input type="text" name="first_name" id="first_name">
                 </div>
-            </fieldset>
-        </div>
+                <div class="input-two-container">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" name="last_name" id="last_name">
+                </div>
+            </div>
+            <div class="form-component-container">
+                <div class="input-one-container">
+                    <label for="address">Address</label>
+                    <input type="text" name="address" id="address">
+                </div>
+            </div>
+            <div class="form-component-container">
+                <div class="input-half-container">
+                    <label for="telephone">Phone Number</label>
+                    <input type="text" name="telephone" id="telephone">
+                </div>
+            </div>
+            <div class="form-component-container">
+                <fieldset class="input-radio-container">
+                    <legend>Are you over the age of 18?</legend>
+                    <div class="input-one-container">
+                        <input type="radio" name="18_radio" id="18_yes" checked>
+                        <label for="18_yes">Yes</label>
+                    </div>
+                    <div class="input-one-container">
+                        <input type="radio" name="18_radio" id="18_no">
+                        <label for="18_no">No</label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="form-component-container">
+                <fieldset class="input-radio-container">
+                    <legend>Are you a citizen of the U.S. or Otherwise authorized to work in the U.S. on an unrestricted basis?</legend>
+                    <div class="input-one-container">
+                        <input type="radio" name="us-citizen_radio" id="us-citizen_yes" checked>
+                        <label for="us-citizen_yes">Yes</label>
+                    </div>
+                    <div class="input-one-container">
+                        <input type="radio" name="us-citizen_radio" id="us-citizen_no">
+                        <label for="us-citizen_no">No</label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="form-component-container">
+                <fieldset class="input-radio-container">
+                    <legend>Have you ever been charged with a felony?</legend>
+                    <div class="input-one-container">
+                        <input type="radio" name="felony_radio" id="felony_yes" checked>
+                        <label for="felony_yes">Yes</label>
+                    </div>
+                    <div class="input-one-container">
+                        <input type="radio" name="felony_radio" id="felony_no">
+                        <label for="felony_no">No</label>
+                    </div>
+                    <div class="input-one-container">
+                        <label for="specify-availability">Describe conviction conditions</label>
+                        <textarea name="availability" id="availability" rows="2" maxlength="100"></textarea>
+                    </div>
+                </fieldset>
+            </div>
+        </section>
+        <section class="driving-form-section hidden">
+            <h2 class="form-title">Driving Information</h2>
+            <div class="form-component-container">
+                <div class="form-component-container">
+                    <fieldset class="input-radio-container">
+                        <legend>Are you a citizen of the U.S. or Otherwise authorized to work in the U.S. on an unrestricted basis?</legend>
+                        <div class="input-one-container">
+                            <input type="radio" name="us-citizen_radio" id="us-citizen_yes" checked>
+                            <label for="us-citizen_yes">Yes</label>
+                        </div>
+                        <div class="input-one-container">
+                            <input type="radio" name="us-citizen_radio" id="us-citizen_no">
+                            <label for="us-citizen_no">No</label>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+        <section class="work-form-section">
+            <h2 class="form-title">Work Information</h2>
+            <div class="form-component-container">
+                <label for="how-did-you-hear">How did you learn about this position?</label>
+                <select name="how-did-you-hear" id="how-did-you-hear" data-select>
+                    <option value="indeed" selected>Indeed</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="word-of-mouth">Word of Mouth</option>
+                    <option value="website">Our Website</option>
+                    <option value="email">Email</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-component-container">
+                <fieldset class="input-radio-container">
+                    <legend>Have you ever worked for Golden Gate Manor Inc. before?</legend>
+                    <div class="input-one-container">
+                        <input type="radio" name="worked-ggm_radio" id="worked-ggm_yes" checked>
+                        <label for="worked-ggm_yes">Yes</label>
+                    </div>
+                    <div class="input-one-container">
+                        <input type="radio" name="worked-ggm_radio" id="worked-ggm_no">
+                        <label for="worked-ggm_no">No</label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="form-component-container">
+                <fieldset class="input-radio-container">
+                    <legend>What kind of employment are you looking for?</legend>
+                    <div class="input-one-container">
+                        <input type="radio" name="employement-type_radio" id="employement-type_full-time" checked>
+                        <label for="employement-type_full-time">Full-Time</label>
+                    </div>
+                    <div class="input-one-container">
+                        <input type="radio" name="employement-type_radio" id="employement-type_part-time">
+                        <label for="employement-type_part-time">Part-Time</label>
+                    </div>
+                    <div class="input-one-container">
+                        <label for="specify-availability">Specify Availability (days and hours if part-time)</label>
+                        <textarea name="availability" id="availability" rows="2" maxlength="100"></textarea>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="form-component-container">
+                <fieldset class="input-radio-container">
+                    <legend>Are you willing to work overtime as required?</legend>
+                    <div class="input-one-container">
+                        <input type="radio" name="overtime_radio" id="overtime_yes" checked>
+                        <label for="overtime_yes">Yes</label>
+                    </div>
+                    <div class="input-one-container">
+                        <input type="radio" name="overtime_radio" id="overtime_no">
+                        <label for="overtime_no">No</label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="form-component-container">
+                <div class="input-one-container">
+                    <label for="pay-rate">What rate of pay are you expecting? (Hourly rate)</label>
+                    <input type="text" name="pay-rate" id="pay-rate">
+                </div>
+            </div>
+            <div class="form-component-container">
+                <div class="input-one-container">
+                    <label for="start-date">If your application is considered favorably, what date would you be avaiable to work?</label>
+                    <input type="date" name="start-date" id="start-date">
+                </div>
+            </div>
+            <div class="form-component-container">
+                <div class="input-form-container">
+                    <label for="file">Submit your Resume</label>
+                    <input type="file" name="resume" id="resume">
+                </div>
+            </div>
+        </section>
+        <button type="submit">Submit Application</button>
         <div class="hidden-form-components">
             <input type="hidden" name="date" data-form-date>
             <input type="hidden" name="position" data-form-position>

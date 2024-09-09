@@ -216,6 +216,7 @@ router.post('/contact-us/send-email', (request, response) => {
     const message = {
         from: process.env.EMAIL_USERNAME,
         to: process.env.EMAIL_USERNAME,
+        cc: process.env.CC_EMAILS,
         subject: `Message From: ${data.first_name} ${data.last_name}`,
         text: `Reason: ${data.reason} Name: ${data.first_name} ${data.last_name} Email Address: ${data.email} Phone Number: ${data.phone} Preferred Contact Method: ${data.contact_method} Message: ${data.message}`,
         html: `<p>Reason: ${data.reason}</p>

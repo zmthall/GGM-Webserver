@@ -215,8 +215,7 @@ router.post('/contact-us/send-email', (request, response) => {
 
     const message = {
         from: process.env.EMAIL_USERNAME,
-        to: 'goldengatemanortransportation@gmail.com',
-        cc: ['goldengatemanor1@aol.com'],
+        to: process.env.EMAIL_USERNAME,
         subject: `Message From: ${data.first_name} ${data.last_name}`,
         text: `Reason: ${data.reason} Name: ${data.first_name} ${data.last_name} Email Address: ${data.email} Phone Number: ${data.phone} Preferred Contact Method: ${data.contact_method} Message: ${data.message}`,
         html: `<p>Reason: ${data.reason}</p>
@@ -227,9 +226,13 @@ router.post('/contact-us/send-email', (request, response) => {
         <p>Message: ${data.message}</p>`
     }
 
-    mailer.send_email(message).catch(console.error)
-
-    response.status(200).redirect('/contact-us/thank-you')
+    if(data.message.body != undefined) {
+        mailer.send_email(message).catch(console.error)
+    
+        response.status(200).redirect('/contact-us/thank-you')
+    } else {
+        response.status(502)
+    }
 })
 
 router.get('/contact-us/thank-you', (request, response) => {

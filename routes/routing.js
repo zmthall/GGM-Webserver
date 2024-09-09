@@ -226,13 +226,9 @@ router.post('/contact-us/send-email', (request, response) => {
         <p>Message: ${data.message}</p>`
     }
 
-    if(data.message.body != undefined) {
-        mailer.send_email(message).catch(console.error)
+    mailer.send_email(message).catch(console.error)
     
-        response.status(200).redirect('/contact-us/thank-you')
-    } else {
-        response.status(502)
-    }
+    response.status(200).redirect('/contact-us/thank-you')
 })
 
 router.get('/contact-us/thank-you', (request, response) => {

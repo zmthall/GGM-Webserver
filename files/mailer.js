@@ -21,10 +21,16 @@ async function send_email(message) {
 
     if(message.from === undefined)
         message.from = mailer_settings.username
-    
-    const info = await transporter.sendMail(message)
 
-    console.log("Message was sent: %s", info.messageId)
+    try {
+        if(message.text.includes(undefined)) {
+            throw new Error('Message contains undefined fields')
+        } else {
+            const info = await transporter.sendMail(message)
+        }
+    } catch(err) {
+        console.error("Error:", err)
+    }
 }
 
 module.exports = {

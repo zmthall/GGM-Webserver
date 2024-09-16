@@ -51,6 +51,10 @@ section.contact-us-form {
     width: 60%;
 }
 
+div .grecaptcha-badge {
+    bottom: 50%!important;    
+}
+
 @media(max-width: 700px) {
     section.contact-us-form {
         width: 100%;

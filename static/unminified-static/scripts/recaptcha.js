@@ -15,10 +15,8 @@ class OnSiteRecaptcha {
                     const data = _this.createData(token);
                     const verify = await _this.verifySubmission(data)
                     if(verify === 200) {
-                        const redirectURL = new URL('/contact-us/thank-you', window.location.origin)
-
-                        console.log(redirectURL)
-                        window.location.replace(redirectURL)
+                        const redirectURL = new URL('/contact-us/thank-you', window.location.origin);
+                        window.location.replace(redirectURL);
                     }
                 });
             });
@@ -31,8 +29,8 @@ class OnSiteRecaptcha {
         for(const value of this.formData.entries()) {
             data.formData[value[0]] = value[1];
         }
-        data.captcha = token
-
+        data.captcha = token;
+        
         return data;
     }
 

@@ -1769,6 +1769,10 @@ section.contact-us-map-iframe-section iframe.location-iframe {
     translate: -3rem -50%;
 }
 
+div .grecaptcha-badge {
+    bottom: 50%!important;    
+}
+
 /* Contact us Page Width Styling */
 
 @media(max-width: 800px) {

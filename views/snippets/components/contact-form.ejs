@@ -1,4 +1,4 @@
-<form autocomplete="off" class="<%- helper.handleize(page.title) %>-page contact-form" action="/contact-us/send-email" method="post">
+<form autocomplete="off" class="<%- helper.handleize(page.title) %>-page contact-form" action="/contact-us/send-email" method="post" id="contact-form">
     <div class="form-item-container">
         <label for="reason">Reason for Contact</label>
         <select name="reason" id="reason">
@@ -42,3 +42,5 @@
 
     <button class="primary-button" type="submit">Send</button>
 </form>
+<script src="https://www.google.com/recaptcha/api.js?render=6LeZz0UqAAAAACaVm35S2EemtZ1XGc_T1GV4o0wf"></script>
+<script src="/scripts/recaptcha.js"></script>

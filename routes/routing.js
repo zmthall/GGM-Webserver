@@ -2,6 +2,7 @@ const express = require('express');
 const helper = require('../files/helper');
 const methods = require('../files/methods')
 const mailer = require('../files/mailer')
+const axios = require('axios')
 const google_handler = require('../files/google-handler')
 const path = require('path')
 require('dotenv').config()
@@ -202,15 +203,16 @@ router.get('/contact-us', (request, response) => {
     })
 })
 
-router.post('/contact-us/send-email', (request, response) => {
+router.post('/contact-us/send-email', async (request, response) => {
+
     const data = {
-        reason: request.body.reason,
-        first_name: request.body.first_name,
-        last_name: request.body.last_name,
-        email: request.body.email,
-        phone: request.body.phone,
-        contact_method: request.body.contact_method,
-        message: request.body.message
+        reason: request.body.formData.reason,
+        first_name: request.body.formData.first_name,
+        last_name: request.body.formData.last_name,
+        email: request.body.formData.email,
+        phone: request.body.formData.phone,
+        contact_method: request.body.formData.contact_method,
+        message: request.body.formData.message
     }
 
     const message = {
@@ -227,9 +229,15 @@ router.post('/contact-us/send-email', (request, response) => {
         <p>Message: ${data.message}</p>`
     }
 
-    mailer.send_email(message).catch(console.error)
-    
-    response.status(200).redirect('/contact-us/thank-you')
+    const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_KEY}&response=${request.body.captcha}`
+    const reCaptcha = await axios.get(verifyURL)
+
+    if(reCaptcha.data.score > 0.5) {
+        mailer.send_email(message).catch(console.error)
+        response.status(200).send(JSON.stringify({ msg: 'Authenticated'}));
+    } else {
+        response.status(401).send(JSON.stringify({ msg: 'Not Authenticated'}))
+    }
 })
 
 router.get('/contact-us/thank-you', (request, response) => {

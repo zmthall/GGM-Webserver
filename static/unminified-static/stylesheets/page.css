@@ -2007,7 +2007,7 @@ legend {
     }
 
     .form-component-container.one-input .input-half-container,
-    .form-component-container.selector select,
+    .form-component-container.selector .select-wrapper,
     .form-component-container.one-input.date-field .input-half-container input,
     .input-half-container textarea,
     .input-form-container label.choose-file-label {

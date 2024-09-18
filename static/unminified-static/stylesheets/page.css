@@ -1751,8 +1751,6 @@ h2.form-title {
     padding: 3.5rem 0 0 0;
     z-index: 2;
     color: black;
-    -webkit-appearance: none;
-    appearance: none;
 }
 
 .form-component-container.one-input .input-half-container,
@@ -1766,6 +1764,8 @@ h2.form-title {
     border-radius: 0.25rem;
     translate: 0 1.25rem;
     background: white;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .form-component-container.selector select,

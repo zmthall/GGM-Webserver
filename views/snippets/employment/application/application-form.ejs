@@ -5,40 +5,42 @@
                 <h2 class="form-title">Personal Information</h2>
                 <div class="form-component-container selector">
                     <label for="job-position">Position</label>
-                    <select name="job-position" id="job-position" data-select onfocus='this.size=10;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
-                        <optgroup label="Transportation">
-                            <option value="transportation" data-company="ggmt-cc" data-job-type="driver">Transportation - General</option>
-                        </optgroup>
-                        <optgroup label="City Cab Positions">
-                            <option value="dispatcher" data-company="cc">Dispatcher</option>
-                            <option value="cc-driver" data-company="cc" data-job-type="driver">City Cab Driver</option>
-                            <option value="cc-office-staff" data-company="cc">City Cab Office</option>
-                        </optgroup>
-                        <optgroup label="NEMT Positions">
-                            <option value="csr" data-company="ggmt">Customer Service Representative</option>
-                            <option value="nemt-driver" data-company="ggmt" data-job-type="driver">NEMT Driver</option>
-                        </optgroup>
-                        <optgroup label="Assisted Living Positions">
-                            <option value="assisted-living" data-company="acf">Assisted Living - General</option>
-                            <option value="qmap" data-company="acf">Assisted Living - QMAP</option>
-                            <option value="pcp" data-company="acf">Assisted Living - PCP</option>
-                        </optgroup>
-                        <optgroup label="Medical Supply Positions">
-                            <option value="medical-supply" data-company="ggms">Medical Supply - General</option>
-                            <option value="dme-specialist" data-company="ggms">DME Specialist</option>
-                            <option value="dme-delivery" data-company="ggms" data-job-type="driver">DME Delivery Technician</option>
-                            <option value="dme-inventory" data-company="ggms" data-job-type="driver">DME Inventory Technician</option>
-                        </optgroup>
-                        <optgroup label="Gas Station Positions">
-                            <option value="gas-station" data-company="ggmc">Gas Station - General</option>
-                            <option value="c-store-manager" data-company="ggmc">Gas Station Manager</option>
-                            <option value="c-assistant-manager" data-company="ggmc">Gas Station Assistant Manager</option>
-                            <option value="c-attendant" data-company="ggmc">Gas Station Attendant</option>
-                        </optgroup>
-                        <optgroup label="Other">
-                            <option value="other" data-company="ggm">General Application</option>
-                        </optgroup>
-                    </select>
+                    <div class="select-wrapper">
+                        <select name="job-position" id="job-position" data-select onfocus='this.size=10; this.parentNode.classList.add("hide-icon")' onblur='this.size=1; this.parentNode.classList.remove("hide-icon")' onchange='this.size=1; this.blur();'>
+                            <optgroup label="Transportation">
+                                <option value="transportation" data-company="ggmt-cc" data-job-type="driver">Transportation - General</option>
+                            </optgroup>
+                            <optgroup label="City Cab Positions">
+                                <option value="dispatcher" data-company="cc">Dispatcher</option>
+                                <option value="cc-driver" data-company="cc" data-job-type="driver">City Cab Driver</option>
+                                <option value="cc-office-staff" data-company="cc">City Cab Office</option>
+                            </optgroup>
+                            <optgroup label="NEMT Positions">
+                                <option value="csr" data-company="ggmt">Customer Service Representative</option>
+                                <option value="nemt-driver" data-company="ggmt" data-job-type="driver">NEMT Driver</option>
+                            </optgroup>
+                            <optgroup label="Assisted Living Positions">
+                                <option value="assisted-living" data-company="acf">Assisted Living - General</option>
+                                <option value="qmap" data-company="acf">Assisted Living - QMAP</option>
+                                <option value="pcp" data-company="acf">Assisted Living - PCP</option>
+                            </optgroup>
+                            <optgroup label="Medical Supply Positions">
+                                <option value="medical-supply" data-company="ggms">Medical Supply - General</option>
+                                <option value="dme-specialist" data-company="ggms">DME Specialist</option>
+                                <option value="dme-delivery" data-company="ggms" data-job-type="driver">DME Delivery Technician</option>
+                                <option value="dme-inventory" data-company="ggms" data-job-type="driver">DME Inventory Technician</option>
+                            </optgroup>
+                            <optgroup label="Gas Station Positions">
+                                <option value="gas-station" data-company="ggmc">Gas Station - General</option>
+                                <option value="c-store-manager" data-company="ggmc">Gas Station Manager</option>
+                                <option value="c-assistant-manager" data-company="ggmc">Gas Station Assistant Manager</option>
+                                <option value="c-attendant" data-company="ggmc">Gas Station Attendant</option>
+                            </optgroup>
+                            <optgroup label="Other">
+                                <option value="other" data-company="ggm">General Application</option>
+                            </optgroup>
+                        </select>
+                    </div>
                 </div>
                 <div class="form-component-container two-input">
                     <div class="input-two-container">
@@ -221,14 +223,16 @@
                 <h2 class="form-title">Work Information</h2>
                 <div class="form-component-container selector">
                     <label for="how-did-you-hear">How did you learn about us?</label>
-                    <select name="how-did-you-hear" id="how-did-you-hear" data-select onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
-                        <option value="indeed" selected>Indeed</option>
-                        <option value="facebook">Facebook</option>
-                        <option value="word-of-mouth">Word of Mouth</option>
-                        <option value="website">Your Website</option>
-                        <option value="email">Email</option>
-                        <option value="other">Other</option>
-                    </select>
+                    <div class="select-wrapper">
+                        <select name="how-did-you-hear" id="how-did-you-hear" data-select onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                            <option value="indeed" selected>Indeed</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="word-of-mouth">Word of Mouth</option>
+                            <option value="website">Your Website</option>
+                            <option value="email">Email</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="form-component-container radio-inputs">
                     <fieldset class="input-radio-container">

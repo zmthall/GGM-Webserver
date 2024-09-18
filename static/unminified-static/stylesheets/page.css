@@ -1754,7 +1754,7 @@ h2.form-title {
 }
 
 .form-component-container.one-input .input-half-container,
-.form-component-container.selector select {
+.form-component-container.selector .select-wrapper {
     width: calc(50% - 0.5rem);
 }
 
@@ -1762,16 +1762,37 @@ h2.form-title {
     padding: 0.5rem;
     border: 2px solid rgba(150, 150, 150, 0.5);
     border-radius: 0.25rem;
-    translate: 0 1.25rem;
+    /* translate: 0 1.25rem; */
     background: white;
     -webkit-appearance: none;
     appearance: none;
+    width: 100%;
 }
 
-.form-component-container.selector select,
+.select-wrapper,
 .form-component-container.selector label {
     position: absolute;
     top: 0;
+}
+
+.select-wrapper {
+    translate: 0 1.25rem;
+}
+
+.select-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 1.5rem;
+    width: 0;
+    height: 0;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-top: 0.5rem solid rgba(150, 150, 150, 0.5);
+}
+
+.select-wrapper.hide-icon::before {
+    display: none;
 }
 
 .form-component-container.selector label {

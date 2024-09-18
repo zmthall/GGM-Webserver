@@ -6,7 +6,7 @@
                 <div class="form-component-container selector">
                     <label for="job-position">Position</label>
                     <div class="select-wrapper">
-                        <select name="job-position" id="job-position" data-select onfocus='this.size=10; this.parentNode.classList.add("hide-icon")' onblur='this.size=1; this.parentNode.classList.remove("hide-icon")' onchange='this.size=1; this.blur();'>
+                        <select name="job-position" id="job-position" data-select onfocus='if(window.innerWidth > 650) { this.size=10; this.parentNode.classList.add("hide-icon") }' onblur='this.size=1; this.parentNode.classList.remove("hide-icon")' onchange='this.size=1; this.blur();'>
                             <optgroup label="Transportation">
                                 <option value="transportation" data-company="ggmt-cc" data-job-type="driver">Transportation - General</option>
                             </optgroup>

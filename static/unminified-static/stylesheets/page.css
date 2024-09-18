@@ -1741,7 +1741,7 @@ h2.form-title {
 }
 
 .form-component-container {
-    z-index: 1;
+    z-index: 0;
 }
 
 .form-component-container.selector {
@@ -1749,7 +1749,7 @@ h2.form-title {
     flex-direction: column;
     position: relative;
     padding: 3.5rem 0 0 0;
-    z-index: 2;
+    z-index: 1;
     color: black;
 }
 

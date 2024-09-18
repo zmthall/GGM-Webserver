@@ -1751,6 +1751,8 @@ h2.form-title {
     padding: 3.5rem 0 0 0;
     z-index: 2;
     color: black;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .form-component-container.one-input .input-half-container,

@@ -1701,6 +1701,303 @@ h2.job-opportunity-list-title {
     }
 }
 
+/* Application Page Styling */
+
+.application-form-container {
+    width: 80%;
+    margin-top: 1rem;
+    background: white;
+    padding: 3rem;
+    border-radius: 0.25rem;
+    border: 2px solid rgba(225, 225, 225, 0.6);
+    box-shadow: 0 4px 5px 1px rgba(150, 150, 150, 0.1);
+}
+
+.application-form {
+    display: flex;
+    flex-direction: column;
+}
+
+section.application-page-section.page-content {
+    display: flex;
+    justify-content: center;
+}
+
+section.application-page-section.page-content section:not(:last-of-type) {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(150, 150, 150, 0.1);
+    margin-bottom: 2rem;
+}
+
+h2.form-title {
+    color: rgb(var(--primary-color));
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(150, 150, 150, 0.3)
+}
+
+.form-component-container:not(:last-of-type) {
+    margin-bottom: 1rem;
+}
+
+.form-component-container {
+    z-index: 1;
+}
+
+.form-component-container.selector {
+    z-index: 2;
+}
+
+.form-component-container.selector {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 3.5rem 0 0 0;
+}
+
+.form-component-container.one-input .input-half-container,
+.form-component-container.selector select {
+    width: calc(50% - 0.5rem);
+}
+
+.form-component-container.selector select {
+    padding: 0.5rem;
+    border: 2px solid rgba(150, 150, 150, 0.5);
+    border-radius: 0.25rem;
+    translate: 0 1.25rem;
+    background: white;
+}
+
+.form-component-container.selector select,
+.form-component-container.selector label {
+    position: absolute;
+    top: 0;
+}
+
+.form-component-container.selector label {
+    translate: 0 -0.4em;
+}
+
+.form-component-container.selector select:hover {
+    border: 2px solid #4e8cff;
+}
+
+.form-component-container.selector select:focus {
+    outline: none;
+    border: 2px solid #4e8cff;
+}
+
+.input-half-container textarea {
+    width: calc(50% - 0.5rem);
+    border: 2px solid rgba(150, 150, 150, 0.5);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    resize: none;
+}
+
+.input-half-container textarea:hover {
+    border: 2px solid #4e8cff;
+}
+
+.input-half-container textarea:focus,
+.input-half-container textarea:focus-visible {
+    outline: none;
+    border: 2px solid #4e8cff;
+}
+
+.form-component-container.two-input {
+    display: flex;
+    gap: 1rem;
+}
+
+.input-two-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-two-container input,
+.form-component-container.one-input input {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 2px solid rgba(150, 150, 150, 0.5);
+}
+
+.input-two-container input:hover,
+.input-two-container input:focus,
+.input-two-container input:focus-visible,
+.form-component-container.one-input input:hover,
+.form-component-container.one-input input:focus, 
+.form-component-container.one-input input:focus-visible {
+    outline: none;
+    border: 2px solid #4e8cff; 
+}
+
+.form-component-container.one-input .input-one-container,
+.form-component-container.one-input .input-half-container,
+.form-component-container.radio-inputs .radio-inputs-container.extra-input .input-half-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+fieldset.input-radio-container,
+fieldset.date-input-container {
+    border: none;
+}
+
+fieldset.date-input-container {
+    width: 100%;
+}
+
+.form-component-container.one-input.date-field .input-half-container {
+    width: 100%;
+}
+
+.form-component-container.one-input.date-field .input-half-container input {
+    width: calc(50% - 0.5rem);
+}
+
+.radio-inputs-container:not(.extra-input) {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
+
+.input-one-container input[type='radio'] {
+    appearance: none;
+}
+
+.input-one-container .radio-label {
+    padding-left: 35px;
+    position: relative;
+}
+
+.input-one-container .radio-label:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    translate: 0 -50%;
+    width: 30px;
+    height: 30px;
+    /* background: red; */
+    border-radius: 100%;
+    border: 2px solid rgba(150, 150, 150, 0.3);
+}
+
+.input-one-container .radio-label:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    translate: 25% -50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: rgba(150, 150, 150, 0.1)
+}
+
+.input-one-container .radio-label:hover::before,
+.input-one-container input[type='radio']:focus + .radio-label::before,
+.input-one-container input[type='radio']:focus-visible + .radio-label::before{
+    border: 2px solid #4e8cff;
+}
+
+.input-one-container input[type='radio']:checked + .radio-label::after {
+    background: rgb(var(--primary-color));
+}
+
+.form-component-container.one-input.date-field .input-half-container {
+    width: 100%;
+}
+
+.form-component-container.one-input.date-field .input-half-container input {
+    width: calc(50% - 0.5rem);
+}
+
+.form-component-container.upload-input .input-form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-form-container label.choose-file-label {
+    width: calc(50% - 0.5rem);
+    padding: 2rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(150, 150, 150, 0.5);
+    border-radius: 0.25rem;
+    position: relative;
+    color: rgb(var(--primary-color));
+    margin-bottom: 1rem;
+}
+
+.input-form-container label.choose-file-label:hover {
+    border: 2px solid #4e8cff;
+    font-weight: 900;
+}
+
+.input-form-container label.choose-file-label:before {
+    content: "(Drag and drop)";
+    position: absolute;
+    translate: 0 1.25em;
+    font-size: 0.75rem;
+    color: rgb(var(--primary-color));
+}
+
+.form-component-container.upload-input input {
+    position: absolute;
+    opacity: 0;
+    translate: 5rem 2rem;
+    z-index: -1;
+}
+
+label,
+legend {
+    line-height: 1.7;
+}
+
+.primary-button.application-page {
+    padding: 0.5rem 3rem;
+    align-self: center;
+    margin-top: 1.5rem;
+}
+
+@media(max-width: 450px) {
+    .application-form-container {
+        padding: 1rem;
+    }
+}
+
+@media(max-width: 650px) {
+    .form-component-container.two-input {
+        flex-direction: column;
+    }
+
+    .form-component-container.one-input .input-half-container,
+    .form-component-container.selector select,
+    .form-component-container.one-input.date-field .input-half-container input,
+    .input-half-container textarea,
+    .input-form-container label.choose-file-label {
+        width: 100%;
+    }
+
+    .primary-button.application-page {
+        align-self: unset;
+    }
+    
+}
+
+@media(max-width: 700px) {
+    .application-form-container {
+        width: 100%;
+    }
+}
+
 /* Contact Us Page Styling */
 
 section.contact-us-get-in-touch {

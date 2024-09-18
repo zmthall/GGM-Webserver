@@ -1745,14 +1745,12 @@ h2.form-title {
 }
 
 .form-component-container.selector {
-    z-index: 2;
-}
-
-.form-component-container.selector {
     display: flex;
     flex-direction: column;
     position: relative;
     padding: 3.5rem 0 0 0;
+    z-index: 2;
+    color: black;
 }
 
 .form-component-container.one-input .input-half-container,
@@ -1949,12 +1947,19 @@ fieldset.date-input-container {
     color: rgb(var(--primary-color));
 }
 
-.form-component-container.upload-input input {
+.form-component-container.upload-input input[type=file]:focus,
+.form-component-container.upload-input input[type=file]:focus-visible {
+    outline: none;
+    border: 2px solid #4e8cff;
+    font-weight: 900;
+}
+
+/* .form-component-container.upload-input input {
     position: absolute;
     opacity: 0;
     translate: 5rem 2rem;
     z-index: -1;
-}
+} */
 
 label,
 legend {

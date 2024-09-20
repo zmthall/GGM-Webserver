@@ -9,6 +9,7 @@ class ApplicationHandler {
             selectOption: this.GetURLParameter('select'),
             dateInput: document.querySelector('[data-form-date]'),
             positionInput: document.querySelector('[data-form-position]'),
+            fileUpload: document.querySelectorAll('[data-file-upload]'),
             dynamicForm: {
                 driverSection: document.querySelector('[data-driving-section]'),
                 dynamicRadios: document.querySelectorAll('[data-dynamic-radio]')
@@ -56,6 +57,19 @@ class ApplicationHandler {
                     }
                 })
             })
+
+            this.form.fileUpload.forEach(uploader => {
+                uploader.addEventListener('dragover', this.preventDefaults);
+
+                uploader.addEventListener('dragenter', () => {
+                    uploader.classList.add('drag-over')
+                });
+                uploader.addEventListener('dragleave', () => {
+                    uploader.classList.remove('drag-over')
+                });
+
+                uploader.addEventListener('drop', this.fileDropHandler)
+            })
         })
     }
 
@@ -72,13 +86,18 @@ class ApplicationHandler {
         return value
     }
 
-    positionSelectorChange() {
-        // if(_this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'driver') {
-        //     if(_this.form.dynamicForm.driverSection.classList.contains('hidden'))
-        //         _this.form.dynamicForm.driverSection.classList.remove('hidden')
-        //     else
-        //         _this.form.dynamicForm.driverSection.classList.add('hidden')
-        // }
+    preventDefaults(event) {
+        event.preventDefault();
+        event.stopPropagation
+    }
+
+    fileDropHandler(event) {
+        const dataName = event.target.getAttribute('data-file-upload')
+        const inputBtn = document.querySelector(`[data-input-btn='${dataName}']`)
+        event.preventDefault();
+        event.target.classList.remove('drag-over');
+        inputBtn.files = event.dataTransfer.files;
+        console.log(inputBtn.files)
     }
 }
 

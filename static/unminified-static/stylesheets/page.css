@@ -1945,9 +1945,11 @@ fieldset.date-input-container {
 
 .input-form-container label.choose-file-label {
     width: calc(50% - 0.5rem);
-    padding: 2rem;
-    padding-bottom: 3rem;
+    /* padding: 2rem;
+    padding-bottom: 3rem; */
+    height: 150px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 2px solid rgba(150, 150, 150, 0.5);
@@ -1962,13 +1964,29 @@ fieldset.date-input-container {
     font-weight: 900;
 }
 
-.input-form-container label.choose-file-label:before {
+.drop-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.drop-box.drag-over {
+    background: rgba(var(--secondary-color));
+}
+
+span.choose-file-text {
+    z-index: 1;
+}
+
+/* .input-form-container label.choose-file-label:before {
     content: "(Drag and drop)";
     position: absolute;
     translate: 0 1.25em;
     font-size: 0.75rem;
     color: rgb(var(--primary-color));
-}
+} */
 
 .form-component-container.upload-input input[type=file]:focus,
 .form-component-container.upload-input input[type=file]:focus-visible {

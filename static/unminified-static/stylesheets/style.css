@@ -1081,6 +1081,10 @@ div#chat_app img.sc-open-icon {
     right: 0px;
 }
 
+div#chat_app .round {
+    z-index: 2;
+}
+
 div#chat_app img.sc-closed-icon {
     width: 30px !important;
     height: 30px !important;

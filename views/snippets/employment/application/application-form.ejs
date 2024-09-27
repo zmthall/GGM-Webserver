@@ -232,7 +232,7 @@
                 <div class="form-component-container selector">
                     <label for="how-did-you-hear">How did you learn about us?</label>
                     <div class="select-wrapper">
-                        <select name="how-did-you-hear" id="how-did-you-hear" data-select onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                        <select name="how-did-you-hear" id="how-did-you-hear" data-select onfocus='if(window.innerWidth > 650) { this.size=5; this.parentNode.classList.add("hide-icon") }' onblur='this.size=1; this.parentNode.classList.remove("hide-icon")' onchange='this.size=1; this.blur();'>
                             <option value="indeed" selected>Indeed</option>
                             <option value="facebook">Facebook</option>
                             <option value="word-of-mouth">Word of Mouth</option>

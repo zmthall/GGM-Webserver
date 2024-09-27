@@ -11,30 +11,30 @@
                                 <option value="transportation" data-company="ggmt-cc" data-job-type="driver">Transportation - General</option>
                             </optgroup>
                             <optgroup label="City Cab Positions">
-                                <option value="dispatcher" data-company="cc">Dispatcher</option>
-                                <option value="cc-driver" data-company="cc" data-job-type="driver">City Cab Driver</option>
-                                <option value="cc-office-staff" data-company="cc">City Cab Office</option>
+                                <option value="city_cab-dispatch" data-company="cc">Transportation Dispatcher</option>
+                                <option value="city_cab-driver" data-company="cc" data-job-type="driver">Taxi Driver</option>
+                                <option value="city_cab-assist_admin" data-company="cc">Administrative Assistant</option>
                             </optgroup>
                             <optgroup label="NEMT Positions">
-                                <option value="csr" data-company="ggmt">Customer Service Representative</option>
+                                <option value="nemt-csr" data-company="ggmt">Customer Service Representative</option>
                                 <option value="nemt-driver" data-company="ggmt" data-job-type="driver">NEMT Driver</option>
                             </optgroup>
                             <optgroup label="Assisted Living Positions">
                                 <option value="assisted-living" data-company="acf">Assisted Living - General</option>
-                                <option value="qmap" data-company="acf">Assisted Living - QMAP</option>
-                                <option value="pcp" data-company="acf">Assisted Living - PCP</option>
+                                <option value="assisted_living-qmap" data-company="acf">QMAP</option>
+                                <option value="assisted_living-pcp" data-company="acf">PCP</option>
                             </optgroup>
                             <optgroup label="Medical Supply Positions">
                                 <option value="medical-supply" data-company="ggms">Medical Supply - General</option>
-                                <option value="dme-specialist" data-company="ggms">DME Specialist</option>
-                                <option value="dme-delivery" data-company="ggms" data-job-type="driver">DME Delivery Technician</option>
-                                <option value="dme-inventory" data-company="ggms" data-job-type="driver">DME Inventory Technician</option>
+                                <option value="medical_supply-dme_specialist" data-company="ggms">DME Specialist</option>
+                                <option value="medical_supply-delivery_tech" data-company="ggms" data-job-type="driver">Delivery Technician</option>
+                                <option value="medical_supply-inventory_tech" data-company="ggms" data-job-type="driver">Inventory Technician</option>
                             </optgroup>
                             <optgroup label="Gas Station Positions">
                                 <option value="gas-station" data-company="ggmc">Gas Station - General</option>
-                                <option value="c-store-manager" data-company="ggmc">Gas Station Manager</option>
-                                <option value="c-assistant-manager" data-company="ggmc">Gas Station Assistant Manager</option>
-                                <option value="c-attendant" data-company="ggmc">Gas Station Attendant</option>
+                                <option value="gas_station-manager" data-company="ggmc">Gas Station Manager</option>
+                                <option value="gas_station-asm" data-company="ggmc">Gas Station Assistant Manager</option>
+                                <option value="gas_station-attendant" data-company="ggmc">Gas Station Attendant</option>
                             </optgroup>
                             <optgroup label="Other">
                                 <option value="other" data-company="ggm">General Application</option>
@@ -204,7 +204,7 @@
                             <div class="radio-inputs-container extra-input hidden">
                                 <div class="input-form-container">
                                     <label>Attach Your MVR (in PDF format)</label>
-                                    <input type="file" name="mvr" id="mvr" hidden data-input-btn="mvr">
+                                    <input type="file" name="mvr" id="mvr" hidden data-file-input-btn="mvr">
                                     <label class="choose-file-label" for="mvr" tabindex="0">
                                         <div class="drop-box" data-file-upload="mvr"></div>
                                         <span class="choose-file-text">Choose File</span>
@@ -218,7 +218,7 @@
                 <div class="form-component-container upload-input">
                     <div class="input-form-container">
                         <label>Attach Your Driver's License</label>
-                        <input type="file" name="drivers-license" id="drivers-license" hidden data-input-btn="license">
+                        <input type="file" name="drivers-license" id="drivers-license" hidden data-file-input="license">
                         <label class="choose-file-label" for="drivers-license" tabindex="0">
                             <div class="drop-box" data-file-upload="license"></div>
                             <span class="choose-file-text">Choose File</span>

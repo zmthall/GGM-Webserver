@@ -119,6 +119,7 @@ span.read-more-plus {
     cursor: pointer;
     border-radius: 0.25rem;
     transition: background 0.3s ease-in-out;
+    text-decoration: none;
 }
 
 .primary-button:hover {

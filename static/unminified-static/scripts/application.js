@@ -10,6 +10,7 @@ class ApplicationHandler {
             dateInput: document.querySelector('[data-form-date]'),
             positionInput: document.querySelector('[data-form-position]'),
             fileUpload: document.querySelectorAll('[data-file-upload]'),
+            fileInputs: document.querySelectorAll('[data-file-input]'),
             dynamicForm: {
                 driverSection: document.querySelector('[data-driving-section]'),
                 dynamicRadios: document.querySelectorAll('[data-dynamic-radio]')
@@ -18,25 +19,27 @@ class ApplicationHandler {
 
         
         window.addEventListener("load", (event) => {
-            this.form.dateInput.value = this.date
+            this.form.dateInput.value = this.date;
             if(this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'driver')
                 this.form.dynamicForm.driverSection.classList.remove('hidden');
             
             if(this.form.selectOption != undefined) {
-                this.form.positionInput.value = this.form.selectOption
-                this.form.select.value = this.form.selectOption
+                this.form.positionInput.value = this.form.selectOption;
+                this.form.select.value = this.form.selectOption;
             } else {
-                this.form.positionInput.value = "general"
+                this.form.positionInput.value = "general";
             }
+
+            console.log(this.form.selectOption)
 
             this.form.select.addEventListener('change', () => {
                 if(_this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'driver') {
                     if(this.form.dynamicForm.driverSection.classList.contains('hidden')) {
-                        this.form.dynamicForm.driverSection.classList.remove('hidden')
+                        this.form.dynamicForm.driverSection.classList.remove('hidden');
                     }
                 } else {
                     if(!this.form.dynamicForm.driverSection.classList.contains('hidden')) {
-                        this.form.dynamicForm.driverSection.classList.add('hidden')
+                        this.form.dynamicForm.driverSection.classList.add('hidden');
                     }
                 }
             })

@@ -30,7 +30,16 @@ class ApplicationHandler {
                 this.form.positionInput.value = "general";
             }
 
-            console.log(this.form.selectOption)
+            if(_this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'driver') {
+                if(this.form.dynamicForm.driverSection.classList.contains('hidden')) {
+                    this.form.dynamicForm.driverSection.classList.remove('hidden');
+                }
+            } else {
+                if(!this.form.dynamicForm.driverSection.classList.contains('hidden')) {
+                    this.form.dynamicForm.driverSection.classList.add('hidden');
+                }
+            }
+
 
             this.form.select.addEventListener('change', () => {
                 if(_this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'driver') {

@@ -391,6 +391,10 @@ form.contact-form textarea {
     }
 }
 
+.home-logo-link img {
+    width: 90%;
+}
+
 @media(max-width: 1000px) {
     .info-header-home img {
         width: calc(82.3vw - 442px);
@@ -750,7 +754,11 @@ li.mobile-navigation-sublink-item:not(:last-of-type) {
 
 /* Mobile-nav Width Styling */
 
-@media(max-width: 768px) {
+@media(max-width: 850px) {
+    .home-logo-link img {
+        width: 60%;
+    }
+
     nav.main-navigation {
         display: none;
     }

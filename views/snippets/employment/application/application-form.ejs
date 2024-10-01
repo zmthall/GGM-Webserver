@@ -45,23 +45,23 @@
                 <div class="form-component-container two-input">
                     <div class="input-two-container">
                         <label for="first_name">First Name</label>
-                        <input type="text" name="first_name" id="first_name">
+                        <input type="text" name="first_name" id="first_name" required>
                     </div>
                     <div class="input-two-container">
                         <label for="last_name">Last Name</label>
-                        <input type="text" name="last_name" id="last_name">
+                        <input type="text" name="last_name" id="last_name" required>
                     </div>
                 </div>
                 <div class="form-component-container one-input">
                     <div class="input-one-container">
                         <label for="address">Address</label>
-                        <input type="text" name="address" id="address">
+                        <input type="text" name="address" id="address" required>
                     </div>
                 </div>
                 <div class="form-component-container one-input">
                     <div class="input-half-container">
                         <label for="telephone">Phone Number</label>
-                        <input type="text" name="telephone" id="telephone">
+                        <input type="text" name="telephone" id="telephone" required>
                     </div>
                 </div>
                 <div class="form-component-container radio-inputs">
@@ -109,8 +109,8 @@
                         </div>
                         <div class="radio-inputs-container extra-input hidden">
                             <div class="input-half-container">
-                                <label for="availability">Describe conviction conditions:</label>
-                                <textarea name="availability" id="availability" rows="5" maxlength="100"></textarea>
+                                <label for="conviction">Describe conviction conditions:</label>
+                                <textarea name="conviction" id="conviction" rows="5" maxlength="100" data-required></textarea>
                             </div>
                         </div>
                     </fieldset>
@@ -134,8 +134,8 @@
                             </div>
                             <div class="radio-inputs-container extra-input hidden">
                                 <div class="input-half-container">
-                                    <label for="availability">Please list any additional driving endorsements:</label>
-                                    <textarea name="availability" id="availability" rows="5" maxlength="100"></textarea>
+                                    <label for="endorsement">Please list any additional driving endorsements:</label>
+                                    <textarea name="endorsement" id="endorsement" rows="5" maxlength="100" data-required></textarea>
                                 </div>
                             </div>
                         </fieldset>
@@ -157,8 +157,8 @@
                             </div>
                             <div class="radio-inputs-container extra-input hidden">
                                 <div class="input-half-container">
-                                    <label for="availability">Please explain the traffic accident(s):</label>
-                                    <textarea name="availability" id="availability" rows="5" maxlength="100"></textarea>
+                                    <label for="traffic-accident">Please explain the traffic accident(s):</label>
+                                    <textarea name="traffic-accident" id="traffic-accident" rows="5" maxlength="100" data-required></textarea>
                                 </div>
                             </div>
                         </fieldset>
@@ -180,8 +180,8 @@
                             </div>
                             <div class="radio-inputs-container extra-input hidden">
                                 <div class="input-half-container">
-                                    <label for="availability">Please explain the traffic conviction(s):</label>
-                                    <textarea name="availability" id="availability" rows="5" maxlength="100"></textarea>
+                                    <label for="traffic-conviction">Please explain the traffic conviction(s):</label>
+                                    <textarea name="traffic-conviction" id="traffic-conviction" rows="5" maxlength="100" data-required></textarea>
                                 </div>
                             </div>
                         </fieldset>
@@ -272,8 +272,8 @@
                         </div>
                         <div class="radio-inputs-container extra-input">
                             <div class="input-half-container">
-                                <label for="specify-availability">Specify Availability (days and hours if part-time):</label>
-                                <textarea name="availability" id="availability" rows="5" maxlength="100"></textarea>
+                                <label for="availability">Specify Availability (days and hours if part-time):</label>
+                                <textarea name="availability" id="availability" rows="5" maxlength="100" required></textarea>
                             </div>
                         </div>
                     </fieldset>

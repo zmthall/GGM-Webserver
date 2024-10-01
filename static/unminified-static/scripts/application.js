@@ -13,15 +13,16 @@ class ApplicationHandler {
             fileInputs: document.querySelectorAll('[data-file-input]'),
             dynamicForm: {
                 driverSection: document.querySelector('[data-driving-section]'),
-                dynamicRadios: document.querySelectorAll('[data-dynamic-radio]')
+                dynamicRadios: document.querySelectorAll('[data-dynamic-radio]'),
             }
         }
 
         
         window.addEventListener("load", (event) => {
             this.form.dateInput.value = this.date;
-            if(this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'driver')
-                this.form.dynamicForm.driverSection.classList.remove('hidden');
+
+            // if(this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'driver')
+            //     this.form.dynamicForm.driverSection.classList.remove('hidden');
             
             if(this.form.selectOption != undefined) {
                 this.form.positionInput.value = this.form.selectOption;
@@ -30,19 +31,22 @@ class ApplicationHandler {
                 this.form.positionInput.value = "general";
             }
 
-            if(_this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'driver') {
+            if(this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'driver') {
                 if(this.form.dynamicForm.driverSection.classList.contains('hidden')) {
                     this.form.dynamicForm.driverSection.classList.remove('hidden');
                 }
             } else {
                 if(!this.form.dynamicForm.driverSection.classList.contains('hidden')) {
                     this.form.dynamicForm.driverSection.classList.add('hidden');
+
                 }
             }
 
 
             this.form.select.addEventListener('change', () => {
-                if(_this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'driver') {
+                const url = new URL(location)
+                console.log(url)
+                if(this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'driver') {
                     if(this.form.dynamicForm.driverSection.classList.contains('hidden')) {
                         this.form.dynamicForm.driverSection.classList.remove('hidden');
                     }
@@ -58,14 +62,17 @@ class ApplicationHandler {
                     const dataName = event.target.getAttribute('data-dynamic-radio')
                     const radioID = event.target.id;
                     const extraInput = event.target.closest(`[data-parent-container='${dataName}']`).querySelector('.extra-input');
-                    console.log(extraInput)
 
                     if(/yes|part-time/.test(radioID)) {
-                        if(extraInput.classList.contains('hidden')) 
+                        if(extraInput.classList.contains('hidden')) {
                             extraInput.classList.remove('hidden')
+                            extraInput.querySelector('[data-required]').required = true
+                        }
                     } else {
-                        if(!extraInput.classList.contains('hidden'))
+                        if(!extraInput.classList.contains('hidden')) {
+                            extraInput.querySelector('[data-required]').required = false
                             extraInput.classList.add('hidden')
+                        }
                     }
                 })
             })

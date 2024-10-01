@@ -393,6 +393,7 @@ form.contact-form textarea {
 
 .home-logo-link img {
     width: 90%;
+    height: var(--mobile-nav-height);
 }
 
 @media(max-width: 1000px) {

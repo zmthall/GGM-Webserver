@@ -38,14 +38,14 @@ class ApplicationHandler {
             } else {
                 if(!this.form.dynamicForm.driverSection.classList.contains('hidden')) {
                     this.form.dynamicForm.driverSection.classList.add('hidden');
-
                 }
             }
 
 
             this.form.select.addEventListener('change', () => {
                 const url = new URL(location)
-                console.log(url)
+                url.searchParams.set('select', this.form.select.value)
+                history.pushState({}, "", url);
                 if(this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'driver') {
                     if(this.form.dynamicForm.driverSection.classList.contains('hidden')) {
                         this.form.dynamicForm.driverSection.classList.remove('hidden');

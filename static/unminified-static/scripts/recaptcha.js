@@ -1,8 +1,10 @@
 class OnSiteRecaptcha {
     constructor() {
         this.form = document.forms['contact-form'];
+        this.formType = this.form.getAttribute('data-form-type')
         this.publicKey = '6LeZz0UqAAAAACaVm35S2EemtZ1XGc_T1GV4o0wf'
-        this.verifyURL = '/contact-us/send-email'
+        this.verifyURL = this.getVerifyURL()
+
         this.createEventListener();
     }
 
@@ -21,6 +23,13 @@ class OnSiteRecaptcha {
                 });
             });
         })
+    }
+    
+    getVerifyURL() {
+        if(this.formType === 'contact')
+            return '/contact-us/send-email'
+        else if(this.formType === 'application')
+            return '/about-us/employment/apply'
     }
 
     createData(token) {
@@ -42,8 +51,14 @@ class OnSiteRecaptcha {
             },
             body: JSON.stringify(data)
         });
-        const response = await fetch(request);
-        return response.status
+
+        try {
+            const response = await fetch(request);
+            console.log(await response.json())
+            return response.status
+        } catch(error) {
+            return false
+        }
     }
 }
 

@@ -184,10 +184,16 @@ router.get('/about-us/employment/apply', (request, response) => {
     })
 })
 
-router.get('/about-us/employment/send-application', (request, response) => {
+router.post('/about-us/employment/apply', async (request, response) => {
+    const data = request.body.formData;
 
-
-    response.status(200).redirect('/contact-us/thank-you')
+    const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_KEY}&response=${request.body.captcha}`
+    const reCaptcha = await axios.get(verifyURL)
+    if(reCaptcha.data.score > 0.5) {
+        response.status(200).send(JSON.stringify({ msg: 'Authenticated'}));
+    } else {
+        response.status(401).send(JSON.stringify({ msg: 'Not Authenticated'}))
+    }
 })
 
 router.get('/contact-us', (request, response) => {
@@ -204,17 +210,7 @@ router.get('/contact-us', (request, response) => {
 })
 
 router.post('/contact-us/send-email', async (request, response) => {
-
-    const data = {
-        reason: request.body.formData.reason,
-        first_name: request.body.formData.first_name,
-        last_name: request.body.formData.last_name,
-        email: request.body.formData.email,
-        phone: request.body.formData.phone,
-        contact_method: request.body.formData.contact_method,
-        message: request.body.formData.message
-    }
-
+    const data = request.body.formData
     const message = {
         from: process.env.EMAIL_USERNAME,
         to: process.env.EMAIL_USERNAME,

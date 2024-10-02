@@ -146,8 +146,8 @@ class ApplicationHandler {
         const uploadName = event.target.getAttribute('data-file-input-btn');
         if(event.target.accept === '' || event.target.accept !== '' && _this.onlyPDF(event.target.accept, event.target.files)) {
             this.showUpload(uploadName, event.target.files[0].name, _this.convertSizeMB(event.target.files[0].size));
-            event.target.value = ""
         } else {
+            event.target.value = ""
             this.showUpload(uploadName)
         }
     }

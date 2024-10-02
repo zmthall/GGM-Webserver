@@ -15,6 +15,7 @@ class OnSiteRecaptcha {
             grecaptcha.ready(function() {
                 grecaptcha.execute(_this.publicKey, {action: 'submit'}).then(async function(token) {
                     const data = _this.createData(token);
+                    console.log(data)
                     const verify = await _this.verifySubmission(data)
                     if(verify === 200) {
                         const redirectURL = new URL('/contact-us/thank-you', window.location.origin);
@@ -33,23 +34,16 @@ class OnSiteRecaptcha {
     }
 
     createData(token) {
-        this.formData = new FormData(this.form);
-        const data = { formData: {}};
-        for(const value of this.formData.entries()) {
-            data.formData[value[0]] = value[1];
-        }
-        data.captcha = token;
+        const formData = new FormData(document.forms['contact-form']);
+        formData.append('captcha', token)
         
-        return data;
+        return formData;
     }
 
     async verifySubmission(data) {
         const request = new Request(this.verifyURL, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
+            body: data
         });
 
         try {

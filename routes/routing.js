@@ -184,12 +184,12 @@ router.get('/about-us/employment/apply', (request, response) => {
     })
 })
 
-router.post('/about-us/employment/apply', async (request, response) => {
-    const data = request.body.formData;
+router.post('/about-us/employment/apply', upload.any(), async (request, response) => {
+    const data = request.body;
 
-    console.log(data)
+    console.log(data.captcha)
 
-    const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_KEY}&response=${request.body.captcha}`
+    const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_KEY}&response=${data.captcha}`
     const reCaptcha = await axios.get(verifyURL)
     if(reCaptcha.data.score > 0.5) {
         response.status(200).send(JSON.stringify({ msg: 'Authenticated'}));
@@ -211,8 +211,8 @@ router.get('/contact-us', (request, response) => {
     })
 })
 
-router.post('/contact-us/send-email', async (request, response) => {
-    const data = request.body.formData
+router.post('/contact-us/send-email', upload.none(), async (request, response) => {
+    const data = request.body
     const message = {
         from: process.env.EMAIL_USERNAME,
         to: process.env.EMAIL_USERNAME,
@@ -227,7 +227,7 @@ router.post('/contact-us/send-email', async (request, response) => {
         <p>Message: ${data.message}</p>`
     }
 
-    const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_KEY}&response=${request.body.captcha}`
+    const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_KEY}&response=${data.captcha}`
     const reCaptcha = await axios.get(verifyURL)
 
     if(reCaptcha.data.score > 0.5) {

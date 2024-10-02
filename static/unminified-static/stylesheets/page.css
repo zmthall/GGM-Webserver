@@ -2138,6 +2138,13 @@ button.upload-delete-btn:hover {
     margin-top: 1.5rem;
 }
 
+.submission-message {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 @media(max-width: 450px) {
     .application-form-container {
         padding: 1rem;

@@ -4,9 +4,9 @@
             <section class="personal-form-section">
                 <h2 class="form-title">Personal Information</h2>
                 <div class="form-component-container selector">
-                    <label for="job-position">Position</label>
+                    <label for="position">Position</label>
                     <div class="select-wrapper">
-                        <select name="job-position" id="job-position" data-select onfocus='if(window.innerWidth > 650) { this.size=10; this.parentNode.classList.add("hide-icon") }' onblur='this.size=1; this.parentNode.classList.remove("hide-icon")' onchange='this.size=1; this.blur();'>
+                        <select name="position" id="position" data-select onfocus='if(window.innerWidth > 650) { this.size=10; this.parentNode.classList.add("hide-icon") }' onblur='this.size=1; this.parentNode.classList.remove("hide-icon")' onchange='this.size=1; this.blur();'>
                             <optgroup label="Transportation">
                                 <option value="transportation" data-company="ggmt-cc" data-job-type="driver">Transportation - General</option>
                             </optgroup>
@@ -353,9 +353,9 @@
                 </div>
             </section>
             <button class="primary-button application-page" type="submit">Submit Application</button>
+            <div class="submission-message" data-submission-message></div>
             <div class="hidden-form-components">
                 <input type="hidden" name="date" data-form-date>
-                <input type="hidden" name="position" data-form-position>
             </div>
         </form>
     </div>

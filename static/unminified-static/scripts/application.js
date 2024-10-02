@@ -8,7 +8,6 @@ class ApplicationHandler {
             select: document.querySelector('[data-select]'),
             selectOption: this.GetURLParameter('select'),
             dateInput: document.querySelector('[data-form-date]'),
-            positionInput: document.querySelector('[data-form-position]'),
             fileUpload: document.querySelectorAll('[data-file-upload]'),
             fileInputs: document.querySelectorAll('[data-file-input]'),
             uploadButtons: document.querySelectorAll('[data-file-input-btn]'),
@@ -22,12 +21,8 @@ class ApplicationHandler {
         
         window.addEventListener("load", (event) => {
             this.form.dateInput.value = this.date;
-
-            // if(this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'driver')
-            //     this.form.dynamicForm.driverSection.classList.remove('hidden');
             
             if(this.form.selectOption != undefined) {
-                this.form.positionInput.value = this.form.selectOption;
                 this.form.select.value = this.form.selectOption;
             } else {
                 this.form.positionInput.value = "general";

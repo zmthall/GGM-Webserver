@@ -187,6 +187,8 @@ router.get('/about-us/employment/apply', (request, response) => {
 router.post('/about-us/employment/apply', async (request, response) => {
     const data = request.body.formData;
 
+    console.log(data)
+
     const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_KEY}&response=${request.body.captcha}`
     const reCaptcha = await axios.get(verifyURL)
     if(reCaptcha.data.score > 0.5) {

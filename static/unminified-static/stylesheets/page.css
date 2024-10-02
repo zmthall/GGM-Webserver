@@ -2095,6 +2095,43 @@ legend {
     line-height: 1.7;
 }
 
+.upload-description {
+    width: calc(50% - .5rem);
+    display: flex;
+    align-items: center;
+    /* border: 2px solid rgba(150, 150, 150, 0.5); */
+    border-radius: 0.25rem;
+}
+
+span.upload-name {
+    width: 65%;
+    padding: 0.5rem 0;
+}
+
+span.upload-size {
+    width: 30%;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+button.upload-delete-btn {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: rgb(var(--primary-color));
+    transition: color 0.2s ease-in-out;
+}
+
+button.upload-delete-btn:hover {
+    color: rgb(var(--link-hover-color));
+}
+
+.icon-wrapper {
+    display: flex;
+    pointer-events: none;
+}
+
 .primary-button.application-page {
     padding: 0.5rem 3rem;
     align-self: center;

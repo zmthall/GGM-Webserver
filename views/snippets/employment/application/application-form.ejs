@@ -107,7 +107,7 @@
                                 <label class="radio-label" for="felony_no">No</label>
                             </div>
                         </div>
-                        <div class="radio-inputs-container extra-input hidden">
+                        <div class="radio-inputs-container extra-input has-required hidden">
                             <div class="input-half-container">
                                 <label for="conviction">Describe conviction conditions:</label>
                                 <textarea name="conviction" id="conviction" rows="5" maxlength="100" data-required></textarea>
@@ -132,7 +132,7 @@
                                     <label class="radio-label" for="endorsements_no">No</label>
                                 </div>
                             </div>
-                            <div class="radio-inputs-container extra-input hidden">
+                            <div class="radio-inputs-container extra-input has-required hidden">
                                 <div class="input-half-container">
                                     <label for="endorsement">Please list any additional driving endorsements:</label>
                                     <textarea name="endorsement" id="endorsement" rows="5" maxlength="100" data-required></textarea>
@@ -155,7 +155,7 @@
                                     <label class="radio-label" for="traffic-accidents_no">No</label>
                                 </div>
                             </div>
-                            <div class="radio-inputs-container extra-input hidden">
+                            <div class="radio-inputs-container extra-input has-required hidden">
                                 <div class="input-half-container">
                                     <label for="traffic-accident">Please explain the traffic accident(s):</label>
                                     <textarea name="traffic-accident" id="traffic-accident" rows="5" maxlength="100" data-required></textarea>
@@ -178,7 +178,7 @@
                                     <label class="radio-label" for="traffic-convictions_no">No</label>
                                 </div>
                             </div>
-                            <div class="radio-inputs-container extra-input hidden">
+                            <div class="radio-inputs-container extra-input has-required hidden">
                                 <div class="input-half-container">
                                     <label for="traffic-conviction">Please explain the traffic conviction(s):</label>
                                     <textarea name="traffic-conviction" id="traffic-conviction" rows="5" maxlength="100" data-required></textarea>
@@ -204,12 +204,23 @@
                             <div class="radio-inputs-container extra-input hidden">
                                 <div class="input-form-container">
                                     <label>Attach Your MVR (in PDF format)</label>
-                                    <input type="file" name="mvr" id="mvr" hidden data-file-input-btn="mvr">
+                                    <input type="file" name="mvr" id="mvr" accept="application/pdf" data-file-input-btn="mvr" hidden>
                                     <label class="choose-file-label" for="mvr" tabindex="0">
                                         <div class="drop-box" data-file-upload="mvr"></div>
                                         <span class="choose-file-text">Choose File</span>
                                         <span class="choose-file-text">(Drag and Drop)</span>
                                     </label>
+                                    <div class="upload-description hidden" data-upload-description="mvr">
+                                        <span class="upload-name" data-upload-name></span>
+                                        <span class="upload-size" data-upload-size></span>
+                                        <button type="button" class="upload-delete-btn" data-upload-delete-btn="mvr">
+                                            <div class="icon-wrapper">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                                </svg>
+                                            </div>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </fieldset>
@@ -218,12 +229,23 @@
                 <div class="form-component-container upload-input">
                     <div class="input-form-container">
                         <label>Attach Your Driver's License</label>
-                        <input type="file" name="drivers-license" id="drivers-license" hidden data-file-input="license">
+                        <input type="file" name="drivers-license" id="drivers-license" hidden data-file-input-btn="license">
                         <label class="choose-file-label" for="drivers-license" tabindex="0">
                             <div class="drop-box" data-file-upload="license"></div>
                             <span class="choose-file-text">Choose File</span>
                             <span class="choose-file-text">(Drag and Drop)</span>
                         </label>
+                        <div class="upload-description  hidden" data-upload-description="license">
+                            <span class="upload-name" data-upload-name></span>
+                            <span class="upload-size" data-upload-size></span>
+                            <button type="button" class="upload-delete-btn" data-upload-delete-btn="license">
+                                <div class="icon-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                        <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -310,12 +332,23 @@
                 <div class="form-component-container upload-input">
                     <div class="input-form-container">
                         <label>Attach Your Resume</label>
-                        <input type="file" name="resume" id="resume" hidden data-input-btn="resume">
+                        <input type="file" name="resume" id="resume" hidden data-file-input-btn="resume">
                         <label class="choose-file-label" for="resume" tabindex="0">
                             <div class="drop-box" data-file-upload="resume"></div>
                             <span class="choose-file-text">Choose File</span>
                             <span class="choose-file-text">(Drag and Drop)</span>
                         </label>
+                        <div class="upload-description hidden" data-upload-description="resume">
+                            <span class="upload-name" data-upload-name></span>
+                            <span class="upload-size" data-upload-size></span>
+                            <button type="button" class="upload-delete-btn" data-upload-delete-btn="resume">
+                                <div class="icon-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                        <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>

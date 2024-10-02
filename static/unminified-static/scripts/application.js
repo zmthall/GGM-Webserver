@@ -17,16 +17,15 @@ class ApplicationHandler {
                 dynamicRadios: document.querySelectorAll('[data-dynamic-radio]'),
             }
         };
-
+        
+        if(this.form.selectOption != undefined) {
+            this.form.select.value = this.form.selectOption;
+        } else {
+            this.form.select.value = "other";
+        }
         
         window.addEventListener("load", (event) => {
             this.form.dateInput.value = this.date;
-            
-            if(this.form.selectOption != undefined) {
-                this.form.select.value = this.form.selectOption;
-            } else {
-                this.form.positionInput.value = "general";
-            }
 
             if(this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'driver') {
                 if(this.form.dynamicForm.driverSection.classList.contains('hidden')) {

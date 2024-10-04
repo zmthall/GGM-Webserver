@@ -8,7 +8,7 @@
                     <div class="select-wrapper">
                         <select name="position" id="position" data-select onfocus='if(window.innerWidth > 650) { this.size=10; this.parentNode.classList.add("hide-icon") }' onblur='this.size=1; this.parentNode.classList.remove("hide-icon")' onchange='this.size=1; this.blur();'>
                             <optgroup label="Transportation">
-                                <option value="transportation" data-company="ggmt-cc" data-job-type="driver">Transportation - General</option>
+                                <option value="transportation_general" data-company="ggmt-cc" data-job-type="driver">Transportation - General</option>
                             </optgroup>
                             <optgroup label="City Cab Positions">
                                 <option value="city_cab-dispatch" data-company="cc">Transportation Dispatcher</option>
@@ -16,28 +16,28 @@
                                 <option value="city_cab-assist_admin" data-company="cc">Administrative Assistant</option>
                             </optgroup>
                             <optgroup label="NEMT Positions">
-                                <option value="nemt-csr" data-company="ggmt">Customer Service Representative</option>
-                                <option value="nemt-driver" data-company="ggmt" data-job-type="driver">NEMT Driver</option>
+                                <option value="ggmt-csr" data-company="ggmt">Customer Service Representative</option>
+                                <option value="ggmt-driver" data-company="ggmt" data-job-type="driver">NEMT Driver</option>
                             </optgroup>
                             <optgroup label="Assisted Living Positions">
-                                <option value="assisted-living" data-company="acf">Assisted Living - General</option>
-                                <option value="assisted_living-qmap" data-company="acf">QMAP</option>
-                                <option value="assisted_living-pcp" data-company="acf">PCP</option>
+                                <option value="al_general" data-company="acf">Assisted Living - General</option>
+                                <option value="acf-qmap" data-company="acf">QMAP</option>
+                                <option value="acf-pcp" data-company="acf">PCP</option>
                             </optgroup>
                             <optgroup label="Medical Supply Positions">
-                                <option value="medical-supply" data-company="ggms">Medical Supply - General</option>
+                                <option value="ms_general" data-company="ggms">Medical Supply - General</option>
                                 <option value="medical_supply-dme_specialist" data-company="ggms">DME Specialist</option>
                                 <option value="medical_supply-delivery_tech" data-company="ggms" data-job-type="driver">Delivery Technician</option>
                                 <option value="medical_supply-inventory_tech" data-company="ggms" data-job-type="driver">Inventory Technician</option>
                             </optgroup>
                             <optgroup label="Gas Station Positions">
-                                <option value="gas-station" data-company="ggmc">Gas Station - General</option>
+                                <option value="gs_general" data-company="ggmc">Gas Station - General</option>
                                 <option value="gas_station-manager" data-company="ggmc">Gas Station Manager</option>
                                 <option value="gas_station-asm" data-company="ggmc">Gas Station Assistant Manager</option>
                                 <option value="gas_station-attendant" data-company="ggmc">Gas Station Attendant</option>
                             </optgroup>
                             <optgroup label="Other">
-                                <option value="other" data-company="ggm">General Application</option>
+                                <option value="general" data-company="ggm">General Application</option>
                             </optgroup>
                         </select>
                     </div>
@@ -96,15 +96,15 @@
                 </div>
                 <div class="form-component-container radio-inputs" data-parent-container="felony">
                     <fieldset class="input-radio-container">
-                        <legend>Have you ever been charged with a felony?</legend>
+                        <legend>Have you ever been charged with a Crime?</legend>
                         <div class="radio-inputs-container">
                             <div class="input-one-container">
-                                <input type="radio" name="felony_radio" id="felony_yes" value="yes" data-dynamic-radio="felony">
-                                <label class="radio-label" for="felony_yes">Yes</label>
+                                <input type="radio" name="crime_radio" id="crime_yes" value="yes" data-dynamic-radio="crime">
+                                <label class="radio-label" for="crime_yes">Yes</label>
                             </div>
                             <div class="input-one-container">
-                                <input type="radio" name="felony_radio" id="felony_no" value="no" data-dynamic-radio="felony" checked>
-                                <label class="radio-label" for="felony_no">No</label>
+                                <input type="radio" name="crime_radio" id="crime_no" value="no" data-dynamic-radio="crime" checked>
+                                <label class="radio-label" for="crime_no">No</label>
                             </div>
                         </div>
                         <div class="radio-inputs-container extra-input has-required hidden">

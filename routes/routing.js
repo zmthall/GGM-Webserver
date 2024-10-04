@@ -186,10 +186,25 @@ router.get('/about-us/employment/apply', (request, response) => {
 
 router.post('/about-us/employment/apply', upload.any(), async (request, response) => {
     const data = request.body;
-
     const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_KEY}&response=${data.captcha}`
     const reCaptcha = await axios.get(verifyURL)
+    const sheetsMetaData = (await google.getSheetMetaData()).data.sheets
+
+    let sheetTitle;
+
+    for(const idx in sheetsMetaData) {
+        const title = sheetsMetaData[idx].properties.title.toLowerCase().split(' ').join('_')
+        if(data.position.includes(title)) {
+            sheetTitle = sheetsMetaData[idx].properties.title
+        }
+    }
+
     if(reCaptcha.data.score > 0.5) {
+        const files = request.files
+        const fileNames = google.getFileNames(files)
+
+        const parsedData = await google.dataParse(data, files, fileNames)
+        google.pushSheetsData(parsedData, sheetTitle)
         response.status(200).send(JSON.stringify({ msg: 'Authenticated'}));
     } else {
         response.status(401).send(JSON.stringify({ msg: 'Not Authenticated'}))

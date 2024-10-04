@@ -19,7 +19,7 @@ class GoogleAPIHandler {
 
     async getDriveAuth() {
         const auth = new google.auth.GoogleAuth({
-            keyFile: 'credentials.json',
+            keyFile: this.keyFile,
             scopes: 'https://www.googleapis.com/auth/drive'
         });
 
@@ -43,9 +43,67 @@ class GoogleAPIHandler {
         })).data;
     }
 
-    async pushSheetsData(name, address, dob, fileLink, sheet = 'Sheet1') {
+    async dataParse(data, files, fileNames) {
+        let parsedData = {}
+        for(const el in data) {
+            parsedData.status = 'New'
+            parsedData.submission_date = data.date
+            if(el !== 'date' && el !== 'captcha') {
+                if(!parsedData.name && (el === 'first_name' || el === 'last_name')) {
+                    parsedData.name = `${data.first_name} ${data.last_name}`
+                    delete data.first_name
+                    delete data.last_name
+                } else {
+                    if(el === 'mvr_radio') {
+                        parsedData['mvr'] = ''
+                        parsedData['drivers-license'] = ''
+                        if(fileNames.includes('mvr') || fileNames.includes('drivers-license')) {
+                            for(const value of files) {
+                                if(value.fieldname !== 'resume')
+                                    parsedData[value.fieldname] = await this.uploadDrive(value)
+                            }
+                        }
+                    } else {
+                        parsedData[el] = data[el]
+                    }
+                }
+
+            }
+        }
+        parsedData['resume'] = ''
+        if(fileNames.includes('resume')) {
+            for(const value of files) {
+                if(value.fieldname === 'resume') {
+                    parsedData[value.fieldname] = await this.uploadDrive(value)
+                }
+            }
+        } 
+        return parsedData
+    }
+
+    getFileNames(files) {
+        const fileNames = []
+        if(files.length > 0) {
+            for(const idx in files) {
+                fileNames.push(files[idx].fieldname)
+            }
+        }
+
+        return fileNames.join(', ')
+    }
+
+    fromObjtoArr(obj) {
+        const newArr = []
+        for(const value in obj) {
+            newArr.push(obj[value])
+        }
+
+        return newArr
+    }
+
+    async pushSheetsData(data, sheet = 'Sheet1') {
         const googleSheets = google.sheets({version: 'v4', auth: await this.getSheetsAuth()});
-        const resource = { values: [[name, address, dob, fileLink]] };
+        const resource = { values: [this.fromObjtoArr(data)] };
 
         googleSheets.spreadsheets.values.append({
             auth: this.auth,

@@ -21,7 +21,7 @@ class ApplicationHandler {
         if(this.form.selectOption != undefined) {
             this.form.select.value = this.form.selectOption;
         } else {
-            this.form.select.value = "other";
+            this.form.select.value = "general";
         }
         
         window.addEventListener("load", (event) => {
@@ -44,7 +44,6 @@ class ApplicationHandler {
             this.form.uploadButtons.forEach(button => {
                 button.addEventListener('change', (event) => this.fileUploadHandler(event, this));
             })
-
 
             this.form.select.addEventListener('change', () => {
                 const url = new URL(location);

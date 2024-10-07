@@ -48,7 +48,8 @@ class GoogleAPIHandler {
         for(const el in data) {
             parsedData.status = 'New'
             parsedData.submission_date = data.date
-            if(el !== 'date' && el !== 'captcha') {
+            parsedData.position = data['full-position-name']
+            if(el !== 'date' && el !== 'captcha' && el !== 'full-position-name' && el !== 'position') {
                 if(!parsedData.name && (el === 'first_name' || el === 'last_name')) {
                     parsedData.name = `${data.first_name} ${data.last_name}`
                     delete data.first_name

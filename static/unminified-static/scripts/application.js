@@ -7,6 +7,7 @@ class ApplicationHandler {
         this.form = {
             select: document.querySelector('[data-select]'),
             selectOption: this.GetURLParameter('select'),
+            fullPositionName: document.querySelector('[data-full-position-name]'),
             dateInput: document.querySelector('[data-form-date]'),
             fileUpload: document.querySelectorAll('[data-file-upload]'),
             fileInputs: document.querySelectorAll('[data-file-input]'),
@@ -25,8 +26,9 @@ class ApplicationHandler {
         }
         
         window.addEventListener("load", (event) => {
+            const selectedPosition = this.form.select.options[this.form.select.selectedIndex].innerText
+            this.form.fullPositionName.value = selectedPosition
             this.form.dateInput.value = this.date;
-
             if(this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'driver') {
                 if(this.form.dynamicForm.driverSection.classList.contains('hidden')) {
                     this.form.dynamicForm.driverSection.classList.remove('hidden');
@@ -58,6 +60,9 @@ class ApplicationHandler {
                         this.form.dynamicForm.driverSection.classList.add('hidden');
                     }
                 }
+
+                const selectedPosition = this.form.select.options[this.form.select.selectedIndex].innerText
+                this.form.fullPositionName.value = selectedPosition
             })
 
             this.form.dynamicForm.dynamicRadios.forEach(radio => {

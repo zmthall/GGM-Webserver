@@ -532,7 +532,7 @@ nav.mobile-navigation {
     position: sticky;
     top: 0;
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, .054);
-    z-index: 2;
+    z-index: 3;
 }
 
 .mobile-nav-logo-wrapper {
@@ -1083,7 +1083,7 @@ div#chat_app img.sc-open-icon {
 }
 
 div#chat_app .round {
-    z-index: 2;
+    z-index: 1;
 }
 
 div#chat_app img.sc-closed-icon {

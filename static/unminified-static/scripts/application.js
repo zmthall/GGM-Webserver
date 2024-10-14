@@ -18,11 +18,13 @@ class ApplicationHandler {
                 dynamicRadios: document.querySelectorAll('[data-dynamic-radio]'),
             }
         };
+
+        console.log(this.form.selectOption)
         
         if(this.form.selectOption != undefined) {
             this.form.select.value = this.form.selectOption;
         } else {
-            this.form.select.value = "general";
+            this.form.select.value = "general";     
         }
         
         window.addEventListener("load", (event) => {
@@ -103,16 +105,7 @@ class ApplicationHandler {
     }
 
     GetURLParameter(name) {
-        let value
-        let pageParameters = window.location.search.slice(1).split("&");
-        pageParameters.forEach(pageParameter => {
-            let parameter = pageParameter.split("=");
-            if(name === parameter[0]) {
-                value = parameter[1] ? parameter[1] : parameter[0];
-                return false;
-            }
-        })
-        return value;
+        return (new URL(window.location)).searchParams.get(name);
     }
 
     preventDefaults(event) {

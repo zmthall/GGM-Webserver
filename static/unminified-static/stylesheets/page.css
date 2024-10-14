@@ -2245,7 +2245,8 @@ section.contact-us-map-iframe-section iframe.location-iframe {
 }
 
 div .grecaptcha-badge {
-    bottom: 50%!important;    
+    bottom: 50%!important;  
+    z-index: 1;  
 }
 
 /* Contact us Page Width Styling */

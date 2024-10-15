@@ -1,5 +1,7 @@
 <section class="community-outreach-top-page page-content section-content">
-    <h2 class="section-title">Upcoming Events for Golden Gate Manor, Inc:</h2>
+    <% if(events.upcoming.length !== 0) { %> 
+        <h2 class="section-title">Upcoming Events for Golden Gate Manor, Inc:</h2>
+    <% } %>
     <% for(const idx in events.upcoming) { %>
         <div class="event-container">
             <div class="event-left-info">

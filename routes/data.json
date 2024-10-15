@@ -257,39 +257,6 @@
         }
     },
     "events": {
-        "upcoming": {
-            "event1": {
-                "name": "2024 Arkansas Valley Senior Resource Fair",
-                "location": {
-                    "name": "Otero College",
-                    "address": "2001 San Juan Ave., La Junta, CO, 81050"
-                },
-                "date": {
-                    "day": "8th",
-                    "month": "August",
-                    "month_abb": "Aug.",
-                    "day_end": "",
-                    "month_end": ""
-                },
-                "description": "For Arkansas Valley Seniors, and those who care for them. Featuring different local organizations. Come learn more about local community resources!",
-                "url": "https://seniorsbluebook.com/events/arkansas-valley-senior-resource-fair/1723132800"
-            },
-            "event2": {
-                "name": "Senior Week - Senior Safari Day",
-                "location": {
-                    "name": "Pueblo Zoo",
-                    "address": "3455 Nuckolls Ave., Pueblo, CO, 81005"
-                },
-                "date": {
-                    "day": "11th",
-                    "month": "September",
-                    "month_abb": "Sept.",
-                    "day_end": "",
-                    "month_end": ""
-                },
-                "description": "Join us for an exciting day at the Pueblo Zoo! From the 8th to the 14th seniors 65+ get in for free to enjoy a festival atmosphere with food, live music, etc.",
-                "url": "https://www.pueblozoo.org/senior-week"
-            }
-        }
+        "upcoming": []
     }
 }

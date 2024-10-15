@@ -502,32 +502,37 @@ a.cta-button.nemt-transportation {
 
 /* Non-Medical Transportation Section */
 
-.non-medical-transportation-cta-wrapper {
+.non-medical-transportation-cta-wrapper,
+.medical-supply-cta-wrapper {
     display: flex;
     padding: 4rem 0.5rem;
     justify-content: center;
     gap: 10rem;
 }
 
-.non-medical-transportation-cta-left {
+.non-medical-transportation-cta-left,
+.medical-supply-cta-right {
     width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-h2.non-medical-transportation-title {
+h2.non-medical-transportation-title,
+h2.medical-supply-title {
     text-align: center;
     margin-bottom: 1rem;
 }
 
-.non-medical-transportation-cta-right {
+.non-medical-transportation-cta-right,
+.medical-supply-cta-left {
     width: 600px;
     display: flex;
     align-items: center;
 }
 
-.non-medical-transportation-cta-right img {
+.non-medical-transportation-cta-right img,
+.medical-supply-cta-left img {
     width: 600px;
 }
 
@@ -545,7 +550,8 @@ ul.non-medical-transportation-content-list {
     width: 250px;
 }
 
-a.cta-button.non-medical-transportation {
+a.cta-button.non-medical-transportation,
+a.cta-button.medical-supply {
     margin: 1rem 0;
 }
 
@@ -553,7 +559,8 @@ a.cta-button.non-medical-transportation {
 
 @media(max-width: 1400px) {
     .nemt-transportation-cta-wrapper,
-    .non-medical-transportation-cta-wrapper {
+    .non-medical-transportation-cta-wrapper,
+    .medical-supply-cta-wrapper {
         gap: 1rem;
         justify-content: space-between;
         width: 100%;
@@ -562,17 +569,20 @@ a.cta-button.non-medical-transportation {
 
 @media(max-width: 1250px) {
     .nemt-transportation-cta-right, 
-    .non-medical-transportation-cta-left { width: 50%; }
+    .non-medical-transportation-cta-left,
+    .medical-supply-cta-right { width: 50%; }
 }
 
 @media(max-width: 1000px) {
     .nemt-transportation-cta-right,
-    .non-medical-transportation-cta-left {
+    .non-medical-transportation-cta-left,
+    .medical-supply-cta-right {
         width: 600px;
     }
 
     .nemt-transportation-cta-wrapper,
-    .non-medical-transportation-cta-wrapper {
+    .non-medical-transportation-cta-wrapper,
+    .medical-supply-cta-wrapper {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -590,7 +600,8 @@ a.cta-button.non-medical-transportation {
     }
 
     .nemt-transportation-cta-left,
-    .non-medical-transportation-cta-right {
+    .non-medical-transportation-cta-right,
+    .medical-supply-cta-left {
         width: 100%;
         border-radius: 1rem;
         overflow: hidden;
@@ -607,7 +618,9 @@ a.cta-button.non-medical-transportation {
     .nemt-transportation-cta-left img,
     .nemt-transportation-cta-right,
     .non-medical-transportation-cta-right img,
-    .non-medical-transportation-cta-left {
+    .non-medical-transportation-cta-left,
+    .medical-supply-cta-left img,
+    .medical-supply-cta-right  {
         width: 100%;
     }
 }

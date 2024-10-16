@@ -770,9 +770,9 @@ li.information-list-item a {
 }
 
 a.link-spacing {
-    margin-top: 1rem;
     display: block;
     width: max-content;
+    margin: 1rem auto;
 }
 
 .nemt-transportation-information-faq ul.section-list-container {

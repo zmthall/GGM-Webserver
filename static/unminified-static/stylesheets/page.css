@@ -772,6 +772,7 @@ li.information-list-item a {
 a.link-spacing {
     margin-top: 1rem;
     display: block;
+    width: max-content;
 }
 
 .nemt-transportation-information-faq ul.section-list-container {
@@ -815,6 +816,10 @@ li.faqs-list-item {
 .faqs-list-content.expanded {
     padding: 1rem;
     max-height: unset;
+}
+
+.faqs-text:not(:last-of-type) {
+    margin-bottom: 0.5rem;
 }
 
 .appointment-schedule-information-container *:not(h3) {

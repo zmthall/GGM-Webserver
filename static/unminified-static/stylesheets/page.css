@@ -775,6 +775,10 @@ a.link-spacing {
     width: max-content;
 }
 
+a.link-spacing.dark-background {
+    margin-left: 2rem;
+}
+
 .nemt-transportation-information-faq ul.section-list-container {
     list-style: none;
     margin-left: 0;
@@ -896,7 +900,7 @@ h3.section-sub-title {
         padding: 1rem;
     }
 
-    a.link-spacing {
+    a.link-spacing.dark-background {
         margin: 1rem auto;
     }
 }

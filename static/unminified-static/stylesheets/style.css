@@ -122,6 +122,10 @@ span.read-more-plus {
     text-decoration: none;
 }
 
+.primary-button:disabled {
+    filter: grayscale(1);
+}
+
 .primary-button:hover {
     color: rgb(var(--primary-color));
     background: rgb(var(--secondary-color));

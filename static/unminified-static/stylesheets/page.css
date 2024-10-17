@@ -1019,17 +1019,17 @@ img.section-image.image-right {
         justify-content: center;
     }
 
-    .about-us-transportation-section .section-content-image-container {
+    .section-content-image-container.text-first {
         flex-direction: column-reverse;
     }
 
     img.section-image.image-left,
     img.section-image.image-right {
         width: 100%;   
-        height: 300px;
+        height: 450px;
         margin-bottom: 1rem;
         object-fit: cover;
-        object-position: bottom
+        object-position: middle;
     }
 
     img.section-image.image-left {
@@ -1048,6 +1048,15 @@ img.section-image.image-right {
 @media(max-width: 600px) {
     .house-image-container {
         display: none;
+    }
+
+    img.section-image.image-left,
+    img.section-image.image-right {
+        width: 100%;   
+        height: 300px;
+        margin-bottom: 1rem;
+        object-fit: cover;
+        object-position: middle;
     }
 
     .about-us-introduction-section img {

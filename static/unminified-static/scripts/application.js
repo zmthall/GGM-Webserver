@@ -14,6 +14,7 @@ class ApplicationHandler {
             uploadButtons: document.querySelectorAll('[data-file-input-btn]'),
             uploadDeleteButtons: document.querySelectorAll('[data-upload-delete-btn]'),
             dynamicForm: {
+                felonyContainer: document.querySelector('[data-felony-container]'),
                 driverSection: document.querySelector('[data-driving-section]'),
                 dynamicRadios: document.querySelectorAll('[data-dynamic-radio]'),
             }
@@ -34,6 +35,13 @@ class ApplicationHandler {
             if(this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'driver') {
                 if(this.form.dynamicForm.driverSection.classList.contains('hidden')) {
                     this.form.dynamicForm.driverSection.classList.remove('hidden');
+                }
+            } else if(this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'c-store') {
+                if(!this.form.dynamicForm.driverSection.classList.contains('hidden')) {
+                    this.form.dynamicForm.driverSection.classList.add('hidden');
+                }
+                if(!this.form.dynamicForm.felonyContainer.classList.contains('hidden')) {
+                    this.form.dynamicForm.felonyContainer.classList.add('hidden');
                 }
             } else {
                 if(!this.form.dynamicForm.driverSection.classList.contains('hidden')) {
@@ -57,9 +65,19 @@ class ApplicationHandler {
                     if(this.form.dynamicForm.driverSection.classList.contains('hidden')) {
                         this.form.dynamicForm.driverSection.classList.remove('hidden');
                     }
+                    if(this.form.dynamicForm.felonyContainer.classList.contains('hidden')) {
+                        this.form.dynamicForm.felonyContainer.classList.remove('hidden');
+                    }
+                } else if(this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'c-store') { 
+                        if(!this.form.dynamicForm.felonyContainer.classList.contains('hidden')) {
+                            this.form.dynamicForm.felonyContainer.classList.add('hidden');
+                        }
                 } else {
                     if(!this.form.dynamicForm.driverSection.classList.contains('hidden')) {
                         this.form.dynamicForm.driverSection.classList.add('hidden');
+                    }
+                    if(this.form.dynamicForm.felonyContainer.classList.contains('hidden')) {
+                        this.form.dynamicForm.felonyContainer.classList.remove('hidden');
                     }
                 }
 
@@ -72,6 +90,7 @@ class ApplicationHandler {
                     const dataName = event.target.getAttribute('data-dynamic-radio');
                     const radioID = event.target.id;
                     const extraInput = event.target.closest(`[data-parent-container='${dataName}']`).querySelector('.extra-input');
+
 
                     if(/yes|part-time/.test(radioID)) {
                         if(extraInput.classList.contains('hidden')) {

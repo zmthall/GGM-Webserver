@@ -31,10 +31,10 @@
                                 <option value="medical_supply-inventory_tech" data-company="ggms" data-job-type="driver">Inventory Technician</option>
                             </optgroup>
                             <optgroup label="Gas Station Positions">
-                                <option value="gs_general" data-company="ggmc">Gas Station - General</option>
-                                <option value="gas_station-manager" data-company="ggmc">Gas Station Manager</option>
-                                <option value="gas_station-asm" data-company="ggmc">Gas Station Assistant Manager</option>
-                                <option value="gas_station-attendant" data-company="ggmc">Gas Station Attendant</option>
+                                <option value="gs_general" data-company="ggmc" data-job-type="c-store">Gas Station - General</option>
+                                <option value="gas_station-manager" data-company="ggmc" data-job-type="c-store">Gas Station Manager</option>
+                                <option value="gas_station-asm" data-company="ggmc" data-job-type="c-store">Gas Station Assistant Manager</option>
+                                <option value="gas_station-attendant" data-company="ggmc" data-job-type="c-store">Gas Station Attendant</option>
                             </optgroup>
                             <optgroup label="Other">
                                 <option value="general" data-company="ggm">General Application</option>
@@ -94,17 +94,17 @@
                         </div>
                     </fieldset>
                 </div>
-                <div class="form-component-container radio-inputs" data-parent-container="felony">
+                <div class="form-component-container radio-inputs" data-parent-container="felony" data-felony-container>
                     <fieldset class="input-radio-container">
-                        <legend>Have you ever been charged with a Crime?</legend>
+                        <legend>Have you ever been charged with a Felony?</legend>
                         <div class="radio-inputs-container">
                             <div class="input-one-container">
-                                <input type="radio" name="crime_radio" id="crime_yes" value="yes" data-dynamic-radio="crime">
-                                <label class="radio-label" for="crime_yes">Yes</label>
+                                <input type="radio" name="felony_radio" id="felony_yes" value="yes" data-dynamic-radio="felony">
+                                <label class="radio-label" for="felony_yes">Yes</label>
                             </div>
                             <div class="input-one-container">
-                                <input type="radio" name="crime_radio" id="crime_no" value="no" data-dynamic-radio="crime" checked>
-                                <label class="radio-label" for="crime_no">No</label>
+                                <input type="radio" name="felony_radio" id="felony_no" value="no" data-dynamic-radio="felony" checked>
+                                <label class="radio-label" for="felony_no">No</label>
                             </div>
                         </div>
                         <div class="radio-inputs-container extra-input has-required hidden">

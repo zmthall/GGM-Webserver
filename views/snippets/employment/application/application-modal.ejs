@@ -1,0 +1,32 @@
+<div class="application-modal-container hidden" data-modal-container>
+    <article class="application-agreement-modal policy-attestation hidden">
+        <div class="modal-content-container">
+            <div class="modal-body-content">
+                <%- include('./application-policy') %>
+            </div>
+        </div>
+        <div class="attestation-container">
+            <div class="attestation-wrapper">
+                <input type="checkbox" name="attestation" id="attestation" class="attestation-checkbox" data-attestation-check>
+                <label for="attestation" class="attestation-label">I agree and certify the information provided is true and correct.</label>
+            </div>
+            <button type="button" class="cta-button application-agreement-modal attestation" data-modal-continue="attestation">Continue</button>
+        </div>
+    </article>
+    <article class="application-agreement-modal disclaimer hidden">
+        <div class="modal-content-container">
+            <h2 class="modal-title">Important Notice</h2>
+            <p class="modal-text">
+                Please be aware that submitting an application does not guarantee it will be reviewed. Due to the volume of applications 
+                we receive and the fact that not all positions are actively hiring at all times, only applications that align with our 
+                current needs and qualifications will be considered. As such, not all applicants will be contacted for an interview or 
+                further steps in the hiring process.
+            </p>
+            <p class="modal-text">
+                We appreciate your interest in joining Golden Gate Manor Inc., and encourage you to apply for future opportunities as 
+                positions become available.
+            </p>
+            <button type="button" class="cta-button application-agreement-modal disclaimer">Continue</button>
+        </div>
+    </article>
+</div>

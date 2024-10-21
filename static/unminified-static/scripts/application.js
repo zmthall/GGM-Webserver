@@ -36,7 +36,7 @@ class ApplicationHandler {
                 if(this.form.dynamicForm.driverSection.classList.contains('hidden')) {
                     this.form.dynamicForm.driverSection.classList.remove('hidden');
                 }
-            } else if(this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'c-store') {
+            } else if(this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'no-felony') {
                 if(!this.form.dynamicForm.driverSection.classList.contains('hidden')) {
                     this.form.dynamicForm.driverSection.classList.add('hidden');
                 }
@@ -68,7 +68,7 @@ class ApplicationHandler {
                     if(this.form.dynamicForm.felonyContainer.classList.contains('hidden')) {
                         this.form.dynamicForm.felonyContainer.classList.remove('hidden');
                     }
-                } else if(this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'c-store') { 
+                } else if(this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'no-felony') { 
                         if(!this.form.dynamicForm.felonyContainer.classList.contains('hidden')) {
                             this.form.dynamicForm.felonyContainer.classList.add('hidden');
                         }

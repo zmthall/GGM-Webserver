@@ -13,23 +13,38 @@ class OnSiteRecaptcha {
         const _this = this
         this.form.addEventListener('submit', (event) => {
             event.preventDefault();
-            grecaptcha.ready(function() {
-                grecaptcha.execute(_this.publicKey, {action: 'submit'}).then(async function(token) {
-                    const submitBtn = _this.form.querySelector('button');
-                    const data = _this.createData(token);
-                    const verify = await _this.verifySubmission(data)
-                    if(verify.status === 200) {
-                        _this.messageContainer.innerText = `Submission ${(await verify.json()).msg}, now redirecting...`
-                        submitBtn.disabled = true;
-                        setTimeout(() => {
-                            const redirectURL = new URL('/contact-us/thank-you', window.location.origin);
-                            window.location.replace(redirectURL);
-                        }, 2000);
-                    } else if(verify.status === 401) {
-                        _this.messageContainer.innerText = `Submission ${(await verify.json()).msg}...`
-                    }
+            let hasAttestation = false;
+            if(document.getElementById('attestation') && document.getElementById('attestation').checked) {
+                hasAttestation = true;
+            } else if(!document.getElementById('attestation')) {
+                hasAttestation = true;
+            }
+
+            
+            if(hasAttestation) {
+                grecaptcha.ready(function() {
+                    grecaptcha.execute(_this.publicKey, {action: 'submit'}).then(async function(token) {
+                        const submitBtn = _this.form.querySelector('button');
+                        const data = _this.createData(token);
+                        const verify = await _this.verifySubmission(data)
+                        if(verify.status === 200) {
+                            _this.messageContainer.innerText = `Submission ${(await verify.json()).msg}, now redirecting...`
+                            submitBtn.disabled = true;
+                            setTimeout(() => {
+                                const redirectURL = new URL('/contact-us/thank-you', window.location.origin);
+                                window.location.replace(redirectURL);
+                            }, 2000);
+                        } else if(verify.status === 401) {
+                            _this.messageContainer.innerText = `Submission ${(await verify.json()).msg}...`
+                        }
+                    });
                 });
-            });
+            } else {
+                _this.messageContainer.innerText = `Form failed to be submitted... refreshing page...`;
+                setTimeout(() => {
+                    location.reload();
+                }, 1000);
+            }
         })
     }
     

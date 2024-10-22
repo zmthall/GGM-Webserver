@@ -2222,6 +2222,11 @@ button.cta-button.application-agreement-modal.disclaimer {
     margin: 1rem auto 0;
 }
 
+button.cta-button.application-agreement-modal.agreement {
+    width: max-content;
+    padding: 0.5rem;
+}
+
 .modal-content-container {
     overflow: auto;
     height: 100%;

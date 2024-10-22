@@ -17,6 +17,13 @@ class ApplicationHandler {
                 felonyContainer: document.querySelector('[data-felony-container]'),
                 driverSection: document.querySelector('[data-driving-section]'),
                 dynamicRadios: document.querySelectorAll('[data-dynamic-radio]'),
+            },
+            modal: {
+                backdrop: document.querySelector('[data-modal-container]'),
+                disclaimer: document.querySelector('[data-modal="disclaimer"]'),
+                agreement: document.querySelector('[data-modal="agreement"]'),
+                modalContinue: document.querySelectorAll('[data-modal-continue]'),
+                attestation: document.querySelector('[data-attestation-check]')
             }
         };
 
@@ -120,6 +127,23 @@ class ApplicationHandler {
 
                 uploader.addEventListener('drop', (event) => this.fileDropHandler(event, this));
             })
+
+            this.openModalonLoad();
+            this.form.modal.modalContinue.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const name = button.getAttribute('data-modal-continue');
+                    if(name === 'disclaimer') {
+                        this.form.modal.disclaimer.classList.add('hidden');
+                        this.form.modal.agreement.classList.remove('hidden');
+                    } else {
+                        if(this.checkAttestation()) {
+                            this.form.modal.backdrop.classList.add('hidden');
+                            this.form.modal.agreement.classList.add('hidden');
+                            document.body.classList.remove('no-scroll');
+                        }
+                    }
+                })
+            })
         })
     }
 
@@ -191,6 +215,20 @@ class ApplicationHandler {
 
         uploadBtn.value = "";
         uploadDescription.classList.add('hidden');
+    }
+
+    openModalonLoad() {
+        if(this.form.modal.backdrop.classList.contains('hidden')) {
+            this.form.modal.backdrop.classList.remove('hidden');
+            this.form.modal.disclaimer.classList.remove('hidden');
+            document.body.classList.add('no-scroll');
+        }
+        
+    }
+    checkAttestation() {
+        if(this.form.modal.attestation.checked)
+            return true;
+        else return false;
     }
 }
 

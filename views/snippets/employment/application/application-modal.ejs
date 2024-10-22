@@ -1,19 +1,5 @@
 <div class="application-modal-container hidden" data-modal-container>
-    <article class="application-agreement-modal policy-attestation hidden">
-        <div class="modal-content-container">
-            <div class="modal-body-content">
-                <%- include('./application-policy') %>
-            </div>
-        </div>
-        <div class="attestation-container">
-            <div class="attestation-wrapper">
-                <input type="checkbox" name="attestation" id="attestation" class="attestation-checkbox" data-attestation-check>
-                <label for="attestation" class="attestation-label">I agree and certify the information provided is true and correct.</label>
-            </div>
-            <button type="button" class="cta-button application-agreement-modal attestation" data-modal-continue="attestation">Continue</button>
-        </div>
-    </article>
-    <article class="application-agreement-modal disclaimer hidden">
+    <article class="application-agreement-modal disclaimer hidden" data-modal="disclaimer">
         <div class="modal-content-container">
             <h2 class="modal-title">Important Notice</h2>
             <p class="modal-text">
@@ -26,7 +12,21 @@
                 We appreciate your interest in joining Golden Gate Manor Inc., and encourage you to apply for future opportunities as 
                 positions become available.
             </p>
-            <button type="button" class="cta-button application-agreement-modal disclaimer">Continue</button>
+            <button type="button" class="cta-button application-agreement-modal disclaimer" data-modal-continue="disclaimer">Continue</button>
+        </div>
+    </article>
+    <article class="application-agreement-modal policy-attestation hidden" data-modal="agreement">
+        <div class="modal-content-container">
+            <div class="modal-body-content">
+                <%- include('./application-policy') %>
+            </div>
+        </div>
+        <div class="attestation-container">
+            <div class="attestation-wrapper">
+                <input type="checkbox" name="attestation" id="attestation" class="attestation-checkbox" data-attestation-check>
+                <label for="attestation" class="attestation-label">I agree and certify the information will be true and correct.</label>
+            </div>
+            <button type="button" class="cta-button application-agreement-modal agreement" data-modal-continue="agreement">Continue</button>
         </div>
     </article>
 </div>

@@ -20,7 +20,6 @@ class OnSiteRecaptcha {
                 hasAttestation = true;
             }
 
-            
             if(hasAttestation) {
                 grecaptcha.ready(function() {
                     grecaptcha.execute(_this.publicKey, {action: 'submit'}).then(async function(token) {

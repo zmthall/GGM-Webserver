@@ -107,12 +107,20 @@ class ApplicationHandler {
                             extraInput.classList.remove('hidden');
                             if(extraInput.classList.contains('has-required'))
                                 extraInput.querySelector('[data-required]').required = true;
+                            if(extraInput.classList.contains('has-note')) {
+                                const note = event.target.closest(`[data-parent-container='${dataName}']`).querySelector('[data-please-note]')
+                                if(!note.classList.contains('hidden')) note.classList.add('hidden');
+                            }
                         }
                     } else {
                         if(!extraInput.classList.contains('hidden')) {
                             extraInput.classList.add('hidden');
                             if(extraInput.classList.contains('has-required'))
                                 extraInput.querySelector('[data-required]').required = false;
+                        }
+                        if(extraInput.classList.contains('has-note')) {
+                            const note = event.target.closest(`[data-parent-container='${dataName}']`).querySelector('[data-please-note]')
+                            if(note.classList.contains('hidden')) note.classList.remove('hidden');
                         }
                     }
                 })

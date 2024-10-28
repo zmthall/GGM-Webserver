@@ -13,6 +13,7 @@ class OnSiteRecaptcha {
         const _this = this;
         this.form.addEventListener('submit', (event) => {
             event.preventDefault();
+            _this.messageContainer.innerText = `Please wait while your submission is authenticated...`
             let hasAttestation = false;
             if(document.getElementById('attestation') && document.getElementById('attestation').checked) {
                 hasAttestation = true;

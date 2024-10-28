@@ -201,8 +201,8 @@ router.post('/about-us/employment/apply', upload.any(), async (request, response
     
     if(reCaptcha.data.score > 0.5) {
         response.status(200).send(JSON.stringify({ msg: 'Authenticated'}));
+        
         const sheetsMetaData = (await google.getSheetMetaData()).data.sheets
-    
         let sheetTitle;
     
         for(const idx in sheetsMetaData) {

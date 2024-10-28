@@ -20,7 +20,8 @@ class OnSiteRecaptcha {
                 hasAttestation = true;
             }
 
-            if(this.form.getAttribute('data-submittable') === '') {
+            if(this.form.getAttribute('data-submittable') === '' && this.form.getAttribute('data-submitted') === null) {
+                this.form.setAttribute('data-submitted', '');
                 if(hasAttestation) {
                     grecaptcha.ready(function() {
                         grecaptcha.execute(_this.publicKey, {action: 'submit'}).then(async function(token) {
@@ -45,6 +46,8 @@ class OnSiteRecaptcha {
                         location.reload();
                     }, 1000);
                 }
+            } else if(this.form.getAttribute('data-submittable') === '' && this.form.getAttribute('data-submitted') !== null) {
+                _this.messageContainer.innerText = `The form was already submitted.. Submission is still being authenticated. Please Wait...`;
             } else {
                 const missingUploads = this.form.getAttribute('data-submittable').split('-');
                 const firstMissingUpload = document.querySelector(`[data-upload-btn="${missingUploads[0]}"]`);

@@ -215,8 +215,8 @@
                             <div class="radio-inputs-container extra-input has-note hidden">
                                 <div class="input-form-container">
                                     <label>Attach Your MVR (in PDF format)</label>
-                                    <input type="file" name="mvr" id="mvr" accept="application/pdf" data-file-input-btn="mvr" hidden>
-                                    <label class="choose-file-label" for="mvr" tabindex="0">
+                                    <input type="file" name="mvr" id="mvr" accept="application/pdf" hidden data-file-input-btn="mvr" data-required-upload="mvr">
+                                    <label class="choose-file-label" for="mvr" tabindex="0" data-upload-btn="mvr">
                                         <div class="drop-box" data-file-upload="mvr"></div>
                                         <span class="choose-file-text">Choose File</span>
                                         <span class="choose-file-text">(Drag and Drop)</span>
@@ -240,8 +240,8 @@
                 <div class="form-component-container upload-input">
                     <div class="input-form-container">
                         <label>Attach Your Driver's License</label>
-                        <input type="file" name="drivers-license" id="drivers-license" hidden data-file-input-btn="license">
-                        <label class="choose-file-label" for="drivers-license" tabindex="0">
+                        <input type="file" name="drivers-license" id="drivers-license" hidden data-file-input-btn="license" data-required-upload="license">
+                        <label class="choose-file-label" for="drivers-license" data-upload-btn="license" tabindex="0">
                             <div class="drop-box" data-file-upload="license"></div>
                             <span class="choose-file-text">Choose File</span>
                             <span class="choose-file-text">(Drag and Drop)</span>
@@ -340,11 +340,11 @@
                         </fieldset>
                     </div>
                 </div>
-                <div class="form-component-container upload-input">
+                <div class="form-component-container upload-input required-upload">
                     <div class="input-form-container">
                         <label>Attach Your Resume</label>
-                        <input type="file" name="resume" id="resume" hidden data-file-input-btn="resume">
-                        <label class="choose-file-label" for="resume" tabindex="0">
+                        <input type="file" name="resume" id="resume" hidden data-file-input-btn="resume" data-required-upload="true">
+                        <label class="choose-file-label" for="resume" data-upload-btn="resume" tabindex="0">
                             <div class="drop-box" data-file-upload="resume"></div>
                             <span class="choose-file-text">Choose File</span>
                             <span class="choose-file-text">(Drag and Drop)</span>
@@ -372,5 +372,3 @@
         </form>
     </div>
 </section>
-<script src="https://www.google.com/recaptcha/api.js?render=6LeZz0UqAAAAACaVm35S2EemtZ1XGc_T1GV4o0wf"></script>
-<script src="/scripts/recaptcha.js"></script>

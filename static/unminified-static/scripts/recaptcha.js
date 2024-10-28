@@ -10,7 +10,7 @@ class OnSiteRecaptcha {
     }
 
     async createEventListener() {
-        const _this = this
+        const _this = this;
         this.form.addEventListener('submit', (event) => {
             event.preventDefault();
             let hasAttestation = false;
@@ -20,29 +20,39 @@ class OnSiteRecaptcha {
                 hasAttestation = true;
             }
 
-            if(hasAttestation) {
-                grecaptcha.ready(function() {
-                    grecaptcha.execute(_this.publicKey, {action: 'submit'}).then(async function(token) {
-                        const submitBtn = _this.form.querySelector('button');
-                        const data = _this.createData(token);
-                        const verify = await _this.verifySubmission(data)
-                        if(verify.status === 200) {
-                            _this.messageContainer.innerText = `Submission ${(await verify.json()).msg}, now redirecting...`
-                            submitBtn.disabled = true;
-                            setTimeout(() => {
-                                const redirectURL = new URL('/contact-us/thank-you', window.location.origin);
-                                window.location.replace(redirectURL);
-                            }, 2000);
-                        } else if(verify.status === 401) {
-                            _this.messageContainer.innerText = `Submission ${(await verify.json()).msg}...`
-                        }
-                    });
-                });
+            if(this.form.getAttribute('data-submittable') === '') {
+                if(hasAttestation) {
+                    // grecaptcha.ready(function() {
+                    //     grecaptcha.execute(_this.publicKey, {action: 'submit'}).then(async function(token) {
+                    //         const submitBtn = _this.form.querySelector('button');
+                    //         const data = _this.createData(token);
+                    //         const verify = await _this.verifySubmission(data)
+                    //         if(verify.status === 200) {
+                    //             _this.messageContainer.innerText = `Submission ${(await verify.json()).msg}, now redirecting...`
+                    //             submitBtn.disabled = true;
+                    //             setTimeout(() => {
+                    //                 const redirectURL = new URL('/contact-us/thank-you', window.location.origin);
+                    //                 window.location.replace(redirectURL);
+                    //             }, 2000);
+                    //         } else if(verify.status === 401) {
+                    //             _this.messageContainer.innerText = `Submission ${(await verify.json()).msg}...`
+                    //         }
+                    //     });
+                    // });
+                } else {
+                    _this.messageContainer.innerText = `Form failed to be submitted... refreshing page...`;
+                    setTimeout(() => {
+                        location.reload();
+                    }, 1000);
+                }
             } else {
-                _this.messageContainer.innerText = `Form failed to be submitted... refreshing page...`;
+                const missingUploads = this.form.getAttribute('data-submittable').split('-');
+                const firstMissingUpload = document.querySelector(`[data-upload-btn="${missingUploads[0]}"]`);
+                _this.messageContainer.innerText = `Make sure to upload all files required.\nThese uploadable items are still required: ${missingUploads.join(' | ')}`
                 setTimeout(() => {
-                    location.reload();
-                }, 1000);
+                    firstMissingUpload.scrollIntoView();
+                    firstMissingUpload.focus();
+                }, 500);
             }
         })
     }

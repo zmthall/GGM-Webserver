@@ -27,7 +27,21 @@ class ApplicationHandler {
             }
         };
 
-        console.log(this.form.selectOption)
+        const form = document.forms['contact-form'];
+        form.addEventListener('submit', (event) => {
+            const requiredUploads = Array.from(document.querySelectorAll('[data-required-upload="true"]'));
+            let missingUploads = [];
+            if(requiredUploads.every(upload => upload.value.length > 0)) {
+                event.target.setAttribute('data-submittable', '');
+            } else {
+                requiredUploads.map(upload => {
+                    if(upload.value.length === 0)
+                        missingUploads.push(upload.getAttribute('data-file-input-btn'));
+                });
+
+                event.target.setAttribute('data-submittable', `${missingUploads.join('-')}`);
+            }
+        })
         
         if(this.form.selectOption != undefined) {
             this.form.select.value = this.form.selectOption;
@@ -36,13 +50,14 @@ class ApplicationHandler {
         }
         
         window.addEventListener("load", (event) => {
-            const selectedPosition = this.form.select.options[this.form.select.selectedIndex].innerText
-            this.form.fullPositionName.value = selectedPosition
+            const selectedPosition = this.form.select.options[this.form.select.selectedIndex].innerText;
+            this.form.fullPositionName.value = selectedPosition;
             this.form.dateInput.value = this.date;
             if(this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'driver') {
                 if(this.form.dynamicForm.driverSection.classList.contains('hidden')) {
                     this.form.dynamicForm.driverSection.classList.remove('hidden');
                 }
+                document.querySelector('[data-required-upload="license"]').setAttribute('data-required-upload', 'true');
             } else if(this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'no-felony') {
                 if(!this.form.dynamicForm.driverSection.classList.contains('hidden')) {
                     this.form.dynamicForm.driverSection.classList.add('hidden');
@@ -50,10 +65,12 @@ class ApplicationHandler {
                 if(!this.form.dynamicForm.felonyContainer.classList.contains('hidden')) {
                     this.form.dynamicForm.felonyContainer.classList.add('hidden');
                 }
+                document.querySelector('[data-required-upload="license"]').setAttribute('data-required-upload', 'license');
             } else {
                 if(!this.form.dynamicForm.driverSection.classList.contains('hidden')) {
                     this.form.dynamicForm.driverSection.classList.add('hidden');
                 }
+                document.querySelector('[data-required-upload="license"]').setAttribute('data-required-upload', 'license');
             }
 
             this.form.uploadDeleteButtons.forEach(button => {
@@ -75,13 +92,15 @@ class ApplicationHandler {
                     if(this.form.dynamicForm.felonyContainer.classList.contains('hidden')) {
                         this.form.dynamicForm.felonyContainer.classList.remove('hidden');
                     }
+                    document.querySelector('[data-required-upload="license"]').setAttribute('data-required-upload', 'true');
                 } else if(this.form.select.selectedOptions[0].getAttribute('data-job-type') === 'no-felony') { 
-                        if(!this.form.dynamicForm.driverSection.classList.contains('hidden')) {
-                            this.form.dynamicForm.driverSection.classList.add('hidden');
-                        }
-                        if(!this.form.dynamicForm.felonyContainer.classList.contains('hidden')) {
-                            this.form.dynamicForm.felonyContainer.classList.add('hidden');
-                        }
+                    if(!this.form.dynamicForm.driverSection.classList.contains('hidden')) {
+                        this.form.dynamicForm.driverSection.classList.add('hidden');
+                    }
+                    if(!this.form.dynamicForm.felonyContainer.classList.contains('hidden')) {
+                        this.form.dynamicForm.felonyContainer.classList.add('hidden');
+                    }
+                    document.querySelector('[data-required-upload="true"]').setAttribute('data-required-upload', 'license');
                 } else {
                     if(!this.form.dynamicForm.driverSection.classList.contains('hidden')) {
                         this.form.dynamicForm.driverSection.classList.add('hidden');
@@ -89,6 +108,7 @@ class ApplicationHandler {
                     if(this.form.dynamicForm.felonyContainer.classList.contains('hidden')) {
                         this.form.dynamicForm.felonyContainer.classList.remove('hidden');
                     }
+                    document.querySelector('[data-required-upload="true"]').setAttribute('data-required-upload', 'license');
                 }
 
                 const selectedPosition = this.form.select.options[this.form.select.selectedIndex].innerText
@@ -100,9 +120,10 @@ class ApplicationHandler {
                     const dataName = event.target.getAttribute('data-dynamic-radio');
                     const radioID = event.target.id;
                     const extraInput = event.target.closest(`[data-parent-container='${dataName}']`).querySelector('.extra-input');
-
-
+                    
+                    
                     if(/yes|part-time/.test(radioID)) {
+                        const requiredUpload = event.target.closest(`[data-parent-container='${dataName}']`).querySelector(`[data-required-upload="${dataName}"]`)
                         if(extraInput.classList.contains('hidden')) {
                             extraInput.classList.remove('hidden');
                             if(extraInput.classList.contains('has-required'))
@@ -111,8 +132,13 @@ class ApplicationHandler {
                                 const note = event.target.closest(`[data-parent-container='${dataName}']`).querySelector('[data-please-note]')
                                 if(!note.classList.contains('hidden')) note.classList.add('hidden');
                             }
+                            if(requiredUpload) {
+                                requiredUpload.setAttribute('data-required-upload', "true");
+                            }
+                                
                         }
                     } else {
+                        const requiredUpload = event.target.closest(`[data-parent-container='${dataName}']`).querySelector(`[data-required-upload="true"]`)
                         if(!extraInput.classList.contains('hidden')) {
                             extraInput.classList.add('hidden');
                             if(extraInput.classList.contains('has-required'))
@@ -121,6 +147,9 @@ class ApplicationHandler {
                         if(extraInput.classList.contains('has-note')) {
                             const note = event.target.closest(`[data-parent-container='${dataName}']`).querySelector('[data-please-note]')
                             if(note.classList.contains('hidden')) note.classList.remove('hidden');
+                        }
+                        if(requiredUpload && requiredUpload.getAttribute('data-file-input-btn') === dataName) {
+                            requiredUpload.setAttribute('data-required-upload', dataName)
                         }
                     }
                 })

@@ -2076,9 +2076,13 @@ fieldset.date-input-container {
     position: relative;
     color: rgb(var(--primary-color));
     margin-bottom: 1rem;
+    scroll-margin-top: 2rem;
 }
 
-.input-form-container label.choose-file-label:hover {
+.input-form-container label.choose-file-label:hover,
+.input-form-container label.choose-file-label:focus-visible,
+.input-form-container label.choose-file-label:focus {
+    outline: none;
     border: 2px solid #4e8cff;
     font-weight: 900;
 }

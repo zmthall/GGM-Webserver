@@ -257,6 +257,23 @@
         }
     },
     "events": {
-        "upcoming": []
+        "upcoming": {
+			"event1": {
+                "name": "Electricritters at Pueblo Zoo",
+                "location": {
+                    "name": "Pueblo Zoo",
+                    "address": "3455 Nuckolls Ave, Pueblo, CO 81005"
+                },
+                "date": {
+                    "day": "29th",
+                    "month": "November",
+                    "month_abb": "Nov.",
+                    "day_end": "15th",
+                    "month_end": "December"
+                },
+                "description": "Bring the family and enjoy a magical evening filled with sparkling lights, festive cheer, and unforgettable memories!",
+                "url": "https://www.pueblozoo.org/electricritters"
+            }
+		}
     }
 }

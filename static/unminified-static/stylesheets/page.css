@@ -1304,6 +1304,14 @@ button.community-images-more-btn:hover {
     padding: 1rem;
 }
 
+.event-to-wrapper {
+    margin: 0.25rem 0;
+}
+
+.event-date {
+    text-align: center;
+}
+
 .event-right-info {
     width: 85%;
     display: flex;

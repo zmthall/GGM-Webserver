@@ -6,9 +6,9 @@
         <div class="event-container">
             <div class="event-left-info">
                 <% if(events.upcoming[idx].date.day_end != "") { %>
-                    <span class="event-from-date"><%- events.upcoming[idx].date.month %> <%- events.upcoming[idx].date.day %></span>
+                    <span class="event-from-date event-date"><%- events.upcoming[idx].date.month %> <%- events.upcoming[idx].date.day %></span>
                     <span class="event-to-wrapper">to</span>
-                    <span class="event-from-date"><%- events.upcoming[idx].date.month_end %><%- events.upcoming[idx].date.day_end %></span>
+                    <span class="event-to-date event-date"><%- events.upcoming[idx].date.month_end %> <%- events.upcoming[idx].date.day_end %></span>
                 <% } else { %>
                     <span class="event-date-month"><%- events.upcoming[idx].date.month %></span>
                     <span class="event-date-day"><%- events.upcoming[idx].date.day %></span>

@@ -276,6 +276,30 @@ router.get('/contact-us/thank-you', (request, response) => {
     })
 })
 
+router.post('/testing', async (request, response) => {
+    const data = request.body;
+    const dobFormat = new Intl.DateTimeFormat("en-US", { dateStyle: 'long' });
+    const requstDateFormat = new Intl.DateTimeFormat("en-US", { dateStyle: 'long', timeStyle: 'long'});
+
+    const message = {
+        from: process.env.EMAIL_USERNAME,
+        to: process.env.EMAIL_USERNAME,
+        subject: `Ride Request From: ${data.post.name}`,
+        text: `Name: ${data.post.name} Date of Birth: ${dobFormat.format(new Date(data.post.dob))} Phone Number: ${data.post.phone} Email Address: ${data.post.email} Medicaid ID: ${data.post.medicaid} Request Date/Time: ${requstDateFormat.format(new Date(data.post.datetime))} Pickup Location: ${data.post.pickup} Drop-Off Location: ${data.post.dropoff} Notes/Messages/Special Requirements: ${data.post.notes}`,
+        html: `<article><h1>Ride Request:</h1><p>Name: ${data.post.name}</p><p>Date of Birth: ${dobFormat.format(new Date(data.post.dob))}</p><p>Phone Number: ${data.post.phone}</p><p>Email Address: <a href="mailto:${data.post.email}">${data.post.email}</a></p><p>Medicaid ID: ${data.post.medicaid}</p><p>Request Date/Time: ${requstDateFormat.format(new Date(data.post.datetime))}</p><p>Pickup Location: ${data.post.pickup}</p><p>Drop-Off Location: ${data.post.dropoff}</p><p>Notes/Messages/Special Requirements: ${data.post.notes}</p></article>`
+    }
+
+    const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_KEY}&response=${data.token}`;
+    const reCaptcha = await axios.post(verifyURL);
+
+    if(reCaptcha.data.score > 0.5) {
+        mailer.send_email(message).catch(console.error)
+        response.status(200).send(JSON.stringify({ msg: 'Authenticated'}));
+    } else {
+        response.status(401).send(JSON.stringify({ msg: 'Not Authenticated'}))
+    }
+})
+
 router.get('/contact-us/schedule-a-ride', (request, response) => {
     response.render('schedule-a-ride', {
         config: json,

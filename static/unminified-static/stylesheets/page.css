@@ -2401,76 +2401,15 @@ div .grecaptcha-badge {
 
 /* Schedule a Ride Page Styling */
 
-.jotform-form-container {
-    margin-top: 1rem;
+form.request-ride-form {
+    width: 75%;
+    padding: 2rem;
+    margin: 2rem auto;
+    background: white;
 }
 
-.form-input-wide .form-header-group {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-li.form-line {
-    margin: 0;
-}
-
-span.please-note {
-    font-weight: 900;
-    text-decoration: underline;
-    color: rgb(var(--please-note-color));
-}
-
-p.please-note {
-    color: rgb(var(--please-note-color));
-    font-weight: 500;
-}
-
-p a {
-    font-size: inherit;
-}
-
-button#input_27 {
-    background: rgb(var(--primary-color));
-    border-color: rgb(var(--primary-color));
-    transition: background 0.3s ease-in-out;
-}
-
-button#input_27:hover {
-    background-color: rgb(var(--secondary-color));
-    color: rgb(var(--primary-color));
-}
-
-div.form-all {
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-.progressBarSubtitle span {
-    font-size: 0.5rem;
-}
-
-.progressBarSubtitle {
-    text-align: right;
-}
-
-/* Thank You Page Styling */
-
-.envelope-mail-svg {
-    width: 30%;
-}
-
-section.thank-you-main-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-p.thank-you-note {font-size: 2rem;font-weight: 900;color: rgb(var(--primary-color));}
-
-p.thank-you-text {
-    width: 50%;
-    text-align: center;
+p.trip-information-text {
+    font-size: 1rem;
 }
 
 /* Thank You Page Width Styling */

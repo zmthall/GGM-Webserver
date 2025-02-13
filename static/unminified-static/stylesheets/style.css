@@ -60,13 +60,13 @@ h5 {
     font-weight: 700;
 }
 
-a, .previous-page-button {
+body a, .previous-page-button {
     color: rgb(var(--primary-color));
     font-weight: 900;
     font-size: 1.3rem;
 }
 
-a:not(.logo-wrapper a,
+body a:not(.logo-wrapper a,
     a.main-navigation-link,
     a.mobile-navigation-link,
     a.cta-button,
@@ -74,7 +74,6 @@ a:not(.logo-wrapper a,
     a.form-button,
     a.info-btn,
     a.secondary-button):hover {
-    /* color: color-mix(in hsl, var(--primary-color) 70%, var(--secondary-color) 30%) */
     color: rgb(var(--link-hover-color));
 }
 

@@ -88,8 +88,12 @@
                 <p class="section-text trip-information-text">If you have any questions or concerns regarding our ability to accommodate a trip please call us at <a href="tel:719-543-2525">(719) 543-2525</a>.</p>
     
                 <b-field label="Appointment Date and Time">
-                    <b-datetimepicker v-model="post.datetime" 
+                    <b-datetimepicker v-if="!mobile" v-model="post.datetime" 
                         inline 
+                        required
+                        validation-message="This field is required.">
+                    </b-datetimepicker>
+                    <b-datetimepicker v-if="mobile" v-model="post.datetime" 
                         required
                         validation-message="This field is required.">
                     </b-datetimepicker>

@@ -14,7 +14,8 @@ const rideRequest = {
                 agree: '',
             },
             showWeekNumber: false,
-            locale: 'en-US' // Browser locale
+            locale: 'en-US', // Browser locale
+            mobile: screen.width < 768
         }
     },
     methods: {

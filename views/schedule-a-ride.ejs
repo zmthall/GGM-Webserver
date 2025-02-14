@@ -67,6 +67,7 @@
     
                 <b-field label="Medicaid ID">
                     <b-input 
+                        placeholder="Medicaid ID"
                         v-model="post.medicaid"
                         type="text"
                         required
@@ -79,7 +80,7 @@
                 </b-field>
             </section>
     
-            <section class="form-section passenger-info">
+            <section class="form-section trip-info">
                 <h2>Trip Information</h2>
                 <p class="section-text please-note trip-information-text"><span class="please-note">Please Note:</span> All trips are on a first come first serve basis, with this in mind, please make sure to schedule trips 24-48 hours prior to the trip date to make sure that we can accommodate the trip. We cannot promise availability for trips that were not scheduled 24-48 hours prior to the trip.</p>
                 <p class="section-text please-note trip-information-text">If your trip falls on a Monday, please schedule the ride on the Friday prior so that we can certify that we have received it in ample time to accommodate the trip. We cannot promise availability for trips on Monday that were not scheduled on the prior Friday.</p>
@@ -96,6 +97,7 @@
     
                 <b-field label="Pickup Address">
                     <b-input 
+                        placeholder="Pickup Location"
                         v-model="post.pickup"
                         required
                         validation-message="This field is required."
@@ -107,8 +109,9 @@
                     </b-input>
                 </b-field>
     
-                <b-field label="Drop Off Address">
+                <b-field label="Drop-Off Address">
                     <b-input 
+                        placeholder="Drop-Off Location"
                         v-model="post.dropoff"
                         required
                         validation-message="This field is required."
@@ -122,6 +125,7 @@
     
                 <b-field label="Notes/Messages/Special Requirements">
                     <b-input 
+                        placeholder="If you need anything specific, such as a wheelchair accessible van, request it here."
                         v-model="post.notes"
                         maxlength="500" 
                         type="textarea">
@@ -137,7 +141,7 @@
                     </b-checkbox>
                 </b-field>
             </section>
-            <section>
+            <section class="form-section submission">
                 <b-button 
                     tag="input"
                     native-type="submit" value="Submit Request">

@@ -2414,8 +2414,8 @@ p.trip-information-text {
     font-size: 1rem;
 }
 
-section.form-section:first-of-type {
-    margin-bottom: 1.5rem;
+section.form-section:not(:first-of-type) {
+    margin-top: 1.5rem;
 }
 
 @media(max-width: 1200px) {

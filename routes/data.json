@@ -259,20 +259,20 @@
     "events": {
         "upcoming": {
 			"event1": {
-                "name": "Electricritters at Pueblo Zoo",
+                "name": "Pueblo Senior Resource Fair",
                 "location": {
-                    "name": "Pueblo Zoo",
-                    "address": "3455 Nuckolls Ave, Pueblo, CO 81005"
+                    "name": "Pueblo Conventional Center",
+                    "address": "320 Central Main St., Pueblo CO, 81003"
                 },
                 "date": {
-                    "day": "29th",
-                    "month": "November",
-                    "month_abb": "Nov.",
-                    "day_end": "15th",
-                    "month_end": "December"
+                    "day": "3rd",
+                    "month": "April",
+                    "month_abb": "Apr.",
+                    "day_end": "",
+                    "month_end": ""
                 },
-                "description": "Bring the family and enjoy a magical evening filled with sparkling lights, festive cheer, and unforgettable memories!",
-                "url": "https://www.pueblozoo.org/electricritters"
+                "description": "Free event - open to the public featuring local organizations. Come join us and we can give more information about our services.",
+                "url": "https://seniorsbluebook.com/events/2025-pueblo-senior-resource-fair/1743696000"
             }
 		}
     }

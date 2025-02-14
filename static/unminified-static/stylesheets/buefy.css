@@ -578,17 +578,7 @@ body {
     font-weight: 400;
     line-height: 1.5;
 }
-a {
-    color: #7957d5;
-    cursor: pointer;
-    text-decoration: none;
-}
-a strong {
-    color: currentColor;
-}
-a:hover {
-    color: #353535;
-}
+
 code {
     background-color: #f4f4f4;
     color: #da1039;

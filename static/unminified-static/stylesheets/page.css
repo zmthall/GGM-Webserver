@@ -2406,10 +2406,42 @@ form.request-ride-form {
     padding: 2rem;
     margin: 2rem auto;
     background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 p.trip-information-text {
     font-size: 1rem;
+}
+
+section.form-section:first-of-type {
+    margin-bottom: 1.5rem;
+}
+
+@media(max-width: 1200px) {
+    form.request-ride-form {
+        width: 100%;
+    }
+}
+
+/* Thank You Page Styling */
+
+.envelope-mail-svg {
+    width: 30%;
+}
+
+section.thank-you-main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p.thank-you-note {font-size: 2rem;font-weight: 900;color: rgb(var(--primary-color));}
+
+p.thank-you-text {
+    width: 50%;
+    text-align: center;
 }
 
 /* Thank You Page Width Styling */

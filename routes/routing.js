@@ -276,17 +276,17 @@ router.get('/contact-us/thank-you', (request, response) => {
     })
 })
 
-router.post('/testing', async (request, response) => {
+router.post('/contact-us/schedule-a-ride', async (request, response) => {
     const data = request.body;
     const dobFormat = new Intl.DateTimeFormat("en-US", { dateStyle: 'long' });
     const requstDateFormat = new Intl.DateTimeFormat("en-US", { dateStyle: 'long', timeStyle: 'long'});
 
     const message = {
         from: process.env.EMAIL_USERNAME,
-        to: process.env.EMAIL_USERNAME,
+        to: process.env.RIDE_REQUEST_EMAIL,
         subject: `Ride Request From: ${data.post.name}`,
         text: `Name: ${data.post.name} Date of Birth: ${dobFormat.format(new Date(data.post.dob))} Phone Number: ${data.post.phone} Email Address: ${data.post.email} Medicaid ID: ${data.post.medicaid} Request Date/Time: ${requstDateFormat.format(new Date(data.post.datetime))} Pickup Location: ${data.post.pickup} Drop-Off Location: ${data.post.dropoff} Notes/Messages/Special Requirements: ${data.post.notes}`,
-        html: `<article><h1>Ride Request:</h1><p>Name: ${data.post.name}</p><p>Date of Birth: ${dobFormat.format(new Date(data.post.dob))}</p><p>Phone Number: ${data.post.phone}</p><p>Email Address: <a href="mailto:${data.post.email}">${data.post.email}</a></p><p>Medicaid ID: ${data.post.medicaid}</p><p>Request Date/Time: ${requstDateFormat.format(new Date(data.post.datetime))}</p><p>Pickup Location: ${data.post.pickup}</p><p>Drop-Off Location: ${data.post.dropoff}</p><p>Notes/Messages/Special Requirements: ${data.post.notes}</p></article>`
+        html: `<article style="font-size: 1.25rem;"><h1 style="text-decoration: underline;">Ride Request:</h1><p><span style="font-weight: 700;">Name:</span> ${data.post.name}</p><p><span style="font-weight: 700;">Date of Birth:</span> ${dobFormat.format(new Date(data.post.dob))}</p><p><span style="font-weight: 700;">Phone Number:</span> ${data.post.phone}</p><p><span style="font-weight: 700;">Email Address:</span> <a href="mailto:${data.post.email}">${data.post.email}</a></p><p><span style="font-weight: 700;">Medicaid ID:</span> ${data.post.medicaid}</p><p><span style="font-weight: 700;">Request Date/Time:</span> ${requstDateFormat.format(new Date(data.post.datetime))}</p><p><span style="font-weight: 700;">Pickup Location:</span> ${data.post.pickup}</p><p><span style="font-weight: 700;">Drop-Off Location:</span> ${data.post.dropoff}</p><p><span style="font-weight: 700;">Notes/Messages/Special Requirements:</span> ${data.post.notes}</p></article>`
     }
 
     const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_KEY}&response=${data.token}`;

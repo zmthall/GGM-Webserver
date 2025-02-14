@@ -2,16 +2,16 @@ const rideRequest = {
     data() {
         return {
             post: {
-                name: 'testing',
+                name: '',
                 dob: new Date(),
-                phone: '1234567890',
-                email: 'testing@testing.com',
-                medicaid: '1234567890',
+                phone: '',
+                email: '',
+                medicaid: '',
                 datetime: new Date(),
-                pickup: 'test',
-                dropoff: 'test',
-                notes: 'test',
-                agree: 'true',
+                pickup: '',
+                dropoff: '',
+                notes: '',
+                agree: '',
             },
             showWeekNumber: false,
             locale: 'en-US' // Browser locale
@@ -44,7 +44,7 @@ const rideRequest = {
             const _this = this;
             grecaptcha.ready(function() {
                 grecaptcha.execute('6LeZz0UqAAAAACaVm35S2EemtZ1XGc_T1GV4o0wf', {action: 'submit'}).then(async function(token) {
-                    const request = new Request('/testing', {
+                    const request = new Request('/contact-us/schedule-a-ride', {
                         method: "POST",
                         body: JSON.stringify({ post: _this.post, token }),
                         headers: {

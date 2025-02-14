@@ -1,11 +1,12 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buefy/dist/buefy.min.css">
+<link rel="stylesheet" href="/stylesheets/buefy.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
 
 <main class="schedule-a-ride-page main-content">
-    <div id="request">
+    <%- include('./snippets/title-breadcrumb', { breadcrumb: config.pages.schedule_a_ride.breadcrumb, helper: helper }) %>
+    <div id="request" class="page-content ">
         <form @submit="rideRequest" method="post" id="ride_form" class="request-ride-form">
 
-            <section>
+            <section class="form-section passenger-info">
                 <h2>Passenger Information</h2>
                 
                 <b-field label="Name">
@@ -78,7 +79,7 @@
                 </b-field>
             </section>
     
-            <section>
+            <section class="form-section passenger-info">
                 <h2>Trip Information</h2>
                 <p class="section-text please-note trip-information-text"><span class="please-note">Please Note:</span> All trips are on a first come first serve basis, with this in mind, please make sure to schedule trips 24-48 hours prior to the trip date to make sure that we can accommodate the trip. We cannot promise availability for trips that were not scheduled 24-48 hours prior to the trip.</p>
                 <p class="section-text please-note trip-information-text">If your trip falls on a Monday, please schedule the ride on the Friday prior so that we can certify that we have received it in ample time to accommodate the trip. We cannot promise availability for trips on Monday that were not scheduled on the prior Friday.</p>
@@ -143,8 +144,7 @@
                 </b-button>
             </section>
         </form>
-    </div>
-                    
+    </div>              
 </main>
 <script src="https://www.google.com/recaptcha/api.js?render=6LeZz0UqAAAAACaVm35S2EemtZ1XGc_T1GV4o0wf"></script>
 <script src="https://cdn.jsdelivr.net/npm/buefy/dist/buefy.min.js"></script>

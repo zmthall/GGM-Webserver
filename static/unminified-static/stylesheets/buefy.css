@@ -12111,6 +12111,11 @@ div.b-colorpicker-square .colorpicker-square-slider-sl .sl-range-thumb:active {
     bottom: 0;
     left: 0;
 }
+
+.datepicker a {
+    text-decoration: none;
+}
+
 .datepicker {
     font-size: 0.875rem;
 }

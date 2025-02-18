@@ -54,10 +54,12 @@ const rideRequest = {
                     });
         
                     const sendRequest = await fetch(request);
-                    const response = await sendRequest.json()
+                    const response = await sendRequest.json();
 
                     if(response.msg === "Authenticated")
-                        window.location = '/contact-us/thank-you'
+                        window.location = '/contact-us/thank-you';
+                    else 
+                        window.location.reload();
                 });
               });
         }

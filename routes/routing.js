@@ -279,7 +279,7 @@ router.get('/contact-us/thank-you', (request, response) => {
 router.post('/contact-us/schedule-a-ride', async (request, response) => {
     const data = request.body;
     const dobFormat = new Intl.DateTimeFormat("en-US", { dateStyle: 'long' });
-    const requstDateFormat = new Intl.DateTimeFormat("en-US", { dateStyle: 'long', timeStyle: 'long'});
+    const requstDateFormat = new Intl.DateTimeFormat("en-US", { dateStyle: 'long', timeStyle: 'long', timeZone: 'America/Denver'});
 
     const message = {
         from: process.env.EMAIL_USERNAME,

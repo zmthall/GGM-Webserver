@@ -2,17 +2,19 @@ const rideRequest = {
     data() {
         return {
             post: {
-                name: '',
-                dob: '',
-                phone: '',
-                email: '',
-                medicaid: '',
-                datetime: '',
-                pickup: '',
-                dropoff: '',
-                notes: '',
-                agree: '',
+                name: 'Zachary Thallas',
+                dob: new Date(),
+                phone: '719-252-2700',
+                email: 'zmthall@gmail.com',
+                medicaid: 'medicaid#',
+                date: new Date(),
+                time: new Date(),
+                pickup: '1913 Beulah Ave',
+                dropoff: '300 Colorado Ave.',
+                notes: 'I need a wheelchair van',
+                agree: 'true',
             },
+            minutesGranularity: 10,
             showWeekNumber: false,
             locale: 'en-US', // Browser locale
             mobile: screen.width < 768
@@ -33,6 +35,9 @@ const rideRequest = {
         },
         clearMedicaid() {
             this.post.medicaid = '';
+        },
+        clearAptTime() {
+            this.post.time = '';
         },
         clearPickup() {
             this.post.pickup = '';

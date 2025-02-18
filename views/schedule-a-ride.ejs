@@ -34,7 +34,8 @@
                         :icon-right="post.dob ? 'close-circle' : ''"
                         icon-right-clickable
                         @icon-right-click="clearDate"
-                        trap-focus>
+                        trap-focus
+                        editable>
                     </b-datepicker>
                 </b-field>
     
@@ -87,16 +88,40 @@
                 <p class="section-text please-note trip-information-text">Golden Gate Manor staff thanks you for your understanding and we appreciate your efforts to ease the scheduling process.</p>
                 <p class="section-text trip-information-text">If you have any questions or concerns regarding our ability to accommodate a trip please call us at <a href="tel:719-543-2525">(719) 543-2525</a>.</p>
     
-                <b-field label="Appointment Date and Time">
-                    <b-datetimepicker v-if="!mobile" v-model="post.datetime" 
-                        inline 
+                <b-field label="Appointment Date">
+                    <b-datepicker 
+                        v-if="!mobile"
+                        v-model="post.date"
                         required
-                        validation-message="This field is required.">
-                    </b-datetimepicker>
-                    <b-datetimepicker v-if="mobile" v-model="post.datetime" 
+                        validation-message="This field is required."
+                        inline>
+                    </b-datepicker>
+                    <b-datepicker
+                        v-if="mobile"
+                        v-model="post.date"
                         required
-                        validation-message="This field is required.">
-                    </b-datetimepicker>
+                        validation-message="This field is required."
+                        placeholder="Type or select a date..."
+                        icon="calendar-today"
+                        locale="en-US"
+                        editable>
+                    </b-datepicker>
+                </b-field>
+
+                <b-field label="Appointment Time">
+                    <b-timepicker 
+                        v-model="post.time"
+                        placeholder="Click to select..."
+                        icon="clock"
+                        required
+                        validation-message="This field is required."
+                        :increment-minutes="minutesGranularity"
+                        :icon-right="post.time ? 'close-circle' : ''"
+                        icon-right-clickable
+                        @icon-right-click="clearAptTime"
+                        trap-focus
+                        editable>
+                    </b-timepicker>
                 </b-field>
     
                 <b-field label="Pickup Address">

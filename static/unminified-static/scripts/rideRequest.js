@@ -3,11 +3,11 @@ const rideRequest = {
         return {
             post: {
                 name: '',
-                dob: new Date(),
+                dob: '',
                 phone: '',
                 email: '',
                 medicaid: '',
-                datetime: new Date(),
+                datetime: '',
                 pickup: '',
                 dropoff: '',
                 notes: '',

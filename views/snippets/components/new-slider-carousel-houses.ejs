@@ -1,0 +1,138 @@
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<h2 class="carousel-title">Golden Gate Manor Houses</h2>
+<div id="houses-carousel" class="carousel-component">
+    <button class="carousel-button left" @mouseleave="autoScroll(true)" @mouseenter="autoScroll(false)"
+        @click="slideLeft" v-if="!imageModalOpen"><span class="left-arrow"></span></button>
+    <button class="carousel-button right" @mouseleave="autoScroll(true)" @mouseenter="autoScroll(false)"
+        @click="slideRight" v-if="!imageModalOpen"><span class="right-arrow"></span></button>
+    <div class="carousel-container" @mouseleave="autoScroll(true)" @mouseenter="autoScroll(false)"
+        :class=" { transition: sliding }" :style="carouselStyling" data-carousel-container>
+        <div v-for="house in houses" :key="house.id" :class=houseCardClass(house)>
+            <div v-if="gHorizon(house)" class="image-container">
+                <div :class="house.id" class="image top-left"></div>
+                <div :class="house.id" class="image top-right"></div>
+                <div :class="house.id" class="image bottom-left"></div>
+                <div :class="house.id" class="image bottom-right"></div>
+            </div>
+            <div class="house-card-information">
+                <h3 class="house-card-title">{{ house.name }}</h2>
+                    <span class="house-card-address">{{ house.address }}</span>
+                    <span class="house-card-additional" v-if="house.additional">{{ house.additional }}</span>
+            </div>
+            <div class="house-card-control">
+                <a :href="house.mapsURL" rel="noreferrer nofollow" class="house-card-btn">view map</a>
+                <button @click="viewMore(house)" :data-view-more="house.id">view more</button>
+            </div>
+        </div>
+    </div>
+    <!-- <span class="loader"></span> -->
+    <div class="image-modal" v-if="imageModalOpen" :data-current-house="currentModal">
+        <teleport to="body">
+            <div class="backdrop" @click="closeModal"></div>
+        </teleport>
+        <button @click="closeModal" class="image-modal-close-button">X</button>
+        <span class="current-page" v-if="imageModalOpen">{{ currentImagePage }}/{{ totalImagePages }}</span>
+        <button class="image-modal-button left" @click="previousImage"><span class="left-arrow"></span></button>
+        <div class="house-images" data-house-images>
+            <span class="image-loader" v-if="loadingImages"></span>
+        </div>
+        <button class="image-modal-button right" @click="nextImage"><span class="right-arrow"></span></button>
+    </div>
+</div>
+
+<style>
+    /* <span class="image-loader"></span> */
+
+    .image-loader {
+        width: 48px;
+        height: 48px;
+        display: inline-block;
+        position: relative;
+        transform: rotate(45deg);
+    }
+
+    .image-loader::before {
+        content: '';
+        box-sizing: border-box;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: -24px;
+        animation: animloader 4s ease infinite;
+    }
+
+    .image-loader::after {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        background: rgba(var(--primary-color), 0.85);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        animation: animloader2 2s ease infinite;
+    }
+
+    @keyframes animloader {
+        0% {
+            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+        }
+
+        12% {
+            box-shadow: 0 24px rgba(var(--primary-color)), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+        }
+
+        25% {
+            box-shadow: 0 24px rgba(var(--primary-color)), 24px 24px rgba(var(--primary-color)), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+        }
+
+        37% {
+            box-shadow: 0 24px rgba(var(--primary-color)), 24px 24px rgba(var(--primary-color)), 24px 48px rgba(var(--primary-color)), 0px 48px rgba(255, 255, 255, 0);
+        }
+
+        50% {
+            box-shadow: 0 24px rgba(var(--primary-color)), 24px 24px rgba(var(--primary-color)), 24px 48px rgba(var(--primary-color)), 0px 48px rgba(var(--primary-color));
+        }
+
+        62% {
+            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(var(--primary-color)), 24px 48px rgba(var(--primary-color)), 0px 48px rgba(var(--primary-color));
+        }
+
+        75% {
+            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(var(--primary-color)), 0px 48px rgba(var(--primary-color));
+        }
+
+        87% {
+            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(var(--primary-color));
+        }
+
+        100% {
+            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+        }
+    }
+
+    @keyframes animloader2 {
+        0% {
+            transform: translate(0, 0) rotateX(0) rotateY(0);
+        }
+
+        25% {
+            transform: translate(100%, 0) rotateX(0) rotateY(180deg);
+        }
+
+        50% {
+            transform: translate(100%, 100%) rotateX(-180deg) rotateY(180deg);
+        }
+
+        75% {
+            transform: translate(0, 100%) rotateX(-180deg) rotateY(360deg);
+        }
+
+        100% {
+            transform: translate(0, 0) rotateX(0) rotateY(360deg);
+        }
+    }
+</style>
+<script src="/scripts/assistedLivingCarousel.js"></script>

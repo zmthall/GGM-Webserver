@@ -1,16 +1,16 @@
 <link rel="stylesheet" href="/stylesheets/style.css">
 <script src="/scripts/script.js" defer></script>
-<script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="27311"></script>
+<!-- <script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="27311"></script> -->
 <!-- <script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="35475"></script> Goldie Bot -->
 
-<% if (page.page_type === 'home-page') { %>
+<% if (page.page_type==='home-page' ) { %>
     <link rel="stylesheet" href="/stylesheets/index.css">
-<% } else if(page.page_type ==='page') { %>
-    <link rel="stylesheet" href="/stylesheets/page.css">
-<% } else if(page.page_type ==='policy-page') { %>
-    <link rel="stylesheet" href="/stylesheets/policy-page.css">
-<% } else if(page.page_type ==='contact-page') { %>
-    <link rel="stylesheet" href="/stylesheets/contact-page.css">
-<% } %>
+    <% } else if(page.page_type==='page' ) { %>
+        <link rel="stylesheet" href="/stylesheets/page.css">
+        <% } else if(page.page_type==='policy-page' ) { %>
+            <link rel="stylesheet" href="/stylesheets/policy-page.css">
+            <% } else if(page.page_type==='contact-page' ) { %>
+                <link rel="stylesheet" href="/stylesheets/contact-page.css">
+                <% } %>
 
-<%- include('./additions/google-tag') %>
+                    <%- include('./additions/google-tag') %>

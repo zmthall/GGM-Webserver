@@ -1,4 +1,4 @@
-const { createApp } = Vue;
+const { createApp } = Vue3;
 
 const assistedLivingCarousel = {
   data() {

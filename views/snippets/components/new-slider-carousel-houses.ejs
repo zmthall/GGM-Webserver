@@ -32,11 +32,13 @@
         </teleport>
         <button @click="closeModal" class="image-modal-close-button">X</button>
         <span class="current-page" v-if="imageModalOpen">{{ currentImagePage }}/{{ totalImagePages }}</span>
-        <button class="image-modal-button left" @click="previousImage"><span class="left-arrow"></span></button>
+        <button class="image-modal-button left" @click="previousImage" v-if="!loadingImages"><span
+                class="left-arrow"></span></button>
         <div class="house-images" data-house-images>
             <span class="image-loader" v-if="loadingImages"></span>
         </div>
-        <button class="image-modal-button right" @click="nextImage"><span class="right-arrow"></span></button>
+        <button class="image-modal-button right" @click="nextImage" v-if="!loadingImages"><span
+                class="right-arrow"></span></button>
     </div>
 </div>
 

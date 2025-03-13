@@ -589,6 +589,8 @@ h2.carousel-title {
       (100vw / var(--slide-items-shown)) - (3rem / var(--slide-items-shown)) -
         (var(--slide-items-shown) * 2rem) / var(--slide-items-shown)
     );
+
+    box-shadow: none;
   }
 
   #houses-carousel.carousel-component {

@@ -1,741 +1,1032 @@
 /* Universal Page Styling */
 
 :root {
-    /* Assisted Living Page Variables */
-    --slide-item-x: 0;
-    --slide-items-shown: 3;
-    --slide-item-margin: 1rem;
-    --slide-view-area-height: 0;
+  /* Assisted Living Page Variables */
+  --slide-item-x: 0;
+  --slide-items-shown: 0;
+  --slide-view-area-height: 0;
 }
 
 /* Assisted Living Page Styling */
 
 /* ---- Top Page Section Styling ---- */
 .assisted-living-top-page-section {
-    padding: 1rem 1rem 4rem 1rem;
+  padding: 1rem 1rem 4rem 1rem;
 }
 
 .assisted-living-top-page {
-    display: flex;
-    gap: 6rem;
-    justify-content: center;
+  display: flex;
+  gap: 6rem;
+  justify-content: center;
 }
 
 .assisted-living-page-container.left-side {
-    width: 600px;
+  width: 600px;
 }
 
 .assisted-living-page-container.left-side h2 {
-    margin-bottom: 1rem;
-    text-align: center
+  margin-bottom: 1rem;
+  text-align: center;
 }
 .assisted-living-page-container.left-side p:first-of-type {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .assisted-living-page-container.right-side {
-    display: flex;
-    align-items: center;
-    width: 600px;
-    justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  width: 600px;
+  justify-content: flex-end;
 }
 
 .assisted-living-page-container.right-side img {
-    border-radius: 1rem;
-    width: 86%;
-    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  width: 86%;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* ---- Amenities Section Styling ---- */
 .assisted-living-page-amenities {
-    padding: 4rem 0 0 0;
-    color: white;
+  padding: 4rem 0 0 0;
+  color: white;
 }
 
 ul.assisted-living-amenities-card {
-    list-style: none;
-    color: black;
+  list-style: none;
+  color: black;
 }
 
 p.amenities-content-description {
-    color: white;
+  color: white;
 }
 
 h2.assisted-living-amenities-title {
-    width: 100%;
+  width: 100%;
 }
 
 .amenity-cards-wrapper {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .assisted-living-page-amenities-wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 4rem 3rem;
-    background: #365DBA;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 4rem 3rem;
+  background: #365dba;
 }
 
 .amenity-cards-wrapper {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .assisted-living-amenities-card {
-    background: #E1E1E1;
-    text-align: center;
-    padding: 1rem;
-    width: 33%;
-    border-radius: 1rem;
-    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.4);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  background: #e1e1e1;
+  text-align: center;
+  padding: 1rem;
+  width: 33%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .amenity-card-item:not(:last-of-type) {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .margin-top-s {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 /* ---- Bottom Page Section Styling ---- */
 
 section.assisted-living-bottom-page-section {
-    padding: 0rem 1rem 4rem 1rem;
+  padding: 0rem 1rem 4rem 1rem;
 }
 
 .free-consultation-cta {
-    display: flex;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 .free-consultation-cta-left,
 .free-consultation-cta-right {
-    width: 50%;
+  width: 50%;
 }
 
 .free-consultation-cta-left img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .free-consultation-cta-right {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 h2.free-consultation-title,
 h2.see-for-yourself-title {
-    color: rgb(var(--primary-color));
-    margin-bottom: 1rem;
+  color: rgb(var(--primary-color));
+  margin-bottom: 1rem;
 }
 
 a.cta-button.assisted-living-page {
-    width: 200px;
-    margin-top: 2rem;
+  width: 200px;
+  margin-top: 2rem;
 }
 
 .see-for-yourself-cta {
-    margin-top: 4rem;
-    border: 1px solid rgba(var(--primary-color));
-    border-radius: 1rem;
-    width: 100%;
-    padding: 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin-top: 4rem;
+  border: 1px solid rgba(var(--primary-color));
+  border-radius: 1rem;
+  width: 100%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .see-for-yourself-cta > .cta-button.assisted-living-page {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
-
 .see-for-yourself-card-wrapper {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .see-for-yourself-card {
-    width: 300px;
-    padding: 2rem;
-    border: 1px solid;
-    border-radius: 0.5rem;
-    margin: 2rem;
-    box-shadow: inset 0 1px 10px 2px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  width: 300px;
+  padding: 2rem;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  margin: 2rem;
+  box-shadow: inset 0 1px 10px 2px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .see-for-yourself-card > h3 {
-    text-align: center;
-    margin-bottom: 0.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
-/* ---- Slider Styling ----- */
+/* ---- Carousel Styling ----- */
 
-section.houses-slide-carousel-section {
-    padding-bottom: 4rem;
+#houses-carousel .house-card.ggmi {
+  background: url("/images/carousel-images/golden-gate-manor-i-house-outside_600.jpg")
+    center/cover;
 }
 
-.slider-carousel-title {
-    text-align: center;
-    margin-bottom: 1rem;
+#houses-carousel .house-card.gview {
+  background: url("/images/carousel-images/golden-view-house-outside_600.jpg")
+    center/cover;
 }
 
-.houses-slide-carousel-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    width: 95%;
+#houses-carousel .house-card.gvalley {
+  background: url("/images/carousel-images/golden-valley-house-outside_600.jpg")
+    center/cover;
 }
 
-.slide-carousel-view-area {
-    width: 100%;
-    height: var(--slide-view-area-height);
-    position: relative;
-    overflow: hidden;
+#houses-carousel .house-card.ggmii {
+  background: url("/images/carousel-images/golden-gate-manor-ii-house-outside_600.jpg")
+    center/cover;
 }
 
-.btn-logo-wrapper {
-    display: flex;
-    align-items: center;
-    height: calc(13.3vw - 52.8px);
-    font-size: calc(2.7vw - 11.2px);
+#houses-carousel .house-card.ghorizon .image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
-.slider-btn {
-    padding: 0 calc(0.7vw - 3.2px);
+#houses-carousel .house-card.ghorizon .image {
+  width: 100%;
+  height: 100%;
 }
 
-.carousel-slides {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    transform: translateX(calc(-1*(var(--slide-item-x) + 2rem)));
+#houses-carousel .house-card.ghorizon .image.top-left {
+  background: url("/images/carousel-images/side-horizon_600.jpg") center/cover;
+}
+#houses-carousel .house-card.ghorizon .image.top-right {
+  background: url("/images/carousel-images/backyard-seating-horizon_600.jpg")
+    center/cover;
+}
+#houses-carousel .house-card.ghorizon .image.bottom-left {
+  background: url("/images/carousel-images/front-horizon-edited_600.jpg")
+    center/cover;
+}
+#houses-carousel .house-card.ghorizon .image.bottom-right {
+  background: url("/images/carousel-images/Backyard-horizon_600.jpg")
+    center/cover;
 }
 
-.carousel-slide-wrapper {
-    width: var(--slide-item-x);
-    height: var(--slide-item-x);
-    margin: var(--slide-item-margin);
+#houses-carousel.carousel-component {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  margin: 1rem 4rem 2rem 4rem;
 }
 
-.carousel-slide-item {
-    width: var(--slide-item-x);
-    height: var(--slide-item-x);
-    background: white;
-    transition: transform 0.5s ease-in-out;
+#houses-carousel div.carousel-container {
+  height: 500px;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  transform: translateY(-50%);
+  /* z-index: -1; */
+}
+
+h2.carousel-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(var(--primary-color));
+}
+
+#houses-carousel .house-card {
+  width: calc(
+    (100vw / var(--slide-items-shown)) - (9rem / var(--slide-items-shown)) -
+      (var(--slide-items-shown) * 2rem) / var(--slide-items-shown)
+  );
+  height: 80%;
+  margin: 2rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+#houses-carousel span.left-arrow {
+  width: 0;
+  height: 0;
+  border-top: 0.5rem solid transparent;
+  border-right: 1rem solid;
+  border-right-color: inherit;
+  border-bottom: 0.5rem solid transparent;
+  margin: 2.5rem 0.75rem;
+  display: block;
+}
+
+#houses-carousel span.right-arrow {
+  width: 0;
+  height: 0;
+  border-top: 0.5rem solid transparent;
+  border-left: 1rem solid;
+  border-left-color: inherit;
+  border-bottom: 0.5rem solid transparent;
+  margin: 2.5rem 0.75rem;
+  display: block;
+}
+
+#houses-carousel .image-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+#houses-carousel button.carousel-button:hover {
+  border-right-color: rgb(var(--primary-color));
+  border-left-color: rgb(var(--primary-color));
+  background: rgb(var(--secondary-color));
+}
+
+#houses-carousel button.carousel-button {
+  background: rgb(var(--primary-color));
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: none;
+  border-right-color: white;
+  border-left-color: white;
+}
+
+#houses-carousel button.carousel-button {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 1;
+}
+
+#houses-carousel button.carousel-button.right {
+  right: 0;
+}
+
+#houses-carousel .house-card-information {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.7);
+  max-height: 52px;
+  transition: max-height 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+#houses-carousel .house-card:hover .house-card-information {
+  max-height: 200px;
+}
+
+#houses-carousel .house-card-control {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#houses-carousel .house-card-control a,
+#houses-carousel .house-card-control button {
+  width: 50%;
+  font-family: var(--font-family-main);
+  font-size: 1rem;
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: 1.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#houses-carousel .house-card-control a:hover,
+#houses-carousel .house-card-control button:hover {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+#houses-carousel .image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 3;
+  backdrop-filter: blur(5px);
+}
+
+#houses-carousel .house-images {
+  width: 80%;
+  height: 100%;
+  background: transparent;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+#houses-carousel img {
+  width: 100%;
+  background: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+}
+
+#houses-carousel img.current-image {
+  opacity: 1;
+}
+
+#houses-carousel button.image-modal-button {
+  position: fixed;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 1;
+  cursor: pointer;
+  background: rgb(var(--primary-color));
+  border: none;
+  border-left-color: white;
+  border-right-color: white;
+  border-radius: 0.5rem;
+}
+
+#houses-carousel button.image-modal-button:hover {
+  border-left-color: rgb(var(--primary-color));
+  border-right-color: rgb(var(--primary-color));
+  background: rgb(var(--secondary-color));
+}
+
+#houses-carousel button.image-modal-button.left {
+  left: 5%;
+}
+
+#houses-carousel button.image-modal-button.right {
+  right: 5%;
+}
+
+#houses-carousel .image-modal-close-button {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 1.5rem;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+#houses-carousel .image-modal-close-button:hover {
+  background: white;
+  color: black;
+}
+
+#houses-carousel .image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#houses-carousel span.current-page {
+  position: fixed;
+  top: 0;
+  left: 10%;
+  z-index: 1;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  color: white;
+  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
 }
 
 /* Assisted Living Page Width Styling */
-
-@media(min-width: 1600px) {
-    .houses-slide-carousel-wrapper {
-        width: 1504.04px;
-    }
-    
-    .btn-logo-wrapper {
-        height: 10rem;
-        font-size: 2rem;
-    }
-    
-    .slider-btn {
-        padding: 0 0.5rem;
-    }
-
-    .carousel-slides {
-        transform: translateX(calc(-1*(var(--slide-item-x) + 1rem)));
-    }
+@media (min-width: 1600px) {
+  .btn-logo-wrapper {
+    height: 10rem;
+    font-size: 2rem;
+  }
 }
 
-@media(min-width: 1017px) {
-    .carousel-slide-wrapper:nth-of-type(3) {
-        width: calc(var(--slide-item-x) * 1.2);
-        height: calc(var(--slide-item-x) * 1.2);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .carousel-slide-item[data-slide-index='2'] {
-        transform: scale(1.2);
-    }
+@media (max-width: 1200px) {
+  .assisted-living-top-page {
+    justify-content: space-between;
+    gap: 1rem;
+  }
 }
 
-@media(max-width: 1200px) {
-    .assisted-living-top-page {
-        justify-content: space-between;
-        gap: 1rem;
-    }
+@media (max-width: 1000px) {
+  .btn-logo-wrapper {
+    height: 5rem;
+    font-size: 1rem;
+  }
+
+  #houses-carousel span.current-page {
+    left: 0;
+    color: black;
+    background: rgba(255, 255, 255, 0.5);
+  }
 }
 
-@media(max-width: 1000px ) {
-    .btn-logo-wrapper {
-        height: 5rem;
-        font-size: 1rem;
-    }
+@media (max-width: 850px) {
+  .assisted-living-top-page {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
 
-    .slider-btn {
-        padding: 0 0.25rem;
-    }
+  .assisted-living-page-container.left-side {
+    width: 100%;
+    text-align: center;
+  }
+
+  .assisted-living-page-container.right-side {
+    width: 80%;
+    justify-content: center;
+  }
+
+  .free-consultation-cta {
+    flex-direction: column;
+  }
+
+  .free-consultation-cta-left,
+  .free-consultation-cta-right {
+    width: 100%;
+  }
+
+  .free-consultation-cta-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-@media(max-width: 850px) {
-    .assisted-living-top-page {
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-    }
+@media (max-width: 800px) {
+  .see-for-yourself-card-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .assisted-living-page-container.left-side {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .assisted-living-page-container.right-side {
-        width: 80%;
-        justify-content: center;
-    }
-
-    .free-consultation-cta {
-        flex-direction: column;
-    }
-
-    .free-consultation-cta-left,
-    .free-consultation-cta-right {
-        width: 100%;
-    }
-
-    .free-consultation-cta-right {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .see-for-yourself-card {
+    width: 80%;
+  }
 }
 
-@media(max-width: 800px) {
-    .see-for-yourself-card-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
+@media (max-width: 768px) {
+  .amenity-cards-wrapper {
+    flex-direction: column;
+    width: 80%;
+    gap: 2rem;
+  }
+  .assisted-living-amenities-card {
+    width: 100%;
+  }
 
-    .see-for-yourself-card {
-        width: 80%;
-    }
+  .assisted-living-page-amenities-wrapper {
+    align-items: center;
+  }
+
+  #houses-carousel .house-card {
+    width: calc(
+      (100vw / var(--slide-items-shown)) - (3rem / var(--slide-items-shown)) -
+        (var(--slide-items-shown) * 2rem) / var(--slide-items-shown)
+    );
+
+    box-shadow: none;
+  }
+
+  #houses-carousel.carousel-component {
+    margin: 0 1rem;
+  }
+
+  #houses-carousel .house-images {
+    width: 100%;
+    height: 100%;
+    background: white;
+  }
+
+  #houses-carousel .image-modal-close-button {
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.2);
+  }
+
+  #houses-carousel .image-modal-close-button:hover {
+    background: black;
+    color: white;
+  }
+
+  #houses-carousel button.image-modal-button {
+    background: rgba(var(--primary-color), 0.2);
+    border-left-color: rgba(255, 255, 255, 0.2);
+    border-right-color: rgba(255, 255, 255, 0.2);
+    padding: 2rem 0.25rem;
+  }
+
+  #houses-carousel span.current-page {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
 }
 
-@media(max-width: 768px) {
-    .amenity-cards-wrapper {
-        flex-direction: column;
-        width: 80%;
-        gap: 2rem;
-    }
-    .assisted-living-amenities-card {
-        width: 100%;
-    }
+@media (max-width: 650px) {
+  .assisted-living-page-container.right-side {
+    width: 100%;
+  }
 
-    .assisted-living-page-amenities-wrapper {
-        align-items: center;
-    }
+  .assisted-living-page-container.right-side img {
+    width: 100%;
+  }
 }
 
-@media(max-width: 650px) {
-    .assisted-living-page-container.right-side {
-        width: 100%;
-    }
+@media (max-width: 618px) {
+  .houses-slide-carousel-wrapper {
+    position: relative;
+  }
 
-    .assisted-living-page-container.right-side img {
-        width: 100%;
-    }
+  .slider-btn {
+    position: absolute;
+  }
+
+  button.slider-btn.right-btn {
+    right: 0;
+  }
+
+  button.slider-btn.left-btn {
+    left: 0;
+  }
 }
 
-@media(max-width: 618px) {
-    .houses-slide-carousel-wrapper {
-        position: relative;
-    }
+@media (max-width: 500px) {
+  .see-for-yourself-card {
+    width: 100%;
+  }
 
-    .slider-btn {
-        position: absolute;
-    }
+  .see-for-yourself-cta {
+    padding: 1rem;
+  }
 
-    button.slider-btn.right-btn {
-        right: 0;
-    }
+  .amenity-cards-wrapper {
+    width: 100%;
+  }
 
-    button.slider-btn.left-btn {
-        left: 0;
-    }
-}
+  .assisted-living-page-amenities-wrapper {
+    padding: 4rem 1rem;
+  }
 
-@media(max-width: 500px) {
-    .see-for-yourself-card {
-        width: 100%;
-    }
+  #houses-carousel .house-card-control {
+    bottom: 0rem;
+    left: 0rem;
+    width: 100%;
+  }
 
-    .see-for-yourself-cta {
-        padding: 1rem;
-    }
+  #houses-carousel .house-card-control a,
+  #houses-carousel .house-card-control button {
+    padding: 0.5rem 1rem;
+  }
 
-    .amenity-cards-wrapper {
-        width: 100%;
-    }
-
-    .assisted-living-page-amenities-wrapper {
-        padding: 4rem 1rem;
-    }
+  #houses-carousel button.image-modal-button {
+    padding: 0;
+  }
 }
 
 /* Non-Medical Transportation Page Styling */
 
 .non-medical-transportation-top-page img {
-    width: 100%;
-    margin-top: 1rem;
-    height: 450px;
-    object-fit: cover;
-    border-radius: .5rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, .2);
+  width: 100%;
+  margin-top: 1rem;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 .section-button-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .section-button-container .cta-button {
-    margin: 1rem 2rem;
+  margin: 1rem 2rem;
 }
 
 section.non-medical-transportation-bottom-page {
-    display: flex;
-    align-items: center
+  display: flex;
+  align-items: center;
 }
 
 .non-medical-transportation-bottom-page img {
-    width: 497px;
-    margin-left: 1rem;
+  width: 497px;
+  margin-left: 1rem;
 }
 
 /* Non-Medical Transportation Page Width Styling */
 
-@media(max-width: 500px) {    
-    .section-button-container {
-        flex-direction: column;
-        align-items: center;
-    }
+@media (max-width: 500px) {
+  .section-button-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .section-button-container .cta-button {
-        width: 100%
-    }
+  .section-button-container .cta-button {
+    width: 100%;
+  }
 }
 
-@media(max-width: 800px) {
-    .non-medical-transportation-top-page img {
-        height: auto;
-        object-fit: contain;
-    }
+@media (max-width: 800px) {
+  .non-medical-transportation-top-page img {
+    height: auto;
+    object-fit: contain;
+  }
 }
 
-@media(max-width: 875px) {
-    .non-medical-transportation-bottom-page img {
-        display: none;
-    }
+@media (max-width: 875px) {
+  .non-medical-transportation-bottom-page img {
+    display: none;
+  }
 }
 
 /* NEMT Page Styling */
 
 /* --- Top Page Section Styling --- */
 
-    section.non-emergency-transportation-top-page {
-        margin-top: 1rem;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
+section.non-emergency-transportation-top-page {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
-    .non-emergency-transportation-top-page-left {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.non-emergency-transportation-top-page-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .non-emergency-transportation-top-page-right {
-        width: 50%;
-    }
+.non-emergency-transportation-top-page-right {
+  width: 50%;
+}
 
-    table.nemt-table, th.nemt-header, td.nemt-table-data {
-        border: 2px solid;
-        border-collapse: collapse;
-        background: #c6d5e4;
-    }
+table.nemt-table,
+th.nemt-header,
+td.nemt-table-data {
+  border: 2px solid;
+  border-collapse: collapse;
+  background: #c6d5e4;
+}
 
-    table.nemt-table {
-        width: 100%;
-        margin: 1rem 0;
-    }
+table.nemt-table {
+  width: 100%;
+  margin: 1rem 0;
+}
 
-    th.nemt-header, td.nemt-table-data {
-        padding: 0.75rem;
-    }
+th.nemt-header,
+td.nemt-table-data {
+  padding: 0.75rem;
+}
 
-    th.nemt-header {
-        font-weight: 900;
-    }
+th.nemt-header {
+  font-weight: 900;
+}
 
-    td.nemt-table-data {
-        font-weight: 500;
-        text-align: center;
-    }
+td.nemt-table-data {
+  font-weight: 500;
+  text-align: center;
+}
 
-    a.form-button {
-        width: 80%;
-        display: flex;
-        font-size: 0.65rem;
-        text-align: center;
-        border-radius: 0.5rem;
-        background: rgb(var(--secondary-color));
-    }
+a.form-button {
+  width: 80%;
+  display: flex;
+  font-size: 0.65rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  background: rgb(var(--secondary-color));
+}
 
-    a.form-button:hover {
-        color: white;
-        background: rgb(var(--primary-color));
-    }
+a.form-button:hover {
+  color: white;
+  background: rgb(var(--primary-color));
+}
 
-    .nemt-form-button-text-wrapper {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding: 1rem;
-    }
+.nemt-form-button-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+}
 
-    .nemt-text-span:first-of-type {
-        margin-bottom: 0.5rem;
-    }
+.nemt-text-span:first-of-type {
+  margin-bottom: 0.5rem;
+}
 
-    a.form-button:hover .nemt-form-button-text-wrapper {
-        position: relative;
-    }
+a.form-button:hover .nemt-form-button-text-wrapper {
+  position: relative;
+}
 
-    a.form-button:hover .nemt-form-button-text-wrapper::before {
-        content: "Opens in New Tab";
-        color: black;
-        position: absolute;
-        width: fit-content;
-        height: fit-content;
-        background: white;
-        padding: 0.25rem;
-        top: 0;
-        left: 50%;
-        translate: -50% -125%;
-        border: 1px solid;
-    }
-    
-    .nemt-transportation-eligible-places-wrapper {
-        display: flex;
-    }
-    
-    .nemt-transportation-content {
-        width: 50%;
-    }
-    
-    .GGMT-service-area-map-container {
-        width: 100%;
-        position: relative;
-    }
-    
-    .GGMT-service-area-map-container img {
-        width: 100%;
-    }
-    
-    .GGMT-service-area-map-container:hover::before  {
-        content: url('/images/circle-plus.svg');
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.3);
-        cursor: pointer;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+a.form-button:hover .nemt-form-button-text-wrapper::before {
+  content: "Opens in New Tab";
+  color: black;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  background: white;
+  padding: 0.25rem;
+  top: 0;
+  left: 50%;
+  translate: -50% -125%;
+  border: 1px solid;
+}
 
-    .eligibility-map.pop-up-modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 10;
-        background: rgb(var(--background-color));
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.nemt-transportation-eligible-places-wrapper {
+  display: flex;
+}
 
-    .eligibility-map-wrapper.pop-up-modal {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-        height: 100%;
-    }
+.nemt-transportation-content {
+  width: 50%;
+}
 
-    .eligibility-map-wrapper.pop-up-modal img {
-        height: 100%;
-        width: auto;
-    }
-    
-    ul.section-list-container.nemt-page {
-        list-style-image: url(/images/check-mark.svg);
-    }
-    
-    ul.section-list-container.nemt-page li p {
-        text-align: left;
-    }
+.GGMT-service-area-map-container {
+  width: 100%;
+  position: relative;
+}
 
-    section.nemt-transportation-driver-safety {
-        display: flex;
-        margin-top: 2rem;
-        padding: 2.5rem;
-        background: rgb(var(--dark-grey));
-        gap: 1rem;
-        align-items: center;
-        border-radius: 1rem;
-        box-shadow: 0 4px 30px 6px rgba(0, 0, 0, .2);
-    }
-    
-    .nemt-transportation-driver-safety-text-content {
-        width: 35%;
-    }
-    
-    .nemt-transportation-driver-safety-image-content {
-        width: 65%;
-    }
-    
-    .nemt-transportation-driver-safety-image-content img {
-        width: 100%;
-    }
-    
-    .driver-safety-images-camera img {
-        width: 50%;
-    }
-    
-    .driver-safety-images-camera {
-        display: flex;
-    }
-    
-    .section-title.driver-safety {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        color: white;
-    }
-    
-    .section-title.driver-safety span.top-header-text {
-        color: rgb(var(--secondary-color))
-    }
+.GGMT-service-area-map-container img {
+  width: 100%;
+}
 
-    @media(max-width: 768px) {
-        .eligibility-map-wrapper.pop-up-modal img {
-            width: 100%;
-            height: auto;
-        }
+.GGMT-service-area-map-container:hover::before {
+  content: url("/images/circle-plus.svg");
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-        .GGMT-service-area-map-container:hover::before  {
-            display: none;
-        }
-    }
-    
-    @media(max-width: 1200px) {
-        section.nemt-transportation-driver-safety {
-            border-radius: 0;
-            box-shadow: none;
-        }
-    }
-    
-    @media(max-width: 850px) {
-        section.nemt-transportation-driver-safety {
-            flex-direction: column;
-        }
-    
-        .nemt-transportation-driver-safety-text-content,
-        .nemt-transportation-driver-safety-image-content {
-            width: 100%;
-        }
-    }
-    
-    @media(max-width: 800px) {
-        .nemt-transportation-eligible-places-wrapper {
-            flex-direction: column;
-        }
-        
-        .nemt-transportation-content {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-    
-        .GGMT-service-area-map-container {
-            width: 75%;
-        }
-    }
-    
-    @media(max-width: 500px) {
-        .GGMT-service-area-map-container {
-            width: 100%;
-        }
+.eligibility-map.pop-up-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: rgb(var(--background-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-        section.nemt-transportation-driver-safety {
-            padding: 1rem;
-        }
-    }
-    
+.eligibility-map-wrapper.pop-up-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  height: 100%;
+}
+
+.eligibility-map-wrapper.pop-up-modal img {
+  height: 100%;
+  width: auto;
+}
+
+ul.section-list-container.nemt-page {
+  list-style-image: url(/images/check-mark.svg);
+}
+
+ul.section-list-container.nemt-page li p {
+  text-align: left;
+}
+
+section.nemt-transportation-driver-safety {
+  display: flex;
+  margin-top: 2rem;
+  padding: 2.5rem;
+  background: rgb(var(--dark-grey));
+  gap: 1rem;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nemt-transportation-driver-safety-text-content {
+  width: 35%;
+}
+
+.nemt-transportation-driver-safety-image-content {
+  width: 65%;
+}
+
+.nemt-transportation-driver-safety-image-content img {
+  width: 100%;
+}
+
+.driver-safety-images-camera img {
+  width: 50%;
+}
+
+.driver-safety-images-camera {
+  display: flex;
+}
+
+.section-title.driver-safety {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
+.section-title.driver-safety span.top-header-text {
+  color: rgb(var(--secondary-color));
+}
+
+@media (max-width: 768px) {
+  .eligibility-map-wrapper.pop-up-modal img {
+    width: 100%;
+    height: auto;
+  }
+
+  .GGMT-service-area-map-container:hover::before {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  section.nemt-transportation-driver-safety {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 850px) {
+  section.nemt-transportation-driver-safety {
+    flex-direction: column;
+  }
+
+  .nemt-transportation-driver-safety-text-content,
+  .nemt-transportation-driver-safety-image-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .nemt-transportation-eligible-places-wrapper {
+    flex-direction: column;
+  }
+
+  .nemt-transportation-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .GGMT-service-area-map-container {
+    width: 75%;
+  }
+}
+
+@media (max-width: 500px) {
+  .GGMT-service-area-map-container {
+    width: 100%;
+  }
+
+  section.nemt-transportation-driver-safety {
+    padding: 1rem;
+  }
+}
+
 /* --- Information Section Styling --- */
 
-    a.nemt-page-anchor {
-        text-decoration: none;
-    }
+a.nemt-page-anchor {
+  text-decoration: none;
+}
 
-    span.nemt-span-text {
-        text-decoration: underline;
-    }
+span.nemt-span-text {
+  text-decoration: underline;
+}
 
 /* --- Information Section Styling */
 
 .nemt-information-wrapper:not(.footer-content-wrapper) {
-    background: rgb(var(--primary-color));
-    display: flex;
-    padding: 3rem;
+  background: rgb(var(--primary-color));
+  display: flex;
+  padding: 3rem;
 }
 
 .nemt-information-wrapper:first-of-type:not(.footer-content-wrapper) {
-    border-bottom: 1px solid rgb(var(--light-grey));
-    
+  border-bottom: 1px solid rgb(var(--light-grey));
 }
 .nemt-information-wrapper:last-of-type:not(.footer-content-wrapper) {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 section.nemt-transportation-information:not(.footer-content-wrapper) {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 p.dark-background,
@@ -744,7 +1035,7 @@ h1.dark-background,
 h2.dark-background,
 h3.dark-background,
 h4.dark-background {
-    color: white;
+  color: white;
 }
 
 p.darker-background,
@@ -753,83 +1044,85 @@ h1.darker-background,
 h2.darker-background,
 h3.darker-background,
 h4.darker-background {
-    color: black;
+  color: black;
 }
 
 h3.content-title {
-    text-align: center;
-    margin-bottom: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .nemt-transportation-information-schedule-ride ul.section-list-container {
-    list-style-image: url('/images/check-mark-white.svg')
+  list-style-image: url("/images/check-mark-white.svg");
 }
 
 li.information-list-item a {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 a.link-spacing {
-    margin-top: 1rem;
-    display: block;
-    width: max-content;
+  margin-top: 1rem;
+  display: block;
+  width: max-content;
 }
 
 a.link-spacing.dark-background {
-    margin-left: 2rem;
+  margin-left: 2rem;
 }
 
 .nemt-transportation-information-faq ul.section-list-container {
-    list-style: none;
-    margin-left: 0;
-    display: flex;
-    flex-direction: column;
+  list-style: none;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 button.faqs-dropdown-button {
-    height: 40px;
-    width: 100%;
-    border: 0;
-    background: 0;
-    border-bottom: 1px solid rgb(var(--light-grey));
-    text-align: left;
-    padding: 0.5rem;
-    cursor: pointer;
-    border-radius: 0.25rem;
-    line-height: 0.9;
-    display: flex;
-    align-items: center;
+  height: 40px;
+  width: 100%;
+  border: 0;
+  background: 0;
+  border-bottom: 1px solid rgb(var(--light-grey));
+  text-align: left;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  line-height: 0.9;
+  display: flex;
+  align-items: center;
 }
 
-button.faqs-dropdown-button:hover {color: rgb(var(--primary-color));font-weight: 900;}
+button.faqs-dropdown-button:hover {
+  color: rgb(var(--primary-color));
+  font-weight: 900;
+}
 
 li.faqs-list-item:not(:last-of-type) {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 li.faqs-list-item {
-    background: rgb(var(--background-color));
-    border-radius: 0.25rem;
+  background: rgb(var(--background-color));
+  border-radius: 0.25rem;
 }
 
 .faqs-list-content {
-    max-height: 0px;
-    overflow: hidden;
+  max-height: 0px;
+  overflow: hidden;
 }
 
 .faqs-list-content.expanded {
-    padding: 1rem;
-    max-height: unset;
+  padding: 1rem;
+  max-height: unset;
 }
 
 .faqs-text:not(:last-of-type) {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .appointment-schedule-information-container *:not(h3) {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
-
 
 /* .during-business-hours-wrapper {
     width:  fit-content;
@@ -840,87 +1133,87 @@ li.faqs-list-item {
 } */
 
 .appointment-schedule-information-container {
-    width: fit-content;
-    padding: 1rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+  width: fit-content;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .appointment-schedule-information-container::before {
-    content: "";
-    height: calc(100% - 2rem);
-    width: 0.25rem;
-    position: absolute;
-    background: white;
-    display: block;
-    left: 0;
-    top: 1rem;
-    border-radius: 100vw;
+  content: "";
+  height: calc(100% - 2rem);
+  width: 0.25rem;
+  position: absolute;
+  background: white;
+  display: block;
+  left: 0;
+  top: 1rem;
+  border-radius: 100vw;
 }
 
 h3.section-sub-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    text-decoration: underline;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
 }
 
 /* NEMT Page Width Styling */
 
-@media(max-width: 768px) {
-    section.non-emergency-transportation-top-page {
-        flex-direction: column-reverse;
-    }
-    
-    .non-emergency-transportation-top-page-left {
-        width: 100%;
-    }
+@media (max-width: 768px) {
+  section.non-emergency-transportation-top-page {
+    flex-direction: column-reverse;
+  }
 
-    .non-emergency-transportation-top-page-right {
-        width: 100%;
-    }
+  .non-emergency-transportation-top-page-left {
+    width: 100%;
+  }
 
-    a.form-button {
-        width: 100%;
-        font-size: calc(1.2vw + 6.784px);
-    }
+  .non-emergency-transportation-top-page-right {
+    width: 100%;
+  }
 
-    .nemt-information-wrapper:not(.footer-content-wrapper) {
-        flex-direction: column;
-    }
+  a.form-button {
+    width: 100%;
+    font-size: calc(1.2vw + 6.784px);
+  }
 
-    .nemt-transportation-information-faq {
-        margin-bottom: 1.5rem;
-    }
+  .nemt-information-wrapper:not(.footer-content-wrapper) {
+    flex-direction: column;
+  }
+
+  .nemt-transportation-information-faq {
+    margin-bottom: 1.5rem;
+  }
 }
 
-@media(max-width: 600px) {
-    .nemt-information-wrapper:not(.footer-content-wrapper) {
-        padding: 1rem;
-    }
+@media (max-width: 600px) {
+  .nemt-information-wrapper:not(.footer-content-wrapper) {
+    padding: 1rem;
+  }
 
-    a.link-spacing.dark-background {
-        margin: 1rem auto;
-    }
+  a.link-spacing.dark-background {
+    margin: 1rem auto;
+  }
 }
 
-@media(max-width: 520px) {
-    .nemt-information-wrapper:not(.footer-content-wrapper) h2.section-title {
-        font-size: calc(4.6vw + 4.08px);
-    }
+@media (max-width: 520px) {
+  .nemt-information-wrapper:not(.footer-content-wrapper) h2.section-title {
+    font-size: calc(4.6vw + 4.08px);
+  }
 
-    .nemt-information-wrapper:last-of-type:not(.footer-content-wrapper) {
-        padding-top: 1rem;
-    }
+  .nemt-information-wrapper:last-of-type:not(.footer-content-wrapper) {
+    padding-top: 1rem;
+  }
 
-    h3.section-sub-title {
-        font-size: calc(4.8vw - 0.96px);
-    }
+  h3.section-sub-title {
+    font-size: calc(4.8vw - 0.96px);
+  }
 
-    .appointment-schedule-information-container *:not(h3) {
-        font-size: calc(4.4vw - 2.08px)
-    }
+  .appointment-schedule-information-container *:not(h3) {
+    font-size: calc(4.4vw - 2.08px);
+  }
 }
 
 /* About Us Page Styling */
@@ -928,1187 +1221,1191 @@ h3.section-sub-title {
 /* ---- Intro Section Styling ---- */
 .about-us-introduction-section img,
 .accessible-vans-introduction-section img {
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 10px 2px rgba(0,0,0,.2);
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 .accessible-vans-introduction-section img {
-    object-position: 25% bottom;
+  object-position: 25% bottom;
 }
 
 main a.cta-button {
-    margin: 1.5rem auto 0 auto;
+  margin: 1.5rem auto 0 auto;
 }
 
 /* ---- Assisted living Section Styling ---- */
 
 p.section-list-description {
-    margin-top: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 p.section-list-description.section-text {
-    text-align: left;
+  text-align: left;
 }
 
 ul.section-list-container {
-    margin-left: 2rem;
+  margin-left: 2rem;
 }
 
-li.section-list-item:nth-of-type(-n + 4) {margin-bottom: 0.3rem;}
+li.section-list-item:nth-of-type(-n + 4) {
+  margin-bottom: 0.3rem;
+}
 
 .house-image-container {
-    max-width: 1400px;
-    margin: 2rem auto 0.5rem auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  max-width: 1400px;
+  margin: 2rem auto 0.5rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .house-image-container img {
-    width: calc(280px - 1.5rem);
-    margin: 0 0.75rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, .2);
+  width: calc(280px - 1.5rem);
+  margin: 0 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* ---- Transportation and Medical Supply Section Styling */
 
 .section-content-image-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.about-us-medical-supply-section  h2.section-title {
-    text-align: right;
+.about-us-medical-supply-section h2.section-title {
+  text-align: right;
 }
 
 img.section-image {
-    width: 40%;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, .2);
+  width: 40%;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 img.section-image.image-left {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 img.section-image.image-right {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 /* About Us Page Width Styling */
 
-@media(max-width: 1400px) {
-    .house-image-container img {
-        margin-top: 1.5rem;
-        justify-self: center;
-    }
+@media (max-width: 1400px) {
+  .house-image-container img {
+    margin-top: 1.5rem;
+    justify-self: center;
+  }
 
-    .house-image-container {
-        margin: 1rem auto 0.5rem auto;
-    }
+  .house-image-container {
+    margin: 1rem auto 0.5rem auto;
+  }
 }
 
-@media(max-width: 1100px) {
-    .section-content-image-container {
-        flex-direction: column;
-        justify-content: center;
-    }
+@media (max-width: 1100px) {
+  .section-content-image-container {
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    .section-content-image-container.text-first {
-        flex-direction: column-reverse;
-    }
+  .section-content-image-container.text-first {
+    flex-direction: column-reverse;
+  }
 
-    img.section-image.image-left,
-    img.section-image.image-right {
-        width: 100%;   
-        height: 450px;
-        margin-bottom: 1rem;
-        object-fit: cover;
-        object-position: middle;
-    }
+  img.section-image.image-left,
+  img.section-image.image-right {
+    width: 100%;
+    height: 450px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    object-position: middle;
+  }
 
-    img.section-image.image-left {
-        margin-right: 0;
-    }
+  img.section-image.image-left {
+    margin-right: 0;
+  }
 
-    img.section-image.image-right {
-        margin-left: 0;
-    }
+  img.section-image.image-right {
+    margin-left: 0;
+  }
 
-    .about-us-medical-supply-section  h2.section-title {
-        text-align: center;
-    }
+  .about-us-medical-supply-section h2.section-title {
+    text-align: center;
+  }
 }
 
-@media(max-width: 600px) {
-    .house-image-container {
-        display: none;
-    }
+@media (max-width: 600px) {
+  .house-image-container {
+    display: none;
+  }
 
-    img.section-image.image-left,
-    img.section-image.image-right {
-        width: 100%;   
-        height: 300px;
-        margin-bottom: 1rem;
-        object-fit: cover;
-        object-position: middle;
-    }
+  img.section-image.image-left,
+  img.section-image.image-right {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    object-position: middle;
+  }
 
-    .about-us-introduction-section img {
-        object-position: right;
-    }
+  .about-us-introduction-section img {
+    object-position: right;
+  }
 }
 
 /* Accessible Transportation Page Styling */
 
 .cta-button-container {
-    display:  flex;
-    justify-content: center;
-    gap: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
 }
 
 a.cta-button.accessible-vans-page {
-    margin: 2rem 0 0 0;
+  margin: 2rem 0 0 0;
 }
 
-@media(max-width: 450px) {
-    .cta-button-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
+@media (max-width: 450px) {
+  .cta-button-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 
-    a.cta-button.accessible-vans-page {
-        margin: 0.5rem;
-        width: 100%;
-    }
+  a.cta-button.accessible-vans-page {
+    margin: 0.5rem;
+    width: 100%;
+  }
 }
 
 /* Location Page Styling */
 
 .location-iframe-container {
-    max-width: 1200px;
-    margin: 1rem auto 4rem auto;
-    padding: 0 1rem;
+  max-width: 1200px;
+  margin: 1rem auto 4rem auto;
+  padding: 0 1rem;
 }
 
 iframe.location-iframe {
-    width: 100%;
-    height: 600px;
+  width: 100%;
+  height: 600px;
 }
 
 .business-information-section {
-    max-width: 1200px;
-    margin: 0 auto 4rem auto;
+  max-width: 1200px;
+  margin: 0 auto 4rem auto;
 }
 
 span.bolded-text {
-    font-weight: 900;
+  font-weight: 900;
 }
 
-p.content-text, p.content-text a {
-    font-size: 1.1rem;
+p.content-text,
+p.content-text a {
+  font-size: 1.1rem;
 }
 
 .business-information-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 300px;
 }
 
 .content-information-container {
-    padding: 0.25rem;
-    margin-left: 2rem;
-    position: relative;
+  padding: 0.25rem;
+  margin-left: 2rem;
+  position: relative;
 }
 
 .content-information-container::before {
-    content: "";
-    width: 4px;
-    height: 100%;
-    position: absolute;
-    background: rgb(var(--primary-color));
-    left: -1rem;
+  content: "";
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  background: rgb(var(--primary-color));
+  left: -1rem;
 }
 
 h2.content-title {
-    margin-bottom: 1rem;
-    color: rgb(var(--primary-color));
+  margin-bottom: 1rem;
+  color: rgb(var(--primary-color));
 }
 
 p.content-text.reservation-days-hours {
-    border-bottom: 1px solid;
-    display: flex;
-    justify-content: space-between;
+  border-bottom: 1px solid;
+  display: flex;
+  justify-content: space-between;
 }
 
 a.facebook-page-link {
-    font-size: 2.5rem;
-    display: flex;
-    width: fit-content;
+  font-size: 2.5rem;
+  display: flex;
+  width: fit-content;
 }
 
 .social-logo-wrapper {
-    display: flex;
+  display: flex;
 }
 
 /* Community Outreach Page Styling */
 
-
 /* ---- Top Page Section Styling */
 .image-carousel-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    width: 100%;
-    margin-bottom: 1rem;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
 }
 
 .image-slide-wrapper img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: right 40%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: right 40%;
 }
 
 .image-slide-wrapper {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .image-slider-container {
-    width: 80%;
-    height: 100%;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    position: relative;
-    background: black;
+  width: 80%;
+  height: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  background: black;
 }
 
 button.image-carousel-btn {
-    height: max-content;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    border-radius: 0;
+  height: max-content;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  border-radius: 0;
 }
 
 button.image-carousel-btn[data-carousel-btn="left"] {
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-    border-right: 0;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-right: 0;
 }
 
 button.image-carousel-btn[data-carousel-btn="right"] {
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-    border-left: 0;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-left: 0;
 }
 
 .image-slide-indicator-wrapper {
-    width: 100%;
-    height: 40px;
-    position: absolute;
-    bottom: 2rem;
-    display: flex;
-    justify-content: space-evenly;
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .image-slide-indicator {
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.4);
-    border: 2px solid;
-    cursor: pointer;
-    border-radius: 100%;
-    transition: background 0.2s ease-in-out;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  border: 2px solid;
+  cursor: pointer;
+  border-radius: 100%;
+  transition: background 0.2s ease-in-out;
 }
 
 .image-slide-indicator:hover {
-    background: white;
+  background: white;
 }
 
 .image-slide-indicator.selected {
-    background: white;
-    position: relative;
+  background: white;
+  position: relative;
 }
 
 .image-slide-indicator.selected::before {
-    content: '';
-    position: absolute;
-    width: 75%;
-    height: 75%;
-    border-radius: 100%;
-    background: rgba(var(--primary-color));
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  border-radius: 100%;
+  background: rgba(var(--primary-color));
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 }
 
 button.image-carousel-btn:hover {
-    background: rgb(var(--secondary-color));
-    color: rgb(var(--primary-color));
+  background: rgb(var(--secondary-color));
+  color: rgb(var(--primary-color));
 }
 
 button.community-images-more-btn {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    font-weight: 900;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    background: rgba(255, 255, 255, 0.1);
-    padding: 0.5rem;
-    color: white;
-    cursor: pointer;
-    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-weight: 900;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 button.community-images-more-btn:hover {
-    background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 /* ---- Events Section Styling ---- */
 
 .event-container {
-    display: flex;
-    margin: 1.5rem 0;
-    width: 80%;
-    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, .1);
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    overflow: hidden;
+  display: flex;
+  margin: 1.5rem 0;
+  width: 80%;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  overflow: hidden;
 }
 
 .event-description.section-text {
-    text-align: left;
+  text-align: left;
 }
 
 .event-left-info {
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgb(var(--primary-color));
-    font-size: 1.25rem;
-    font-weight: 900;
-    color: white;
-    padding: 1rem;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(var(--primary-color));
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: white;
+  padding: 1rem;
 }
 
 .event-to-wrapper {
-    margin: 0.25rem 0;
+  margin: 0.25rem 0;
 }
 
 .event-date {
-    text-align: center;
+  text-align: center;
 }
 
 .event-right-info {
-    width: 85%;
-    display: flex;
-    padding: 1rem;
-    background: rgb(210, 210, 255);
+  width: 85%;
+  display: flex;
+  padding: 1rem;
+  background: rgb(210, 210, 255);
 }
 
 .event-more-info-button-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem;
 }
 
 a.event-more-info-btn.cta-button {
-    margin: 0;
+  margin: 0;
 }
 
 .event-top-information {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 p.event-description.section-text {
-    margin: 0;
+  margin: 0;
 }
 
 p.event-description {
-    --max-lines: 2;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    line-clamp: var(--max-lines);
-    -webkit-line-clamp: var(--max-lines);
-    position: relative;
+  --max-lines: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-clamp: var(--max-lines);
+  -webkit-line-clamp: var(--max-lines);
+  position: relative;
 }
 
 p.event-description::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(to bottom, transparent, rgb(210, 210, 255));
-    width: 100%;
-    height: 1.5rem;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgb(210, 210, 255));
+  width: 100%;
+  height: 1.5rem;
+  pointer-events: none;
 }
 
 p.event-description.expanded {
-    display: block;
+  display: block;
 }
 
 p.event-description.expanded::before {
-    display: none;
+  display: none;
 }
 
 button.event-button.expand-button {
-    border: 0;
-    background: none;
-    cursor: pointer;
-    font-weight: 900;
-    padding: 0.5rem 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-weight: 900;
+  padding: 0.5rem 0;
 }
 
 button.event-button.expand-button:hover {
-    color: rgb(var(--dark-grey));
+  color: rgb(var(--dark-grey));
 }
 
 /* Community Outreach Width Styling */
 
-@media(max-width: 850px) {
-    .event-right-info {
-        flex-direction: column;
-        width: 80%;
-    }
-    .event-more-info-button-wrapper {
-        margin: 0;
-        margin-top: 1rem;
-        justify-content: flex-start;
-    }
+@media (max-width: 850px) {
+  .event-right-info {
+    flex-direction: column;
+    width: 80%;
+  }
+  .event-more-info-button-wrapper {
+    margin: 0;
+    margin-top: 1rem;
+    justify-content: flex-start;
+  }
 
-    .event-container {
-        width: 100%;
-    }
+  .event-container {
+    width: 100%;
+  }
 }
 
-@media(max-width: 768px) {
-    .image-slider-container {
-        position: absolute;
-        width: 100vw;
-    }
+@media (max-width: 768px) {
+  .image-slider-container {
+    position: absolute;
+    width: 100vw;
+  }
 
-    .image-slider-container img {
-        object-position: 70%;
-    }
+  .image-slider-container img {
+    object-position: 70%;
+  }
 
-    .image-slide-indicator-wrapper {
-        display: none;
-    }  
+  .image-slide-indicator-wrapper {
+    display: none;
+  }
 
-    button.image-carousel-btn {
-        position: absolute;
-        border: 1px solid rgba(255, 255, 255, .25);
-        background: rgba(255, 255, 255, .1);
-        box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, .2);
-        border-radius: 0.5rem;
-        z-index: 1;
-    }
+  button.image-carousel-btn {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    z-index: 1;
+  }
 
-    button.image-carousel-btn[data-carousel-btn=left] {
-        border-right: 1px solid rgba(255, 255, 255, .25);
-        left: 0;
-    }
+  button.image-carousel-btn[data-carousel-btn="left"] {
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    left: 0;
+  }
 
-    button.image-carousel-btn[data-carousel-btn=right] {
-        border-left: 1px solid rgba(255, 255, 255, .25);
-        right: 0;
-    }
+  button.image-carousel-btn[data-carousel-btn="right"] {
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    right: 0;
+  }
 }
 
-@media(max-width: 450px) {
-    .event-container {
-        flex-direction: column;
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 1rem;
-    }
+@media (max-width: 450px) {
+  .event-container {
+    flex-direction: column;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+  }
 
-    .event-left-info,
-    .event-right-info {
-        width: 100%;
-    }
+  .event-left-info,
+  .event-right-info {
+    width: 100%;
+  }
 }
 
 /* Employment Page Styling */
 
 section.employment-page-hero-shot {
-    background: url('/images/employment-hero_1600.webp') center/cover;
-    height: 600px;
-    width: 100%;
-    position: relative;
-    padding: 2rem;
+  background: url("/images/employment-hero_1600.webp") center/cover;
+  height: 600px;
+  width: 100%;
+  position: relative;
+  padding: 2rem;
 }
 
 .employement-hero-shot-wrapper {
-    width: fit-content;
-    padding: 2rem;
-    color: white;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 1rem;
+  width: fit-content;
+  padding: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 1rem;
 }
 
 ul.employment-page-what-we-want {
-    margin-left: 2rem;
-    list-style-image: url(/images/check-mark-white.svg);
+  margin-left: 2rem;
+  list-style-image: url(/images/check-mark-white.svg);
 }
 
 section.employment-page-section.about-us.page-content {
-    margin: 5rem auto;
+  margin: 5rem auto;
 }
 
 span.employement-page-title-span {
-    display: block;
+  display: block;
 }
 
 span.employment-page-top-title {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 2rem
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
 section.employment-page-section {
-    margin: 2rem auto;
+  margin: 2rem auto;
 }
 
 section.employment-page-section.cta {
-    background: rgb(var(--primary-color));
-    color:  white;
-    padding: 4rem 6rem;
-    text-align: center;
+  background: rgb(var(--primary-color));
+  color: white;
+  padding: 4rem 6rem;
+  text-align: center;
 }
 
 h2.employment-page.section-title.cta {
-    color: white;
-    text-align: center;
-    margin-bottom: 1rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 p.employement-page.section-text.cta {
-    color: white;
+  color: white;
 }
 
 section.employment-page-opportunities {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    margin: 2rem 0;
-    margin-bottom: 4rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 2rem 0;
+  margin-bottom: 4rem;
 }
 
 .employment-page-opportunity-cards-container {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .employment-page-opportunity-card {
-    width: 330px;
-    height: 350px;
-    margin: 0.75rem;
-    position: relative;
+  width: 330px;
+  height: 350px;
+  margin: 0.75rem;
+  position: relative;
 }
 
-.employment-page-opportunity-card:hover > .opportunity-card-back{
-    transform: rotateY(360deg);
+.employment-page-opportunity-card:hover > .opportunity-card-back {
+  transform: rotateY(360deg);
 }
 
 .employment-page-opportunity-card:hover > .opportunity-card-front {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 h2.employment-page.section-title.opportunities {
-    margin: 1rem 0;
-    text-align: center;
+  margin: 1rem 0;
+  text-align: center;
 }
 
 .opportunity-card-back {
-    background-color: white;
-    transform: rotateY(180deg);
+  background-color: white;
+  transform: rotateY(180deg);
 }
 
 .opportunity-card-front,
 .opportunity-card-back {
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transition: transform 1s ease-in-out;
-    border: 1px solid;
-    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 1rem;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: transform 1s ease-in-out;
+  border: 1px solid;
+  box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .opportunity-card-front {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #fff;
-    z-index: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  z-index: 0;
 }
 
 .opportunity-card-front::before {
-    content: "";
-    width: 100%;
-    height: 30%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    background: linear-gradient(to bottom, white, transparent);
-    z-index: 0;
+  content: "";
+  width: 100%;
+  height: 30%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: linear-gradient(to bottom, white, transparent);
+  z-index: 0;
 }
 
 .opportunity-card-front::after {
-    content: "";
-    width: 100%;
-    height: 30%;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    background: linear-gradient(to top, white, transparent);
-    z-index: 0;
+  content: "";
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background: linear-gradient(to top, white, transparent);
+  z-index: 0;
 }
 .opportunity-card-front.transportion {
-    background: url('/images/golden-gate-manor-cars-building-employment.jpg') center/cover;
+  background: url("/images/golden-gate-manor-cars-building-employment.jpg")
+    center/cover;
 }
 
 .opportunity-card-front.assisted-living {
-    background: url('/images/assisted-living-employment.jpg') left/cover;
+  background: url("/images/assisted-living-employment.jpg") left/cover;
 }
 
 .opportunity-card-front.medical-supply-store {
-    background: url('/images/medical-supply-employment.jpg') left/cover;
+  background: url("/images/medical-supply-employment.jpg") left/cover;
 }
 
 .opportunity-card-front.gas-station {
-    background: url('/images/gas-staton-employment.jpg') center/cover;
+  background: url("/images/gas-staton-employment.jpg") center/cover;
 }
 
 .opportunity-card-front .opportunity-card-title,
 .opportunity-card-front .opportunity-card-description {
-    z-index: 1;
+  z-index: 1;
 }
 
 p.job-opportunity-list-text {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 900;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
 }
 
 ul.job-opportunity-list-items {
-    list-style: none;
+  list-style: none;
 }
 
 ul.job-opportunity-list-items {
-    height: 100%;
+  height: 100%;
 }
 
 h3.opportunity-card-title {
-    text-decoration: underline;
-    margin-bottom: 0.25rem;
+  text-decoration: underline;
+  margin-bottom: 0.25rem;
 }
 
 article.job-description-modal {
-    position: fixed;
-    z-index: 11;
-    width: 650px;
-    height: 80%;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    background: rgb(var(--background-color));
-    padding: 3rem;
-    border-radius: 1rem;
+  position: fixed;
+  z-index: 11;
+  width: 650px;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  background: rgb(var(--background-color));
+  padding: 3rem;
+  border-radius: 1rem;
 }
 
 .job-description-modal-container {
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
 }
 
 section.employment-page-opportunities.open-modal::before {
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 10;
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
 }
 
 h2.job-description-title {
-    border-bottom: 1px solid;
-    padding-bottom: 0.25rem;
-    margin-bottom: 0.5rem;
-    color: rgba(var(--primary-color));
+  border-bottom: 1px solid;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+  color: rgba(var(--primary-color));
 }
 
 .job-description-content {
-    margin: 0.5rem 0;
+  margin: 0.5rem 0;
 }
 
 h3.job-description-subtitle {
-    font-size: 1.15rem;
-    font-weight: 800;
-    margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
 }
 
 ul.job-description-list-items {
-    margin-left: 1.5rem;
+  margin-left: 1.5rem;
 }
 
 a.primary-button.job-description-apply-button {
-    padding: 0.5rem 2rem;
-    align-self: center;
-    margin-top: 1rem;
+  padding: 0.5rem 2rem;
+  align-self: center;
+  margin-top: 1rem;
 }
 
 .department-positions:last-of-type {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .department-positions:only-of-type {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .department-positions {
-    margin-left: 1.5rem;
-    position: relative;
+  margin-left: 1.5rem;
+  position: relative;
 }
 
 .department-positions::before {
-    content: "";
-    position: absolute;
-    border-radius: 1rem;
-    top: 50%;
-    left: -1rem;
-    width: 0.25rem;
-    height: 100%;
-    background: rgb(var(--primary-color));
-    translate: 0 -50%;
+  content: "";
+  position: absolute;
+  border-radius: 1rem;
+  top: 50%;
+  left: -1rem;
+  width: 0.25rem;
+  height: 100%;
+  background: rgb(var(--primary-color));
+  translate: 0 -50%;
 }
 
 .opportunity-card-back {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
 }
 
 .opportunity-card-back::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 30%;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 30%;
 }
 
 .opportunity-card-back.transportation::before {
-    background: url('/images/golden-gate-manor-cars-building-employment.jpg') center / cover;
+  background: url("/images/golden-gate-manor-cars-building-employment.jpg")
+    center / cover;
 }
 
 .opportunity-card-back.assisted-living::before {
-    background: url('/images/assisted-living-employment.jpg') left / cover;
+  background: url("/images/assisted-living-employment.jpg") left / cover;
 }
 
 .opportunity-card-back.medical-supply-store::before {
-    background: url('/images/medical-supply-employment.jpg') left / cover;
+  background: url("/images/medical-supply-employment.jpg") left / cover;
 }
 
 .opportunity-card-back.gas-station::before {
-    background: url('/images/gas-staton-employment.jpg') center / cover;
+  background: url("/images/gas-staton-employment.jpg") center / cover;
 }
 
 h2.job-opportunity-list-title {
-    z-index: 1;
-    font-size: 1.4rem;
-    font-weight: 900;
-    align-self: center;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-    text-align: center;
+  z-index: 1;
+  font-size: 1.4rem;
+  font-weight: 900;
+  align-self: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  text-align: center;
 }
 
 .cta-button.employment-page {
-    z-index: 1;
+  z-index: 1;
 }
 
 .opportunity-card-back.transportation > a.cta-button.employment-page {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 span.list-item.divider {
-    display: inline-block;
-    width: 1rem;
-    margin: 0 0.25rem;
-    height: 1px;
-    background: black;
+  display: inline-block;
+  width: 1rem;
+  margin: 0 0.25rem;
+  height: 1px;
+  background: black;
 }
 
 li.job-opportunity-list-item {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 button.list-item.modal-button {
-    border: 0;
-    background: 0;
-    font-family: var(--font-family-main);
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    color: rgba(var(--primary-color));
+  border: 0;
+  background: 0;
+  font-family: var(--font-family-main);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: rgba(var(--primary-color));
 }
 
 button.list-item.modal-button:hover {
-    color: rgba(var(--link-hover-color));
-    text-decoration: underline;
+  color: rgba(var(--link-hover-color));
+  text-decoration: underline;
 }
 
-@media(max-width: 650px) {
-    article.job-description-modal {
-        width: 100%;
-        height: 100svh;
-        border-radius: 0;
-        padding: 3rem 1rem;
-    } 
+@media (max-width: 650px) {
+  article.job-description-modal {
+    width: 100%;
+    height: 100svh;
+    border-radius: 0;
+    padding: 3rem 1rem;
+  }
 }
 
-@media(max-width: 600px) {
-    section.employment-page-section.cta {
-        padding: 3rem 1rem;
-    }
+@media (max-width: 600px) {
+  section.employment-page-section.cta {
+    padding: 3rem 1rem;
+  }
 }
 
-@media(max-width: 500px) {
-    section.employment-page-hero-shot {
-        padding: 0;
-    }
+@media (max-width: 500px) {
+  section.employment-page-hero-shot {
+    padding: 0;
+  }
 
-    .employement-hero-shot-wrapper {
-        border-radius: 0;
-        height: 100%;
-    }
+  .employement-hero-shot-wrapper {
+    border-radius: 0;
+    height: 100%;
+  }
 
-    h1.employment-page-title {
-        font-size: calc(5vw + 4px);
-    }
+  h1.employment-page-title {
+    font-size: calc(5vw + 4px);
+  }
 }
 
 /* Application Page Styling */
 
 .application-form-container {
-    width: 80%;
-    margin-top: 1rem;
-    background: white;
-    padding: 3rem;
-    border-radius: 0.25rem;
-    border: 2px solid rgba(225, 225, 225, 0.6);
-    box-shadow: 0 4px 5px 1px rgba(150, 150, 150, 0.1);
+  width: 80%;
+  margin-top: 1rem;
+  background: white;
+  padding: 3rem;
+  border-radius: 0.25rem;
+  border: 2px solid rgba(225, 225, 225, 0.6);
+  box-shadow: 0 4px 5px 1px rgba(150, 150, 150, 0.1);
 }
 
 .application-form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 section.application-page-section.page-content {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 section.application-page-section.page-content section:not(:last-of-type) {
-    padding-bottom: 2rem;
-    border-bottom: 1px solid rgba(150, 150, 150, 0.1);
-    margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(150, 150, 150, 0.1);
+  margin-bottom: 2rem;
 }
 
 h2.form-title {
-    color: rgb(var(--primary-color));
-    margin-bottom: 1rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid rgba(150, 150, 150, 0.3)
+  color: rgb(var(--primary-color));
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(150, 150, 150, 0.3);
 }
 
 .form-component-container:not(:last-of-type) {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .form-component-container {
-    z-index: 0;
+  z-index: 0;
 }
 
 .form-component-container.selector {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 3.5rem 0 0 0;
-    z-index: 1;
-    color: black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 3.5rem 0 0 0;
+  z-index: 1;
+  color: black;
 }
 
 .form-component-container.one-input .input-half-container,
 .form-component-container.selector .select-wrapper {
-    width: calc(50% - 0.5rem);
+  width: calc(50% - 0.5rem);
 }
 
 .form-component-container.selector select {
-    padding: 0.5rem;
-    border: 2px solid rgba(150, 150, 150, 0.5);
-    border-radius: 0.25rem;
-    /* translate: 0 1.25rem; */
-    background: white;
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100%;
+  padding: 0.5rem;
+  border: 2px solid rgba(150, 150, 150, 0.5);
+  border-radius: 0.25rem;
+  /* translate: 0 1.25rem; */
+  background: white;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
 }
 
 .select-wrapper,
 .form-component-container.selector label {
-    position: absolute;
-    top: 0;
+  position: absolute;
+  top: 0;
 }
 
 .select-wrapper {
-    translate: 0 1.25rem;
+  translate: 0 1.25rem;
 }
 
 .select-wrapper::before {
-    content: "";
-    position: absolute;
-    top: 45%;
-    right: 1.5rem;
-    width: 0;
-    height: 0;
-    border-left: 0.5rem solid transparent;
-    border-right: 0.5rem solid transparent;
-    border-top: 0.5rem solid rgba(150, 150, 150, 0.5);
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 1.5rem;
+  width: 0;
+  height: 0;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-top: 0.5rem solid rgba(150, 150, 150, 0.5);
 }
 
 .select-wrapper.hide-icon::before {
-    display: none;
+  display: none;
 }
 
 .form-component-container.selector label {
-    translate: 0 -0.4em;
+  translate: 0 -0.4em;
 }
 
 .form-component-container.selector select:hover {
-    border: 2px solid #4e8cff;
+  border: 2px solid #4e8cff;
 }
 
 .form-component-container.selector select:focus {
-    outline: none;
-    border: 2px solid #4e8cff;
+  outline: none;
+  border: 2px solid #4e8cff;
 }
 
 .input-half-container textarea {
-    width: calc(50% - 0.5rem);
-    border: 2px solid rgba(150, 150, 150, 0.5);
-    border-radius: 0.25rem;
-    padding: 0.5rem;
-    resize: none;
+  width: calc(50% - 0.5rem);
+  border: 2px solid rgba(150, 150, 150, 0.5);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  resize: none;
 }
 
 .input-half-container textarea:hover {
-    border: 2px solid #4e8cff;
+  border: 2px solid #4e8cff;
 }
 
 .input-half-container textarea:focus,
 .input-half-container textarea:focus-visible {
-    outline: none;
-    border: 2px solid #4e8cff;
+  outline: none;
+  border: 2px solid #4e8cff;
 }
 
 .form-component-container.two-input {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .input-two-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .input-two-container input,
 .form-component-container.one-input input {
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    border: 2px solid rgba(150, 150, 150, 0.5);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 2px solid rgba(150, 150, 150, 0.5);
 }
 
 .input-two-container input:hover,
 .input-two-container input:focus,
 .input-two-container input:focus-visible,
 .form-component-container.one-input input:hover,
-.form-component-container.one-input input:focus, 
+.form-component-container.one-input input:focus,
 .form-component-container.one-input input:focus-visible {
-    outline: none;
-    border: 2px solid #4e8cff; 
+  outline: none;
+  border: 2px solid #4e8cff;
 }
 
 .form-component-container.one-input .input-one-container,
 .form-component-container.one-input .input-half-container,
-.form-component-container.radio-inputs .radio-inputs-container.extra-input .input-half-container {
-    display: flex;
-    flex-direction: column;
+.form-component-container.radio-inputs
+  .radio-inputs-container.extra-input
+  .input-half-container {
+  display: flex;
+  flex-direction: column;
 }
-
-
 
 fieldset.input-radio-container,
 fieldset.date-input-container {
-    border: none;
+  border: none;
 }
 
 fieldset.date-input-container {
-    width: 100%;
+  width: 100%;
 }
 
 .form-component-container.one-input.date-field .input-half-container {
-    width: 100%;
+  width: 100%;
 }
 
 .form-component-container.one-input.date-field .input-half-container input {
-    width: calc(50% - 0.5rem);
+  width: calc(50% - 0.5rem);
 }
 
 .radio-inputs-container:not(.extra-input) {
-    display: flex;
-    gap: 1rem;
-    padding: 0.5rem 0;
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
 }
 
-.input-one-container input[type='radio'] {
-    appearance: none;
+.input-one-container input[type="radio"] {
+  appearance: none;
 }
 
 .input-one-container .radio-label {
-    padding-left: 35px;
-    position: relative;
+  padding-left: 35px;
+  position: relative;
 }
 
 .input-one-container .radio-label:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    translate: 0 -50%;
-    width: 30px;
-    height: 30px;
-    /* background: red; */
-    border-radius: 100%;
-    border: 2px solid rgba(150, 150, 150, 0.3);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  translate: 0 -50%;
+  width: 30px;
+  height: 30px;
+  /* background: red; */
+  border-radius: 100%;
+  border: 2px solid rgba(150, 150, 150, 0.3);
 }
 
 .input-one-container .radio-label:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    translate: 25% -50%;
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    background: rgba(150, 150, 150, 0.1)
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  translate: 25% -50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: rgba(150, 150, 150, 0.1);
 }
 
 .input-one-container .radio-label:hover::before,
-.input-one-container input[type='radio']:focus + .radio-label::before,
-.input-one-container input[type='radio']:focus-visible + .radio-label::before{
-    border: 2px solid #4e8cff;
+.input-one-container input[type="radio"]:focus + .radio-label::before,
+.input-one-container input[type="radio"]:focus-visible + .radio-label::before {
+  border: 2px solid #4e8cff;
 }
 
-.input-one-container input[type='radio']:checked + .radio-label::after {
-    background: rgb(var(--primary-color));
+.input-one-container input[type="radio"]:checked + .radio-label::after {
+  background: rgb(var(--primary-color));
 }
 
 .form-component-container.one-input.date-field .input-half-container {
-    width: 100%;
+  width: 100%;
 }
 
 .form-component-container.one-input.date-field .input-half-container input {
-    width: calc(50% - 0.5rem);
+  width: calc(50% - 0.5rem);
 }
 
 .form-component-container.upload-input .input-form-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .input-form-container label.choose-file-label {
-    width: calc(50% - 0.5rem);
-    /* padding: 2rem;
+  width: calc(50% - 0.5rem);
+  /* padding: 2rem;
     padding-bottom: 3rem; */
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid rgba(150, 150, 150, 0.5);
-    border-radius: 0.25rem;
-    position: relative;
-    color: rgb(var(--primary-color));
-    margin-bottom: 1rem;
-    scroll-margin-top: 2rem;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(150, 150, 150, 0.5);
+  border-radius: 0.25rem;
+  position: relative;
+  color: rgb(var(--primary-color));
+  margin-bottom: 1rem;
+  scroll-margin-top: 2rem;
 }
 
 .input-form-container label.choose-file-label:hover,
 .input-form-container label.choose-file-label:focus-visible,
 .input-form-container label.choose-file-label:focus {
-    outline: none;
-    border: 2px solid #4e8cff;
-    font-weight: 900;
+  outline: none;
+  border: 2px solid #4e8cff;
+  font-weight: 900;
 }
 
 .drop-box {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .drop-box.drag-over {
-    background: rgba(var(--secondary-color));
+  background: rgba(var(--secondary-color));
 }
 
 span.choose-file-text {
-    z-index: 1;
+  z-index: 1;
 }
 
 /* .input-form-container label.choose-file-label:before {
@@ -2119,11 +2416,11 @@ span.choose-file-text {
     color: rgb(var(--primary-color));
 } */
 
-.form-component-container.upload-input input[type=file]:focus,
-.form-component-container.upload-input input[type=file]:focus-visible {
-    outline: none;
-    border: 2px solid #4e8cff;
-    font-weight: 900;
+.form-component-container.upload-input input[type="file"]:focus,
+.form-component-container.upload-input input[type="file"]:focus-visible {
+  outline: none;
+  border: 2px solid #4e8cff;
+  font-weight: 900;
 }
 
 /* .form-component-container.upload-input input {
@@ -2135,397 +2432,399 @@ span.choose-file-text {
 
 label,
 legend {
-    line-height: 1.7;
+  line-height: 1.7;
 }
 
 .upload-description {
-    width: calc(50% - .5rem);
-    display: flex;
-    align-items: center;
-    /* border: 2px solid rgba(150, 150, 150, 0.5); */
-    border-radius: 0.25rem;
+  width: calc(50% - 0.5rem);
+  display: flex;
+  align-items: center;
+  /* border: 2px solid rgba(150, 150, 150, 0.5); */
+  border-radius: 0.25rem;
 }
 
 span.upload-name {
-    width: 65%;
-    padding: 0.5rem 0;
+  width: 65%;
+  padding: 0.5rem 0;
 }
 
 span.upload-size {
-    width: 30%;
-    padding: 0.5rem 0;
-    text-align: center;
+  width: 30%;
+  padding: 0.5rem 0;
+  text-align: center;
 }
 
 button.upload-delete-btn {
-    background: none;
-    border: none;
-    font-size: 1.25rem;
-    cursor: pointer;
-    color: rgb(var(--primary-color));
-    transition: color 0.2s ease-in-out;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: rgb(var(--primary-color));
+  transition: color 0.2s ease-in-out;
 }
 
 button.upload-delete-btn:hover {
-    color: rgb(var(--link-hover-color));
+  color: rgb(var(--link-hover-color));
 }
 
 .icon-wrapper {
-    display: flex;
-    pointer-events: none;
+  display: flex;
+  pointer-events: none;
 }
 
 .primary-button.application-page {
-    padding: 0.5rem 3rem;
-    align-self: center;
-    margin-top: 1.5rem;
+  padding: 0.5rem 3rem;
+  align-self: center;
+  margin-top: 1.5rem;
 }
 
 .submission-message {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    text-align: center;
-    text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .application-modal-container {
-    position: fixed;
-    z-index: 3;
-    top:  0;
-    left:  0;
-    width: 100svw;
-    height: 100svh;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100svw;
+  height: 100svh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 article.application-agreement-modal {
-    width: 600px;
-    height: 80%;
-    background: rgba(var(--background-color));
-    border-radius: 0.5rem;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
+  width: 600px;
+  height: 80%;
+  background: rgba(var(--background-color));
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 article.application-agreement-modal.disclaimer {
-    height: max-content;
+  height: max-content;
 }
 
 .modal-text {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 p.modal-text:not(:last-of-type) {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 h2.modal-title {
-    margin-bottom: 0.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(0, 0, 0,0.2);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 button.cta-button.application-agreement-modal.disclaimer {
-    margin-top: 1rem;
-    margin: 1rem auto 0;
+  margin-top: 1rem;
+  margin: 1rem auto 0;
 }
 
 button.cta-button.application-agreement-modal.agreement {
-    width: max-content;
-    padding: 0.5rem;
+  width: max-content;
+  padding: 0.5rem;
 }
 
 .modal-content-container {
-    overflow: auto;
-    height: 100%;
-    padding: 0.5rem;
-    box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.2);
+  overflow: auto;
+  height: 100%;
+  padding: 0.5rem;
+  box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.2);
 }
 
 ul.modal-list-items {
-    margin-left: 2rem;
+  margin-left: 2rem;
 }
 
 span.modal-subtitle {
-    font-weight: 900;
-    text-decoration: underline;
+  font-weight: 900;
+  text-decoration: underline;
 }
 
 .modal-content-wrapper:not(:last-of-type) {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .attestation-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
 button.cta-button.application-agreement-modal.attestation {
-    margin: 0;
-    padding: 0.5rem;;
-    width: max-content;
+  margin: 0;
+  padding: 0.5rem;
+  width: max-content;
 }
 
-@media(max-width: 450px) {
-    .application-form-container {
-        padding: 1rem;
-    }
+@media (max-width: 450px) {
+  .application-form-container {
+    padding: 1rem;
+  }
 }
 
-@media(max-width: 650px) {
-    .form-component-container.two-input {
-        flex-direction: column;
-    }
+@media (max-width: 650px) {
+  .form-component-container.two-input {
+    flex-direction: column;
+  }
 
-    .form-component-container.one-input .input-half-container,
-    .form-component-container.selector .select-wrapper,
-    .form-component-container.one-input.date-field .input-half-container input,
-    .input-half-container textarea,
-    .input-form-container label.choose-file-label {
-        width: 100%;
-    }
+  .form-component-container.one-input .input-half-container,
+  .form-component-container.selector .select-wrapper,
+  .form-component-container.one-input.date-field .input-half-container input,
+  .input-half-container textarea,
+  .input-form-container label.choose-file-label {
+    width: 100%;
+  }
 
-    .primary-button.application-page {
-        align-self: unset;
-    }
-    
+  .primary-button.application-page {
+    align-self: unset;
+  }
 }
 
-@media(max-width: 700px) {
-    .application-form-container {
-        width: 100%;
-    }
+@media (max-width: 700px) {
+  .application-form-container {
+    width: 100%;
+  }
 }
 
 /* Contact Us Page Styling */
 
 section.contact-us-get-in-touch {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 section.contact-us-map-iframe-section .location-iframe-container,
 section.contact-us-map-iframe-section iframe.location-iframe {
-    height: 350px;
-    margin-top: 1rem;
+  height: 350px;
+  margin-top: 1rem;
 }
 
 .contact-us-get-in-touch-wrapper {
-    width: 50%;
-    text-align: left;
+  width: 50%;
+  text-align: left;
 }
 
 .business-information {
-    margin-left: 4rem;
-    margin-top: 1rem;
+  margin-left: 4rem;
+  margin-top: 1rem;
 }
 
 .contact-us-location,
-.contact-us-phone, 
+.contact-us-phone,
 .contact-us-hours {
-    position: relative;
+  position: relative;
 }
 
 .contact-us-location,
 .contact-us-phone {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .contact-us-location a {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: max-content;
 }
 
 .business-information a {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .contact-us-location::before {
-    content: url('/images/location-fill.svg');
+  content: url("/images/location-fill.svg");
 }
 
 .contact-us-phone::before {
-    content: url('/images/phone.svg');
+  content: url("/images/phone.svg");
 }
 
 .contact-us-hours::before {
-    content: url('/images/clock.svg');
+  content: url("/images/clock.svg");
 }
 
 .contact-us-location::before,
 .contact-us-phone::before,
 .contact-us-hours::before {
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    top: 50%;
-    translate: -3rem -50%;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 50%;
+  translate: -3rem -50%;
 }
 
 div .grecaptcha-badge {
-    bottom: 50%!important;  
-    z-index: 1;  
+  bottom: 50% !important;
+  z-index: 1;
 }
 
 /* Contact us Page Width Styling */
 
-@media(max-width: 800px) {
-    section.contact-us-get-in-touch {
-        flex-direction: column;
-        align-items: center;
-    }
+@media (max-width: 800px) {
+  section.contact-us-get-in-touch {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    section.contact-us-get-in-touch p.section-text {
-        text-align: left;
-    }
+  section.contact-us-get-in-touch p.section-text {
+    text-align: left;
+  }
 
-    .contact-us-get-in-touch-wrapper {
-        width: 80%;
-    }
+  .contact-us-get-in-touch-wrapper {
+    width: 80%;
+  }
 }
 
-@media(max-width: 768px) {
-    .contact-us-get-in-touch-wrapper {
-        width: 100%;
-    }
+@media (max-width: 768px) {
+  .contact-us-get-in-touch-wrapper {
+    width: 100%;
+  }
 }
 
 /* Schedule a Ride Page Styling */
 
 form.request-ride-form {
-    width: 75%;
-    padding: 2rem;
-    margin: 2rem auto;
-    background: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
+  width: 75%;
+  padding: 2rem;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 p.trip-information-text {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 section.form-section:not(:first-of-type) {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
-@media(max-width: 1200px) {
-    form.request-ride-form {
-        width: 100%;
-    }
+@media (max-width: 1200px) {
+  form.request-ride-form {
+    width: 100%;
+  }
 }
 
 /* Thank You Page Styling */
 
 .envelope-mail-svg {
-    width: 30%;
+  width: 30%;
 }
 
 section.thank-you-main-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-p.thank-you-note {font-size: 2rem;font-weight: 900;color: rgb(var(--primary-color));}
+p.thank-you-note {
+  font-size: 2rem;
+  font-weight: 900;
+  color: rgb(var(--primary-color));
+}
 
 p.thank-you-text {
-    width: 50%;
-    text-align: center;
+  width: 50%;
+  text-align: center;
 }
 
 /* Thank You Page Width Styling */
 
-@media(max-width: 768px) {
-    .thank-you-main-section {
-        margin-top: 4rem;
-    }
+@media (max-width: 768px) {
+  .thank-you-main-section {
+    margin-top: 4rem;
+  }
 
-    p.thank-you-text {
-        width: 100%;
-    }
+  p.thank-you-text {
+    width: 100%;
+  }
 
-    .envelope-mail-svg {
-        width: 50%;
-    }
-} 
+  .envelope-mail-svg {
+    width: 50%;
+  }
+}
 
 /* Site Map Page Styling */
 
 nav.site-map-navigation {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 /* 404 Page Styling */
 
 button.previous-page-button {
-    font-family: var(--font-family-headings);
-    background: none;
-    border: none;
-    font-weight: 700;
-    cursor: pointer;
-    text-decoration: underline;
-    font-size: 1.2rem;
+  font-family: var(--font-family-headings);
+  background: none;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 1.2rem;
 }
 main.bad-page.main-content {
-    margin-top: 4rem; 
+  margin-top: 4rem;
 }
 
 .main-section {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    
+  width: 80%;
+  display: flex;
+  flex-direction: column;
 }
 
 button.previous-page-button:hover {
-    color: rgb(var(--link-hover-color))
+  color: rgb(var(--link-hover-color));
 }
 
 .bad-page-main-section-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 p.main-section-text {
-    font-size: 10rem;
-    display: flex;
-    justify-content: center;
+  font-size: 10rem;
+  display: flex;
+  justify-content: center;
 }
 
 .main-section-text svg {
-    height: 200px;
+  height: 200px;
 }
 
 /* 404 Page Width Styling */
 
-@media(max-width: 1200px) {
-    .main-section-text svg {
-        height: calc(11.4vw + 63.2px);
-    }
+@media (max-width: 1200px) {
+  .main-section-text svg {
+    height: calc(11.4vw + 63.2px);
+  }
 
-    p.main-section-text {
-        font-size: calc(07.3vw + 72.4px)
-    }
+  p.main-section-text {
+    font-size: calc(07.3vw + 72.4px);
+  }
 }
 
-@media(max-width: 768px) {
-    p.section-text {
-        text-align: center;
-    }
+@media (max-width: 768px) {
+  p.section-text {
+    text-align: center;
+  }
 
-    h2.section-title {
-        text-align: center;
-    }
+  h2.section-title {
+    text-align: center;
+  }
 }

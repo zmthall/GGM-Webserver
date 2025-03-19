@@ -1,8 +1,8 @@
-<main class="non-medical-transportation-page main-content">
+<section class="non-medical-transportation-page main-content">
     <%- include('./snippets/title-breadcrumb', { breadcrumb: config.pages.nemt.breadcrumb, helper: helper }) %>
-    <%- include('./snippets/nemt/top-page') %>
-    <%- include('./snippets/nemt/information', { company: config.company }) %>
-    <%- include('./snippets/nemt/eligible-places', { company: config.company }) %>
-    <%- include('./snippets/nemt/driver-safety') %>
-    <script src="/scripts/nemt-page.js"></script>
-</main>
+        <%- include('./snippets/nemt/top-page') %>
+            <%- include('./snippets/nemt/information', { company: config.company }) %>
+                <%- include('./snippets/nemt/eligible-places', { company: config.company }) %>
+                    <%- include('./snippets/nemt/driver-safety') %>
+                        <script src="/scripts/nemt-page.js"></script>
+</section>

@@ -1,0 +1,54 @@
+<section class="gas-station-landing main-content">
+    <div class="left-page">
+        <h1 class="landing-title">
+            <span>Golden Gate Manor Inc. Presents:</span>
+            <span>Golden Gate Gas & Goods Grand
+                Opening</span>
+        </h1>
+        <div class="countdown" id="countdown">
+            <ul>
+                <li><span id="days"></span><span class="countdown-intervals-full">days</span><span
+                        class="countdown-intervals-small">Days</span></li>
+                <li><span id="hours"></span><span class="countdown-intervals-full">Hours</span><span
+                        class="countdown-intervals-small">Hrs.</span></li>
+                <li><span id="minutes"></span><span class="countdown-intervals-full">Minutes</span><span
+                        class="countdown-intervals-small">Mins.</span></li>
+                <li><span id="seconds"></span><span class="countdown-intervals-full">Seconds</span><span
+                        class="countdown-intervals-small">Secs.</span></li>
+            </ul>
+        </div>
+        <script src="/scripts/countdown.js"></script>
+        <h2>Join us for an exciting day of celebrations!</h2>
+        <section class="count-down-timer-section">
+            <p>
+                We’re counting down the days until our grand opening! Mark your calendars and don’t miss out on this big
+                event for our company!
+                We will be doing a community can food drive, where all donations are provided to our local Care and
+                Share, so bring cans for the community and get a coupon for a free hotdog with any purchase!
+            </P>
+        </section>
+    </div>
+    <section class="event-details-section">
+        <h3>Event Details:</h3>
+        <ul>
+            <li>
+                <%- include('../svg/calendar') %> April 17th, 2025
+            </li>
+            <li>
+                <%- include('../svg/location') %> 1242 S. Prairie Ave., Pueblo Colorado, 81005
+            </li>
+            <li>
+                <%- include('../svg/clock') %> 10:00 AM to 1:00 PM
+            </li>
+        </ul>
+    </section>
+    <div class="image-container">
+        <img src="/images/landing-pages/ribbon-cutting-scissors.png"
+            alt="Ribbon cutting scissors overlay for grand-opening">
+    </div>
+    <div class="content"></div>
+    <script src="/scripts/page-confetti.js"></script>
+    <!-- <a href="/gas-and-goods" class="landing-page-link"><span>View More</span><span class="chevron-icon-down">
+            <%- include('../svg/chevron-compact-down') %>
+        </span></a> -->
+</section>

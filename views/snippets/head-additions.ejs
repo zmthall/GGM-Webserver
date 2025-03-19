@@ -11,6 +11,8 @@
             <link rel="stylesheet" href="/stylesheets/policy-page.css">
             <% } else if(page.page_type==='contact-page' ) { %>
                 <link rel="stylesheet" href="/stylesheets/contact-page.css">
-                <% } %>
+                <% } else if(page.page_type==='landing-page' ) { %>
+                    <link rel="stylesheet" href="/stylesheets/landing-page.css">
+                    <% } %>
 
-                    <%- include('./additions/google-tag') %>
+                        <%- include('./additions/google-tag') %>

@@ -1,184 +1,122 @@
 <link rel="stylesheet" href="/stylesheets/buefy.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
 
-<main class="schedule-a-ride-page main-content">
-    <%- include('./snippets/title-breadcrumb', { breadcrumb: config.pages.schedule_a_ride.breadcrumb, helper: helper }) %>
-    <div id="request" class="page-content ">
-        <form @submit="rideRequest" method="post" id="ride_form" class="request-ride-form">
+<section class="schedule-a-ride-page main-content">
+    <%- include('./snippets/title-breadcrumb', { breadcrumb: config.pages.schedule_a_ride.breadcrumb, helper: helper })
+        %>
+        <div id="request" class="page-content ">
+            <form @submit="rideRequest" method="post" id="ride_form" class="request-ride-form">
 
-            <section class="form-section passenger-info">
-                <h2>Passenger Information</h2>
-                
-                <b-field label="Name">
-                    <b-input 
-                        v-model="post.name"
-                        required
-                        validation-message="This field is required."
-                        placeholder="First and Last"
-                        icon="card-account-details"
-                        icon-right="close-circle"
-                        icon-right-clickable
-                        @icon-right-click="clearName">
-                    </b-input>
-                </b-field>
-    
-                <b-field label="Date of Birth">
-                    <b-datepicker
-                        v-model="post.dob"
-                        required
-                        validation-message="This field is required."
-                        :show-week-number="showWeekNumber"
-                        :locale="locale"
-                        placeholder="Click to select..."
-                        icon="calendar-today"
-                        :icon-right="post.dob ? 'close-circle' : ''"
-                        icon-right-clickable
-                        @icon-right-click="clearDate"
-                        trap-focus
-                        editable>
-                    </b-datepicker>
-                </b-field>
-    
-                <b-field label="Phone Number">
-                    <b-input placeholder="Phone Number"
-                        v-model="post.phone"
-                        type="tel"
-                        required
-                        validation-message="This field is required and the entry must be a proper phone number."
-                        icon="phone"
-                        icon-right="close-circle"
-                        icon-right-clickable
-                        @icon-right-click="clearPhone"
-                        pattern="^\D*(\d\D*){10,}$">
-                    </b-input>
-                </b-field>
-    
-                <b-field label="Email">
-                    <b-input placeholder="Email"
-                        v-model="post.email"
-                        required
-                        validation-message="This field is required."
-                        type="email"
-                        icon="email"
-                        icon-right="close-circle"
-                        icon-right-clickable
-                        @icon-right-click="clearEmail">
-                    </b-input>
-                </b-field>
-    
-                <b-field label="Medicaid ID">
-                    <b-input 
-                        placeholder="Medicaid ID"
-                        v-model="post.medicaid"
-                        type="text"
-                        required
-                        validation-message="This field is required."
-                        icon="medical-bag"
-                        icon-right="close-circle"
-                        icon-right-clickable
-                        @icon-right-click="clearMedicaid">
-                    </b-input>
-                </b-field>
-            </section>
-    
-            <section class="form-section trip-info">
-                <h2>Trip Information</h2>
-                <p class="section-text please-note trip-information-text"><span class="please-note">Please Note:</span> All trips are on a first come first serve basis, with this in mind, please make sure to schedule trips 24-48 hours prior to the trip date to make sure that we can accommodate the trip. We cannot promise availability for trips that were not scheduled 24-48 hours prior to the trip.</p>
-                <p class="section-text please-note trip-information-text">If your trip falls on a Monday, please schedule the ride on the Friday prior so that we can certify that we have received it in ample time to accommodate the trip. We cannot promise availability for trips on Monday that were not scheduled on the prior Friday.</p>
-                <p class="section-text please-note trip-information-text">Golden Gate Manor staff thanks you for your understanding and we appreciate your efforts to ease the scheduling process.</p>
-                <p class="section-text trip-information-text">If you have any questions or concerns regarding our ability to accommodate a trip please call us at <a href="tel:719-543-2525">(719) 543-2525</a>.</p>
-    
-                <b-field label="Appointment Date">
-                    <b-datepicker 
-                        v-if="!mobile"
-                        v-model="post.date"
-                        required
-                        validation-message="This field is required."
-                        inline>
-                    </b-datepicker>
-                    <b-datepicker
-                        v-if="mobile"
-                        v-model="post.date"
-                        required
-                        validation-message="This field is required."
-                        placeholder="Type or select a date..."
-                        icon="calendar-today"
-                        locale="en-US"
-                        editable>
-                    </b-datepicker>
-                </b-field>
+                <section class="form-section passenger-info">
+                    <h2>Passenger Information</h2>
 
-                <b-field label="Appointment Time">
-                    <b-timepicker 
-                        v-model="post.time"
-                        placeholder="Click to select..."
-                        icon="clock"
-                        required
-                        validation-message="This field is required."
-                        :increment-minutes="minutesGranularity"
-                        :icon-right="post.time ? 'close-circle' : ''"
-                        icon-right-clickable
-                        @icon-right-click="clearAptTime"
-                        trap-focus
-                        editable>
-                    </b-timepicker>
-                </b-field>
-    
-                <b-field label="Pickup Address">
-                    <b-input 
-                        placeholder="Pickup Location"
-                        v-model="post.pickup"
-                        required
-                        validation-message="This field is required."
-                        type="text"
-                        icon="map-marker-up"
-                        icon-right="close-circle"
-                        icon-right-clickable
-                        @icon-right-click="clearPickup">
-                    </b-input>
-                </b-field>
-    
-                <b-field label="Drop-Off Address">
-                    <b-input 
-                        placeholder="Drop-Off Location"
-                        v-model="post.dropoff"
-                        required
-                        validation-message="This field is required."
-                        type="text"
-                        icon="map-marker-down"
-                        icon-right="close-circle"
-                        icon-right-clickable
-                        @icon-right-click="clearDropoff">
-                    </b-input>
-                </b-field>
-    
-                <b-field label="Notes/Messages/Special Requirements">
-                    <b-input 
-                        placeholder="If you need anything specific, such as a wheelchair accessible van, request it here."
-                        v-model="post.notes"
-                        maxlength="500" 
-                        type="textarea">
-                    </b-input>
-                </b-field>
-    
-                <b-field label="Agree to Terms">
-                    <b-checkbox
-                        v-model="post.agree" 
-                        required
-                        validation-message="This field is required.">
-                        I certify the information provided is accurate to the best of my knowledge.
-                    </b-checkbox>
-                </b-field>
-            </section>
-            <section class="form-section submission">
-                <b-button 
-                    tag="input"
-                    native-type="submit" value="Submit Request">
-                </b-button>
-            </section>
-        </form>
-    </div>              
-</main>
+                    <b-field label="Name">
+                        <b-input v-model="post.name" required validation-message="This field is required."
+                            placeholder="First and Last" icon="card-account-details" icon-right="close-circle"
+                            icon-right-clickable @icon-right-click="clearName">
+                        </b-input>
+                    </b-field>
+
+                    <b-field label="Date of Birth">
+                        <b-datepicker v-model="post.dob" required validation-message="This field is required."
+                            :show-week-number="showWeekNumber" :locale="locale" placeholder="Click to select..."
+                            icon="calendar-today" :icon-right="post.dob ? 'close-circle' : ''" icon-right-clickable
+                            @icon-right-click="clearDate" trap-focus editable>
+                        </b-datepicker>
+                    </b-field>
+
+                    <b-field label="Phone Number">
+                        <b-input placeholder="Phone Number" v-model="post.phone" type="tel" required
+                            validation-message="This field is required and the entry must be a proper phone number."
+                            icon="phone" icon-right="close-circle" icon-right-clickable @icon-right-click="clearPhone"
+                            pattern="^\D*(\d\D*){10,}$">
+                        </b-input>
+                    </b-field>
+
+                    <b-field label="Email">
+                        <b-input placeholder="Email" v-model="post.email" required
+                            validation-message="This field is required." type="email" icon="email"
+                            icon-right="close-circle" icon-right-clickable @icon-right-click="clearEmail">
+                        </b-input>
+                    </b-field>
+
+                    <b-field label="Medicaid ID">
+                        <b-input placeholder="Medicaid ID" v-model="post.medicaid" type="text" required
+                            validation-message="This field is required." icon="medical-bag" icon-right="close-circle"
+                            icon-right-clickable @icon-right-click="clearMedicaid">
+                        </b-input>
+                    </b-field>
+                </section>
+
+                <section class="form-section trip-info">
+                    <h2>Trip Information</h2>
+                    <p class="section-text please-note trip-information-text"><span class="please-note">Please
+                            Note:</span> All trips are on a first come first serve basis, with this in mind, please make
+                        sure to schedule trips 24-48 hours prior to the trip date to make sure that we can accommodate
+                        the trip. We cannot promise availability for trips that were not scheduled 24-48 hours prior to
+                        the trip.</p>
+                    <p class="section-text please-note trip-information-text">If your trip falls on a Monday, please
+                        schedule the ride on the Friday prior so that we can certify that we have received it in ample
+                        time to accommodate the trip. We cannot promise availability for trips on Monday that were not
+                        scheduled on the prior Friday.</p>
+                    <p class="section-text please-note trip-information-text">Golden Gate Manor staff thanks you for
+                        your understanding and we appreciate your efforts to ease the scheduling process.</p>
+                    <p class="section-text trip-information-text">If you have any questions or concerns regarding our
+                        ability to accommodate a trip please call us at <a href="tel:719-543-2525">(719) 543-2525</a>.
+                    </p>
+
+                    <b-field label="Appointment Date">
+                        <b-datepicker v-if="!mobile" v-model="post.date" required
+                            validation-message="This field is required." inline>
+                        </b-datepicker>
+                        <b-datepicker v-if="mobile" v-model="post.date" required
+                            validation-message="This field is required." placeholder="Type or select a date..."
+                            icon="calendar-today" locale="en-US" editable>
+                        </b-datepicker>
+                    </b-field>
+
+                    <b-field label="Appointment Time">
+                        <b-timepicker v-model="post.time" placeholder="Click to select..." icon="clock" required
+                            validation-message="This field is required." :increment-minutes="minutesGranularity"
+                            :icon-right="post.time ? 'close-circle' : ''" icon-right-clickable
+                            @icon-right-click="clearAptTime" trap-focus editable>
+                        </b-timepicker>
+                    </b-field>
+
+                    <b-field label="Pickup Address">
+                        <b-input placeholder="Pickup Location" v-model="post.pickup" required
+                            validation-message="This field is required." type="text" icon="map-marker-up"
+                            icon-right="close-circle" icon-right-clickable @icon-right-click="clearPickup">
+                        </b-input>
+                    </b-field>
+
+                    <b-field label="Drop-Off Address">
+                        <b-input placeholder="Drop-Off Location" v-model="post.dropoff" required
+                            validation-message="This field is required." type="text" icon="map-marker-down"
+                            icon-right="close-circle" icon-right-clickable @icon-right-click="clearDropoff">
+                        </b-input>
+                    </b-field>
+
+                    <b-field label="Notes/Messages/Special Requirements">
+                        <b-input
+                            placeholder="If you need anything specific, such as a wheelchair accessible van, request it here."
+                            v-model="post.notes" maxlength="500" type="textarea">
+                        </b-input>
+                    </b-field>
+
+                    <b-field label="Agree to Terms">
+                        <b-checkbox v-model="post.agree" required validation-message="This field is required.">
+                            I certify the information provided is accurate to the best of my knowledge.
+                        </b-checkbox>
+                    </b-field>
+                </section>
+                <section class="form-section submission">
+                    <b-button tag="input" native-type="submit" value="Submit Request">
+                    </b-button>
+                </section>
+            </form>
+        </div>
+</section>
 <script src="https://www.google.com/recaptcha/api.js?render=6LeZz0UqAAAAACaVm35S2EemtZ1XGc_T1GV4o0wf"></script>
 <script src="https://cdn.jsdelivr.net/npm/buefy/dist/buefy.min.js"></script>
 <script src="/scripts/rideRequest.js"></script>

@@ -1,11 +1,11 @@
 <header class="hero-header">
     <%- include('./snippets/components/wheelchair-accessible-ad') %>
-    <%- include('./snippets/index/hero', { company: config.company, links: config.links }) %>
+        <%- include('./snippets/index/hero', { company: config.company, links: config.links }) %>
 </header>
-<main class="home-page-main-content">
+<section class="home-page-main-content">
     <%- include('./snippets/index/our-services', { links: config.links}) %>
-    <%- include('./snippets/index/assisted-living', { links: config.links, pages: config.pages }) %>
-    <%- include('./snippets/index/nemt-transportation', { links: config.links, company: config.company }) %>
-    <%- include('./snippets/index/non-medical', { links: config.links }) %>
-    <%- include('./snippets/index/medical-supplies') %>
-</main>
+        <%- include('./snippets/index/assisted-living', { links: config.links, pages: config.pages }) %>
+            <%- include('./snippets/index/nemt-transportation', { links: config.links, company: config.company }) %>
+                <%- include('./snippets/index/non-medical', { links: config.links }) %>
+                    <%- include('./snippets/index/medical-supplies') %>
+</section>

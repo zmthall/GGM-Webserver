@@ -445,6 +445,21 @@ router.get("/policy/accessibility", (request, response) => {
   });
 });
 
+router.get("/gas-and-goods/grand-opening", (request, response) => {
+  response.render("./landing-pages/gas-station-landing.ejs", {
+    config: json,
+    helper: helper,
+    page: {
+      title: "Golden Gate Gas & Goods - Grand Opening",
+      "meta-description":
+        "Join us for the grand opening of Golden Gate Gas and Goods! Enjoy exclusive deals, community events, and free hot dogs The countdown is on—see you on April 17th, 2025!",
+      href: "/gas-and-goods/grand-opening",
+      page_type: "landing-page",
+    },
+    layout: "./layouts/main-layout",
+  });
+});
+
 router.get("/site-map", (request, response) => {
   response.render("site-map", {
     config: json,

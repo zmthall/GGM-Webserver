@@ -691,7 +691,8 @@ h2.carousel-title {
 
 /* Non-Medical Transportation Page Styling */
 
-.non-medical-transportation-top-page img {
+.non-medical-transportation-top-page img,
+.gas-station-top-page img {
   width: 100%;
   margin-top: 1rem;
   height: 450px;
@@ -734,7 +735,8 @@ section.non-medical-transportation-bottom-page {
 }
 
 @media (max-width: 800px) {
-  .non-medical-transportation-top-page img {
+  .non-medical-transportation-top-page img,
+  .gas-station-top-page img {
     height: auto;
     object-fit: contain;
   }
@@ -1213,6 +1215,272 @@ h3.section-sub-title {
 
   .appointment-schedule-information-container *:not(h3) {
     font-size: calc(4.4vw - 2.08px);
+  }
+}
+
+/* Gas Station Page Styling */
+
+section.gas-station-page ul {
+  list-style: none;
+}
+
+section.gas-station-page ul.amenities-list {
+  margin-left: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+section.gas-station-page ul.amenities-list:before {
+  content: "";
+  position: absolute;
+  left: -0.5rem;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: rgb(var(--primary-color));
+}
+
+.what-we-offer.content {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.what-we-offer-container {
+  padding: 4rem 0;
+}
+
+.what-we-offer.card {
+  width: 425px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(50, 50, 50);
+  background: lightgray;
+  flex-shrink: 0;
+  font-size: 1.25rem;
+}
+
+.what-we-offer.card h3 {
+  font-size: 1.25rem;
+  color: rgba(var(--primary-color), 0.8);
+}
+
+section.what-we-offer {
+  background: rgba(var(--primary-color));
+  padding: 2rem;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 0;
+}
+
+section.what-we-offer h2.section-title {
+  color: white;
+  margin-bottom: 2rem;
+}
+
+section.gas-station-community-commitment.page-content
+  .community-commitment-container {
+  padding: 4rem;
+  margin: 4rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+section.gas-station-community-commitment.page-content
+  .community-commitment-container
+  p {
+  font-size: 1.75rem;
+}
+
+section.gas-station-community-commitment.page-content
+  .community-commitment-container
+  h2.section-title {
+  font-size: 2rem;
+}
+
+section.gas-station-locations.page-content ul.locations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+section.gas-station-locations.page-content ul.locations-list ul {
+  margin-left: 2rem;
+  position: relative;
+}
+
+section.gas-station-locations.page-content ul.locations-list ul:before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  left: -0.5rem;
+  top: 0;
+  background: rgb(var(--primary-color));
+}
+
+li.location-item {
+  padding: 1rem;
+  position: relative;
+  padding-left: 6rem;
+  margin-top: 2rem;
+  z-index: 0;
+  height: 120px;
+  border-radius: 2px;
+}
+
+li.location-item .location-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  background: white;
+  height: 120px;
+  width: 120px;
+  font-size: 2rem;
+  top: 0;
+  left: 0;
+  box-shadow: 1px 4px 5px 2px rgba(0, 0, 0, 0.4);
+  translate: -3rem -1rem;
+}
+
+li.location-item {
+  --location-item-color: #ea3a3a;
+}
+
+li.location-item:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-left: 60px solid var(--location-item-color);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  translate: calc(100% - 1px) -50%;
+  z-index: -1;
+}
+
+li.location-item.station-1 {
+  background: var(--location-item-color);
+  color: black;
+}
+
+li.location-item.station-2 {
+  --location-item-color: #176444;
+  background: var(--location-item-color);
+}
+
+li.location-item .section-text {
+  color: white;
+}
+
+li.location-item.station-2 {
+  background: #176444;
+}
+
+@media (min-width: 575px) {
+  .what-we-offer.card:hover {
+    color: black;
+    transform: scale(1.25);
+  }
+  .what-we-offer.card:hover h3 {
+    color: rgba(var(--primary-color), 1);
+  }
+}
+
+@media (max-width: 1475px) {
+  li.location-item:after {
+    display: none;
+  }
+
+  li.location-item .location-number {
+    translate: 0 -1px;
+    height: 121px;
+  }
+
+  li.location-item {
+    padding: 1rem 1rem 1rem 9rem;
+  }
+}
+
+@media (max-width: 1475px) and (min-width: 900px) {
+  .what-we-offer.card h3 {
+    font-size: calc(1.11304vw + 3.5827px);
+  }
+
+  .what-we-offer.card {
+    width: calc(34.7826vw - 63.0435px);
+    font-size: calc(1.3913vw - 0.521739px);
+    padding: calc(1.3913vw + 3.47826px);
+  }
+}
+
+@media (max-width: 1050px) {
+  li.location-item h3 span.location-name {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .what-we-offer.content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 810px) {
+  li.location-item {
+    height: max-content;
+  }
+
+  li.location-item .location-number {
+    height: 117px;
+  }
+
+  li.location-item span.location-phone-number {
+    display: none;
+  }
+
+  li.location-item ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .what-we-offer.card h3 {
+    color: rgb(var(--primary-color));
+  }
+}
+
+@media (max-width: 500px) {
+  .what-we-offer-container {
+    width: 100%;
+  }
+
+  .what-we-offer.card {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .what-we-offer.card h3 {
+    font-size: 1rem;
+  }
+
+  section.what-we-offer {
+    padding: 0.75rem;
   }
 }
 

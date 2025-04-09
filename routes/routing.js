@@ -445,20 +445,35 @@ router.get("/policy/accessibility", (request, response) => {
   });
 });
 
-router.get("/gas-and-goods/grand-opening", (request, response) => {
-  response.render("./landing-pages/gas-station-landing.ejs", {
-    config: json,
-    helper: helper,
-    page: {
-      title: "Golden Gate Gas & Goods - Grand Opening",
-      "meta-description":
-        "Join us for the grand opening of Golden Gate Gas and Goods! Enjoy exclusive deals, community events, and free hot dogs The countdown is on—see you on April 17th, 2025!",
-      href: "/gas-and-goods/grand-opening",
-      page_type: "landing-page",
-    },
-    layout: "./layouts/main-layout",
-  });
-});
+// router.get("/gas-and-goods", (request, response) => {
+//   response.render("gas-station", {
+//     config: json,
+//     helper: helper,
+//     page: {
+//       title: "Golden Gate Gas & Goods",
+//       meta_description:
+//         "Discover Golden Gate Gas & Goods in Pueblo, CO - newly renovated community gas stations offering quality fuel, fresh food options, and expanded convenience stores with beer caves. Visit our Prairie Ave or Elizabeth St locations today!",
+//       href: "/gas-and-goods",
+//       page_type: "page",
+//     },
+//     layout: "./layouts/main-layout",
+//   });
+// });
+
+// router.get("/gas-and-goods/grand-opening", (request, response) => {
+//   response.render("./landing-pages/gas-station-landing.ejs", {
+//     config: json,
+//     helper: helper,
+//     page: {
+//       title: "Golden Gate Gas & Goods - Grand Opening",
+//       "meta-description":
+//         "Join us for the grand opening of Golden Gate Gas and Goods! Enjoy exclusive deals, community events, and free hot dogs The countdown is on—see you on April 17th, 2025!",
+//       href: "/gas-and-goods/grand-opening",
+//       page_type: "landing-page",
+//     },
+//     layout: "./layouts/main-layout",
+//   });
+// });
 
 router.get("/site-map", (request, response) => {
   response.render("site-map", {
